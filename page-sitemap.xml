@@ -1,331 +1,331 @@
 <?xml version="1.0" encoding="UTF-8"?><?xml-stylesheet type="text/xsl" href="/bardart_site/main-sitemap.xsl"?>
 <urlset xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:image="http://www.google.com/schemas/sitemap-image/1.1" xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9 http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd http://www.google.com/schemas/sitemap-image/1.1 http://www.google.com/schemas/sitemap-image/1.1/sitemap-image.xsd" xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 	<url>
-		<loc>/bardart_site/</loc>
+		<loc>/bardart_site//</loc>
 		<lastmod>2024-04-30T16:07:59+00:00</lastmod>
 		<image:image>
-			<image:loc>/bardart_site/wp-content/uploads/2024/04/1675464433_gas-kvas-com-p-melodii-i-fonovie-risunki-44.jpg</image:loc>
+			<image:loc>/bardart_site//wp-content/uploads/2024/04/1675464433_gas-kvas-com-p-melodii-i-fonovie-risunki-44.jpg</image:loc>
 		</image:image>
 	</url>
 	<url>
-		<loc>/bardart_site/muzyka/</loc>
+		<loc>/bardart_site//muzyka/</loc>
 		<lastmod>2024-05-27T19:29:58+00:00</lastmod>
 	</url>
 	<url>
-		<loc>/bardart_site/sharzhi/</loc>
+		<loc>/bardart_site//sharzhi/</loc>
 		<lastmod>2024-07-18T06:02:00+00:00</lastmod>
 		<image:image>
-			<image:loc>/bardart_site/wp-content/uploads/2024/05/dzhekson-724x1024.jpg</image:loc>
+			<image:loc>/bardart_site//wp-content/uploads/2024/05/dzhekson-724x1024.jpg</image:loc>
 		</image:image>
 		<image:image>
-			<image:loc>/bardart_site/wp-content/uploads/2024/05/dzhekson.jpeg</image:loc>
+			<image:loc>/bardart_site//wp-content/uploads/2024/05/dzhekson.jpeg</image:loc>
 		</image:image>
 		<image:image>
-			<image:loc>/bardart_site/wp-content/uploads/2024/05/dzhekson-s-telczem-724x1024.jpg</image:loc>
+			<image:loc>/bardart_site//wp-content/uploads/2024/05/dzhekson-s-telczem-724x1024.jpg</image:loc>
 		</image:image>
 		<image:image>
-			<image:loc>/bardart_site/wp-content/uploads/2024/05/devushka-724x1024.jpg</image:loc>
+			<image:loc>/bardart_site//wp-content/uploads/2024/05/devushka-724x1024.jpg</image:loc>
 		</image:image>
 		<image:image>
-			<image:loc>/bardart_site/wp-content/uploads/2024/05/3-827x1024.jpg</image:loc>
+			<image:loc>/bardart_site//wp-content/uploads/2024/05/3-827x1024.jpg</image:loc>
 		</image:image>
 		<image:image>
-			<image:loc>/bardart_site/wp-content/uploads/2024/05/devushka-s-telczem-724x1024.jpg</image:loc>
+			<image:loc>/bardart_site//wp-content/uploads/2024/05/devushka-s-telczem-724x1024.jpg</image:loc>
 		</image:image>
 		<image:image>
-			<image:loc>/bardart_site/wp-content/uploads/2024/05/devochka-724x1024.jpg</image:loc>
+			<image:loc>/bardart_site//wp-content/uploads/2024/05/devochka-724x1024.jpg</image:loc>
 		</image:image>
 		<image:image>
-			<image:loc>/bardart_site/wp-content/uploads/2024/05/208.jpeg</image:loc>
+			<image:loc>/bardart_site//wp-content/uploads/2024/05/208.jpeg</image:loc>
 		</image:image>
 		<image:image>
-			<image:loc>/bardart_site/wp-content/uploads/2024/05/devochka-s-telczem-725x1024.jpg</image:loc>
+			<image:loc>/bardart_site//wp-content/uploads/2024/05/devochka-s-telczem-725x1024.jpg</image:loc>
 		</image:image>
 		<image:image>
-			<image:loc>/bardart_site/wp-content/uploads/2024/05/malchik-724x1024.jpg</image:loc>
+			<image:loc>/bardart_site//wp-content/uploads/2024/05/malchik-724x1024.jpg</image:loc>
 		</image:image>
 		<image:image>
-			<image:loc>/bardart_site/wp-content/uploads/2024/05/94-843x1024.jpeg</image:loc>
+			<image:loc>/bardart_site//wp-content/uploads/2024/05/94-843x1024.jpeg</image:loc>
 		</image:image>
 		<image:image>
-			<image:loc>/bardart_site/wp-content/uploads/2024/05/malchik-s-telczem-726x1024.jpg</image:loc>
+			<image:loc>/bardart_site//wp-content/uploads/2024/05/malchik-s-telczem-726x1024.jpg</image:loc>
 		</image:image>
 		<image:image>
-			<image:loc>/bardart_site/wp-content/uploads/2024/05/babushka-2-724x1024.jpg</image:loc>
+			<image:loc>/bardart_site//wp-content/uploads/2024/05/babushka-2-724x1024.jpg</image:loc>
 		</image:image>
 		<image:image>
-			<image:loc>/bardart_site/wp-content/uploads/2024/05/492-2-1024x683.jpeg</image:loc>
+			<image:loc>/bardart_site//wp-content/uploads/2024/05/492-2-1024x683.jpeg</image:loc>
 		</image:image>
 		<image:image>
-			<image:loc>/bardart_site/wp-content/uploads/2024/05/dedushka-724x1024.jpg</image:loc>
+			<image:loc>/bardart_site//wp-content/uploads/2024/05/dedushka-724x1024.jpg</image:loc>
 		</image:image>
 		<image:image>
-			<image:loc>/bardart_site/wp-content/uploads/2024/05/132.jpeg</image:loc>
+			<image:loc>/bardart_site//wp-content/uploads/2024/05/132.jpeg</image:loc>
 		</image:image>
 		<image:image>
-			<image:loc>/bardart_site/wp-content/uploads/2024/05/enot-724x1024.jpg</image:loc>
+			<image:loc>/bardart_site//wp-content/uploads/2024/05/enot-724x1024.jpg</image:loc>
 		</image:image>
 		<image:image>
-			<image:loc>/bardart_site/wp-content/uploads/2024/05/3.jpeg</image:loc>
+			<image:loc>/bardart_site//wp-content/uploads/2024/05/3.jpeg</image:loc>
 		</image:image>
 		<image:image>
-			<image:loc>/bardart_site/wp-content/uploads/2024/05/rybak-724x1024.jpg</image:loc>
+			<image:loc>/bardart_site//wp-content/uploads/2024/05/rybak-724x1024.jpg</image:loc>
 		</image:image>
 	</url>
 	<url>
-		<loc>/bardart_site/kartiny/</loc>
+		<loc>/bardart_site//kartiny/</loc>
 		<lastmod>2024-07-18T06:02:00+00:00</lastmod>
 		<image:image>
-			<image:loc>/bardart_site/wp-content/uploads/2024/04/bolshoj-format-150x150.jpg</image:loc>
+			<image:loc>/bardart_site//wp-content/uploads/2024/04/bolshoj-format-150x150.jpg</image:loc>
 		</image:image>
 		<image:image>
-			<image:loc>/bardart_site/wp-content/uploads/2024/04/portret-s-vodoj-150x150.jpg</image:loc>
+			<image:loc>/bardart_site//wp-content/uploads/2024/04/portret-s-vodoj-150x150.jpg</image:loc>
 		</image:image>
 		<image:image>
-			<image:loc>/bardart_site/wp-content/uploads/2024/04/dym-150x150.jpg</image:loc>
+			<image:loc>/bardart_site//wp-content/uploads/2024/04/dym-150x150.jpg</image:loc>
 		</image:image>
 		<image:image>
-			<image:loc>/bardart_site/wp-content/uploads/2024/04/perenos-proporczij-150x150.jpg</image:loc>
+			<image:loc>/bardart_site//wp-content/uploads/2024/04/perenos-proporczij-150x150.jpg</image:loc>
 		</image:image>
 		<image:image>
-			<image:loc>/bardart_site/wp-content/uploads/2024/04/indeecz-150x150.jpg</image:loc>
+			<image:loc>/bardart_site//wp-content/uploads/2024/04/indeecz-150x150.jpg</image:loc>
 		</image:image>
 		<image:image>
-			<image:loc>/bardart_site/wp-content/uploads/2024/04/babushka-150x150.jpg</image:loc>
+			<image:loc>/bardart_site//wp-content/uploads/2024/04/babushka-150x150.jpg</image:loc>
 		</image:image>
 		<image:image>
-			<image:loc>/bardart_site/wp-content/uploads/2024/04/negr-150x150.jpg</image:loc>
+			<image:loc>/bardart_site//wp-content/uploads/2024/04/negr-150x150.jpg</image:loc>
 		</image:image>
 		<image:image>
-			<image:loc>/bardart_site/wp-content/uploads/2024/04/aziatka-150x150.jpg</image:loc>
+			<image:loc>/bardart_site//wp-content/uploads/2024/04/aziatka-150x150.jpg</image:loc>
 		</image:image>
 		<image:image>
-			<image:loc>/bardart_site/wp-content/uploads/2024/04/sobaka-150x150.jpg</image:loc>
+			<image:loc>/bardart_site//wp-content/uploads/2024/04/sobaka-150x150.jpg</image:loc>
 		</image:image>
 		<image:image>
-			<image:loc>/bardart_site/wp-content/uploads/2024/04/kot-150x150.jpg</image:loc>
+			<image:loc>/bardart_site//wp-content/uploads/2024/04/kot-150x150.jpg</image:loc>
 		</image:image>
 		<image:image>
-			<image:loc>/bardart_site/wp-content/uploads/2024/04/dredy-150x150.jpg</image:loc>
+			<image:loc>/bardart_site//wp-content/uploads/2024/04/dredy-150x150.jpg</image:loc>
 		</image:image>
 		<image:image>
-			<image:loc>/bardart_site/wp-content/uploads/2024/04/kosa-150x150.jpg</image:loc>
+			<image:loc>/bardart_site//wp-content/uploads/2024/04/kosa-150x150.jpg</image:loc>
 		</image:image>
 		<image:image>
-			<image:loc>/bardart_site/wp-content/uploads/2024/04/detskij-150x150.jpg</image:loc>
+			<image:loc>/bardart_site//wp-content/uploads/2024/04/detskij-150x150.jpg</image:loc>
 		</image:image>
 		<image:image>
-			<image:loc>/bardart_site/wp-content/uploads/2024/04/zhenskij-anfas-150x150.jpg</image:loc>
+			<image:loc>/bardart_site//wp-content/uploads/2024/04/zhenskij-anfas-150x150.jpg</image:loc>
 		</image:image>
 		<image:image>
-			<image:loc>/bardart_site/wp-content/uploads/2024/04/zhenskij-profil-150x150.jpg</image:loc>
+			<image:loc>/bardart_site//wp-content/uploads/2024/04/zhenskij-profil-150x150.jpg</image:loc>
 		</image:image>
 		<image:image>
-			<image:loc>/bardart_site/wp-content/uploads/2024/04/muzhskoj-150x150.jpg</image:loc>
+			<image:loc>/bardart_site//wp-content/uploads/2024/04/muzhskoj-150x150.jpg</image:loc>
 		</image:image>
 		<image:image>
-			<image:loc>/bardart_site/wp-content/uploads/2024/04/zlost-150x150.jpg</image:loc>
+			<image:loc>/bardart_site//wp-content/uploads/2024/04/zlost-150x150.jpg</image:loc>
 		</image:image>
 		<image:image>
-			<image:loc>/bardart_site/wp-content/uploads/2024/04/radost-150x150.jpg</image:loc>
+			<image:loc>/bardart_site//wp-content/uploads/2024/04/radost-150x150.jpg</image:loc>
 		</image:image>
 		<image:image>
-			<image:loc>/bardart_site/wp-content/uploads/2024/04/sleza-150x150.jpg</image:loc>
+			<image:loc>/bardart_site//wp-content/uploads/2024/04/sleza-150x150.jpg</image:loc>
 		</image:image>
 		<image:image>
-			<image:loc>/bardart_site/wp-content/uploads/2024/04/strah-150x150.jpg</image:loc>
+			<image:loc>/bardart_site//wp-content/uploads/2024/04/strah-150x150.jpg</image:loc>
 		</image:image>
 		<image:image>
-			<image:loc>/bardart_site/wp-content/uploads/2024/04/udivlenie-150x150.jpg</image:loc>
+			<image:loc>/bardart_site//wp-content/uploads/2024/04/udivlenie-150x150.jpg</image:loc>
 		</image:image>
 		<image:image>
-			<image:loc>/bardart_site/wp-content/uploads/2024/04/klint-istvud-150x150.jpg</image:loc>
+			<image:loc>/bardart_site//wp-content/uploads/2024/04/klint-istvud-150x150.jpg</image:loc>
 		</image:image>
 		<image:image>
-			<image:loc>/bardart_site/wp-content/uploads/2024/04/s-dobavleniem-czveta-150x150.jpg</image:loc>
+			<image:loc>/bardart_site//wp-content/uploads/2024/04/s-dobavleniem-czveta-150x150.jpg</image:loc>
 		</image:image>
 		<image:image>
-			<image:loc>/bardart_site/wp-content/uploads/2024/04/cherez-steklo-150x150.jpg</image:loc>
+			<image:loc>/bardart_site//wp-content/uploads/2024/04/cherez-steklo-150x150.jpg</image:loc>
 		</image:image>
 		<image:image>
-			<image:loc>/bardart_site/wp-content/uploads/2024/04/svetlaya-fotografiya-150x150.jpg</image:loc>
+			<image:loc>/bardart_site//wp-content/uploads/2024/04/svetlaya-fotografiya-150x150.jpg</image:loc>
 		</image:image>
 		<image:image>
-			<image:loc>/bardart_site/wp-content/uploads/2024/04/na-chernoj-bumage-150x150.jpg</image:loc>
+			<image:loc>/bardart_site//wp-content/uploads/2024/04/na-chernoj-bumage-150x150.jpg</image:loc>
 		</image:image>
 		<image:image>
-			<image:loc>/bardart_site/wp-content/uploads/2024/04/po-tochkam-150x150.jpg</image:loc>
+			<image:loc>/bardart_site//wp-content/uploads/2024/04/po-tochkam-150x150.jpg</image:loc>
 		</image:image>
 		<image:image>
-			<image:loc>/bardart_site/wp-content/uploads/2024/04/balerina-150x150.jpg</image:loc>
+			<image:loc>/bardart_site//wp-content/uploads/2024/04/balerina-150x150.jpg</image:loc>
 		</image:image>
 		<image:image>
-			<image:loc>/bardart_site/wp-content/uploads/2024/04/sportsmen-150x150.jpg</image:loc>
+			<image:loc>/bardart_site//wp-content/uploads/2024/04/sportsmen-150x150.jpg</image:loc>
 		</image:image>
 		<image:image>
-			<image:loc>/bardart_site/wp-content/uploads/2024/04/volodya-150x150.jpg</image:loc>
+			<image:loc>/bardart_site//wp-content/uploads/2024/04/volodya-150x150.jpg</image:loc>
 		</image:image>
 		<image:image>
-			<image:loc>/bardart_site/wp-content/uploads/2024/04/dianochka-150x150.jpg</image:loc>
+			<image:loc>/bardart_site//wp-content/uploads/2024/04/dianochka-150x150.jpg</image:loc>
 		</image:image>
 		<image:image>
-			<image:loc>/bardart_site/wp-content/uploads/2024/04/izobrazhenie_viber_2024-04-19_15-15-39-323-150x150.jpg</image:loc>
+			<image:loc>/bardart_site//wp-content/uploads/2024/04/izobrazhenie_viber_2024-04-19_15-15-39-323-150x150.jpg</image:loc>
 		</image:image>
 		<image:image>
-			<image:loc>/bardart_site/wp-content/uploads/2024/04/maksimko-150x150.jpg</image:loc>
+			<image:loc>/bardart_site//wp-content/uploads/2024/04/maksimko-150x150.jpg</image:loc>
 		</image:image>
 		<image:image>
-			<image:loc>/bardart_site/wp-content/uploads/2024/04/oksana-150x150.jpg</image:loc>
+			<image:loc>/bardart_site//wp-content/uploads/2024/04/oksana-150x150.jpg</image:loc>
 		</image:image>
 		<image:image>
-			<image:loc>/bardart_site/wp-content/uploads/2024/04/izobrazhenie_viber_2024-04-23_20-41-10-482-150x150.jpg</image:loc>
+			<image:loc>/bardart_site//wp-content/uploads/2024/04/izobrazhenie_viber_2024-04-23_20-41-10-482-150x150.jpg</image:loc>
 		</image:image>
 		<image:image>
-			<image:loc>/bardart_site/wp-content/uploads/2024/05/anyconv.com__img_2775-150x150.jpg</image:loc>
+			<image:loc>/bardart_site//wp-content/uploads/2024/05/anyconv.com__img_2775-150x150.jpg</image:loc>
 		</image:image>
 		<image:image>
-			<image:loc>/bardart_site/wp-content/uploads/2024/05/pavlik-150x150.jpg</image:loc>
+			<image:loc>/bardart_site//wp-content/uploads/2024/05/pavlik-150x150.jpg</image:loc>
 		</image:image>
 		<image:image>
-			<image:loc>/bardart_site/wp-content/uploads/2024/06/alinochka-150x150.jpg</image:loc>
+			<image:loc>/bardart_site//wp-content/uploads/2024/06/alinochka-150x150.jpg</image:loc>
 		</image:image>
 	</url>
 	<url>
-		<loc>/bardart_site/akvarel/</loc>
+		<loc>/bardart_site//akvarel/</loc>
 		<lastmod>2024-07-18T07:04:16+00:00</lastmod>
 		<image:image>
-			<image:loc>/bardart_site/wp-content/uploads/2024/07/devochka-732x1024.jpg</image:loc>
+			<image:loc>/bardart_site//wp-content/uploads/2024/07/devochka-732x1024.jpg</image:loc>
 		</image:image>
 		<image:image>
-			<image:loc>/bardart_site/wp-content/uploads/2024/07/ryzhaya-devushka-670x1024.jpg</image:loc>
+			<image:loc>/bardart_site//wp-content/uploads/2024/07/ryzhaya-devushka-670x1024.jpg</image:loc>
 		</image:image>
 		<image:image>
-			<image:loc>/bardart_site/wp-content/uploads/2024/07/malchik-732x1024.jpg</image:loc>
+			<image:loc>/bardart_site//wp-content/uploads/2024/07/malchik-732x1024.jpg</image:loc>
 		</image:image>
 		<image:image>
-			<image:loc>/bardart_site/wp-content/uploads/2024/07/dzhun-734x1024.jpg</image:loc>
+			<image:loc>/bardart_site//wp-content/uploads/2024/07/dzhun-734x1024.jpg</image:loc>
 		</image:image>
 		<image:image>
-			<image:loc>/bardart_site/wp-content/uploads/2024/07/helen-mirren-737x1024.jpg</image:loc>
+			<image:loc>/bardart_site//wp-content/uploads/2024/07/helen-mirren-737x1024.jpg</image:loc>
 		</image:image>
 		<image:image>
-			<image:loc>/bardart_site/wp-content/uploads/2024/07/makkellen-768x1024.jpg</image:loc>
+			<image:loc>/bardart_site//wp-content/uploads/2024/07/makkellen-768x1024.jpg</image:loc>
 		</image:image>
 		<image:image>
-			<image:loc>/bardart_site/wp-content/uploads/2024/07/igor-768x1024.jpg</image:loc>
+			<image:loc>/bardart_site//wp-content/uploads/2024/07/igor-768x1024.jpg</image:loc>
 		</image:image>
 		<image:image>
-			<image:loc>/bardart_site/wp-content/uploads/2024/07/ira-768x1024.jpg</image:loc>
+			<image:loc>/bardart_site//wp-content/uploads/2024/07/ira-768x1024.jpg</image:loc>
 		</image:image>
 	</url>
 	<url>
-		<loc>/bardart_site/elementor-752/</loc>
+		<loc>/bardart_site//elementor-752/</loc>
 		<lastmod>2024-08-02T16:57:17+00:00</lastmod>
 		<image:image>
-			<image:loc>/bardart_site/wp-content/uploads/2024/04/perenos-proporczij-724x1024.jpg</image:loc>
+			<image:loc>/bardart_site//wp-content/uploads/2024/04/perenos-proporczij-724x1024.jpg</image:loc>
 		</image:image>
 		<image:image>
-			<image:loc>/bardart_site/wp-content/uploads/2024/04/207-815x1024.jpg</image:loc>
+			<image:loc>/bardart_site//wp-content/uploads/2024/04/207-815x1024.jpg</image:loc>
 		</image:image>
 		<image:image>
-			<image:loc>/bardart_site/wp-content/uploads/2024/04/dym-724x1024.jpg</image:loc>
+			<image:loc>/bardart_site//wp-content/uploads/2024/04/dym-724x1024.jpg</image:loc>
 		</image:image>
 		<image:image>
-			<image:loc>/bardart_site/wp-content/uploads/2024/04/316.jpg</image:loc>
+			<image:loc>/bardart_site//wp-content/uploads/2024/04/316.jpg</image:loc>
 		</image:image>
 		<image:image>
-			<image:loc>/bardart_site/wp-content/uploads/2024/04/portret-s-vodoj-901x1024.jpg</image:loc>
+			<image:loc>/bardart_site//wp-content/uploads/2024/04/portret-s-vodoj-901x1024.jpg</image:loc>
 		</image:image>
 		<image:image>
-			<image:loc>/bardart_site/wp-content/uploads/2024/04/114-819x1024.jpg</image:loc>
+			<image:loc>/bardart_site//wp-content/uploads/2024/04/114-819x1024.jpg</image:loc>
 		</image:image>
 		<image:image>
-			<image:loc>/bardart_site/wp-content/uploads/2024/04/bolshoj-format-753x1024.jpg</image:loc>
+			<image:loc>/bardart_site//wp-content/uploads/2024/04/bolshoj-format-753x1024.jpg</image:loc>
 		</image:image>
 		<image:image>
-			<image:loc>/bardart_site/wp-content/uploads/2024/04/221-768x1024.jpg</image:loc>
+			<image:loc>/bardart_site//wp-content/uploads/2024/04/221-768x1024.jpg</image:loc>
 		</image:image>
 		<image:image>
-			<image:loc>/bardart_site/wp-content/uploads/2024/08/portret-706x1024.jpg</image:loc>
+			<image:loc>/bardart_site//wp-content/uploads/2024/08/portret-706x1024.jpg</image:loc>
 		</image:image>
 		<image:image>
-			<image:loc>/bardart_site/wp-content/uploads/2024/08/foto-894x1024.jpg</image:loc>
+			<image:loc>/bardart_site//wp-content/uploads/2024/08/foto-894x1024.jpg</image:loc>
 		</image:image>
 	</url>
 	<url>
-		<loc>/bardart_site/841-2/</loc>
+		<loc>/bardart_site//841-2/</loc>
 		<lastmod>2024-08-24T18:42:50+00:00</lastmod>
 		<image:image>
-			<image:loc>/bardart_site/wp-content/plugins/wpforms-lite/assets/images/submit-spin.svg</image:loc>
+			<image:loc>/bardart_site//wp-content/plugins/wpforms-lite/assets/images/submit-spin.svg</image:loc>
 		</image:image>
 	</url>
 	<url>
-		<loc>/bardart_site/pastel/</loc>
+		<loc>/bardart_site//pastel/</loc>
 		<lastmod>2024-08-24T18:42:50+00:00</lastmod>
 		<image:image>
-			<image:loc>/bardart_site/wp-content/uploads/2024/07/malchtk-s-vesnushkami-768x1024.jpg</image:loc>
+			<image:loc>/bardart_site//wp-content/uploads/2024/07/malchtk-s-vesnushkami-768x1024.jpg</image:loc>
 		</image:image>
 		<image:image>
-			<image:loc>/bardart_site/wp-content/uploads/2024/07/muzhchina-v-platke-768x1024.jpg</image:loc>
+			<image:loc>/bardart_site//wp-content/uploads/2024/07/muzhchina-v-platke-768x1024.jpg</image:loc>
 		</image:image>
 		<image:image>
-			<image:loc>/bardart_site/wp-content/uploads/2024/07/devochka-1-1024x840.jpg</image:loc>
+			<image:loc>/bardart_site//wp-content/uploads/2024/07/devochka-1-1024x840.jpg</image:loc>
 		</image:image>
 		<image:image>
-			<image:loc>/bardart_site/wp-content/uploads/2024/07/meggi-smit-719x1024.jpg</image:loc>
+			<image:loc>/bardart_site//wp-content/uploads/2024/07/meggi-smit-719x1024.jpg</image:loc>
 		</image:image>
 		<image:image>
-			<image:loc>/bardart_site/wp-content/uploads/2024/07/devushka-v-sharfe-1024x780.jpg</image:loc>
+			<image:loc>/bardart_site//wp-content/uploads/2024/07/devushka-v-sharfe-1024x780.jpg</image:loc>
 		</image:image>
 		<image:image>
-			<image:loc>/bardart_site/wp-content/uploads/2024/07/devushka-v-akvagrime-1024x719.jpg</image:loc>
+			<image:loc>/bardart_site//wp-content/uploads/2024/07/devushka-v-akvagrime-1024x719.jpg</image:loc>
 		</image:image>
 		<image:image>
-			<image:loc>/bardart_site/wp-content/uploads/2024/07/genri-kevill-677x1024.jpg</image:loc>
+			<image:loc>/bardart_site//wp-content/uploads/2024/07/genri-kevill-677x1024.jpg</image:loc>
 		</image:image>
 		<image:image>
-			<image:loc>/bardart_site/wp-content/uploads/2024/08/portret-706x1024.jpg</image:loc>
+			<image:loc>/bardart_site//wp-content/uploads/2024/08/portret-706x1024.jpg</image:loc>
 		</image:image>
 		<image:image>
-			<image:loc>/bardart_site/wp-content/uploads/2024/08/oksana-717x1024.jpg</image:loc>
+			<image:loc>/bardart_site//wp-content/uploads/2024/08/oksana-717x1024.jpg</image:loc>
 		</image:image>
 		<image:image>
-			<image:loc>/bardart_site/wp-content/uploads/2024/08/oksana-palmira-689x1024.jpg</image:loc>
+			<image:loc>/bardart_site//wp-content/uploads/2024/08/oksana-palmira-689x1024.jpg</image:loc>
 		</image:image>
 		<image:image>
-			<image:loc>/bardart_site/wp-content/uploads/2024/08/oi-portret-831x1024.jpg</image:loc>
+			<image:loc>/bardart_site//wp-content/uploads/2024/08/oi-portret-831x1024.jpg</image:loc>
 		</image:image>
 	</url>
 	<url>
-		<loc>/bardart_site/galereya/</loc>
+		<loc>/bardart_site//galereya/</loc>
 		<lastmod>2024-08-24T19:26:56+00:00</lastmod>
 	</url>
 	<url>
-		<loc>/bardart_site/akril/</loc>
+		<loc>/bardart_site//akril/</loc>
 		<lastmod>2025-05-10T20:21:47+00:00</lastmod>
 		<image:image>
-			<image:loc>/bardart_site/wp-content/uploads/2024/08/granat-660x1024.jpg</image:loc>
+			<image:loc>/bardart_site//wp-content/uploads/2024/08/granat-660x1024.jpg</image:loc>
 		</image:image>
 		<image:image>
-			<image:loc>/bardart_site/wp-content/uploads/2024/09/listya-s-kaplyami-664x1024.jpg</image:loc>
+			<image:loc>/bardart_site//wp-content/uploads/2024/09/listya-s-kaplyami-664x1024.jpg</image:loc>
 		</image:image>
 		<image:image>
-			<image:loc>/bardart_site/wp-content/uploads/2024/09/more-i-kamni-682x1024.jpg</image:loc>
+			<image:loc>/bardart_site//wp-content/uploads/2024/09/more-i-kamni-682x1024.jpg</image:loc>
 		</image:image>
 		<image:image>
-			<image:loc>/bardart_site/wp-content/uploads/2024/09/sinyaya-pticza-722x1024.jpg</image:loc>
+			<image:loc>/bardart_site//wp-content/uploads/2024/09/sinyaya-pticza-722x1024.jpg</image:loc>
 		</image:image>
 		<image:image>
-			<image:loc>/bardart_site/wp-content/uploads/2025/02/sobaka-663x1024.jpg</image:loc>
+			<image:loc>/bardart_site//wp-content/uploads/2025/02/sobaka-663x1024.jpg</image:loc>
 		</image:image>
 		<image:image>
-			<image:loc>/bardart_site/wp-content/uploads/2025/02/loshad-704x1024.jpg</image:loc>
+			<image:loc>/bardart_site//wp-content/uploads/2025/02/loshad-704x1024.jpg</image:loc>
 		</image:image>
 		<image:image>
-			<image:loc>/bardart_site/wp-content/uploads/2025/04/lev-i-lvenok-691x1024.jpg</image:loc>
+			<image:loc>/bardart_site//wp-content/uploads/2025/04/lev-i-lvenok-691x1024.jpg</image:loc>
 		</image:image>
 		<image:image>
-			<image:loc>/bardart_site/wp-content/uploads/2025/05/pop-art-722x1024.jpg</image:loc>
+			<image:loc>/bardart_site//wp-content/uploads/2025/05/pop-art-722x1024.jpg</image:loc>
 		</image:image>
 	</url>
 </urlset>

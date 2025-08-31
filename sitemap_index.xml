@@ -1,19 +1,19 @@
 <?xml version="1.0" encoding="UTF-8"?><?xml-stylesheet type="text/xsl" href="/bardart_site/main-sitemap.xsl"?>
 <sitemapindex xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 	<sitemap>
-		<loc>/bardart_site/post-sitemap.xml</loc>
+		<loc>/bardart_site//post-sitemap.xml</loc>
 		<lastmod>2024-04-23T07:33:24+00:00</lastmod>
 	</sitemap>
 	<sitemap>
-		<loc>/bardart_site/page-sitemap.xml</loc>
+		<loc>/bardart_site//page-sitemap.xml</loc>
 		<lastmod>2025-05-10T20:21:47+00:00</lastmod>
 	</sitemap>
 	<sitemap>
-		<loc>/bardart_site/category-sitemap.xml</loc>
+		<loc>/bardart_site//category-sitemap.xml</loc>
 		<lastmod>2024-04-23T07:33:24+00:00</lastmod>
 	</sitemap>
 	<sitemap>
-		<loc>/bardart_site/author-sitemap.xml</loc>
+		<loc>/bardart_site//author-sitemap.xml</loc>
 		<lastmod>2025-08-29T13:27:27+00:00</lastmod>
 	</sitemap>
 </sitemapindex>
