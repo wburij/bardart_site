@@ -1,4 +1,4 @@
-﻿/******/ (() => { // webpackBootstrap
+/******/ (() => { // webpackBootstrap
 /******/ 	var __webpack_modules__ = ({
 
 /***/ 1681:
@@ -603,7 +603,7 @@ var __WEBPACK_AMD_DEFINE_FACTORY__, __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_
 			abbr = abbr ? abbr.join('') : undefined;
 		} else {
 			// 17:56:31 CST
-			// 17:56:31 GMT+0800 (еЏ°еЊ—жЁ™жє–ж™‚й–“)
+			// 17:56:31 GMT+0800 (台北標準時間)
 			abbr = timeString.match(/[A-Z]{3,5}/g);
 			abbr = abbr ? abbr[0] : undefined;
 		}

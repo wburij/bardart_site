@@ -1,4 +1,4 @@
-﻿/******/ (() => { // webpackBootstrap
+/******/ (() => { // webpackBootstrap
 /******/ 	"use strict";
 /******/ 	// The require scope
 /******/ 	var __webpack_require__ = {};
@@ -308,7 +308,7 @@ mapValues(modifiers, (/** @type {WPModifier} */modifier) => {
  * ```js
  * // Assuming macOS:
  * displayShortcutList.primary( 'm' );
- * // [ "вЊ", "M" ]
+ * // [ "⌘", "M" ]
  * ```
  *
  * @type {WPModifierHandler<WPKeyHandler<string[]>>} Keyed map of functions to
@@ -319,11 +319,11 @@ mapValues(modifiers, (/** @type {WPModifier} */modifier) => {
   return /** @type {WPKeyHandler<string[]>} */(character, _isApple = isAppleOS) => {
     const isApple = _isApple();
     const replacementKeyMap = {
-      [ALT]: isApple ? 'вЊҐ' : 'Alt',
-      [CTRL]: isApple ? 'вЊѓ' : 'Ctrl',
-      // Make sure вЊѓ is the U+2303 UP ARROWHEAD unicode character and not the caret character.
-      [COMMAND]: 'вЊ',
-      [SHIFT]: isApple ? 'в‡§' : 'Shift'
+      [ALT]: isApple ? '⌥' : 'Alt',
+      [CTRL]: isApple ? '⌃' : 'Ctrl',
+      // Make sure ⌃ is the U+2303 UP ARROWHEAD unicode character and not the caret character.
+      [COMMAND]: '⌘',
+      [SHIFT]: isApple ? '⇧' : 'Shift'
     };
     const modifierKeys = modifier(_isApple).reduce((accumulator, key) => {
       var _replacementKeyMap$ke;
@@ -345,7 +345,7 @@ mapValues(modifiers, (/** @type {WPModifier} */modifier) => {
  * ```js
  * // Assuming macOS:
  * displayShortcut.primary( 'm' );
- * // "вЊM"
+ * // "⌘M"
  * ```
  *
  * @type {WPModifierHandler<WPKeyHandler<string>>} Keyed map of functions to
@@ -415,7 +415,7 @@ function getEventModifiers(event) {
  *
  * @example
  * ```js
- * // Assuming an event for вЊM key press:
+ * // Assuming an event for ⌘M key press:
  * isKeyboardEvent.primary( event, 'm' );
  * // true
  * ```

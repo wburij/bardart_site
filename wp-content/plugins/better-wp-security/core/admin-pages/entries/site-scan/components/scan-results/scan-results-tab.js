@@ -1,4 +1,4 @@
-﻿/**
+/**
  * WordPress dependencies
  */
 import { __ } from '@wordpress/i18n';
@@ -128,7 +128,7 @@ function NoResultsEmptyState() {
 				variant={ TextVariant.DARK } weight={ 700 }
 				text={ hasRunScan
 					? __( 'No scan results found!', 'better-wp-security' )
-					: __( 'Scan to find issues with your siteвЂ™s security.', 'better-wp-security' ) }
+					: __( 'Scan to find issues with your site’s security.', 'better-wp-security' ) }
 			/>
 			<Button onClick={ onClick } variant="primary" text={ __( 'Start Site Scan', 'better-wp-security' ) } />
 		</StyledNoScans>

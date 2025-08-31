@@ -1,4 +1,4 @@
-﻿.blocks-gallery-grid:not(.has-nested-images),.wp-block-gallery:not(.has-nested-images){
+.blocks-gallery-grid:not(.has-nested-images),.wp-block-gallery:not(.has-nested-images){
   display:flex;
   flex-wrap:wrap;
   list-style-type:none;

@@ -1,4 +1,4 @@
-﻿/*!
+/*!
  * modernizr v3.3.1
  * Build https://modernizr.com/download?-setclasses-dontmin
  *

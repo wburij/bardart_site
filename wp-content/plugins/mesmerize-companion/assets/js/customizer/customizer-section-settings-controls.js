@@ -1,4 +1,4 @@
-﻿(function (root, CP_Customizer, $) {
+(function (root, CP_Customizer, $) {
 
     var sectionSettingsContainer = $('' +
         '<li id="cp-section-setting-popup" class="customizer-right-section">' +

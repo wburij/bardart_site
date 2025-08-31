@@ -1,4 +1,4 @@
-﻿import { StyledHeader } from '../styles';
+import { StyledHeader } from '../styles';
 import { Text, TextSize } from '@ithemes/ui';
 
 export function WelcomeFlowBanner( { text } ) {

@@ -1,4 +1,4 @@
-﻿(function (root, CP_Customizer, $) {
+(function (root, CP_Customizer, $) {
     CP_Customizer.addModule(function (CP_Customizer) {
         CP_Customizer.hooks.addFilter('section_fixed_overlay_options', function (options, type) {
 

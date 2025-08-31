@@ -1,4 +1,4 @@
-﻿function wbcr_factory_logger_140_LogCleanup(element) {
+function wbcr_factory_logger_140_LogCleanup(element) {
     var btn = jQuery(element),
         currentBtnText = btn.html();
 

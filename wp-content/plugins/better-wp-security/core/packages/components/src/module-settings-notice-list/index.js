@@ -1,4 +1,4 @@
-﻿/**
+/**
  * External dependencies
  */
 import { filter, omit } from 'lodash';

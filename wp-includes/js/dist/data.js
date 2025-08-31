@@ -1,4 +1,4 @@
-﻿/******/ (() => { // webpackBootstrap
+/******/ (() => { // webpackBootstrap
 /******/ 	"use strict";
 /******/ 	var __webpack_modules__ = ({
 
@@ -3098,7 +3098,7 @@ function createRegistry(storeConfigs = {}, parent = null) {
       try {
         return unlock(stores[name].store).privateActions;
       } catch (e) {
-        // unlock() throws an error the store was not locked вЂ“ this means
+        // unlock() throws an error the store was not locked – this means
         // there no private actions are available
         return {};
       }

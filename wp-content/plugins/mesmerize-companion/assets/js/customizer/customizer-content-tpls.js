@@ -1,4 +1,4 @@
-﻿(function () {
+(function () {
     var __templates = {};
 
     var templateOptions = {

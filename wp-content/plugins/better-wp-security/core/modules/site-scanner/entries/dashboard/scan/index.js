@@ -1,4 +1,4 @@
-﻿/**
+/**
  * External dependencies
  */
 import memize from 'memize';

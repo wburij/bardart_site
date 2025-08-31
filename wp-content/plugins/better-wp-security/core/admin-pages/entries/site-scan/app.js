@@ -1,4 +1,4 @@
-﻿/**
+/**
  * External dependencies
  */
 import { Router, Switch, Route } from 'react-router-dom';

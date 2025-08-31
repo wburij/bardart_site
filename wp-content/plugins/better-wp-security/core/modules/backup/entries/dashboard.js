@@ -1,4 +1,4 @@
-﻿/**
+/**
  * WordPress dependencies
  */
 import { setLocaleData } from '@wordpress/i18n';

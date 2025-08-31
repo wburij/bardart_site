@@ -1,1 +1,1 @@
-﻿window.wpseoRedirectOldFeaturesTabToNewSettings=function(){if("#top#features"===window.location.hash){const e=window.location.href.replace("wpseo_dashboard#top#features","wpseo_page_settings#/site-features");window.location.replace(e)}};
+window.wpseoRedirectOldFeaturesTabToNewSettings=function(){if("#top#features"===window.location.hash){const e=window.location.href.replace("wpseo_dashboard#top#features","wpseo_page_settings#/site-features");window.location.replace(e)}};

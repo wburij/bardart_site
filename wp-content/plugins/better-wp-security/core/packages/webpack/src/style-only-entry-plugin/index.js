@@ -1,4 +1,4 @@
-﻿function StyleOnlyEntryPlugin( styleTests ) {
+function StyleOnlyEntryPlugin( styleTests ) {
 	let list = [];
 
 	if ( styleTests instanceof RegExp ) {

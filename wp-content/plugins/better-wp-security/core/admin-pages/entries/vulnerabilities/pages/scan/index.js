@@ -1,4 +1,4 @@
-﻿/**
+/**
  * External dependencies
  */
 import { Link, useHistory } from 'react-router-dom';
@@ -66,7 +66,7 @@ export default function Scan() {
 								<ScanningContainer>
 									<StyledSpinner />
 									<Text
-										text={ __( 'Scanning for vulnerabilitiesвЂ¦', 'better-wp-security' ) }
+										text={ __( 'Scanning for vulnerabilities…', 'better-wp-security' ) }
 										size={ TextSize.LARGE }
 										weight={ TextWeight.HEAVY }
 										variant={ TextVariant.DARK }

@@ -1,4 +1,4 @@
-﻿/**
+/**
  * Internal dependencies
  */
 import { RECEIVE_HELP } from './actions';

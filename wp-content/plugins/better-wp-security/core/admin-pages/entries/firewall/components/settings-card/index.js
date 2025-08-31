@@ -1,4 +1,4 @@
-﻿import { PageHeader } from '@ithemes/ui';
+import { PageHeader } from '@ithemes/ui';
 import { ModuleCard } from '@ithemes/security.pages.settings';
 import { StyledModulePanelContainer } from './styles';
 

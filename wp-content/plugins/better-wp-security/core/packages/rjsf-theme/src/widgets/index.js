@@ -1,4 +1,4 @@
-﻿export { default as BaseInput } from './base-input';
+export { default as BaseInput } from './base-input';
 export { default as ToggleWidget } from './toggle-widget';
 export { default as CheckboxWidget } from './checkbox-widget';
 export { default as CheckboxesWidget } from './checkboxes-widget';

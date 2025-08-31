@@ -1,4 +1,4 @@
-﻿/**
+/**
  * External dependencies
  */
 import { createGlobalState } from 'react-hooks-global-state';

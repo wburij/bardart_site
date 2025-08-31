@@ -1,4 +1,4 @@
-﻿(function($) {
+(function($) {
 	'use strict';
 
 	var redirectLink = '';
@@ -44,7 +44,7 @@
 			return false;
 		});
 
-		// Р•СЃР»Рё РєР»РёРєРЅСѓС‚СЊ РЅР° РѕРґРЅСѓ РёР· СЂР°РґРёРѕРєРЅРѕРїРѕРє, РёР·РјРµРЅРёС‚СЃСЏ С‚РµРєСЃС‚ РєРЅРѕРїРєРё
+		// Если кликнуть на одну из радиокнопок, изменится текст кнопки
 		modal.on('click', 'input[type="radio"]', function(e) {
 			var $selectedReasonOption = $(this);
 			$selectedReasonOption.attr('checked');

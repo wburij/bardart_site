@@ -1,4 +1,4 @@
-﻿.wp-block-columns :where(.wp-block){
+.wp-block-columns :where(.wp-block){
   margin-left:0;
   margin-right:0;
   max-width:none;

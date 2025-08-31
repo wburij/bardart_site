@@ -1,4 +1,4 @@
-﻿/**
+/**
  * Internal Dependencies
  */
 import { MarkPro } from '@ithemes/security-style-guide';

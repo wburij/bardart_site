@@ -1,4 +1,4 @@
-﻿// Clear URL - remove wpforms_form_id
+// Clear URL - remove wpforms_form_id
 ( function() {
 	var loc = window.location,
 		query = loc.search;

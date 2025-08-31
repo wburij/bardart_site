@@ -1,4 +1,4 @@
-﻿/* global wpforms_admin_settings_stripe, wpforms_admin */
+/* global wpforms_admin_settings_stripe, wpforms_admin */
 
 /**
  * Stripe integration settings script.

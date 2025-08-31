@@ -1,4 +1,4 @@
-﻿/**
+/**
  * External dependencies
  */
 const escapeStringRegexp = require( 'escape-string-regexp' );

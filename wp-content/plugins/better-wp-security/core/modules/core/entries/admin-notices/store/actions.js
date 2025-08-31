@@ -1,4 +1,4 @@
-﻿/**
+/**
  * Internal dependencies
  */
 import { apiFetch, doAction } from './controls';

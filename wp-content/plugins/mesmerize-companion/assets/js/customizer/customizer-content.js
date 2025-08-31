@@ -1,4 +1,4 @@
-﻿(function ($) {
+(function ($) {
   var listItemTemplate = _.template(
     '<li class="full_row item" data-id="<%= sectionID %>">' +
       '       <div class="reorder-handler"></div>' +

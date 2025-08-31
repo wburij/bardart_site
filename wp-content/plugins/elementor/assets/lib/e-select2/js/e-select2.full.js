@@ -1,4 +1,4 @@
-﻿/*!
+/*!
  * Select2 4.0.6-rc.1
  * https://select2.github.io
  *
@@ -4603,7 +4603,7 @@ S2.define('select2/i18n/en',[],function () {
       return message;
     },
     loadingMore: function () {
-      return 'Loading more resultsвЂ¦';
+      return 'Loading more results…';
     },
     maximumSelected: function (args) {
       var message = 'You can only select ' + args.maximum + ' item';
@@ -4618,7 +4618,7 @@ S2.define('select2/i18n/en',[],function () {
       return 'No results found';
     },
     searching: function () {
-      return 'SearchingвЂ¦';
+      return 'Searching…';
     }
   };
 });

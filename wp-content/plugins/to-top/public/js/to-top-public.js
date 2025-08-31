@@ -1,4 +1,4 @@
-﻿(function($) {
+(function($) {
     "use strict";
     $(function() {
         var container = $("#to_top_scrollup").css({

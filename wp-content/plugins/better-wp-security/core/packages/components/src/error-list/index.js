@@ -1,4 +1,4 @@
-﻿/**
+/**
  * Internal dependencies
  */
 import { transformApiErrorToList } from '@ithemes/security-utils';

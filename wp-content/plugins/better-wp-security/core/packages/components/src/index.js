@@ -1,4 +1,4 @@
-﻿export { default as LogModal } from './log-modal';
+export { default as LogModal } from './log-modal';
 export { default as SiteScanResults } from './site-scan-results';
 export { default as PrintR } from './print-r';
 export { default as HoverDetector } from './hover-detector';

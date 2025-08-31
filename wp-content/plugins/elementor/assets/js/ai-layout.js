@@ -1,4 +1,4 @@
-﻿/*! elementor - v3.20.0 - 10-04-2024 */
+/*! elementor - v3.20.0 - 10-04-2024 */
 /******/ (() => { // webpackBootstrap
 /******/ 	var __webpack_modules__ = ({
 
@@ -1400,7 +1400,7 @@ var PromptErrorMessage = function PromptErrorMessage(_ref) {
       },
       rate_limit_network: {
         text: /*#__PURE__*/_react.default.createElement(_ui.AlertTitle, null, (0, _i18n.__)('Whoa! Slow down there.', 'elementor')),
-        description: (0, _i18n.__)('We canвЂ™t process that many requests so fast. Try again in 15 minutes.', 'elementor')
+        description: (0, _i18n.__)('We can’t process that many requests so fast. Try again in 15 minutes.', 'elementor')
       },
       invalid_prompts: {
         text: /*#__PURE__*/_react.default.createElement(_ui.AlertTitle, null, (0, _i18n.__)('We were unable to generate that prompt.', 'elementor')),
@@ -3408,7 +3408,7 @@ var PromptPowerNotice = function PromptPowerNotice() {
     sx: {
       paddingInlineEnd: 1
     }
-  }, (0, _i18n.__)('YouвЂ™ve got the power.', 'elementor')), /*#__PURE__*/_react.default.createElement(_ui.Typography, {
+  }, (0, _i18n.__)('You’ve got the power.', 'elementor')), /*#__PURE__*/_react.default.createElement(_ui.Typography, {
     variant: "body2",
     display: "inline-block"
   }, (0, _i18n.__)('Craft your prompt to affect content, images and/or colors - whichever you decide.', 'elementor'))));
@@ -4153,7 +4153,7 @@ var ProWidgetsNotice = function ProWidgetsNotice() {
     sx: {
       paddingInlineEnd: 1
     }
-  }, (0, _i18n.__)('Upgrade your plan for best results.', 'elementor')), (0, _i18n.__)('You wonвЂ™t be able to use layouts with Elementor Pro widgets until you do.', 'elementor')), /*#__PURE__*/_react.default.createElement(_ui.Button, {
+  }, (0, _i18n.__)('Upgrade your plan for best results.', 'elementor')), (0, _i18n.__)('You won’t be able to use layouts with Elementor Pro widgets until you do.', 'elementor')), /*#__PURE__*/_react.default.createElement(_ui.Button, {
     variant: "outlined",
     size: "small",
     onClick: function onClick() {

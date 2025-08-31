@@ -1,4 +1,4 @@
-﻿
+
 // Node.prototype.contains
 (function() {
 

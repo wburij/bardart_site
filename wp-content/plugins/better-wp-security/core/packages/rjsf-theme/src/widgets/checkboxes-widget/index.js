@@ -1,4 +1,4 @@
-﻿/**
+/**
  * Internal dependencies
  */
 import { CheckboxGroupControl, Markup } from '@ithemes/security-components';

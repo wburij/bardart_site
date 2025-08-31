@@ -1,4 +1,4 @@
-﻿/**
+/**
  * External dependencies
  */
 import { groupBy, map } from 'lodash';

@@ -1,4 +1,4 @@
-﻿/**
+/**
  * External dependencies
  */
 import { keyBy, map, without, omit } from 'lodash';

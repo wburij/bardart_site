@@ -1,4 +1,4 @@
-﻿
+
 .not-visible-in-manager {
     display: none;
 }
@@ -100,7 +100,7 @@
 
 .license-message .alert-warning-icon {
     padding-left: 60px;
-    background-image: url("/bardart_site/wp-content/plugins/hide-login-page/libs/factory/templates/assets/img/warning.png");
+    background-image: url("/bardart_site//wp-content/plugins/hide-login-page/libs/factory/templates/assets/img/warning.png");
     background-position: 15px 11px;
     background-repeat: no-repeat;
 }
@@ -305,15 +305,15 @@
 
 #license-manager .license-param-domain {
     padding-left: 65px;
-    background: url('/bardart_site/wp-content/plugins/hide-login-page/libs/factory/templates/assets/img/free-license-chip.png') -3px 0px no-repeat;
+    background: url('/bardart_site//wp-content/plugins/hide-login-page/libs/factory/templates/assets/img/free-license-chip.png') -3px 0px no-repeat;
 }
 
 #license-manager .trial-details-block .license-param-domain {
-    background: url('/bardart_site/wp-content/plugins/hide-login-page/libs/factory/templates/assets/img/trial-license-chip.png') -3px 0px no-repeat;
+    background: url('/bardart_site//wp-content/plugins/hide-login-page/libs/factory/templates/assets/img/trial-license-chip.png') -3px 0px no-repeat;
 }
 
 #license-manager .paid-details-block .license-param-domain {
-    background: url('/bardart_site/wp-content/plugins/hide-login-page/libs/factory/templates/assets/img/paid-license-chip.png') -3px 0px no-repeat;
+    background: url('/bardart_site//wp-content/plugins/hide-login-page/libs/factory/templates/assets/img/paid-license-chip.png') -3px 0px no-repeat;
 }
 
 #license-manager .license-details-block h3 {
@@ -610,7 +610,7 @@
 }
 
 #create-account .onp-container {
-    background: #fff url("/bardart_site/wp-content/plugins/hide-login-page/libs/factory/templates/assets/img/create-account-bg.png") no-repeat 370px 230px !important;
+    background: #fff url("/bardart_site//wp-content/plugins/hide-login-page/libs/factory/templates/assets/img/create-account-bg.png") no-repeat 370px 230px !important;
 }
 
 #account-created .onp-step {
@@ -650,7 +650,7 @@
 }
 
 #finish .onp-container {
-    background: #fff url("/bardart_site/wp-content/plugins/hide-login-page/libs/factory/templates/assets/img/finish.png") no-repeat 0 -90px !important;
+    background: #fff url("/bardart_site//wp-content/plugins/hide-login-page/libs/factory/templates/assets/img/finish.png") no-repeat 0 -90px !important;
     padding-left: 260px;
     min-height: 250px;
 

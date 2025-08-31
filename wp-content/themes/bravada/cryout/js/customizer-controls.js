@@ -1,4 +1,4 @@
-﻿/**
+/**
  * JS for Custom Customizer Controls
  *
  * @package Cryout Framework
@@ -110,7 +110,7 @@ jQuery(document).ready(function(){
 			inputTooShort:function(){ return "Please enter more characters" },
 			loadingMore:  function(){ return "Loading more results..." },
 			noResults:    function(){ return "No results found" },
-			searching:	  function(){ return "SearchingвЂ¦" },
+			searching:	  function(){ return "Searching…" },
 			maximumSelected:function(){ return "You have selected too many items"}
 		}
 

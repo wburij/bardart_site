@@ -1,4 +1,4 @@
-﻿/**
+/**
  * WordPress dependencies
  */
 import { __ } from '@wordpress/i18n';
@@ -55,7 +55,7 @@ export default function CreateDashboard() {
 		return (
 			<div className="itsec-create-dashboard">
 				<Text as="p" text={ __(
-					'You donвЂ™t have permission to create new dashboards. Try switching to a dashboard or ask an administrator to invite you to one.',
+					'You don’t have permission to create new dashboards. Try switching to a dashboard or ask an administrator to invite you to one.',
 					'better-wp-security'
 				) } />
 			</div>

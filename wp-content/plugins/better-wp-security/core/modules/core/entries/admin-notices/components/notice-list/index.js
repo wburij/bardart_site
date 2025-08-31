@@ -1,4 +1,4 @@
-﻿/**
+/**
  * iThemes dependencies
  */
 import { List } from '@ithemes/ui';

@@ -1,4 +1,4 @@
-﻿/*! elementor - v3.20.0 - 10-04-2024 */
+/*! elementor - v3.20.0 - 10-04-2024 */
 (self["webpackChunkelementor"] = self["webpackChunkelementor"] || []).push([["kit-library"],{
 
 /***/ "../app/modules/kit-library/assets/js/components/badge.scss":
@@ -3790,7 +3790,7 @@ function Index(props) {
     className: "e-kit-library__index-layout-main"
   }, /*#__PURE__*/_react.default.createElement(_react.default.Fragment, null, isLoading && /*#__PURE__*/_react.default.createElement(_pageLoader.default, null), isError && /*#__PURE__*/_react.default.createElement(_errorScreen.default, {
     title: __('Something went wrong.', 'elementor'),
-    description: __('Nothing to worry about, use рџ”„ on the top corner to try again. If the problem continues, head over to the Help Center.', 'elementor'),
+    description: __('Nothing to worry about, use 🔄 on the top corner to try again. If the problem continues, head over to the Help Center.', 'elementor'),
     button: {
       text: __('Learn More', 'elementor'),
       url: 'https://go.elementor.com/app-kit-library-error/',

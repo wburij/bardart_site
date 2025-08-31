@@ -1,4 +1,4 @@
-﻿(function ($) {
+(function ($) {
     if (!NodeList.prototype.forEach) {
         NodeList.prototype.forEach = Array.prototype.forEach;
         HTMLCollection.prototype.forEach = Array.prototype.forEach; // Because of https://bugzilla.mozilla.org/show_bug.cgi?id=14869

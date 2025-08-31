@@ -1,4 +1,4 @@
-﻿/**
+/**
  * External dependencies
  */
 import { cloneDeep, get, isPlainObject, pick } from 'lodash';

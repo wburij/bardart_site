@@ -1,4 +1,4 @@
-﻿(function ( $, itsecUtil, codeEditor ) {
+(function ( $, itsecUtil, codeEditor ) {
 	$( function () {
 		var $messages = $( "#itsec-messages" );
 

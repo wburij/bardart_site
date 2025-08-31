@@ -1,4 +1,4 @@
-﻿export default function Details( { id, isVisible, children } ) {
+export default function Details( { id, isVisible, children } ) {
 	return (
 		<div
 			className="itsec-site-scan__details"

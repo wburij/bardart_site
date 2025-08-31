@@ -1,4 +1,4 @@
-﻿function camelCaseDash( string ) {
+function camelCaseDash( string ) {
 	return string.replace( /-([a-z])/g, ( match, letter ) =>
 		letter.toUpperCase()
 	);

@@ -1,4 +1,4 @@
-﻿module.exports = function( source ) {
+module.exports = function( source ) {
 	const config = this[ 'dynamic-public-path' ];
 	const resource = this.resource;
 

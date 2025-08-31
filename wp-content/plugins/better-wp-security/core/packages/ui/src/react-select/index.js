@@ -1,4 +1,4 @@
-﻿/**
+/**
  * External dependencies
  */
 import { lazy, Suspense } from 'react';

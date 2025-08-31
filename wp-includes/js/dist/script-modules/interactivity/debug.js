@@ -1,4 +1,4 @@
-﻿/******/ var __webpack_modules__ = ({
+/******/ var __webpack_modules__ = ({
 
 /***/ 380:
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
@@ -1268,8 +1268,8 @@ const universalUnlock = 'I acknowledge that using a private store means my plugi
  * content.
  *
  * These props typically consist of `state`, which is the reactive part of the
- * store вЂ• which means that any directive referencing a state property will be
- * re-rendered anytime it changes вЂ• and function properties like `actions` and
+ * store ― which means that any directive referencing a state property will be
+ * re-rendered anytime it changes ― and function properties like `actions` and
  * `callbacks`, mostly used for event handlers. These props can then be
  * referenced by any directive to make the HTML interactive.
  *

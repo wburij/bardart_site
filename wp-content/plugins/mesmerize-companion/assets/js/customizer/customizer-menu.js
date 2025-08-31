@@ -1,4 +1,4 @@
-﻿(function (root, CP_Customizer, $) {
+(function (root, CP_Customizer, $) {
 
     CP_Customizer.addModule(function (CP_Customizer) {
         _.extend(CP_Customizer, {

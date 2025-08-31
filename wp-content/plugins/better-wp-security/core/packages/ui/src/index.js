@@ -1,4 +1,4 @@
-﻿export { default as EntitySelectControl } from './entity-select-control';
+export { default as EntitySelectControl } from './entity-select-control';
 export { default as ErrorList } from './error-list';
 export { default as FlexSpacer } from './flex';
 export { default as Markup } from './markup';

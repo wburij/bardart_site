@@ -1,4 +1,4 @@
-﻿if ( ! window.elementorV2?.env ) {
+if ( ! window.elementorV2?.env ) {
 	throw new Error( 'The "@elementor/env" package was not loaded.' );
 }
 

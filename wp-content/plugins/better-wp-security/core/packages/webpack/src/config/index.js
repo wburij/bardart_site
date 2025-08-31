@@ -1,4 +1,4 @@
-﻿const LiveReloadPlugin = require( 'webpack-livereload-plugin' );
+const LiveReloadPlugin = require( 'webpack-livereload-plugin' );
 const MiniCssExtractPlugin = require( 'mini-css-extract-plugin' );
 const { WebpackManifestPlugin } = require( 'webpack-manifest-plugin' );
 const CopyWebpackPlugin = require( 'copy-webpack-plugin' );

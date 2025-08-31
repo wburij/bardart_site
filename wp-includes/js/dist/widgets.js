@@ -1,4 +1,4 @@
-﻿/******/ (() => { // webpackBootstrap
+/******/ (() => { // webpackBootstrap
 /******/ 	"use strict";
 /******/ 	// The require scope
 /******/ 	var __webpack_require__ = {};
@@ -1494,7 +1494,7 @@ const {
 
 const widget_group_settings = {
   title: (0,external_wp_i18n_namespaceObject.__)('Widget Group'),
-  description: (0,external_wp_i18n_namespaceObject.__)('Create a classic widget layout with a title thatвЂ™s styled by your theme for your widget areas.'),
+  description: (0,external_wp_i18n_namespaceObject.__)('Create a classic widget layout with a title that’s styled by your theme for your widget areas.'),
   icon: library_group,
   __experimentalLabel: ({
     name: label

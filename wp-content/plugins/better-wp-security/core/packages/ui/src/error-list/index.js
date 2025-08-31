@@ -1,4 +1,4 @@
-﻿/**
+/**
  * iThemes dependencies
  */
 import { MessageList } from '@ithemes/ui';

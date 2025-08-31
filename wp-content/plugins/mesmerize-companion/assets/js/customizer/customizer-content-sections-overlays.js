@@ -1,4 +1,4 @@
-﻿/* global top */
+/* global top */
 
 (function (root, CP_Customizer, $) {
 

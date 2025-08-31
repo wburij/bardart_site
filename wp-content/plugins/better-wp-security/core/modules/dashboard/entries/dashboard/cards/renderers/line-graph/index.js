@@ -1,4 +1,4 @@
-﻿/**
+/**
  * External dependencies
  */
 import { useTheme } from '@emotion/react';
@@ -71,12 +71,12 @@ function EmptyGraphContent( { card } ) {
 					<Text
 						align="center"
 						variant={ TextVariant.DARK }
-						text={ __( 'There are no recently blocked threats. This could mean there havenвЂ™t been any attacks recently.', 'better-wp-security' ) }
+						text={ __( 'There are no recently blocked threats. This could mean there haven’t been any attacks recently.', 'better-wp-security' ) }
 					/>
 					<Text
 						align="center"
 						variant={ TextVariant.DARK }
-						text={ __( 'Make sure to configure the firewall settings if you havenвЂ™t yet!', 'better-wp-security' ) }
+						text={ __( 'Make sure to configure the firewall settings if you haven’t yet!', 'better-wp-security' ) }
 					/>
 					<Button
 						href={ settingsUrl }

@@ -1,9 +1,9 @@
-﻿/*!
- * Р“Р»РѕР±Р°Р»СЊРЅС‹Р№ JS С„Р°Р№Р», РєРѕС‚РѕСЂС‹Р№ СЂРµРіРёСЃС‚СЂРёСЂСѓРµС‚ РіР»РѕР±Р°Р»СЊРЅС‹Рµ РїРµСЂРµРјРµРЅРЅС‹Рµ СЃ РѕР±С‰РёРјРё РјРµС‚РѕРґР°РјРё РґР»СЏ РІСЃРµС… РєРѕРјРїРѕРЅРµРЅС‚РѕРІ Clearfy
- * Рё СЃР°РјРѕРіРѕ Clearfy.
+/*!
+ * Глобальный JS файл, который регистрирует глобальные переменные с общими методами для всех компонентов Clearfy
+ * и самого Clearfy.
  *
- * $.wbcr_factory_templates_127.app - РјРµС‚РѕРґС‹ РґР»СЏ СЂР°Р±РѕС‚С‹ СЃ РїСЂРёР»РѕР¶РµРЅРёРµРј. РЎРєСЂС‹С‚СЊ, РїРѕРєР°Р·Р°С‚СЊ СѓРІРµРґРѕРјР»РµРЅРёСЏ.
- * $.wbcr_factory_templates_127.hooks - СЌС‚Рѕ РёРјРјРёС‚Р°С†РёСЏ С…СѓРєРѕРІ Рё С„РёР»СЊС‚СЂРѕРІ Р°РЅР°Р»РѕРіРёС‡РЅРѕ С‚РµРј, С‡С‚Рѕ РёСЃРїРѕР»СЊР·СѓСЋС‚СЃСЏ РІ Wordpress
+ * $.wbcr_factory_templates_127.app - методы для работы с приложением. Скрыть, показать уведомления.
+ * $.wbcr_factory_templates_127.hooks - это иммитация хуков и фильтров аналогично тем, что используются в Wordpress
  *
  * Copyright 2018, Webcraftic, http://webcraftic.com
  * 
@@ -17,17 +17,17 @@
 		$.wbcr_factory_templates_127 = {};
 	}
 
-	//todo: РџРµСЂРµРѕРїСЂРµРґР»РµРЅРёРµ РґР»СЏ СЃРѕРІРјРµСЃС‚РёРјРѕСЃС‚Рё СЃРѕ СЃС‚Р°СЂС‹РјРё РІРµСЂСЃРёСЏРјРё РїР»Р°РіРёРЅРѕРІ.
+	//todo: Переопредление для совместимости со старыми версиями плагинов.
 	$.wbcr_factory_templates_127.filters = $.wbcr_factory_templates_127.filters || $.wfactory_474.filters;
-	//todo: РџРµСЂРµРѕРїСЂРµРґР»РµРЅРёРµ РґР»СЏ СЃРѕРІРјРµСЃС‚РёРјРѕСЃС‚Рё СЃРѕ СЃС‚Р°СЂС‹РјРё РІРµСЂСЃРёСЏРјРё РїР»Р°РіРёРЅРѕРІ.
+	//todo: Переопредление для совместимости со старыми версиями плагинов.
 	$.wbcr_factory_templates_127.hooks = $.wbcr_factory_templates_127.hooks || $.wfactory_474.hooks;
 
 	$.wbcr_factory_templates_127.app = $.wbcr_factory_templates_127.app || {
 		/**
-		 * РЎРѕР·РґР°РµС‚ Рё РїРѕРєР°Р·С‹РІР°РµС‚ СѓРІРµРґРѕРјР»РµРЅРёРµ РІРЅСѓС‚СЂРё РёРЅС‚РµСЂС„РµР№СЃР° Clearfy
+		 * Создает и показывает уведомление внутри интерфейса Clearfy
 		 *
-		 * @param {string} message - СЃРѕРѕР±С‰РµРЅРёРµ РѕР± РѕС€РёР±РєРµ РёР»Рё РїСЂРµРґСѓРїСЂРµР¶РґРµРЅРёРµ
-		 * @param {string} type - С‚РёРї СѓРІРµРґРѕРјР»РµРЅРёСЏ (error, warning, success)
+		 * @param {string} message - сообщение об ошибке или предупреждение
+		 * @param {string} type - тип уведомления (error, warning, success)
 		 */
 		showNotice: function(message, type) {
 			var noticeContanier = $('<div></div>'),
@@ -66,11 +66,11 @@
 				noticeContanier.fadeIn();
 
 				/**
-				 * РҐСѓРє РІС‹РїРѕР»РЅСЏРµС‚ РїСЂРѕРёРІРѕР»СЊРЅСѓСЋ С„СѓРЅРєС†РёСЋ, РїРѕСЃР»Рµ С‚РѕРіРѕ РєР°Рє СѓРІРµРґРѕРјР»РµРЅРёРµ РѕС‚РѕР±СЂР°Р¶РµРЅРѕ
-				 * Р РµР°Р»РёР·Р°С†РёСЏ СЃРёСЃС‚РµРјС‹ С„РёР»СЊС‚СЂРѕРІ Рё С…СѓРєРѕРІ РІ С„Р°Р№Р»Рµ libs/clearfy/admin/assests/js/global.js
-				 * РџСЂРёРјРµСЂ СЂРµРіРёСЃС‚СЂР°С†РёРё С…СѓРєР° $.wfactory_474.hooks.add('wbcr/factory_templates_127/updated',
+				 * Хук выполняет проивольную функцию, после того как уведомление отображено
+				 * Реализация системы фильтров и хуков в файле libs/clearfy/admin/assests/js/global.js
+				 * Пример регистрации хука $.wfactory_474.hooks.add('wbcr/factory_templates_127/updated',
 				 * function(noticeId) {});
-				 * @param {string} noticeId - id СѓРІРµРґРѕРјР»РµРЅРёСЏ
+				 * @param {string} noticeId - id уведомления
 				 */
 				$.wfactory_474.hooks.run('wbcr/factory_templates_127/showed_notice', [noticeId]);
 				$.wfactory_474.hooks.run('wbcr/clearfy/showed_notice', [noticeId]);
@@ -80,9 +80,9 @@
 		},
 
 		/**
-		 * РЈРґР°Р»СЏРµС‚ СѓРІРµРґРѕРјР»РµРЅРёРµ РёР· РёРЅС‚РµСЂС„РµР№СЃР° Clearfy
+		 * Удаляет уведомление из интерфейса Clearfy
 		 *
-		 * @param {string} noticeId - id СѓРІРµРґРѕРјР»РµРЅРёСЏ
+		 * @param {string} noticeId - id уведомления
 		 */
 		hideNotice: function(noticeId) {
 			var el;
@@ -96,12 +96,12 @@
 				$(e).remove();
 
 				/**
-				 * РҐСѓРє РІС‹РїРѕР»РЅСЏРµС‚ РїСЂРѕРёРІРѕР»СЊРЅСѓСЋ С„СѓРЅРєС†РёСЋ, РїРѕСЃР»Рµ С‚РѕРіРѕ РєР°Рє СѓРІРµРґРѕРјР»РµРЅРёРµ СЃРєСЂС‹С‚Рѕ
-				 * Р РµР°Р»РёР·Р°С†РёСЏ СЃРёСЃС‚РµРјС‹ С„РёР»СЊС‚СЂРѕРІ Рё С…СѓРєРѕРІ РІ С„Р°Р№Р»Рµ libs/clearfy/admin/assests/js/global.js
-				 * РџСЂРёРјРµСЂ СЂРµРіРёСЃС‚СЂР°С†РёРё С…СѓРєР° $.wfactory_474.hooks.add('wbcr/factory_templates_127/updated',
+				 * Хук выполняет проивольную функцию, после того как уведомление скрыто
+				 * Реализация системы фильтров и хуков в файле libs/clearfy/admin/assests/js/global.js
+				 * Пример регистрации хука $.wfactory_474.hooks.add('wbcr/factory_templates_127/updated',
 				 * function(noticeId)
 				 * {});
-				 * @param {string} noticeId - id СѓРІРµРґРѕРјР»РµРЅРёСЏ
+				 * @param {string} noticeId - id уведомления
 				 */
 				$.wfactory_474.hooks.run('wbcr/factory_templates_127/hidded_notice', [noticeId]);
 				$.wfactory_474.hooks.run('wbcr/clearfy/hidded_notice', [noticeId]);
@@ -122,7 +122,7 @@
 	};
 
 	$.wfactory_474.hooks.add('core/components/pre_activate', function(button) {
-		// Р’С‹РїРѕР»РЅСЏРµРј РєРѕРґ РЅРёР¶Рµ, С‚РѕР»СЊРєРѕ РЅР° СЃС‚СЂР°РЅРёС†Р°С… РїР»Р°РіРёРЅР° СЃ РёРЅС‚РµСЂС„РµР№СЃРѕРј Clearfy
+		// Выполняем код ниже, только на страницах плагина с интерфейсом Clearfy
 		if( !$('#WBCR').length ) {
 			return false;
 		}
@@ -138,7 +138,7 @@
 	});
 
 	$.wfactory_474.hooks.add('core/components/deactivated', function(button, data, response) {
-		// Р’С‹РїРѕР»РЅСЏРµРј РєРѕРґ РЅРёР¶Рµ, С‚РѕР»СЊРєРѕ РЅР° СЃС‚СЂР°РЅРёС†Р°С… РїР»Р°РіРёРЅР° СЃ РёРЅС‚РµСЂС„РµР№СЃРѕРј Clearfy
+		// Выполняем код ниже, только на страницах плагина с интерфейсом Clearfy
 		if( !$('#WBCR').length ) {
 			return false;
 		}
@@ -157,7 +157,7 @@
 	});
 
 	$.wfactory_474.hooks.add('core/components/deleted', function(button) {
-		// Р’С‹РїРѕР»РЅСЏРµРј РєРѕРґ РЅРёР¶Рµ, С‚РѕР»СЊРєРѕ РЅР° СЃС‚СЂР°РЅРёС†Р°С… РїР»Р°РіРёРЅР° СЃ РёРЅС‚РµСЂС„РµР№СЃРѕРј Clearfy
+		// Выполняем код ниже, только на страницах плагина с интерфейсом Clearfy
 		if( !$('#WBCR').length ) {
 			return false;
 		}
@@ -176,7 +176,7 @@
 	});
 
 	$.wfactory_474.hooks.add('core/components/activation_error', function(plugin, button, response) {
-		// Р’С‹РїРѕР»РЅСЏРµРј РєРѕРґ РЅРёР¶Рµ, С‚РѕР»СЊРєРѕ РЅР° СЃС‚СЂР°РЅРёС†Р°С… РїР»Р°РіРёРЅР° СЃ РёРЅС‚РµСЂС„РµР№СЃРѕРј Clearfy
+		// Выполняем код ниже, только на страницах плагина с интерфейсом Clearfy
 		if( !($('#WBCR').length && $.wbcr_factory_templates_127) ) {
 			return false;
 		}
@@ -189,7 +189,7 @@
 	});
 
 	$.wfactory_474.hooks.add('core/components/update_error', function(button, data, response) {
-		// Р’С‹РїРѕР»РЅСЏРµРј РєРѕРґ РЅРёР¶Рµ, С‚РѕР»СЊРєРѕ РЅР° СЃС‚СЂР°РЅРёС†Р°С… РїР»Р°РіРёРЅР° СЃ РёРЅС‚РµСЂС„РµР№СЃРѕРј Clearfy
+		// Выполняем код ниже, только на страницах плагина с интерфейсом Clearfy
 		if( !($('#WBCR').length && $.wbcr_factory_templates_127) ) {
 			return false;
 		}
@@ -201,7 +201,7 @@
 	});
 
 	$.wfactory_474.hooks.add('core/components/activated', function(button, data, response) {
-		// Р’С‹РїРѕР»РЅСЏРµРј РєРѕРґ РЅРёР¶Рµ, С‚РѕР»СЊРєРѕ РЅР° СЃС‚СЂР°РЅРёС†Р°С… РїР»Р°РіРёРЅР° СЃ РёРЅС‚РµСЂС„РµР№СЃРѕРј Clearfy
+		// Выполняем код ниже, только на страницах плагина с интерфейсом Clearfy
 		if( !$('#WBCR').length ) {
 			return false;
 		}
@@ -210,7 +210,7 @@
 	});
 
 	$.wfactory_474.hooks.add('core/components/ajax_error', function(xhr, ajaxOptions, thrownError) {
-		// Р’С‹РїРѕР»РЅСЏРµРј РєРѕРґ РЅРёР¶Рµ, С‚РѕР»СЊРєРѕ РЅР° СЃС‚СЂР°РЅРёС†Р°С… РїР»Р°РіРёРЅР° СЃ РёРЅС‚РµСЂС„РµР№СЃРѕРј Clearfy
+		// Выполняем код ниже, только на страницах плагина с интерфейсом Clearfy
 		if( !($('#WBCR').length && $.wbcr_factory_templates_127) ) {
 			return false;
 		}

@@ -1,4 +1,4 @@
-﻿(function (root, CP_Customizer, $) {
+(function (root, CP_Customizer, $) {
 
     var countUpSelector = '[data-countup="true"]';
 

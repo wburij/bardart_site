@@ -1,4 +1,4 @@
-﻿/******/ (() => { // webpackBootstrap
+/******/ (() => { // webpackBootstrap
 /******/ 	"use strict";
 /******/ 	var __webpack_modules__ = ({
 
@@ -1296,17 +1296,17 @@ var SUPPORTED_LOCALE = {
     tr: {
         regexp: /\u0130|\u0049|\u0049\u0307/g,
         map: {
-            Д°: "\u0069",
+            İ: "\u0069",
             I: "\u0131",
-            IМ‡: "\u0069",
+            İ: "\u0069",
         },
     },
     az: {
         regexp: /\u0130/g,
         map: {
-            Д°: "\u0069",
+            İ: "\u0069",
             I: "\u0131",
-            IМ‡: "\u0069",
+            İ: "\u0069",
         },
     },
     lt: {
@@ -1314,10 +1314,10 @@ var SUPPORTED_LOCALE = {
         map: {
             I: "\u0069\u0307",
             J: "\u006A\u0307",
-            Д®: "\u012F\u0307",
-            ГЊ: "\u0069\u0307\u0300",
-            ГЌ: "\u0069\u0307\u0301",
-            ДЁ: "\u0069\u0307\u0303",
+            Į: "\u012F\u0307",
+            Ì: "\u0069\u0307\u0300",
+            Í: "\u0069\u0307\u0301",
+            Ĩ: "\u0069\u0307\u0303",
         },
     },
 };
@@ -1659,9 +1659,9 @@ function getNormalAttributeName(attribute) {
 /**
  * Returns the normal form of the style property name for HTML.
  *
- * - Converts property names to kebab-case, e.g. 'backgroundColor' в†’ 'background-color'
- * - Leaves custom attributes alone, e.g. '--myBackgroundColor' в†’ '--myBackgroundColor'
- * - Converts vendor-prefixed property names to -kebab-case, e.g. 'MozTransform' в†’ '-moz-transform'
+ * - Converts property names to kebab-case, e.g. 'backgroundColor' → 'background-color'
+ * - Leaves custom attributes alone, e.g. '--myBackgroundColor' → '--myBackgroundColor'
+ * - Converts vendor-prefixed property names to -kebab-case, e.g. 'MozTransform' → '-moz-transform'
  *
  * @param {string} property Property name.
  *

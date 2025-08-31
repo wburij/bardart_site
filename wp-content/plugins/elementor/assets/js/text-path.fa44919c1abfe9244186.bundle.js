@@ -1,4 +1,4 @@
-﻿/*! elementor - v3.20.0 - 10-04-2024 */
+/*! elementor - v3.20.0 - 10-04-2024 */
 (self["webpackChunkelementor"] = self["webpackChunkelementor"] || []).push([["text-path"],{
 
 /***/ "../modules/shapes/assets/js/frontend/handlers/text-path.js":
@@ -751,11 +751,11 @@ exports["default"] = TextPathHandler;
      * properties and JS variables, mitigating attacks that abuse the HTML/DOM spec rules.
      *
      * HTML/DOM spec rules that enable DOM Clobbering:
-     *   - Named Access on Window (В§7.3.3)
-     *   - DOM Tree Accessors (В§3.1.5)
-     *   - Form Element Parent-Child Relations (В§4.10.3)
-     *   - Iframe srcdoc / Nested WindowProxies (В§4.8.5)
-     *   - HTMLCollection (В§4.2.10.2)
+     *   - Named Access on Window (§7.3.3)
+     *   - DOM Tree Accessors (§3.1.5)
+     *   - Form Element Parent-Child Relations (§4.10.3)
+     *   - Iframe srcdoc / Nested WindowProxies (§4.8.5)
+     *   - HTMLCollection (§4.2.10.2)
      *
      * Namespace isolation is implemented by prefixing `id` and `name` attributes
      * with a constant string, i.e., `user-content-`

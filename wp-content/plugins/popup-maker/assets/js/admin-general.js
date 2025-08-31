@@ -1,4 +1,4 @@
-﻿/********************************************
+/********************************************
  * Copyright (c) 2020, Code Atlantic LLC
  ********************************************/
 
@@ -6894,7 +6894,7 @@ function pumChecked(val1, val2, print) {
                         return message;
                     },
                     loadingMore: function () {
-                        return 'Loading more resultsвЂ¦';
+                        return 'Loading more results…';
                     },
                     maximumSelected: function (args) {
                         var message = 'You can only select ' + args.maximum + ' item';
@@ -6909,7 +6909,7 @@ function pumChecked(val1, val2, print) {
                         return 'No results found';
                     },
                     searching: function () {
-                        return 'SearchingвЂ¦';
+                        return 'Searching…';
                     }
                 };
             });

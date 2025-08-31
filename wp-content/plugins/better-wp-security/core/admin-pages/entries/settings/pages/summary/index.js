@@ -1,4 +1,4 @@
-﻿/**
+/**
  * WordPress dependencies
  */
 import { useViewportMatch } from '@wordpress/compose';

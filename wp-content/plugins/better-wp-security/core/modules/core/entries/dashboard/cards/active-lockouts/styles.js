@@ -1,4 +1,4 @@
-﻿import styled from '@emotion/styled';
+import styled from '@emotion/styled';
 import { Surface } from '@ithemes/ui';
 
 export const StyledSurface = styled( Surface )`

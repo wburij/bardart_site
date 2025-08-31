@@ -1,4 +1,4 @@
-﻿(function ($) {
+(function ($) {
 
     window.addEventListener('resize', function () {
         var videoElement = document.querySelector('video#wp-custom-header-video') || document.querySelector('iframe#wp-custom-header-video');

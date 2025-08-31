@@ -1,4 +1,4 @@
-﻿/* global wpforms_divi_builder */
+/* global wpforms_divi_builder */
 
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';

@@ -1,4 +1,4 @@
-﻿/******/ (() => { // webpackBootstrap
+/******/ (() => { // webpackBootstrap
 /******/ 	var __webpack_modules__ = ({
 
 /***/ 1030:
@@ -166,7 +166,7 @@ function getDefaultOpts (simple) {
     },
     metadata: {
       defaultValue: false,
-      description: 'Enable support for document metadata (defined at the top of the document between `В«В«В«` and `В»В»В»` or between `---` and `---`).',
+      description: 'Enable support for document metadata (defined at the top of the document between `«««` and `»»»` or between `---` and `---`).',
       type: 'boolean'
     },
     splitAdjacentBlockquotes: {
@@ -686,7 +686,7 @@ showdown.helper.stdExtName = function (s) {
 function escapeCharactersCallback (wholeMatch, m1) {
   'use strict';
   var charCodeToEscape = m1.charCodeAt(0);
-  return 'ВЁE' + charCodeToEscape + 'E';
+  return '¨E' + charCodeToEscape + 'E';
 }
 
 /**
@@ -2459,15 +2459,15 @@ showdown.Converter = function (converterOptions) {
       }
     };
 
-    // This lets us use ВЁ trema as an escape char to avoid md5 hashes
+    // This lets us use ¨ trema as an escape char to avoid md5 hashes
     // The choice of character is arbitrary; anything that isn't
     // magic in Markdown will work.
-    text = text.replace(/ВЁ/g, 'ВЁT');
+    text = text.replace(/¨/g, '¨T');
 
-    // Replace $ with ВЁD
+    // Replace $ with ¨D
     // RegExp interprets $ as a special character
     // when it's in a replacement string
-    text = text.replace(/\$/g, 'ВЁD');
+    text = text.replace(/\$/g, '¨D');
 
     // Standardize line endings
     text = text.replace(/\r\n/g, '\n'); // DOS to Unix
@@ -2511,10 +2511,10 @@ showdown.Converter = function (converterOptions) {
     text = showdown.subParser('unescapeSpecialChars')(text, options, globals);
 
     // attacklab: Restore dollar signs
-    text = text.replace(/ВЁD/g, '$$');
+    text = text.replace(/¨D/g, '$$');
 
     // attacklab: Restore tremas
-    text = text.replace(/ВЁT/g, 'ВЁ');
+    text = text.replace(/¨T/g, '¨');
 
     // render a complete html document instead of a partial if the option is enabled
     text = showdown.subParser('completeHTMLDocument')(text, options, globals);
@@ -2544,7 +2544,7 @@ showdown.Converter = function (converterOptions) {
     // due to an edge case, we need to find this: > <
     // to prevent removing of non silent white spaces
     // ex: <em>this is</em> <strong>sparta</strong>
-    src = src.replace(/>[ \t]+</, '>ВЁNBSP;<');
+    src = src.replace(/>[ \t]+</, '>¨NBSP;<');
 
     if (!HTMLParser) {
       if (window && window.document) {
@@ -2837,7 +2837,7 @@ showdown.subParser('anchors', function (text, options, globals) {
     // to external links. Hash links (#) open in same page
     if (options.openLinksInNewWindow && !/^#/.test(url)) {
       // escaped _
-      result += ' rel="noopener noreferrer" target="ВЁE95Eblank"';
+      result += ' rel="noopener noreferrer" target="¨E95Eblank"';
     }
 
     result += '>' + linkText + '</a>';
@@ -2876,7 +2876,7 @@ showdown.subParser('anchors', function (text, options, globals) {
       var lnk = options.ghMentionsLink.replace(/\{u}/g, username),
           target = '';
       if (options.openLinksInNewWindow) {
-        target = ' rel="noopener noreferrer" target="ВЁE95Eblank"';
+        target = ' rel="noopener noreferrer" target="¨E95Eblank"';
       }
       return st + '<a href="' + lnk + '"' + target + '>' + mentions + '</a>';
     });
@@ -2910,7 +2910,7 @@ var simpleURLRegex  = /([*~_]+|\b)(((https?|ftp|dict):\/\/|www\.)[^'">\s]+?\.[^'
           append = trailingPunctuation;
         }
         if (options.openLinksInNewWindow) {
-          target = ' rel="noopener noreferrer" target="ВЁE95Eblank"';
+          target = ' rel="noopener noreferrer" target="¨E95Eblank"';
         }
         return lmc + '<a href="' + link + '"' + target + '>' + lnkTxt + '</a>' + append + tmc;
       };
@@ -3019,7 +3019,7 @@ showdown.subParser('blockQuotes', function (text, options, globals) {
     bq = bq.replace(/^[ \t]*>[ \t]?/gm, ''); // trim one level of quoting
 
     // attacklab: clean up hack
-    bq = bq.replace(/ВЁ0/g, '');
+    bq = bq.replace(/¨0/g, '');
 
     bq = bq.replace(/^[ \t]+$/gm, ''); // trim whitespace-only lines
     bq = showdown.subParser('githubCodeBlocks')(bq, options, globals);
@@ -3030,8 +3030,8 @@ showdown.subParser('blockQuotes', function (text, options, globals) {
     bq = bq.replace(/(\s*<pre>[^\r]+?<\/pre>)/gm, function (wholeMatch, m1) {
       var pre = m1;
       // attacklab: hack around Konqueror 3.5.4 bug:
-      pre = pre.replace(/^  /mg, 'ВЁ0');
-      pre = pre.replace(/ВЁ0/g, '');
+      pre = pre.replace(/^  /mg, '¨0');
+      pre = pre.replace(/¨0/g, '');
       return pre;
     });
 
@@ -3051,9 +3051,9 @@ showdown.subParser('codeBlocks', function (text, options, globals) {
   text = globals.converter._dispatch('codeBlocks.before', text, options, globals);
 
   // sentinel workarounds for lack of \A and \Z, safari\khtml bug
-  text += 'ВЁ0';
+  text += '¨0';
 
-  var pattern = /(?:\n\n|^)((?:(?:[ ]{4}|\t).*\n+)+)(\n*[ ]{0,3}[^ \t\n]|(?=ВЁ0))/g;
+  var pattern = /(?:\n\n|^)((?:(?:[ ]{4}|\t).*\n+)+)(\n*[ ]{0,3}[^ \t\n]|(?=¨0))/g;
   text = text.replace(pattern, function (wholeMatch, m1, m2) {
     var codeblock = m1,
         nextChar = m2,
@@ -3075,7 +3075,7 @@ showdown.subParser('codeBlocks', function (text, options, globals) {
   });
 
   // strip sentinel
-  text = text.replace(/ВЁ0/, '');
+  text = text.replace(/¨0/, '');
 
   text = globals.converter._dispatch('codeBlocks.after', text, options, globals);
   return text;
@@ -3204,10 +3204,10 @@ showdown.subParser('detab', function (text, options, globals) {
   text = text.replace(/\t(?=\t)/g, '    '); // g_tab_width
 
   // replace the nth with two sentinels
-  text = text.replace(/\t/g, 'ВЁAВЁB');
+  text = text.replace(/\t/g, '¨A¨B');
 
   // use the sentinel to anchor our regex so it doesn't explode
-  text = text.replace(/ВЁB(.+?)ВЁA/g, function (wholeMatch, m1) {
+  text = text.replace(/¨B(.+?)¨A/g, function (wholeMatch, m1) {
     var leadingText = m1,
         numSpaces = 4 - leadingText.length % 4;  // g_tab_width
 
@@ -3220,8 +3220,8 @@ showdown.subParser('detab', function (text, options, globals) {
   });
 
   // clean up sentinels
-  text = text.replace(/ВЁA/g, '    ');  // g_tab_width
-  text = text.replace(/ВЁB/g, '');
+  text = text.replace(/¨A/g, '    ');  // g_tab_width
+  text = text.replace(/¨B/g, '');
 
   text = globals.converter._dispatch('detab.after', text, options, globals);
   return text;
@@ -3232,7 +3232,7 @@ showdown.subParser('ellipsis', function (text, options, globals) {
 
   text = globals.converter._dispatch('ellipsis.before', text, options, globals);
 
-  text = text.replace(/\.\.\./g, 'вЂ¦');
+  text = text.replace(/\.\.\./g, '…');
 
   text = globals.converter._dispatch('ellipsis.after', text, options, globals);
 
@@ -3384,7 +3384,7 @@ showdown.subParser('githubCodeBlocks', function (text, options, globals) {
 
   text = globals.converter._dispatch('githubCodeBlocks.before', text, options, globals);
 
-  text += 'ВЁ0';
+  text += '¨0';
 
   text = text.replace(/(?:^|\n)(?: {0,3})(```+|~~~+)(?: *)([^\s`~]*)\n([\s\S]*?)\n(?: {0,3})\1/g, function (wholeMatch, delim, language, codeblock) {
     var end = (options.omitExtraWLInCodeBlocks) ? '' : '\n';
@@ -3402,11 +3402,11 @@ showdown.subParser('githubCodeBlocks', function (text, options, globals) {
     // Since GHCodeblocks can be false positives, we need to
     // store the primitive text and the parsed text in a global var,
     // and then return a token
-    return '\n\nВЁG' + (globals.ghCodeBlocks.push({text: wholeMatch, codeblock: codeblock}) - 1) + 'G\n\n';
+    return '\n\n¨G' + (globals.ghCodeBlocks.push({text: wholeMatch, codeblock: codeblock}) - 1) + 'G\n\n';
   });
 
   // attacklab: strip sentinel
-  text = text.replace(/ВЁ0/, '');
+  text = text.replace(/¨0/, '');
 
   return globals.converter._dispatch('githubCodeBlocks.after', text, options, globals);
 });
@@ -3415,7 +3415,7 @@ showdown.subParser('hashBlock', function (text, options, globals) {
   'use strict';
   text = globals.converter._dispatch('hashBlock.before', text, options, globals);
   text = text.replace(/(^\n+|\n+$)/g, '');
-  text = '\n\nВЁK' + (globals.gHtmlBlocks.push(text) - 1) + 'K\n\n';
+  text = '\n\n¨K' + (globals.gHtmlBlocks.push(text) - 1) + 'K\n\n';
   text = globals.converter._dispatch('hashBlock.after', text, options, globals);
   return text;
 });
@@ -3429,7 +3429,7 @@ showdown.subParser('hashCodeTags', function (text, options, globals) {
 
   var repFunc = function (wholeMatch, match, left, right) {
     var codeblock = left + showdown.subParser('encodeCode')(match, options, globals) + right;
-    return 'ВЁC' + (globals.gHtmlSpans.push(codeblock) - 1) + 'C';
+    return '¨C' + (globals.gHtmlSpans.push(codeblock) - 1) + 'C';
   };
 
   // Hash naked <code>
@@ -3452,8 +3452,8 @@ showdown.subParser('hashElement', function (text, options, globals) {
     // strip trailing blank lines
     blockText = blockText.replace(/\n+$/g, '');
 
-    // Replace the element text with a marker ("ВЁKxK" where x is its key)
-    blockText = '\n\nВЁK' + (globals.gHtmlBlocks.push(blockText) - 1) + 'K\n\n';
+    // Replace the element text with a marker ("¨KxK" where x is its key)
+    blockText = '\n\n¨K' + (globals.gHtmlBlocks.push(blockText) - 1) + 'K\n\n';
 
     return blockText;
   };
@@ -3506,7 +3506,7 @@ showdown.subParser('hashHTMLBlocks', function (text, options, globals) {
         if (left.search(/\bmarkdown\b/) !== -1) {
           txt = left + globals.converter.makeHtml(match) + right;
         }
-        return '\n\nВЁK' + (globals.gHtmlBlocks.push(txt) - 1) + 'K\n\n';
+        return '\n\n¨K' + (globals.gHtmlBlocks.push(txt) - 1) + 'K\n\n';
       };
 
   if (options.backslashEscapesHTMLTags) {
@@ -3547,7 +3547,7 @@ showdown.subParser('hashHTMLBlocks', function (text, options, globals) {
 
   // Special case for standalone HTML comments
   text = showdown.helper.replaceRecursiveRegExp(text, function (txt) {
-    return '\n\nВЁK' + (globals.gHtmlBlocks.push(txt) - 1) + 'K\n\n';
+    return '\n\n¨K' + (globals.gHtmlBlocks.push(txt) - 1) + 'K\n\n';
   }, '^ {0,3}<!--', '-->', 'gm');
 
   // PHP and ASP-style processor instructions (<?...?> and <%...%>)
@@ -3566,7 +3566,7 @@ showdown.subParser('hashHTMLSpans', function (text, options, globals) {
   text = globals.converter._dispatch('hashHTMLSpans.before', text, options, globals);
 
   function hashHTMLSpan (html) {
-    return 'ВЁC' + (globals.gHtmlSpans.push(html) - 1) + 'C';
+    return '¨C' + (globals.gHtmlSpans.push(html) - 1) + 'C';
   }
 
   // Hash Self Closing tags
@@ -3607,16 +3607,16 @@ showdown.subParser('unhashHTMLSpans', function (text, options, globals) {
         // limiter to prevent infinite loop (assume 10 as limit for recurse)
         limit = 0;
 
-    while (/ВЁC(\d+)C/.test(repText)) {
+    while (/¨C(\d+)C/.test(repText)) {
       var num = RegExp.$1;
-      repText = repText.replace('ВЁC' + num + 'C', globals.gHtmlSpans[num]);
+      repText = repText.replace('¨C' + num + 'C', globals.gHtmlSpans[num]);
       if (limit === 10) {
         console.error('maximum nesting of 10 spans reached!!!');
         break;
       }
       ++limit;
     }
-    text = text.replace('ВЁC' + i + 'C', repText);
+    text = text.replace('¨C' + i + 'C', repText);
   }
 
   text = globals.converter._dispatch('unhashHTMLSpans.after', text, options, globals);
@@ -3633,7 +3633,7 @@ showdown.subParser('hashPreCodeTags', function (text, options, globals) {
   var repFunc = function (wholeMatch, match, left, right) {
     // encode html entities
     var codeblock = left + showdown.subParser('encodeCode')(match, options, globals) + right;
-    return '\n\nВЁG' + (globals.ghCodeBlocks.push({text: wholeMatch, codeblock: codeblock}) - 1) + 'G\n\n';
+    return '\n\n¨G' + (globals.ghCodeBlocks.push({text: wholeMatch, codeblock: codeblock}) - 1) + 'G\n\n';
   };
 
   // Hash <pre><code>
@@ -3730,21 +3730,21 @@ showdown.subParser('headers', function (text, options, globals) {
     if (options.ghCompatibleHeaderId) {
       title = title
         .replace(/ /g, '-')
-        // replace previously escaped chars (&, ВЁ and $)
+        // replace previously escaped chars (&, ¨ and $)
         .replace(/&amp;/g, '')
-        .replace(/ВЁT/g, '')
-        .replace(/ВЁD/g, '')
+        .replace(/¨T/g, '')
+        .replace(/¨D/g, '')
         // replace rest of the chars (&~$ are repeated as they might have been escaped)
         // borrowed from github's redcarpet (some they should produce similar results)
-        .replace(/[&+$,\/:;=?@"#{}|^ВЁ~\[\]`\\*)(%.!'<>]/g, '')
+        .replace(/[&+$,\/:;=?@"#{}|^¨~\[\]`\\*)(%.!'<>]/g, '')
         .toLowerCase();
     } else if (options.rawHeaderId) {
       title = title
         .replace(/ /g, '-')
-        // replace previously escaped chars (&, ВЁ and $)
+        // replace previously escaped chars (&, ¨ and $)
         .replace(/&amp;/g, '&')
-        .replace(/ВЁT/g, 'ВЁ')
-        .replace(/ВЁD/g, '$')
+        .replace(/¨T/g, '¨')
+        .replace(/¨D/g, '$')
         // replace " and '
         .replace(/["']/g, '-')
         .toLowerCase();
@@ -4002,16 +4002,16 @@ showdown.subParser('lists', function (text, options, globals) {
     listStr = listStr.replace(/\n{2,}$/, '\n');
 
     // attacklab: add sentinel to emulate \z
-    listStr += 'ВЁ0';
+    listStr += '¨0';
 
-    var rgx = /(\n)?(^ {0,3})([*+-]|\d+[.])[ \t]+((\[(x|X| )?])?[ \t]*[^\r]+?(\n{1,2}))(?=\n*(ВЁ0| {0,3}([*+-]|\d+[.])[ \t]+))/gm,
-        isParagraphed = (/\n[ \t]*\n(?!ВЁ0)/.test(listStr));
+    var rgx = /(\n)?(^ {0,3})([*+-]|\d+[.])[ \t]+((\[(x|X| )?])?[ \t]*[^\r]+?(\n{1,2}))(?=\n*(¨0| {0,3}([*+-]|\d+[.])[ \t]+))/gm,
+        isParagraphed = (/\n[ \t]*\n(?!¨0)/.test(listStr));
 
     // Since version 1.5, nesting sublists requires 4 spaces (or 1 tab) indentation,
     // which is a syntax breaking change
     // activating this option reverts to old behavior
     if (options.disableForced4SpacesIndentedSublists) {
-      rgx = /(\n)?(^ {0,3})([*+-]|\d+[.])[ \t]+((\[(x|X| )?])?[ \t]*[^\r]+?(\n{1,2}))(?=\n*(ВЁ0|\2([*+-]|\d+[.])[ \t]+))/gm;
+      rgx = /(\n)?(^ {0,3})([*+-]|\d+[.])[ \t]+((\[(x|X| )?])?[ \t]*[^\r]+?(\n{1,2}))(?=\n*(¨0|\2([*+-]|\d+[.])[ \t]+))/gm;
     }
 
     listStr = listStr.replace(rgx, function (wholeMatch, m1, m2, m3, m4, taskbtn, checked) {
@@ -4039,10 +4039,10 @@ showdown.subParser('lists', function (text, options, globals) {
       // <ul><li><li><li>a</li></li></li></ul>
       // instead of:
       // <ul><li>- - a</li></ul>
-      // So, to prevent it, we will put a marker (ВЁA)in the beginning of the line
+      // So, to prevent it, we will put a marker (¨A)in the beginning of the line
       // Kind of hackish/monkey patching, but seems more effective than overcomplicating the list parser
       item = item.replace(/^([-*+]|\d\.)[ \t]+[\S\n ]*/g, function (wm2) {
-        return 'ВЁA' + wm2;
+        return '¨A' + wm2;
       });
 
       // m1 - Leading line or
@@ -4066,8 +4066,8 @@ showdown.subParser('lists', function (text, options, globals) {
         }
       }
 
-      // now we need to remove the marker (ВЁA)
-      item = item.replace('ВЁA', '');
+      // now we need to remove the marker (¨A)
+      item = item.replace('¨A', '');
       // we can finally wrap the line in list item tags
       item =  '<li' + bulletStyle + '>' + item + '</li>\n';
 
@@ -4075,7 +4075,7 @@ showdown.subParser('lists', function (text, options, globals) {
     });
 
     // attacklab: strip sentinel
-    listStr = listStr.replace(/ВЁ0/g, '');
+    listStr = listStr.replace(/¨0/g, '');
 
     globals.gListLevel--;
 
@@ -4142,17 +4142,17 @@ showdown.subParser('lists', function (text, options, globals) {
   text = globals.converter._dispatch('lists.before', text, options, globals);
   // add sentinel to hack around khtml/safari bug:
   // http://bugs.webkit.org/show_bug.cgi?id=11231
-  text += 'ВЁ0';
+  text += '¨0';
 
   if (globals.gListLevel) {
-    text = text.replace(/^(( {0,3}([*+-]|\d+[.])[ \t]+)[^\r]+?(ВЁ0|\n{2,}(?=\S)(?![ \t]*(?:[*+-]|\d+[.])[ \t]+)))/gm,
+    text = text.replace(/^(( {0,3}([*+-]|\d+[.])[ \t]+)[^\r]+?(¨0|\n{2,}(?=\S)(?![ \t]*(?:[*+-]|\d+[.])[ \t]+)))/gm,
       function (wholeMatch, list, m2) {
         var listType = (m2.search(/[*+-]/g) > -1) ? 'ul' : 'ol';
         return parseConsecutiveLists(list, listType, true);
       }
     );
   } else {
-    text = text.replace(/(\n\n|^\n?)(( {0,3}([*+-]|\d+[.])[ \t]+)[^\r]+?(ВЁ0|\n{2,}(?=\S)(?![ \t]*(?:[*+-]|\d+[.])[ \t]+)))/gm,
+    text = text.replace(/(\n\n|^\n?)(( {0,3}([*+-]|\d+[.])[ \t]+)[^\r]+?(¨0|\n{2,}(?=\S)(?![ \t]*(?:[*+-]|\d+[.])[ \t]+)))/gm,
       function (wholeMatch, m1, list, m3) {
         var listType = (m3.search(/[*+-]/g) > -1) ? 'ul' : 'ol';
         return parseConsecutiveLists(list, listType, false);
@@ -4161,7 +4161,7 @@ showdown.subParser('lists', function (text, options, globals) {
   }
 
   // strip sentinel
-  text = text.replace(/ВЁ0/, '');
+  text = text.replace(/¨0/, '');
   text = globals.converter._dispatch('lists.after', text, options, globals);
   return text;
 });
@@ -4197,9 +4197,9 @@ showdown.subParser('metadata', function (text, options, globals) {
     });
   }
 
-  text = text.replace(/^\s*В«В«В«+(\S*?)\n([\s\S]+?)\nВ»В»В»+\n/, function (wholematch, format, content) {
+  text = text.replace(/^\s*«««+(\S*?)\n([\s\S]+?)\n»»»+\n/, function (wholematch, format, content) {
     parseMetadataContents(content);
-    return 'ВЁM';
+    return '¨M';
   });
 
   text = text.replace(/^\s*---+(\S*?)\n([\s\S]+?)\n---+\n/, function (wholematch, format, content) {
@@ -4207,10 +4207,10 @@ showdown.subParser('metadata', function (text, options, globals) {
       globals.metadata.format = format;
     }
     parseMetadataContents(content);
-    return 'ВЁM';
+    return '¨M';
   });
 
-  text = text.replace(/ВЁM/g, '');
+  text = text.replace(/¨M/g, '');
 
   text = globals.converter._dispatch('metadata.after', text, options, globals);
   return text;
@@ -4225,10 +4225,10 @@ showdown.subParser('outdent', function (text, options, globals) {
 
   // attacklab: hack around Konqueror 3.5.4 bug:
   // "----------bug".replace(/^-/g,"") == "bug"
-  text = text.replace(/^(\t|[ ]{1,4})/gm, 'ВЁ0'); // attacklab: g_tab_width
+  text = text.replace(/^(\t|[ ]{1,4})/gm, '¨0'); // attacklab: g_tab_width
 
   // attacklab: clean up hack
-  text = text.replace(/ВЁ0/g, '');
+  text = text.replace(/¨0/g, '');
 
   text = globals.converter._dispatch('outdent.after', text, options, globals);
   return text;
@@ -4252,7 +4252,7 @@ showdown.subParser('paragraphs', function (text, options, globals) {
   for (var i = 0; i < end; i++) {
     var str = grafs[i];
     // if this is an HTML marker, copy it
-    if (str.search(/ВЁ(K|G)(\d+)\1/g) >= 0) {
+    if (str.search(/¨(K|G)(\d+)\1/g) >= 0) {
       grafsOut.push(str);
 
     // test for presence of characters to prevent empty lines being parsed
@@ -4273,7 +4273,7 @@ showdown.subParser('paragraphs', function (text, options, globals) {
         codeFlag = false;
     // if this is a marker for an html block...
     // use RegExp.test instead of string.search because of QML bug
-    while (/ВЁ(K|G)(\d+)\1/.test(grafsOutIt)) {
+    while (/¨(K|G)(\d+)\1/.test(grafsOutIt)) {
       var delim = RegExp.$1,
           num   = RegExp.$2;
 
@@ -4290,7 +4290,7 @@ showdown.subParser('paragraphs', function (text, options, globals) {
       }
       blockText = blockText.replace(/\$/g, '$$$$'); // Escape any dollar signs
 
-      grafsOutIt = grafsOutIt.replace(/(\n\n)?ВЁ(K|G)\d+\2(\n\n)?/, blockText);
+      grafsOutIt = grafsOutIt.replace(/(\n\n)?¨(K|G)\d+\2(\n\n)?/, blockText);
       // Check if grafsOutIt is a pre->code
       if (/^<pre\b[^>]*>\s*<code\b[^>]*>/.test(grafsOutIt)) {
         codeFlag = true;
@@ -4364,7 +4364,7 @@ showdown.subParser('spanGamut', function (text, options, globals) {
   if (options.simpleLineBreaks) {
     // GFM style hard breaks
     // only add line breaks if the text does not contain a block (special case for lists)
-    if (!/\n\nВЁK/.test(text)) {
+    if (!/\n\n¨K/.test(text)) {
       text = text.replace(/\n+/g, '<br />\n');
     }
   } else {
@@ -4403,11 +4403,11 @@ showdown.subParser('strikethrough', function (text, options, globals) {
 showdown.subParser('stripLinkDefinitions', function (text, options, globals) {
   'use strict';
 
-  var regex       = /^ {0,3}\[(.+)]:[ \t]*\n?[ \t]*<?([^>\s]+)>?(?: =([*\d]+[A-Za-z%]{0,4})x([*\d]+[A-Za-z%]{0,4}))?[ \t]*\n?[ \t]*(?:(\n*)["|'(](.+?)["|')][ \t]*)?(?:\n+|(?=ВЁ0))/gm,
-      base64Regex = /^ {0,3}\[(.+)]:[ \t]*\n?[ \t]*<?(data:.+?\/.+?;base64,[A-Za-z0-9+/=\n]+?)>?(?: =([*\d]+[A-Za-z%]{0,4})x([*\d]+[A-Za-z%]{0,4}))?[ \t]*\n?[ \t]*(?:(\n*)["|'(](.+?)["|')][ \t]*)?(?:\n\n|(?=ВЁ0)|(?=\n\[))/gm;
+  var regex       = /^ {0,3}\[(.+)]:[ \t]*\n?[ \t]*<?([^>\s]+)>?(?: =([*\d]+[A-Za-z%]{0,4})x([*\d]+[A-Za-z%]{0,4}))?[ \t]*\n?[ \t]*(?:(\n*)["|'(](.+?)["|')][ \t]*)?(?:\n+|(?=¨0))/gm,
+      base64Regex = /^ {0,3}\[(.+)]:[ \t]*\n?[ \t]*<?(data:.+?\/.+?;base64,[A-Za-z0-9+/=\n]+?)>?(?: =([*\d]+[A-Za-z%]{0,4})x([*\d]+[A-Za-z%]{0,4}))?[ \t]*\n?[ \t]*(?:(\n*)["|'(](.+?)["|')][ \t]*)?(?:\n\n|(?=¨0)|(?=\n\[))/gm;
 
   // attacklab: sentinel workarounds for lack of \A and \Z, safari\khtml bug
-  text += 'ВЁ0';
+  text += '¨0';
 
   var replaceFunc = function (wholeMatch, linkId, url, width, height, blankLines, title) {
     linkId = linkId.toLowerCase();
@@ -4444,7 +4444,7 @@ showdown.subParser('stripLinkDefinitions', function (text, options, globals) {
   text = text.replace(regex, replaceFunc);
 
   // attacklab: strip sentinel
-  text = text.replace(/ВЁ0/, '');
+  text = text.replace(/¨0/, '');
 
   return text;
 });
@@ -4456,9 +4456,9 @@ showdown.subParser('tables', function (text, options, globals) {
     return text;
   }
 
-  var tableRgx       = /^ {0,3}\|?.+\|.+\n {0,3}\|?[ \t]*:?[ \t]*(?:[-=]){2,}[ \t]*:?[ \t]*\|[ \t]*:?[ \t]*(?:[-=]){2,}[\s\S]+?(?:\n\n|ВЁ0)/gm,
-      //singeColTblRgx = /^ {0,3}\|.+\|\n {0,3}\|[ \t]*:?[ \t]*(?:[-=]){2,}[ \t]*:?[ \t]*\|[ \t]*\n(?: {0,3}\|.+\|\n)+(?:\n\n|ВЁ0)/gm;
-      singeColTblRgx = /^ {0,3}\|.+\|[ \t]*\n {0,3}\|[ \t]*:?[ \t]*(?:[-=]){2,}[ \t]*:?[ \t]*\|[ \t]*\n( {0,3}\|.+\|[ \t]*\n)*(?:\n|ВЁ0)/gm;
+  var tableRgx       = /^ {0,3}\|?.+\|.+\n {0,3}\|?[ \t]*:?[ \t]*(?:[-=]){2,}[ \t]*:?[ \t]*\|[ \t]*:?[ \t]*(?:[-=]){2,}[\s\S]+?(?:\n\n|¨0)/gm,
+      //singeColTblRgx = /^ {0,3}\|.+\|\n {0,3}\|[ \t]*:?[ \t]*(?:[-=]){2,}[ \t]*:?[ \t]*\|[ \t]*\n(?: {0,3}\|.+\|\n)+(?:\n\n|¨0)/gm;
+      singeColTblRgx = /^ {0,3}\|.+\|[ \t]*\n {0,3}\|[ \t]*:?[ \t]*(?:[-=]){2,}[ \t]*:?[ \t]*\|[ \t]*\n( {0,3}\|.+\|[ \t]*\n)*(?:\n|¨0)/gm;
 
   function parseStyles (sLine) {
     if (/^:[ \t]*--*$/.test(sLine)) {
@@ -4632,7 +4632,7 @@ showdown.subParser('unescapeSpecialChars', function (text, options, globals) {
   'use strict';
   text = globals.converter._dispatch('unescapeSpecialChars.before', text, options, globals);
 
-  text = text.replace(/ВЁE(\d+)E/g, function (wholeMatch, m1) {
+  text = text.replace(/¨E(\d+)E/g, function (wholeMatch, m1) {
     var charCodeToReplace = parseInt(m1);
     return String.fromCharCode(charCodeToReplace);
   });
@@ -5091,8 +5091,8 @@ showdown.subParser('makeMarkdown.txt', function (node) {
   // multiple spaces are collapsed
   txt = txt.replace(/ +/g, ' ');
 
-  // replace the custom ВЁNBSP; with a space
-  txt = txt.replace(/ВЁNBSP;/g, ' ');
+  // replace the custom ¨NBSP; with a space
+  txt = txt.replace(/¨NBSP;/g, ' ');
 
   // ", <, > and & should replace escaped html entities
   txt = showdown.helper.unescapeHTMLEntities(txt);
@@ -5266,465 +5266,465 @@ if (true) {
 /***/ ((module) => {
 
 var characterMap = {
-	"ГЂ": "A",
-	"ГЃ": "A",
-	"Г‚": "A",
-	"Гѓ": "A",
-	"Г„": "A",
-	"Г…": "A",
-	"бє¤": "A",
-	"бє®": "A",
-	"бєІ": "A",
-	"бєґ": "A",
-	"бє¶": "A",
-	"Г†": "AE",
-	"бє¦": "A",
-	"бє°": "A",
-	"И‚": "A",
-	"бєў": "A",
-	"бє ": "A",
-	"бєЁ": "A",
-	"бєЄ": "A",
-	"бє¬": "A",
-	"Г‡": "C",
-	"бё€": "C",
-	"Г€": "E",
-	"Г‰": "E",
-	"ГЉ": "E",
-	"Г‹": "E",
-	"бєѕ": "E",
-	"бё–": "E",
-	"б»Ђ": "E",
-	"бё”": "E",
-	"бёњ": "E",
-	"И†": "E",
-	"бєє": "E",
-	"бєј": "E",
-	"бєё": "E",
-	"б»‚": "E",
-	"б»„": "E",
-	"б»†": "E",
-	"ГЊ": "I",
-	"ГЌ": "I",
-	"ГЋ": "I",
-	"ГЏ": "I",
-	"бё®": "I",
-	"ИЉ": "I",
-	"б»€": "I",
-	"б»Љ": "I",
-	"Гђ": "D",
-	"Г‘": "N",
-	"Г’": "O",
-	"Г“": "O",
-	"Г”": "O",
-	"Г•": "O",
-	"Г–": "O",
-	"Г": "O",
-	"б»ђ": "O",
-	"б№Њ": "O",
-	"б№’": "O",
-	"ИЋ": "O",
-	"б»Ћ": "O",
-	"б»Њ": "O",
-	"б»”": "O",
-	"б»–": "O",
-	"б»": "O",
-	"б»њ": "O",
-	"б»ћ": "O",
-	"б» ": "O",
-	"б»љ": "O",
-	"б»ў": "O",
-	"Г™": "U",
-	"Гљ": "U",
-	"Г›": "U",
-	"Гњ": "U",
-	"б»¦": "U",
-	"б»¤": "U",
-	"б»¬": "U",
-	"б»®": "U",
-	"б»°": "U",
-	"Гќ": "Y",
-	"Г ": "a",
-	"ГЎ": "a",
-	"Гў": "a",
-	"ГЈ": "a",
-	"Г¤": "a",
-	"ГҐ": "a",
-	"бєҐ": "a",
-	"бєЇ": "a",
-	"бєі": "a",
-	"бєµ": "a",
-	"бє·": "a",
-	"Г¦": "ae",
-	"бє§": "a",
-	"бє±": "a",
-	"Иѓ": "a",
-	"бєЈ": "a",
-	"бєЎ": "a",
-	"бє©": "a",
-	"бє«": "a",
-	"бє­": "a",
-	"Г§": "c",
-	"бё‰": "c",
-	"ГЁ": "e",
-	"Г©": "e",
-	"ГЄ": "e",
-	"Г«": "e",
-	"бєї": "e",
-	"бё—": "e",
-	"б»Ѓ": "e",
-	"бё•": "e",
-	"бёќ": "e",
-	"И‡": "e",
-	"бє»": "e",
-	"бєЅ": "e",
-	"бє№": "e",
-	"б»ѓ": "e",
-	"б»…": "e",
-	"б»‡": "e",
-	"Г¬": "i",
-	"Г­": "i",
-	"Г®": "i",
-	"ГЇ": "i",
-	"бёЇ": "i",
-	"И‹": "i",
-	"б»‰": "i",
-	"б»‹": "i",
-	"Г°": "d",
-	"Г±": "n",
-	"ГІ": "o",
-	"Гі": "o",
-	"Гґ": "o",
-	"Гµ": "o",
-	"Г¶": "o",
-	"Гё": "o",
-	"б»‘": "o",
-	"б№Ќ": "o",
-	"б№“": "o",
-	"ИЏ": "o",
-	"б»Џ": "o",
-	"б»Ќ": "o",
-	"б»•": "o",
-	"б»—": "o",
-	"б»™": "o",
-	"б»ќ": "o",
-	"б»џ": "o",
-	"б»Ў": "o",
-	"б»›": "o",
-	"б»Ј": "o",
-	"Г№": "u",
-	"Гє": "u",
-	"Г»": "u",
-	"Гј": "u",
-	"б»§": "u",
-	"б»Ґ": "u",
-	"б»­": "u",
-	"б»Ї": "u",
-	"б»±": "u",
-	"ГЅ": "y",
-	"Гї": "y",
-	"ДЂ": "A",
-	"ДЃ": "a",
-	"Д‚": "A",
-	"Дѓ": "a",
-	"Д„": "A",
-	"Д…": "a",
-	"Д†": "C",
-	"Д‡": "c",
-	"Д€": "C",
-	"Д‰": "c",
-	"ДЉ": "C",
-	"Д‹": "c",
-	"ДЊ": "C",
-	"ДЌ": "c",
-	"CМ†": "C",
-	"cМ†": "c",
-	"ДЋ": "D",
-	"ДЏ": "d",
-	"Дђ": "D",
-	"Д‘": "d",
-	"Д’": "E",
-	"Д“": "e",
-	"Д”": "E",
-	"Д•": "e",
-	"Д–": "E",
-	"Д—": "e",
-	"Д": "E",
-	"Д™": "e",
-	"Дљ": "E",
-	"Д›": "e",
-	"Дњ": "G",
-	"Зґ": "G",
-	"Дќ": "g",
-	"Зµ": "g",
-	"Дћ": "G",
-	"Дџ": "g",
-	"Д ": "G",
-	"ДЎ": "g",
-	"Дў": "G",
-	"ДЈ": "g",
-	"Д¤": "H",
-	"ДҐ": "h",
-	"Д¦": "H",
-	"Д§": "h",
-	"бёЄ": "H",
-	"бё«": "h",
-	"ДЁ": "I",
-	"Д©": "i",
-	"ДЄ": "I",
-	"Д«": "i",
-	"Д¬": "I",
-	"Д­": "i",
-	"Д®": "I",
-	"ДЇ": "i",
-	"Д°": "I",
-	"Д±": "i",
-	"ДІ": "IJ",
-	"Ді": "ij",
-	"Дґ": "J",
-	"Дµ": "j",
-	"Д¶": "K",
-	"Д·": "k",
-	"бё°": "K",
-	"бё±": "k",
-	"KМ†": "K",
-	"kМ†": "k",
-	"Д№": "L",
-	"Дє": "l",
-	"Д»": "L",
-	"Дј": "l",
-	"ДЅ": "L",
-	"Дѕ": "l",
-	"Дї": "L",
-	"ЕЂ": "l",
-	"ЕЃ": "l",
-	"Е‚": "l",
-	"бёѕ": "M",
-	"бёї": "m",
-	"MМ†": "M",
-	"mМ†": "m",
-	"Еѓ": "N",
-	"Е„": "n",
-	"Е…": "N",
-	"Е†": "n",
-	"Е‡": "N",
-	"Е€": "n",
-	"Е‰": "n",
-	"NМ†": "N",
-	"nМ†": "n",
-	"ЕЊ": "O",
-	"ЕЌ": "o",
-	"ЕЋ": "O",
-	"ЕЏ": "o",
-	"Еђ": "O",
-	"Е‘": "o",
-	"Е’": "OE",
-	"Е“": "oe",
-	"PМ†": "P",
-	"pМ†": "p",
-	"Е”": "R",
-	"Е•": "r",
-	"Е–": "R",
-	"Е—": "r",
-	"Е": "R",
-	"Е™": "r",
-	"RМ†": "R",
-	"rМ†": "r",
-	"И’": "R",
-	"И“": "r",
-	"Ељ": "S",
-	"Е›": "s",
-	"Ењ": "S",
-	"Еќ": "s",
-	"Ећ": "S",
-	"И": "S",
-	"И™": "s",
-	"Еџ": "s",
-	"Е ": "S",
-	"ЕЎ": "s",
-	"Еў": "T",
-	"ЕЈ": "t",
-	"И›": "t",
-	"Иљ": "T",
-	"Е¤": "T",
-	"ЕҐ": "t",
-	"Е¦": "T",
-	"Е§": "t",
-	"TМ†": "T",
-	"tМ†": "t",
-	"ЕЁ": "U",
-	"Е©": "u",
-	"ЕЄ": "U",
-	"Е«": "u",
-	"Е¬": "U",
-	"Е­": "u",
-	"Е®": "U",
-	"ЕЇ": "u",
-	"Е°": "U",
-	"Е±": "u",
-	"ЕІ": "U",
-	"Еі": "u",
-	"И–": "U",
-	"И—": "u",
-	"VМ†": "V",
-	"vМ†": "v",
-	"Еґ": "W",
-	"Еµ": "w",
-	"бє‚": "W",
-	"бєѓ": "w",
-	"XМ†": "X",
-	"xМ†": "x",
-	"Е¶": "Y",
-	"Е·": "y",
-	"Её": "Y",
-	"YМ†": "Y",
-	"yМ†": "y",
-	"Е№": "Z",
-	"Еє": "z",
-	"Е»": "Z",
-	"Еј": "z",
-	"ЕЅ": "Z",
-	"Еѕ": "z",
-	"Еї": "s",
-	"Ж’": "f",
-	"Ж ": "O",
-	"ЖЎ": "o",
-	"ЖЇ": "U",
-	"Ж°": "u",
-	"ЗЌ": "A",
-	"ЗЋ": "a",
-	"ЗЏ": "I",
-	"Зђ": "i",
-	"З‘": "O",
-	"З’": "o",
-	"З“": "U",
-	"З”": "u",
-	"З•": "U",
-	"З–": "u",
-	"З—": "U",
-	"З": "u",
-	"З™": "U",
-	"Зљ": "u",
-	"З›": "U",
-	"Зњ": "u",
-	"б»Ё": "U",
-	"б»©": "u",
-	"б№ё": "U",
-	"б№№": "u",
-	"Зє": "A",
-	"З»": "a",
-	"Зј": "AE",
-	"ЗЅ": "ae",
-	"Зѕ": "O",
-	"Зї": "o",
-	"Гћ": "TH",
-	"Гѕ": "th",
-	"б№”": "P",
-	"б№•": "p",
-	"б№¤": "S",
-	"б№Ґ": "s",
-	"XМЃ": "X",
-	"xМЃ": "x",
-	"Рѓ": "Р“",
-	"С“": "Рі",
-	"РЊ": "Рљ",
-	"Сњ": "Рє",
-	"AМ‹": "A",
-	"aМ‹": "a",
-	"EМ‹": "E",
-	"eМ‹": "e",
-	"IМ‹": "I",
-	"iМ‹": "i",
-	"Зё": "N",
-	"З№": "n",
-	"б»’": "O",
-	"б»“": "o",
-	"б№ђ": "O",
-	"б№‘": "o",
-	"б»Є": "U",
-	"б»«": "u",
-	"бєЂ": "W",
-	"бєЃ": "w",
-	"б»І": "Y",
-	"б»і": "y",
-	"ИЂ": "A",
-	"ИЃ": "a",
-	"И„": "E",
-	"И…": "e",
-	"И€": "I",
-	"И‰": "i",
-	"ИЊ": "O",
-	"ИЌ": "o",
-	"Иђ": "R",
-	"И‘": "r",
-	"И”": "U",
-	"И•": "u",
-	"BМЊ": "B",
-	"bМЊ": "b",
-	"ДЊМЈ": "C",
-	"ДЌМЈ": "c",
-	"ГЉМЊ": "E",
-	"ГЄМЊ": "e",
-	"FМЊ": "F",
-	"fМЊ": "f",
-	"З¦": "G",
-	"З§": "g",
-	"Ић": "H",
-	"Иџ": "h",
-	"JМЊ": "J",
-	"З°": "j",
-	"ЗЁ": "K",
-	"З©": "k",
-	"MМЊ": "M",
-	"mМЊ": "m",
-	"PМЊ": "P",
-	"pМЊ": "p",
-	"QМЊ": "Q",
-	"qМЊ": "q",
-	"ЕМ©": "R",
-	"Е™М©": "r",
-	"б№¦": "S",
-	"б№§": "s",
-	"VМЊ": "V",
-	"vМЊ": "v",
-	"WМЊ": "W",
-	"wМЊ": "w",
-	"XМЊ": "X",
-	"xМЊ": "x",
-	"YМЊ": "Y",
-	"yМЊ": "y",
-	"AМ§": "A",
-	"aМ§": "a",
-	"BМ§": "B",
-	"bМ§": "b",
-	"бёђ": "D",
-	"бё‘": "d",
-	"ИЁ": "E",
-	"И©": "e",
-	"ЖђМ§": "E",
-	"Й›М§": "e",
-	"бёЁ": "H",
-	"бё©": "h",
-	"IМ§": "I",
-	"iМ§": "i",
-	"Ж—М§": "I",
-	"ЙЁМ§": "i",
-	"MМ§": "M",
-	"mМ§": "m",
-	"OМ§": "O",
-	"oМ§": "o",
-	"QМ§": "Q",
-	"qМ§": "q",
-	"UМ§": "U",
-	"uМ§": "u",
-	"XМ§": "X",
-	"xМ§": "x",
-	"ZМ§": "Z",
-	"zМ§": "z",
-	"Р№":"Рё",
-	"Р™":"Р",
-	"С‘":"Рµ",
-	"РЃ":"Р•",
+	"À": "A",
+	"Á": "A",
+	"Â": "A",
+	"Ã": "A",
+	"Ä": "A",
+	"Å": "A",
+	"Ấ": "A",
+	"Ắ": "A",
+	"Ẳ": "A",
+	"Ẵ": "A",
+	"Ặ": "A",
+	"Æ": "AE",
+	"Ầ": "A",
+	"Ằ": "A",
+	"Ȃ": "A",
+	"Ả": "A",
+	"Ạ": "A",
+	"Ẩ": "A",
+	"Ẫ": "A",
+	"Ậ": "A",
+	"Ç": "C",
+	"Ḉ": "C",
+	"È": "E",
+	"É": "E",
+	"Ê": "E",
+	"Ë": "E",
+	"Ế": "E",
+	"Ḗ": "E",
+	"Ề": "E",
+	"Ḕ": "E",
+	"Ḝ": "E",
+	"Ȇ": "E",
+	"Ẻ": "E",
+	"Ẽ": "E",
+	"Ẹ": "E",
+	"Ể": "E",
+	"Ễ": "E",
+	"Ệ": "E",
+	"Ì": "I",
+	"Í": "I",
+	"Î": "I",
+	"Ï": "I",
+	"Ḯ": "I",
+	"Ȋ": "I",
+	"Ỉ": "I",
+	"Ị": "I",
+	"Ð": "D",
+	"Ñ": "N",
+	"Ò": "O",
+	"Ó": "O",
+	"Ô": "O",
+	"Õ": "O",
+	"Ö": "O",
+	"Ø": "O",
+	"Ố": "O",
+	"Ṍ": "O",
+	"Ṓ": "O",
+	"Ȏ": "O",
+	"Ỏ": "O",
+	"Ọ": "O",
+	"Ổ": "O",
+	"Ỗ": "O",
+	"Ộ": "O",
+	"Ờ": "O",
+	"Ở": "O",
+	"Ỡ": "O",
+	"Ớ": "O",
+	"Ợ": "O",
+	"Ù": "U",
+	"Ú": "U",
+	"Û": "U",
+	"Ü": "U",
+	"Ủ": "U",
+	"Ụ": "U",
+	"Ử": "U",
+	"Ữ": "U",
+	"Ự": "U",
+	"Ý": "Y",
+	"à": "a",
+	"á": "a",
+	"â": "a",
+	"ã": "a",
+	"ä": "a",
+	"å": "a",
+	"ấ": "a",
+	"ắ": "a",
+	"ẳ": "a",
+	"ẵ": "a",
+	"ặ": "a",
+	"æ": "ae",
+	"ầ": "a",
+	"ằ": "a",
+	"ȃ": "a",
+	"ả": "a",
+	"ạ": "a",
+	"ẩ": "a",
+	"ẫ": "a",
+	"ậ": "a",
+	"ç": "c",
+	"ḉ": "c",
+	"è": "e",
+	"é": "e",
+	"ê": "e",
+	"ë": "e",
+	"ế": "e",
+	"ḗ": "e",
+	"ề": "e",
+	"ḕ": "e",
+	"ḝ": "e",
+	"ȇ": "e",
+	"ẻ": "e",
+	"ẽ": "e",
+	"ẹ": "e",
+	"ể": "e",
+	"ễ": "e",
+	"ệ": "e",
+	"ì": "i",
+	"í": "i",
+	"î": "i",
+	"ï": "i",
+	"ḯ": "i",
+	"ȋ": "i",
+	"ỉ": "i",
+	"ị": "i",
+	"ð": "d",
+	"ñ": "n",
+	"ò": "o",
+	"ó": "o",
+	"ô": "o",
+	"õ": "o",
+	"ö": "o",
+	"ø": "o",
+	"ố": "o",
+	"ṍ": "o",
+	"ṓ": "o",
+	"ȏ": "o",
+	"ỏ": "o",
+	"ọ": "o",
+	"ổ": "o",
+	"ỗ": "o",
+	"ộ": "o",
+	"ờ": "o",
+	"ở": "o",
+	"ỡ": "o",
+	"ớ": "o",
+	"ợ": "o",
+	"ù": "u",
+	"ú": "u",
+	"û": "u",
+	"ü": "u",
+	"ủ": "u",
+	"ụ": "u",
+	"ử": "u",
+	"ữ": "u",
+	"ự": "u",
+	"ý": "y",
+	"ÿ": "y",
+	"Ā": "A",
+	"ā": "a",
+	"Ă": "A",
+	"ă": "a",
+	"Ą": "A",
+	"ą": "a",
+	"Ć": "C",
+	"ć": "c",
+	"Ĉ": "C",
+	"ĉ": "c",
+	"Ċ": "C",
+	"ċ": "c",
+	"Č": "C",
+	"č": "c",
+	"C̆": "C",
+	"c̆": "c",
+	"Ď": "D",
+	"ď": "d",
+	"Đ": "D",
+	"đ": "d",
+	"Ē": "E",
+	"ē": "e",
+	"Ĕ": "E",
+	"ĕ": "e",
+	"Ė": "E",
+	"ė": "e",
+	"Ę": "E",
+	"ę": "e",
+	"Ě": "E",
+	"ě": "e",
+	"Ĝ": "G",
+	"Ǵ": "G",
+	"ĝ": "g",
+	"ǵ": "g",
+	"Ğ": "G",
+	"ğ": "g",
+	"Ġ": "G",
+	"ġ": "g",
+	"Ģ": "G",
+	"ģ": "g",
+	"Ĥ": "H",
+	"ĥ": "h",
+	"Ħ": "H",
+	"ħ": "h",
+	"Ḫ": "H",
+	"ḫ": "h",
+	"Ĩ": "I",
+	"ĩ": "i",
+	"Ī": "I",
+	"ī": "i",
+	"Ĭ": "I",
+	"ĭ": "i",
+	"Į": "I",
+	"į": "i",
+	"İ": "I",
+	"ı": "i",
+	"Ĳ": "IJ",
+	"ĳ": "ij",
+	"Ĵ": "J",
+	"ĵ": "j",
+	"Ķ": "K",
+	"ķ": "k",
+	"Ḱ": "K",
+	"ḱ": "k",
+	"K̆": "K",
+	"k̆": "k",
+	"Ĺ": "L",
+	"ĺ": "l",
+	"Ļ": "L",
+	"ļ": "l",
+	"Ľ": "L",
+	"ľ": "l",
+	"Ŀ": "L",
+	"ŀ": "l",
+	"Ł": "l",
+	"ł": "l",
+	"Ḿ": "M",
+	"ḿ": "m",
+	"M̆": "M",
+	"m̆": "m",
+	"Ń": "N",
+	"ń": "n",
+	"Ņ": "N",
+	"ņ": "n",
+	"Ň": "N",
+	"ň": "n",
+	"ŉ": "n",
+	"N̆": "N",
+	"n̆": "n",
+	"Ō": "O",
+	"ō": "o",
+	"Ŏ": "O",
+	"ŏ": "o",
+	"Ő": "O",
+	"ő": "o",
+	"Œ": "OE",
+	"œ": "oe",
+	"P̆": "P",
+	"p̆": "p",
+	"Ŕ": "R",
+	"ŕ": "r",
+	"Ŗ": "R",
+	"ŗ": "r",
+	"Ř": "R",
+	"ř": "r",
+	"R̆": "R",
+	"r̆": "r",
+	"Ȓ": "R",
+	"ȓ": "r",
+	"Ś": "S",
+	"ś": "s",
+	"Ŝ": "S",
+	"ŝ": "s",
+	"Ş": "S",
+	"Ș": "S",
+	"ș": "s",
+	"ş": "s",
+	"Š": "S",
+	"š": "s",
+	"Ţ": "T",
+	"ţ": "t",
+	"ț": "t",
+	"Ț": "T",
+	"Ť": "T",
+	"ť": "t",
+	"Ŧ": "T",
+	"ŧ": "t",
+	"T̆": "T",
+	"t̆": "t",
+	"Ũ": "U",
+	"ũ": "u",
+	"Ū": "U",
+	"ū": "u",
+	"Ŭ": "U",
+	"ŭ": "u",
+	"Ů": "U",
+	"ů": "u",
+	"Ű": "U",
+	"ű": "u",
+	"Ų": "U",
+	"ų": "u",
+	"Ȗ": "U",
+	"ȗ": "u",
+	"V̆": "V",
+	"v̆": "v",
+	"Ŵ": "W",
+	"ŵ": "w",
+	"Ẃ": "W",
+	"ẃ": "w",
+	"X̆": "X",
+	"x̆": "x",
+	"Ŷ": "Y",
+	"ŷ": "y",
+	"Ÿ": "Y",
+	"Y̆": "Y",
+	"y̆": "y",
+	"Ź": "Z",
+	"ź": "z",
+	"Ż": "Z",
+	"ż": "z",
+	"Ž": "Z",
+	"ž": "z",
+	"ſ": "s",
+	"ƒ": "f",
+	"Ơ": "O",
+	"ơ": "o",
+	"Ư": "U",
+	"ư": "u",
+	"Ǎ": "A",
+	"ǎ": "a",
+	"Ǐ": "I",
+	"ǐ": "i",
+	"Ǒ": "O",
+	"ǒ": "o",
+	"Ǔ": "U",
+	"ǔ": "u",
+	"Ǖ": "U",
+	"ǖ": "u",
+	"Ǘ": "U",
+	"ǘ": "u",
+	"Ǚ": "U",
+	"ǚ": "u",
+	"Ǜ": "U",
+	"ǜ": "u",
+	"Ứ": "U",
+	"ứ": "u",
+	"Ṹ": "U",
+	"ṹ": "u",
+	"Ǻ": "A",
+	"ǻ": "a",
+	"Ǽ": "AE",
+	"ǽ": "ae",
+	"Ǿ": "O",
+	"ǿ": "o",
+	"Þ": "TH",
+	"þ": "th",
+	"Ṕ": "P",
+	"ṕ": "p",
+	"Ṥ": "S",
+	"ṥ": "s",
+	"X́": "X",
+	"x́": "x",
+	"Ѓ": "Г",
+	"ѓ": "г",
+	"Ќ": "К",
+	"ќ": "к",
+	"A̋": "A",
+	"a̋": "a",
+	"E̋": "E",
+	"e̋": "e",
+	"I̋": "I",
+	"i̋": "i",
+	"Ǹ": "N",
+	"ǹ": "n",
+	"Ồ": "O",
+	"ồ": "o",
+	"Ṑ": "O",
+	"ṑ": "o",
+	"Ừ": "U",
+	"ừ": "u",
+	"Ẁ": "W",
+	"ẁ": "w",
+	"Ỳ": "Y",
+	"ỳ": "y",
+	"Ȁ": "A",
+	"ȁ": "a",
+	"Ȅ": "E",
+	"ȅ": "e",
+	"Ȉ": "I",
+	"ȉ": "i",
+	"Ȍ": "O",
+	"ȍ": "o",
+	"Ȑ": "R",
+	"ȑ": "r",
+	"Ȕ": "U",
+	"ȕ": "u",
+	"B̌": "B",
+	"b̌": "b",
+	"Č̣": "C",
+	"č̣": "c",
+	"Ê̌": "E",
+	"ê̌": "e",
+	"F̌": "F",
+	"f̌": "f",
+	"Ǧ": "G",
+	"ǧ": "g",
+	"Ȟ": "H",
+	"ȟ": "h",
+	"J̌": "J",
+	"ǰ": "j",
+	"Ǩ": "K",
+	"ǩ": "k",
+	"M̌": "M",
+	"m̌": "m",
+	"P̌": "P",
+	"p̌": "p",
+	"Q̌": "Q",
+	"q̌": "q",
+	"Ř̩": "R",
+	"ř̩": "r",
+	"Ṧ": "S",
+	"ṧ": "s",
+	"V̌": "V",
+	"v̌": "v",
+	"W̌": "W",
+	"w̌": "w",
+	"X̌": "X",
+	"x̌": "x",
+	"Y̌": "Y",
+	"y̌": "y",
+	"A̧": "A",
+	"a̧": "a",
+	"B̧": "B",
+	"b̧": "b",
+	"Ḑ": "D",
+	"ḑ": "d",
+	"Ȩ": "E",
+	"ȩ": "e",
+	"Ɛ̧": "E",
+	"ɛ̧": "e",
+	"Ḩ": "H",
+	"ḩ": "h",
+	"I̧": "I",
+	"i̧": "i",
+	"Ɨ̧": "I",
+	"ɨ̧": "i",
+	"M̧": "M",
+	"m̧": "m",
+	"O̧": "O",
+	"o̧": "o",
+	"Q̧": "Q",
+	"q̧": "q",
+	"U̧": "U",
+	"u̧": "u",
+	"X̧": "X",
+	"x̧": "x",
+	"Z̧": "Z",
+	"z̧": "z",
+	"й":"и",
+	"Й":"И",
+	"ё":"е",
+	"Ё":"Е",
 };
 
 var chars = Object.keys(characterMap).join('|');
@@ -6390,17 +6390,17 @@ var SUPPORTED_LOCALE = {
     tr: {
         regexp: /\u0130|\u0049|\u0049\u0307/g,
         map: {
-            Д°: "\u0069",
+            İ: "\u0069",
             I: "\u0131",
-            IМ‡: "\u0069",
+            İ: "\u0069",
         },
     },
     az: {
         regexp: /\u0130/g,
         map: {
-            Д°: "\u0069",
+            İ: "\u0069",
             I: "\u0131",
-            IМ‡: "\u0069",
+            İ: "\u0069",
         },
     },
     lt: {
@@ -6408,10 +6408,10 @@ var SUPPORTED_LOCALE = {
         map: {
             I: "\u0069\u0307",
             J: "\u006A\u0307",
-            Д®: "\u012F\u0307",
-            ГЊ: "\u0069\u0307\u0300",
-            ГЌ: "\u0069\u0307\u0301",
-            ДЁ: "\u0069\u0307\u0303",
+            Į: "\u012F\u0307",
+            Ì: "\u0069\u0307\u0300",
+            Í: "\u0069\u0307\u0301",
+            Ĩ: "\u0069\u0307\u0303",
         },
     },
 };
@@ -7362,7 +7362,7 @@ function isTemplatePart(blockOrType) {
 /**
  * Returns an array with the child blocks of a given block.
  *
- * @param {string} blockName Name of block (example: вЂњlatest-postsвЂќ).
+ * @param {string} blockName Name of block (example: “latest-posts”).
  *
  * @return {Array} Array of child block names.
  */
@@ -7373,7 +7373,7 @@ const getChildBlockNames = blockName => {
 /**
  * Returns a boolean indicating if a block has child blocks or not.
  *
- * @param {string} blockName Name of block (example: вЂњlatest-postsвЂќ).
+ * @param {string} blockName Name of block (example: “latest-posts”).
  *
  * @return {boolean} True if a block contains child blocks and false otherwise.
  */
@@ -7399,7 +7399,7 @@ const hasChildBlocksWithInserterSupport = blockName => {
  * For more information on connecting the styles with CSS
  * [the official documentation](https://developer.wordpress.org/block-editor/reference-guides/block-api/block-styles/#styles).
  *
- * @param {string|Array} blockNames     Name of blocks e.g. вЂњcore/latest-postsвЂќ or `["core/group", "core/columns"]`.
+ * @param {string|Array} blockNames     Name of blocks e.g. “core/latest-posts” or `["core/group", "core/columns"]`.
  * @param {Object}       styleVariation Object containing `name` which is the class name applied to the block and `label` which identifies the variation to the user.
  *
  * @example
@@ -7432,7 +7432,7 @@ const registerBlockStyle = (blockNames, styleVariation) => {
 /**
  * Unregisters a block style for the given block.
  *
- * @param {string} blockName          Name of block (example: вЂњcore/latest-postsвЂќ).
+ * @param {string} blockName          Name of block (example: “core/latest-posts”).
  * @param {string} styleVariationName Name of class applied to the block.
  *
  * @example
@@ -7464,7 +7464,7 @@ const unregisterBlockStyle = (blockName, styleVariationName) => {
  *
  * @ignore
  *
- * @param {string}                blockName Name of block (example: вЂњcore/columnsвЂќ).
+ * @param {string}                blockName Name of block (example: “core/columns”).
  * @param {WPBlockVariationScope} [scope]   Block variation scope name.
  *
  * @return {(WPBlockVariation[]|void)} Block variations.
@@ -7479,7 +7479,7 @@ const getBlockVariations = (blockName, scope) => {
  * For more information on block variations see
  * [the official documentation ](https://developer.wordpress.org/block-editor/reference-guides/block-api/block-variations/).
  *
- * @param {string}           blockName Name of the block (example: вЂњcore/columnsвЂќ).
+ * @param {string}           blockName Name of the block (example: “core/columns”).
  * @param {WPBlockVariation} variation Object describing a block variation.
  *
  * @example
@@ -7515,7 +7515,7 @@ const registerBlockVariation = (blockName, variation) => {
 /**
  * Unregisters a block variation defined for the given block type.
  *
- * @param {string} blockName     Name of the block (example: вЂњcore/columnsвЂќ).
+ * @param {string} blockName     Name of the block (example: “core/columns”).
  * @param {string} variationName Name of the variation defined for the block.
  *
  * @example
@@ -8856,7 +8856,7 @@ const selectors_getBlockVariations = (0,external_wp_data_namespaceObject.createS
  * A function that accepts a block's attributes and the variation's attributes and determines if a variation is active.
  *
  * @param {Object}                state      Data state.
- * @param {string}                blockName  Name of block (example: вЂњcore/columnsвЂќ).
+ * @param {string}                blockName  Name of block (example: “core/columns”).
  * @param {Object}                attributes Block attributes used to determine active variation.
  * @param {WPBlockVariationScope} [scope]    Block variation scope name.
  *
@@ -11048,7 +11048,7 @@ function serialize(blocks, options) {
  * do not edit
  */
 var namedCharRefs = {
-    Aacute: "ГЃ", aacute: "ГЎ", Abreve: "Д‚", abreve: "Дѓ", ac: "в€ѕ", acd: "в€ї", acE: "в€ѕМі", Acirc: "Г‚", acirc: "Гў", acute: "Вґ", Acy: "Рђ", acy: "Р°", AElig: "Г†", aelig: "Г¦", af: "\u2061", Afr: "рќ”„", afr: "рќ”ћ", Agrave: "ГЂ", agrave: "Г ", alefsym: "в„µ", aleph: "в„µ", Alpha: "О‘", alpha: "О±", Amacr: "ДЂ", amacr: "ДЃ", amalg: "вЁї", amp: "&", AMP: "&", andand: "в©•", And: "в©“", and: "в€§", andd: "в©њ", andslope: "в©", andv: "в©љ", ang: "в€ ", ange: "в¦¤", angle: "в€ ", angmsdaa: "в¦Ё", angmsdab: "в¦©", angmsdac: "в¦Є", angmsdad: "в¦«", angmsdae: "в¦¬", angmsdaf: "в¦­", angmsdag: "в¦®", angmsdah: "в¦Ї", angmsd: "в€Ў", angrt: "в€џ", angrtvb: "вЉѕ", angrtvbd: "в¦ќ", angsph: "в€ў", angst: "Г…", angzarr: "вЌј", Aogon: "Д„", aogon: "Д…", Aopf: "рќ”ё", aopf: "рќ•’", apacir: "в©Ї", ap: "в‰€", apE: "в©°", ape: "в‰Љ", apid: "в‰‹", apos: "'", ApplyFunction: "\u2061", approx: "в‰€", approxeq: "в‰Љ", Aring: "Г…", aring: "ГҐ", Ascr: "рќ’њ", ascr: "рќ’¶", Assign: "в‰”", ast: "*", asymp: "в‰€", asympeq: "в‰Ќ", Atilde: "Гѓ", atilde: "ГЈ", Auml: "Г„", auml: "Г¤", awconint: "в€і", awint: "вЁ‘", backcong: "в‰Њ", backepsilon: "П¶", backprime: "вЂµ", backsim: "в€Ѕ", backsimeq: "в‹Ќ", Backslash: "в€–", Barv: "в«§", barvee: "вЉЅ", barwed: "вЊ…", Barwed: "вЊ†", barwedge: "вЊ…", bbrk: "вЋµ", bbrktbrk: "вЋ¶", bcong: "в‰Њ", Bcy: "Р‘", bcy: "Р±", bdquo: "вЂћ", becaus: "в€µ", because: "в€µ", Because: "в€µ", bemptyv: "в¦°", bepsi: "П¶", bernou: "в„¬", Bernoullis: "в„¬", Beta: "О’", beta: "ОІ", beth: "в„¶", between: "в‰¬", Bfr: "рќ”…", bfr: "рќ”џ", bigcap: "в‹‚", bigcirc: "в—Ї", bigcup: "в‹ѓ", bigodot: "вЁЂ", bigoplus: "вЁЃ", bigotimes: "вЁ‚", bigsqcup: "вЁ†", bigstar: "в…", bigtriangledown: "в–Ѕ", bigtriangleup: "в–і", biguplus: "вЁ„", bigvee: "в‹Ѓ", bigwedge: "в‹Ђ", bkarow: "в¤Ќ", blacklozenge: "в§«", blacksquare: "в–Є", blacktriangle: "в–ґ", blacktriangledown: "в–ѕ", blacktriangleleft: "в—‚", blacktriangleright: "в–ё", blank: "вђЈ", blk12: "в–’", blk14: "в–‘", blk34: "в–“", block: "в–€", bne: "=вѓҐ", bnequiv: "в‰ЎвѓҐ", bNot: "в«­", bnot: "вЊђ", Bopf: "рќ”№", bopf: "рќ•“", bot: "вЉҐ", bottom: "вЉҐ", bowtie: "в‹€", boxbox: "в§‰", boxdl: "в”ђ", boxdL: "в••", boxDl: "в•–", boxDL: "в•—", boxdr: "в”Њ", boxdR: "в•’", boxDr: "в•“", boxDR: "в•”", boxh: "в”Ђ", boxH: "в•ђ", boxhd: "в”¬", boxHd: "в•¤", boxhD: "в•Ґ", boxHD: "в•¦", boxhu: "в”ґ", boxHu: "в•§", boxhU: "в•Ё", boxHU: "в•©", boxminus: "вЉџ", boxplus: "вЉћ", boxtimes: "вЉ ", boxul: "в”", boxuL: "в•›", boxUl: "в•њ", boxUL: "в•ќ", boxur: "в””", boxuR: "в•", boxUr: "в•™", boxUR: "в•љ", boxv: "в”‚", boxV: "в•‘", boxvh: "в”ј", boxvH: "в•Є", boxVh: "в•«", boxVH: "в•¬", boxvl: "в”¤", boxvL: "в•Ў", boxVl: "в•ў", boxVL: "в•Ј", boxvr: "в”њ", boxvR: "в•ћ", boxVr: "в•џ", boxVR: "в• ", bprime: "вЂµ", breve: "Л", Breve: "Л", brvbar: "В¦", bscr: "рќ’·", Bscr: "в„¬", bsemi: "вЃЏ", bsim: "в€Ѕ", bsime: "в‹Ќ", bsolb: "в§…", bsol: "\\", bsolhsub: "вџ€", bull: "вЂў", bullet: "вЂў", bump: "в‰Ћ", bumpE: "вЄ®", bumpe: "в‰Џ", Bumpeq: "в‰Ћ", bumpeq: "в‰Џ", Cacute: "Д†", cacute: "Д‡", capand: "в©„", capbrcup: "в©‰", capcap: "в©‹", cap: "в€©", Cap: "в‹’", capcup: "в©‡", capdot: "в©Ђ", CapitalDifferentialD: "в……", caps: "в€©пёЂ", caret: "вЃЃ", caron: "Л‡", Cayleys: "в„­", ccaps: "в©Ќ", Ccaron: "ДЊ", ccaron: "ДЌ", Ccedil: "Г‡", ccedil: "Г§", Ccirc: "Д€", ccirc: "Д‰", Cconint: "в€°", ccups: "в©Њ", ccupssm: "в©ђ", Cdot: "ДЉ", cdot: "Д‹", cedil: "Вё", Cedilla: "Вё", cemptyv: "в¦І", cent: "Вў", centerdot: "В·", CenterDot: "В·", cfr: "рќ” ", Cfr: "в„­", CHcy: "Р§", chcy: "С‡", check: "вњ“", checkmark: "вњ“", Chi: "О§", chi: "П‡", circ: "Л†", circeq: "в‰—", circlearrowleft: "в†є", circlearrowright: "в†»", circledast: "вЉ›", circledcirc: "вЉљ", circleddash: "вЉќ", CircleDot: "вЉ™", circledR: "В®", circledS: "в“€", CircleMinus: "вЉ–", CirclePlus: "вЉ•", CircleTimes: "вЉ—", cir: "в—‹", cirE: "в§ѓ", cire: "в‰—", cirfnint: "вЁђ", cirmid: "в«Ї", cirscir: "в§‚", ClockwiseContourIntegral: "в€І", CloseCurlyDoubleQuote: "вЂќ", CloseCurlyQuote: "вЂ™", clubs: "в™Ј", clubsuit: "в™Ј", colon: ":", Colon: "в€·", Colone: "в©ґ", colone: "в‰”", coloneq: "в‰”", comma: ",", commat: "@", comp: "в€Ѓ", compfn: "в€", complement: "в€Ѓ", complexes: "в„‚", cong: "в‰…", congdot: "в©­", Congruent: "в‰Ў", conint: "в€®", Conint: "в€Ї", ContourIntegral: "в€®", copf: "рќ•”", Copf: "в„‚", coprod: "в€ђ", Coproduct: "в€ђ", copy: "В©", COPY: "В©", copysr: "в„—", CounterClockwiseContourIntegral: "в€і", crarr: "в†µ", cross: "вњ—", Cross: "вЁЇ", Cscr: "рќ’ћ", cscr: "рќ’ё", csub: "в«Џ", csube: "в«‘", csup: "в«ђ", csupe: "в«’", ctdot: "в‹Ї", cudarrl: "в¤ё", cudarrr: "в¤µ", cuepr: "в‹ћ", cuesc: "в‹џ", cularr: "в†¶", cularrp: "в¤Ѕ", cupbrcap: "в©€", cupcap: "в©†", CupCap: "в‰Ќ", cup: "в€Є", Cup: "в‹“", cupcup: "в©Љ", cupdot: "вЉЌ", cupor: "в©…", cups: "в€ЄпёЂ", curarr: "в†·", curarrm: "в¤ј", curlyeqprec: "в‹ћ", curlyeqsucc: "в‹џ", curlyvee: "в‹Ћ", curlywedge: "в‹Џ", curren: "В¤", curvearrowleft: "в†¶", curvearrowright: "в†·", cuvee: "в‹Ћ", cuwed: "в‹Џ", cwconint: "в€І", cwint: "в€±", cylcty: "вЊ­", dagger: "вЂ ", Dagger: "вЂЎ", daleth: "в„ё", darr: "в†“", Darr: "в†Ў", dArr: "в‡“", dash: "вЂђ", Dashv: "в«¤", dashv: "вЉЈ", dbkarow: "в¤Џ", dblac: "Лќ", Dcaron: "ДЋ", dcaron: "ДЏ", Dcy: "Р”", dcy: "Рґ", ddagger: "вЂЎ", ddarr: "в‡Љ", DD: "в……", dd: "в…†", DDotrahd: "в¤‘", ddotseq: "в©·", deg: "В°", Del: "в€‡", Delta: "О”", delta: "Оґ", demptyv: "в¦±", dfisht: "вҐї", Dfr: "рќ”‡", dfr: "рќ”Ў", dHar: "вҐҐ", dharl: "в‡ѓ", dharr: "в‡‚", DiacriticalAcute: "Вґ", DiacriticalDot: "Л™", DiacriticalDoubleAcute: "Лќ", DiacriticalGrave: "`", DiacriticalTilde: "Лњ", diam: "в‹„", diamond: "в‹„", Diamond: "в‹„", diamondsuit: "в™¦", diams: "в™¦", die: "ВЁ", DifferentialD: "в…†", digamma: "Пќ", disin: "в‹І", div: "Г·", divide: "Г·", divideontimes: "в‹‡", divonx: "в‹‡", DJcy: "Р‚", djcy: "С’", dlcorn: "вЊћ", dlcrop: "вЊЌ", dollar: "$", Dopf: "рќ”»", dopf: "рќ••", Dot: "ВЁ", dot: "Л™", DotDot: "вѓњ", doteq: "в‰ђ", doteqdot: "в‰‘", DotEqual: "в‰ђ", dotminus: "в€ё", dotplus: "в€”", dotsquare: "вЉЎ", doublebarwedge: "вЊ†", DoubleContourIntegral: "в€Ї", DoubleDot: "ВЁ", DoubleDownArrow: "в‡“", DoubleLeftArrow: "в‡ђ", DoubleLeftRightArrow: "в‡”", DoubleLeftTee: "в«¤", DoubleLongLeftArrow: "вџё", DoubleLongLeftRightArrow: "вџє", DoubleLongRightArrow: "вџ№", DoubleRightArrow: "в‡’", DoubleRightTee: "вЉЁ", DoubleUpArrow: "в‡‘", DoubleUpDownArrow: "в‡•", DoubleVerticalBar: "в€Ґ", DownArrowBar: "в¤“", downarrow: "в†“", DownArrow: "в†“", Downarrow: "в‡“", DownArrowUpArrow: "в‡µ", DownBreve: "М‘", downdownarrows: "в‡Љ", downharpoonleft: "в‡ѓ", downharpoonright: "в‡‚", DownLeftRightVector: "вҐђ", DownLeftTeeVector: "вҐћ", DownLeftVectorBar: "вҐ–", DownLeftVector: "в†Ѕ", DownRightTeeVector: "вҐџ", DownRightVectorBar: "вҐ—", DownRightVector: "в‡Ѓ", DownTeeArrow: "в†§", DownTee: "вЉ¤", drbkarow: "в¤ђ", drcorn: "вЊџ", drcrop: "вЊЊ", Dscr: "рќ’џ", dscr: "рќ’№", DScy: "Р…", dscy: "С•", dsol: "в§¶", Dstrok: "Дђ", dstrok: "Д‘", dtdot: "в‹±", dtri: "в–ї", dtrif: "в–ѕ", duarr: "в‡µ", duhar: "вҐЇ", dwangle: "в¦¦", DZcy: "РЏ", dzcy: "Сџ", dzigrarr: "вџї", Eacute: "Г‰", eacute: "Г©", easter: "в©®", Ecaron: "Дљ", ecaron: "Д›", Ecirc: "ГЉ", ecirc: "ГЄ", ecir: "в‰–", ecolon: "в‰•", Ecy: "Р­", ecy: "СЌ", eDDot: "в©·", Edot: "Д–", edot: "Д—", eDot: "в‰‘", ee: "в…‡", efDot: "в‰’", Efr: "рќ”€", efr: "рќ”ў", eg: "вЄљ", Egrave: "Г€", egrave: "ГЁ", egs: "вЄ–", egsdot: "вЄ", el: "вЄ™", Element: "в€€", elinters: "вЏ§", ell: "в„“", els: "вЄ•", elsdot: "вЄ—", Emacr: "Д’", emacr: "Д“", empty: "в€…", emptyset: "в€…", EmptySmallSquare: "в—»", emptyv: "в€…", EmptyVerySmallSquare: "в–«", emsp13: "вЂ„", emsp14: "вЂ…", emsp: "вЂѓ", ENG: "ЕЉ", eng: "Е‹", ensp: "вЂ‚", Eogon: "Д", eogon: "Д™", Eopf: "рќ”ј", eopf: "рќ•–", epar: "в‹•", eparsl: "в§Ј", eplus: "в©±", epsi: "Оµ", Epsilon: "О•", epsilon: "Оµ", epsiv: "Пµ", eqcirc: "в‰–", eqcolon: "в‰•", eqsim: "в‰‚", eqslantgtr: "вЄ–", eqslantless: "вЄ•", Equal: "в©µ", equals: "=", EqualTilde: "в‰‚", equest: "в‰џ", Equilibrium: "в‡Њ", equiv: "в‰Ў", equivDD: "в©ё", eqvparsl: "в§Ґ", erarr: "вҐ±", erDot: "в‰“", escr: "в„Ї", Escr: "в„°", esdot: "в‰ђ", Esim: "в©і", esim: "в‰‚", Eta: "О—", eta: "О·", ETH: "Гђ", eth: "Г°", Euml: "Г‹", euml: "Г«", euro: "в‚¬", excl: "!", exist: "в€ѓ", Exists: "в€ѓ", expectation: "в„°", exponentiale: "в…‡", ExponentialE: "в…‡", fallingdotseq: "в‰’", Fcy: "Р¤", fcy: "С„", female: "в™Ђ", ffilig: "п¬ѓ", fflig: "п¬Ђ", ffllig: "п¬„", Ffr: "рќ”‰", ffr: "рќ”Ј", filig: "п¬Ѓ", FilledSmallSquare: "в—ј", FilledVerySmallSquare: "в–Є", fjlig: "fj", flat: "в™­", fllig: "п¬‚", fltns: "в–±", fnof: "Ж’", Fopf: "рќ”Ѕ", fopf: "рќ•—", forall: "в€Ђ", ForAll: "в€Ђ", fork: "в‹”", forkv: "в«™", Fouriertrf: "в„±", fpartint: "вЁЌ", frac12: "ВЅ", frac13: "в…“", frac14: "Вј", frac15: "в…•", frac16: "в…™", frac18: "в…›", frac23: "в…”", frac25: "в…–", frac34: "Вѕ", frac35: "в…—", frac38: "в…њ", frac45: "в…", frac56: "в…љ", frac58: "в…ќ", frac78: "в…ћ", frasl: "вЃ„", frown: "вЊў", fscr: "рќ’»", Fscr: "в„±", gacute: "Зµ", Gamma: "О“", gamma: "Оі", Gammad: "Пњ", gammad: "Пќ", gap: "вЄ†", Gbreve: "Дћ", gbreve: "Дџ", Gcedil: "Дў", Gcirc: "Дњ", gcirc: "Дќ", Gcy: "Р“", gcy: "Рі", Gdot: "Д ", gdot: "ДЎ", ge: "в‰Ґ", gE: "в‰§", gEl: "вЄЊ", gel: "в‹›", geq: "в‰Ґ", geqq: "в‰§", geqslant: "в©ѕ", gescc: "вЄ©", ges: "в©ѕ", gesdot: "вЄЂ", gesdoto: "вЄ‚", gesdotol: "вЄ„", gesl: "в‹›пёЂ", gesles: "вЄ”", Gfr: "рќ”Љ", gfr: "рќ”¤", gg: "в‰«", Gg: "в‹™", ggg: "в‹™", gimel: "в„·", GJcy: "Рѓ", gjcy: "С“", gla: "вЄҐ", gl: "в‰·", glE: "вЄ’", glj: "вЄ¤", gnap: "вЄЉ", gnapprox: "вЄЉ", gne: "вЄ€", gnE: "в‰©", gneq: "вЄ€", gneqq: "в‰©", gnsim: "в‹§", Gopf: "рќ”ѕ", gopf: "рќ•", grave: "`", GreaterEqual: "в‰Ґ", GreaterEqualLess: "в‹›", GreaterFullEqual: "в‰§", GreaterGreater: "вЄў", GreaterLess: "в‰·", GreaterSlantEqual: "в©ѕ", GreaterTilde: "в‰і", Gscr: "рќ’ў", gscr: "в„Љ", gsim: "в‰і", gsime: "вЄЋ", gsiml: "вЄђ", gtcc: "вЄ§", gtcir: "в©є", gt: ">", GT: ">", Gt: "в‰«", gtdot: "в‹—", gtlPar: "в¦•", gtquest: "в©ј", gtrapprox: "вЄ†", gtrarr: "вҐё", gtrdot: "в‹—", gtreqless: "в‹›", gtreqqless: "вЄЊ", gtrless: "в‰·", gtrsim: "в‰і", gvertneqq: "в‰©пёЂ", gvnE: "в‰©пёЂ", Hacek: "Л‡", hairsp: "вЂЉ", half: "ВЅ", hamilt: "в„‹", HARDcy: "РЄ", hardcy: "СЉ", harrcir: "вҐ€", harr: "в†”", hArr: "в‡”", harrw: "в†­", Hat: "^", hbar: "в„Џ", Hcirc: "Д¤", hcirc: "ДҐ", hearts: "в™Ґ", heartsuit: "в™Ґ", hellip: "вЂ¦", hercon: "вЉ№", hfr: "рќ”Ґ", Hfr: "в„Њ", HilbertSpace: "в„‹", hksearow: "в¤Ґ", hkswarow: "в¤¦", hoarr: "в‡ї", homtht: "в€»", hookleftarrow: "в†©", hookrightarrow: "в†Є", hopf: "рќ•™", Hopf: "в„Ќ", horbar: "вЂ•", HorizontalLine: "в”Ђ", hscr: "рќ’Ѕ", Hscr: "в„‹", hslash: "в„Џ", Hstrok: "Д¦", hstrok: "Д§", HumpDownHump: "в‰Ћ", HumpEqual: "в‰Џ", hybull: "вЃѓ", hyphen: "вЂђ", Iacute: "ГЌ", iacute: "Г­", ic: "\u2063", Icirc: "ГЋ", icirc: "Г®", Icy: "Р", icy: "Рё", Idot: "Д°", IEcy: "Р•", iecy: "Рµ", iexcl: "ВЎ", iff: "в‡”", ifr: "рќ”¦", Ifr: "в„‘", Igrave: "ГЊ", igrave: "Г¬", ii: "в…€", iiiint: "вЁЊ", iiint: "в€­", iinfin: "в§њ", iiota: "в„©", IJlig: "ДІ", ijlig: "Ді", Imacr: "ДЄ", imacr: "Д«", image: "в„‘", ImaginaryI: "в…€", imagline: "в„ђ", imagpart: "в„‘", imath: "Д±", Im: "в„‘", imof: "вЉ·", imped: "Жµ", Implies: "в‡’", incare: "в„…", in: "в€€", infin: "в€ћ", infintie: "в§ќ", inodot: "Д±", intcal: "вЉє", int: "в€«", Int: "в€¬", integers: "в„¤", Integral: "в€«", intercal: "вЉє", Intersection: "в‹‚", intlarhk: "вЁ—", intprod: "вЁј", InvisibleComma: "\u2063", InvisibleTimes: "\u2062", IOcy: "РЃ", iocy: "С‘", Iogon: "Д®", iogon: "ДЇ", Iopf: "рќ•Ђ", iopf: "рќ•љ", Iota: "О™", iota: "О№", iprod: "вЁј", iquest: "Вї", iscr: "рќ’ѕ", Iscr: "в„ђ", isin: "в€€", isindot: "в‹µ", isinE: "в‹№", isins: "в‹ґ", isinsv: "в‹і", isinv: "в€€", it: "\u2062", Itilde: "ДЁ", itilde: "Д©", Iukcy: "Р†", iukcy: "С–", Iuml: "ГЏ", iuml: "ГЇ", Jcirc: "Дґ", jcirc: "Дµ", Jcy: "Р™", jcy: "Р№", Jfr: "рќ”Ќ", jfr: "рќ”§", jmath: "И·", Jopf: "рќ•Ѓ", jopf: "рќ•›", Jscr: "рќ’Ґ", jscr: "рќ’ї", Jsercy: "Р€", jsercy: "С", Jukcy: "Р„", jukcy: "С”", Kappa: "Ољ", kappa: "Оє", kappav: "П°", Kcedil: "Д¶", kcedil: "Д·", Kcy: "Рљ", kcy: "Рє", Kfr: "рќ”Ћ", kfr: "рќ”Ё", kgreen: "Дё", KHcy: "РҐ", khcy: "С…", KJcy: "РЊ", kjcy: "Сњ", Kopf: "рќ•‚", kopf: "рќ•њ", Kscr: "рќ’¦", kscr: "рќ“Ђ", lAarr: "в‡љ", Lacute: "Д№", lacute: "Дє", laemptyv: "в¦ґ", lagran: "в„’", Lambda: "О›", lambda: "О»", lang: "вџЁ", Lang: "вџЄ", langd: "в¦‘", langle: "вџЁ", lap: "вЄ…", Laplacetrf: "в„’", laquo: "В«", larrb: "в‡¤", larrbfs: "в¤џ", larr: "в†ђ", Larr: "в†ћ", lArr: "в‡ђ", larrfs: "в¤ќ", larrhk: "в†©", larrlp: "в†«", larrpl: "в¤№", larrsim: "вҐі", larrtl: "в†ў", latail: "в¤™", lAtail: "в¤›", lat: "вЄ«", late: "вЄ­", lates: "вЄ­пёЂ", lbarr: "в¤Њ", lBarr: "в¤Ћ", lbbrk: "вќІ", lbrace: "{", lbrack: "[", lbrke: "в¦‹", lbrksld: "в¦Џ", lbrkslu: "в¦Ќ", Lcaron: "ДЅ", lcaron: "Дѕ", Lcedil: "Д»", lcedil: "Дј", lceil: "вЊ€", lcub: "{", Lcy: "Р›", lcy: "Р»", ldca: "в¤¶", ldquo: "вЂњ", ldquor: "вЂћ", ldrdhar: "вҐ§", ldrushar: "вҐ‹", ldsh: "в†І", le: "в‰¤", lE: "в‰¦", LeftAngleBracket: "вџЁ", LeftArrowBar: "в‡¤", leftarrow: "в†ђ", LeftArrow: "в†ђ", Leftarrow: "в‡ђ", LeftArrowRightArrow: "в‡†", leftarrowtail: "в†ў", LeftCeiling: "вЊ€", LeftDoubleBracket: "вџ¦", LeftDownTeeVector: "вҐЎ", LeftDownVectorBar: "вҐ™", LeftDownVector: "в‡ѓ", LeftFloor: "вЊЉ", leftharpoondown: "в†Ѕ", leftharpoonup: "в†ј", leftleftarrows: "в‡‡", leftrightarrow: "в†”", LeftRightArrow: "в†”", Leftrightarrow: "в‡”", leftrightarrows: "в‡†", leftrightharpoons: "в‡‹", leftrightsquigarrow: "в†­", LeftRightVector: "вҐЋ", LeftTeeArrow: "в†¤", LeftTee: "вЉЈ", LeftTeeVector: "вҐљ", leftthreetimes: "в‹‹", LeftTriangleBar: "в§Џ", LeftTriangle: "вЉІ", LeftTriangleEqual: "вЉґ", LeftUpDownVector: "вҐ‘", LeftUpTeeVector: "вҐ ", LeftUpVectorBar: "вҐ", LeftUpVector: "в†ї", LeftVectorBar: "вҐ’", LeftVector: "в†ј", lEg: "вЄ‹", leg: "в‹љ", leq: "в‰¤", leqq: "в‰¦", leqslant: "в©Ѕ", lescc: "вЄЁ", les: "в©Ѕ", lesdot: "в©ї", lesdoto: "вЄЃ", lesdotor: "вЄѓ", lesg: "в‹љпёЂ", lesges: "вЄ“", lessapprox: "вЄ…", lessdot: "в‹–", lesseqgtr: "в‹љ", lesseqqgtr: "вЄ‹", LessEqualGreater: "в‹љ", LessFullEqual: "в‰¦", LessGreater: "в‰¶", lessgtr: "в‰¶", LessLess: "вЄЎ", lesssim: "в‰І", LessSlantEqual: "в©Ѕ", LessTilde: "в‰І", lfisht: "вҐј", lfloor: "вЊЉ", Lfr: "рќ”Џ", lfr: "рќ”©", lg: "в‰¶", lgE: "вЄ‘", lHar: "вҐў", lhard: "в†Ѕ", lharu: "в†ј", lharul: "вҐЄ", lhblk: "в–„", LJcy: "Р‰", ljcy: "С™", llarr: "в‡‡", ll: "в‰Є", Ll: "в‹", llcorner: "вЊћ", Lleftarrow: "в‡љ", llhard: "вҐ«", lltri: "в—є", Lmidot: "Дї", lmidot: "ЕЂ", lmoustache: "вЋ°", lmoust: "вЋ°", lnap: "вЄ‰", lnapprox: "вЄ‰", lne: "вЄ‡", lnE: "в‰Ё", lneq: "вЄ‡", lneqq: "в‰Ё", lnsim: "в‹¦", loang: "вџ¬", loarr: "в‡Ѕ", lobrk: "вџ¦", longleftarrow: "вџµ", LongLeftArrow: "вџµ", Longleftarrow: "вџё", longleftrightarrow: "вџ·", LongLeftRightArrow: "вџ·", Longleftrightarrow: "вџє", longmapsto: "вџј", longrightarrow: "вџ¶", LongRightArrow: "вџ¶", Longrightarrow: "вџ№", looparrowleft: "в†«", looparrowright: "в†¬", lopar: "в¦…", Lopf: "рќ•ѓ", lopf: "рќ•ќ", loplus: "вЁ­", lotimes: "вЁґ", lowast: "в€—", lowbar: "_", LowerLeftArrow: "в†™", LowerRightArrow: "в†", loz: "в—Љ", lozenge: "в—Љ", lozf: "в§«", lpar: "(", lparlt: "в¦“", lrarr: "в‡†", lrcorner: "вЊџ", lrhar: "в‡‹", lrhard: "вҐ­", lrm: "\u200e", lrtri: "вЉї", lsaquo: "вЂ№", lscr: "рќ“Ѓ", Lscr: "в„’", lsh: "в†°", Lsh: "в†°", lsim: "в‰І", lsime: "вЄЌ", lsimg: "вЄЏ", lsqb: "[", lsquo: "вЂ", lsquor: "вЂљ", Lstrok: "ЕЃ", lstrok: "Е‚", ltcc: "вЄ¦", ltcir: "в©№", lt: "<", LT: "<", Lt: "в‰Є", ltdot: "в‹–", lthree: "в‹‹", ltimes: "в‹‰", ltlarr: "вҐ¶", ltquest: "в©»", ltri: "в—ѓ", ltrie: "вЉґ", ltrif: "в—‚", ltrPar: "в¦–", lurdshar: "вҐЉ", luruhar: "вҐ¦", lvertneqq: "в‰ЁпёЂ", lvnE: "в‰ЁпёЂ", macr: "ВЇ", male: "в™‚", malt: "вњ ", maltese: "вњ ", Map: "в¤…", map: "в†¦", mapsto: "в†¦", mapstodown: "в†§", mapstoleft: "в†¤", mapstoup: "в†Ґ", marker: "в–®", mcomma: "вЁ©", Mcy: "Рњ", mcy: "Рј", mdash: "вЂ”", mDDot: "в€є", measuredangle: "в€Ў", MediumSpace: "вЃџ", Mellintrf: "в„і", Mfr: "рќ”ђ", mfr: "рќ”Є", mho: "в„§", micro: "Вµ", midast: "*", midcir: "в«°", mid: "в€Ј", middot: "В·", minusb: "вЉџ", minus: "в€’", minusd: "в€ё", minusdu: "вЁЄ", MinusPlus: "в€“", mlcp: "в«›", mldr: "вЂ¦", mnplus: "в€“", models: "вЉ§", Mopf: "рќ•„", mopf: "рќ•ћ", mp: "в€“", mscr: "рќ“‚", Mscr: "в„і", mstpos: "в€ѕ", Mu: "Оњ", mu: "Ој", multimap: "вЉё", mumap: "вЉё", nabla: "в€‡", Nacute: "Еѓ", nacute: "Е„", nang: "в€ вѓ’", nap: "в‰‰", napE: "в©°Мё", napid: "в‰‹Мё", napos: "Е‰", napprox: "в‰‰", natural: "в™®", naturals: "в„•", natur: "в™®", nbsp: "В ", nbump: "в‰ЋМё", nbumpe: "в‰ЏМё", ncap: "в©ѓ", Ncaron: "Е‡", ncaron: "Е€", Ncedil: "Е…", ncedil: "Е†", ncong: "в‰‡", ncongdot: "в©­Мё", ncup: "в©‚", Ncy: "Рќ", ncy: "РЅ", ndash: "вЂ“", nearhk: "в¤¤", nearr: "в†—", neArr: "в‡—", nearrow: "в†—", ne: "в‰ ", nedot: "в‰ђМё", NegativeMediumSpace: "вЂ‹", NegativeThickSpace: "вЂ‹", NegativeThinSpace: "вЂ‹", NegativeVeryThinSpace: "вЂ‹", nequiv: "в‰ў", nesear: "в¤Ё", nesim: "в‰‚Мё", NestedGreaterGreater: "в‰«", NestedLessLess: "в‰Є", NewLine: "\u000a", nexist: "в€„", nexists: "в€„", Nfr: "рќ”‘", nfr: "рќ”«", ngE: "в‰§Мё", nge: "в‰±", ngeq: "в‰±", ngeqq: "в‰§Мё", ngeqslant: "в©ѕМё", nges: "в©ѕМё", nGg: "в‹™Мё", ngsim: "в‰µ", nGt: "в‰«вѓ’", ngt: "в‰Ї", ngtr: "в‰Ї", nGtv: "в‰«Мё", nharr: "в†®", nhArr: "в‡Ћ", nhpar: "в«І", ni: "в€‹", nis: "в‹ј", nisd: "в‹є", niv: "в€‹", NJcy: "РЉ", njcy: "Сљ", nlarr: "в†љ", nlArr: "в‡Ќ", nldr: "вЂҐ", nlE: "в‰¦Мё", nle: "в‰°", nleftarrow: "в†љ", nLeftarrow: "в‡Ќ", nleftrightarrow: "в†®", nLeftrightarrow: "в‡Ћ", nleq: "в‰°", nleqq: "в‰¦Мё", nleqslant: "в©ЅМё", nles: "в©ЅМё", nless: "в‰®", nLl: "в‹Мё", nlsim: "в‰ґ", nLt: "в‰Євѓ’", nlt: "в‰®", nltri: "в‹Є", nltrie: "в‹¬", nLtv: "в‰ЄМё", nmid: "в€¤", NoBreak: "\u2060", NonBreakingSpace: "В ", nopf: "рќ•џ", Nopf: "в„•", Not: "в«¬", not: "В¬", NotCongruent: "в‰ў", NotCupCap: "в‰­", NotDoubleVerticalBar: "в€¦", NotElement: "в€‰", NotEqual: "в‰ ", NotEqualTilde: "в‰‚Мё", NotExists: "в€„", NotGreater: "в‰Ї", NotGreaterEqual: "в‰±", NotGreaterFullEqual: "в‰§Мё", NotGreaterGreater: "в‰«Мё", NotGreaterLess: "в‰№", NotGreaterSlantEqual: "в©ѕМё", NotGreaterTilde: "в‰µ", NotHumpDownHump: "в‰ЋМё", NotHumpEqual: "в‰ЏМё", notin: "в€‰", notindot: "в‹µМё", notinE: "в‹№Мё", notinva: "в€‰", notinvb: "в‹·", notinvc: "в‹¶", NotLeftTriangleBar: "в§ЏМё", NotLeftTriangle: "в‹Є", NotLeftTriangleEqual: "в‹¬", NotLess: "в‰®", NotLessEqual: "в‰°", NotLessGreater: "в‰ё", NotLessLess: "в‰ЄМё", NotLessSlantEqual: "в©ЅМё", NotLessTilde: "в‰ґ", NotNestedGreaterGreater: "вЄўМё", NotNestedLessLess: "вЄЎМё", notni: "в€Њ", notniva: "в€Њ", notnivb: "в‹ѕ", notnivc: "в‹Ѕ", NotPrecedes: "вЉЂ", NotPrecedesEqual: "вЄЇМё", NotPrecedesSlantEqual: "в‹ ", NotReverseElement: "в€Њ", NotRightTriangleBar: "в§ђМё", NotRightTriangle: "в‹«", NotRightTriangleEqual: "в‹­", NotSquareSubset: "вЉЏМё", NotSquareSubsetEqual: "в‹ў", NotSquareSuperset: "вЉђМё", NotSquareSupersetEqual: "в‹Ј", NotSubset: "вЉ‚вѓ’", NotSubsetEqual: "вЉ€", NotSucceeds: "вЉЃ", NotSucceedsEqual: "вЄ°Мё", NotSucceedsSlantEqual: "в‹Ў", NotSucceedsTilde: "в‰їМё", NotSuperset: "вЉѓвѓ’", NotSupersetEqual: "вЉ‰", NotTilde: "в‰Ѓ", NotTildeEqual: "в‰„", NotTildeFullEqual: "в‰‡", NotTildeTilde: "в‰‰", NotVerticalBar: "в€¤", nparallel: "в€¦", npar: "в€¦", nparsl: "в«ЅвѓҐ", npart: "в€‚Мё", npolint: "вЁ”", npr: "вЉЂ", nprcue: "в‹ ", nprec: "вЉЂ", npreceq: "вЄЇМё", npre: "вЄЇМё", nrarrc: "в¤іМё", nrarr: "в†›", nrArr: "в‡Џ", nrarrw: "в†ќМё", nrightarrow: "в†›", nRightarrow: "в‡Џ", nrtri: "в‹«", nrtrie: "в‹­", nsc: "вЉЃ", nsccue: "в‹Ў", nsce: "вЄ°Мё", Nscr: "рќ’©", nscr: "рќ“ѓ", nshortmid: "в€¤", nshortparallel: "в€¦", nsim: "в‰Ѓ", nsime: "в‰„", nsimeq: "в‰„", nsmid: "в€¤", nspar: "в€¦", nsqsube: "в‹ў", nsqsupe: "в‹Ј", nsub: "вЉ„", nsubE: "в«…Мё", nsube: "вЉ€", nsubset: "вЉ‚вѓ’", nsubseteq: "вЉ€", nsubseteqq: "в«…Мё", nsucc: "вЉЃ", nsucceq: "вЄ°Мё", nsup: "вЉ…", nsupE: "в«†Мё", nsupe: "вЉ‰", nsupset: "вЉѓвѓ’", nsupseteq: "вЉ‰", nsupseteqq: "в«†Мё", ntgl: "в‰№", Ntilde: "Г‘", ntilde: "Г±", ntlg: "в‰ё", ntriangleleft: "в‹Є", ntrianglelefteq: "в‹¬", ntriangleright: "в‹«", ntrianglerighteq: "в‹­", Nu: "Оќ", nu: "ОЅ", num: "#", numero: "в„–", numsp: "вЂ‡", nvap: "в‰Ќвѓ’", nvdash: "вЉ¬", nvDash: "вЉ­", nVdash: "вЉ®", nVDash: "вЉЇ", nvge: "в‰Ґвѓ’", nvgt: ">вѓ’", nvHarr: "в¤„", nvinfin: "в§ћ", nvlArr: "в¤‚", nvle: "в‰¤вѓ’", nvlt: "<вѓ’", nvltrie: "вЉґвѓ’", nvrArr: "в¤ѓ", nvrtrie: "вЉµвѓ’", nvsim: "в€јвѓ’", nwarhk: "в¤Ј", nwarr: "в†–", nwArr: "в‡–", nwarrow: "в†–", nwnear: "в¤§", Oacute: "Г“", oacute: "Гі", oast: "вЉ›", Ocirc: "Г”", ocirc: "Гґ", ocir: "вЉљ", Ocy: "Рћ", ocy: "Рѕ", odash: "вЉќ", Odblac: "Еђ", odblac: "Е‘", odiv: "вЁё", odot: "вЉ™", odsold: "в¦ј", OElig: "Е’", oelig: "Е“", ofcir: "в¦ї", Ofr: "рќ”’", ofr: "рќ”¬", ogon: "Л›", Ograve: "Г’", ograve: "ГІ", ogt: "в§Ѓ", ohbar: "в¦µ", ohm: "О©", oint: "в€®", olarr: "в†є", olcir: "в¦ѕ", olcross: "в¦»", oline: "вЂѕ", olt: "в§Ђ", Omacr: "ЕЊ", omacr: "ЕЌ", Omega: "О©", omega: "П‰", Omicron: "Оџ", omicron: "Ої", omid: "в¦¶", ominus: "вЉ–", Oopf: "рќ•†", oopf: "рќ• ", opar: "в¦·", OpenCurlyDoubleQuote: "вЂњ", OpenCurlyQuote: "вЂ", operp: "в¦№", oplus: "вЉ•", orarr: "в†»", Or: "в©”", or: "в€Ё", ord: "в©ќ", order: "в„ґ", orderof: "в„ґ", ordf: "ВЄ", ordm: "Вє", origof: "вЉ¶", oror: "в©–", orslope: "в©—", orv: "в©›", oS: "в“€", Oscr: "рќ’Є", oscr: "в„ґ", Oslash: "Г", oslash: "Гё", osol: "вЉ", Otilde: "Г•", otilde: "Гµ", otimesas: "вЁ¶", Otimes: "вЁ·", otimes: "вЉ—", Ouml: "Г–", ouml: "Г¶", ovbar: "вЊЅ", OverBar: "вЂѕ", OverBrace: "вЏћ", OverBracket: "вЋґ", OverParenthesis: "вЏњ", para: "В¶", parallel: "в€Ґ", par: "в€Ґ", parsim: "в«і", parsl: "в«Ѕ", part: "в€‚", PartialD: "в€‚", Pcy: "Рџ", pcy: "Рї", percnt: "%", period: ".", permil: "вЂ°", perp: "вЉҐ", pertenk: "вЂ±", Pfr: "рќ”“", pfr: "рќ”­", Phi: "О¦", phi: "П†", phiv: "П•", phmmat: "в„і", phone: "вЋ", Pi: "О ", pi: "ПЂ", pitchfork: "в‹”", piv: "П–", planck: "в„Џ", planckh: "в„Ћ", plankv: "в„Џ", plusacir: "вЁЈ", plusb: "вЉћ", pluscir: "вЁў", plus: "+", plusdo: "в€”", plusdu: "вЁҐ", pluse: "в©І", PlusMinus: "В±", plusmn: "В±", plussim: "вЁ¦", plustwo: "вЁ§", pm: "В±", Poincareplane: "в„Њ", pointint: "вЁ•", popf: "рќ•Ў", Popf: "в„™", pound: "ВЈ", prap: "вЄ·", Pr: "вЄ»", pr: "в‰є", prcue: "в‰ј", precapprox: "вЄ·", prec: "в‰є", preccurlyeq: "в‰ј", Precedes: "в‰є", PrecedesEqual: "вЄЇ", PrecedesSlantEqual: "в‰ј", PrecedesTilde: "в‰ѕ", preceq: "вЄЇ", precnapprox: "вЄ№", precneqq: "вЄµ", precnsim: "в‹Ё", pre: "вЄЇ", prE: "вЄі", precsim: "в‰ѕ", prime: "вЂІ", Prime: "вЂі", primes: "в„™", prnap: "вЄ№", prnE: "вЄµ", prnsim: "в‹Ё", prod: "в€Џ", Product: "в€Џ", profalar: "вЊ®", profline: "вЊ’", profsurf: "вЊ“", prop: "в€ќ", Proportional: "в€ќ", Proportion: "в€·", propto: "в€ќ", prsim: "в‰ѕ", prurel: "вЉ°", Pscr: "рќ’«", pscr: "рќ“…", Psi: "ОЁ", psi: "П€", puncsp: "вЂ€", Qfr: "рќ””", qfr: "рќ”®", qint: "вЁЊ", qopf: "рќ•ў", Qopf: "в„љ", qprime: "вЃ—", Qscr: "рќ’¬", qscr: "рќ“†", quaternions: "в„Ќ", quatint: "вЁ–", quest: "?", questeq: "в‰џ", quot: "\"", QUOT: "\"", rAarr: "в‡›", race: "в€ЅМ±", Racute: "Е”", racute: "Е•", radic: "в€љ", raemptyv: "в¦і", rang: "вџ©", Rang: "вџ«", rangd: "в¦’", range: "в¦Ґ", rangle: "вџ©", raquo: "В»", rarrap: "вҐµ", rarrb: "в‡Ґ", rarrbfs: "в¤ ", rarrc: "в¤і", rarr: "в†’", Rarr: "в† ", rArr: "в‡’", rarrfs: "в¤ћ", rarrhk: "в†Є", rarrlp: "в†¬", rarrpl: "вҐ…", rarrsim: "вҐґ", Rarrtl: "в¤–", rarrtl: "в†Ј", rarrw: "в†ќ", ratail: "в¤љ", rAtail: "в¤њ", ratio: "в€¶", rationals: "в„љ", rbarr: "в¤Ќ", rBarr: "в¤Џ", RBarr: "в¤ђ", rbbrk: "вќі", rbrace: "}", rbrack: "]", rbrke: "в¦Њ", rbrksld: "в¦Ћ", rbrkslu: "в¦ђ", Rcaron: "Е", rcaron: "Е™", Rcedil: "Е–", rcedil: "Е—", rceil: "вЊ‰", rcub: "}", Rcy: "Р ", rcy: "СЂ", rdca: "в¤·", rdldhar: "вҐ©", rdquo: "вЂќ", rdquor: "вЂќ", rdsh: "в†і", real: "в„њ", realine: "в„›", realpart: "в„њ", reals: "в„ќ", Re: "в„њ", rect: "в–­", reg: "В®", REG: "В®", ReverseElement: "в€‹", ReverseEquilibrium: "в‡‹", ReverseUpEquilibrium: "вҐЇ", rfisht: "вҐЅ", rfloor: "вЊ‹", rfr: "рќ”Ї", Rfr: "в„њ", rHar: "вҐ¤", rhard: "в‡Ѓ", rharu: "в‡Ђ", rharul: "вҐ¬", Rho: "ОЎ", rho: "ПЃ", rhov: "П±", RightAngleBracket: "вџ©", RightArrowBar: "в‡Ґ", rightarrow: "в†’", RightArrow: "в†’", Rightarrow: "в‡’", RightArrowLeftArrow: "в‡„", rightarrowtail: "в†Ј", RightCeiling: "вЊ‰", RightDoubleBracket: "вџ§", RightDownTeeVector: "вҐќ", RightDownVectorBar: "вҐ•", RightDownVector: "в‡‚", RightFloor: "вЊ‹", rightharpoondown: "в‡Ѓ", rightharpoonup: "в‡Ђ", rightleftarrows: "в‡„", rightleftharpoons: "в‡Њ", rightrightarrows: "в‡‰", rightsquigarrow: "в†ќ", RightTeeArrow: "в†¦", RightTee: "вЉў", RightTeeVector: "вҐ›", rightthreetimes: "в‹Њ", RightTriangleBar: "в§ђ", RightTriangle: "вЉі", RightTriangleEqual: "вЉµ", RightUpDownVector: "вҐЏ", RightUpTeeVector: "вҐњ", RightUpVectorBar: "вҐ”", RightUpVector: "в†ѕ", RightVectorBar: "вҐ“", RightVector: "в‡Ђ", ring: "Лљ", risingdotseq: "в‰“", rlarr: "в‡„", rlhar: "в‡Њ", rlm: "\u200f", rmoustache: "вЋ±", rmoust: "вЋ±", rnmid: "в«®", roang: "вџ­", roarr: "в‡ѕ", robrk: "вџ§", ropar: "в¦†", ropf: "рќ•Ј", Ropf: "в„ќ", roplus: "вЁ®", rotimes: "вЁµ", RoundImplies: "вҐ°", rpar: ")", rpargt: "в¦”", rppolint: "вЁ’", rrarr: "в‡‰", Rrightarrow: "в‡›", rsaquo: "вЂє", rscr: "рќ“‡", Rscr: "в„›", rsh: "в†±", Rsh: "в†±", rsqb: "]", rsquo: "вЂ™", rsquor: "вЂ™", rthree: "в‹Њ", rtimes: "в‹Љ", rtri: "в–№", rtrie: "вЉµ", rtrif: "в–ё", rtriltri: "в§Ћ", RuleDelayed: "в§ґ", ruluhar: "вҐЁ", rx: "в„ћ", Sacute: "Ељ", sacute: "Е›", sbquo: "вЂљ", scap: "вЄё", Scaron: "Е ", scaron: "ЕЎ", Sc: "вЄј", sc: "в‰»", sccue: "в‰Ѕ", sce: "вЄ°", scE: "вЄґ", Scedil: "Ећ", scedil: "Еџ", Scirc: "Ењ", scirc: "Еќ", scnap: "вЄє", scnE: "вЄ¶", scnsim: "в‹©", scpolint: "вЁ“", scsim: "в‰ї", Scy: "РЎ", scy: "СЃ", sdotb: "вЉЎ", sdot: "в‹…", sdote: "в©¦", searhk: "в¤Ґ", searr: "в†", seArr: "в‡", searrow: "в†", sect: "В§", semi: ";", seswar: "в¤©", setminus: "в€–", setmn: "в€–", sext: "вњ¶", Sfr: "рќ”–", sfr: "рќ”°", sfrown: "вЊў", sharp: "в™Ї", SHCHcy: "Р©", shchcy: "С‰", SHcy: "РЁ", shcy: "С€", ShortDownArrow: "в†“", ShortLeftArrow: "в†ђ", shortmid: "в€Ј", shortparallel: "в€Ґ", ShortRightArrow: "в†’", ShortUpArrow: "в†‘", shy: "\u00ad", Sigma: "ОЈ", sigma: "Пѓ", sigmaf: "П‚", sigmav: "П‚", sim: "в€ј", simdot: "в©Є", sime: "в‰ѓ", simeq: "в‰ѓ", simg: "вЄћ", simgE: "вЄ ", siml: "вЄќ", simlE: "вЄџ", simne: "в‰†", simplus: "вЁ¤", simrarr: "вҐІ", slarr: "в†ђ", SmallCircle: "в€", smallsetminus: "в€–", smashp: "вЁі", smeparsl: "в§¤", smid: "в€Ј", smile: "вЊЈ", smt: "вЄЄ", smte: "вЄ¬", smtes: "вЄ¬пёЂ", SOFTcy: "Р¬", softcy: "СЊ", solbar: "вЊї", solb: "в§„", sol: "/", Sopf: "рќ•Љ", sopf: "рќ•¤", spades: "в™ ", spadesuit: "в™ ", spar: "в€Ґ", sqcap: "вЉ“", sqcaps: "вЉ“пёЂ", sqcup: "вЉ”", sqcups: "вЉ”пёЂ", Sqrt: "в€љ", sqsub: "вЉЏ", sqsube: "вЉ‘", sqsubset: "вЉЏ", sqsubseteq: "вЉ‘", sqsup: "вЉђ", sqsupe: "вЉ’", sqsupset: "вЉђ", sqsupseteq: "вЉ’", square: "в–Ў", Square: "в–Ў", SquareIntersection: "вЉ“", SquareSubset: "вЉЏ", SquareSubsetEqual: "вЉ‘", SquareSuperset: "вЉђ", SquareSupersetEqual: "вЉ’", SquareUnion: "вЉ”", squarf: "в–Є", squ: "в–Ў", squf: "в–Є", srarr: "в†’", Sscr: "рќ’®", sscr: "рќ“€", ssetmn: "в€–", ssmile: "вЊЈ", sstarf: "в‹†", Star: "в‹†", star: "в†", starf: "в…", straightepsilon: "Пµ", straightphi: "П•", strns: "ВЇ", sub: "вЉ‚", Sub: "в‹ђ", subdot: "вЄЅ", subE: "в«…", sube: "вЉ†", subedot: "в«ѓ", submult: "в«Ѓ", subnE: "в«‹", subne: "вЉЉ", subplus: "вЄї", subrarr: "вҐ№", subset: "вЉ‚", Subset: "в‹ђ", subseteq: "вЉ†", subseteqq: "в«…", SubsetEqual: "вЉ†", subsetneq: "вЉЉ", subsetneqq: "в«‹", subsim: "в«‡", subsub: "в«•", subsup: "в«“", succapprox: "вЄё", succ: "в‰»", succcurlyeq: "в‰Ѕ", Succeeds: "в‰»", SucceedsEqual: "вЄ°", SucceedsSlantEqual: "в‰Ѕ", SucceedsTilde: "в‰ї", succeq: "вЄ°", succnapprox: "вЄє", succneqq: "вЄ¶", succnsim: "в‹©", succsim: "в‰ї", SuchThat: "в€‹", sum: "в€‘", Sum: "в€‘", sung: "в™Є", sup1: "В№", sup2: "ВІ", sup3: "Ві", sup: "вЉѓ", Sup: "в‹‘", supdot: "вЄѕ", supdsub: "в«", supE: "в«†", supe: "вЉ‡", supedot: "в«„", Superset: "вЉѓ", SupersetEqual: "вЉ‡", suphsol: "вџ‰", suphsub: "в«—", suplarr: "вҐ»", supmult: "в«‚", supnE: "в«Њ", supne: "вЉ‹", supplus: "в«Ђ", supset: "вЉѓ", Supset: "в‹‘", supseteq: "вЉ‡", supseteqq: "в«†", supsetneq: "вЉ‹", supsetneqq: "в«Њ", supsim: "в«€", supsub: "в«”", supsup: "в«–", swarhk: "в¤¦", swarr: "в†™", swArr: "в‡™", swarrow: "в†™", swnwar: "в¤Є", szlig: "Гџ", Tab: "\u0009", target: "вЊ–", Tau: "О¤", tau: "П„", tbrk: "вЋґ", Tcaron: "Е¤", tcaron: "ЕҐ", Tcedil: "Еў", tcedil: "ЕЈ", Tcy: "Рў", tcy: "С‚", tdot: "вѓ›", telrec: "вЊ•", Tfr: "рќ”—", tfr: "рќ”±", there4: "в€ґ", therefore: "в€ґ", Therefore: "в€ґ", Theta: "О", theta: "Оё", thetasym: "П‘", thetav: "П‘", thickapprox: "в‰€", thicksim: "в€ј", ThickSpace: "вЃџвЂЉ", ThinSpace: "вЂ‰", thinsp: "вЂ‰", thkap: "в‰€", thksim: "в€ј", THORN: "Гћ", thorn: "Гѕ", tilde: "Лњ", Tilde: "в€ј", TildeEqual: "в‰ѓ", TildeFullEqual: "в‰…", TildeTilde: "в‰€", timesbar: "вЁ±", timesb: "вЉ ", times: "Г—", timesd: "вЁ°", tint: "в€­", toea: "в¤Ё", topbot: "вЊ¶", topcir: "в«±", top: "вЉ¤", Topf: "рќ•‹", topf: "рќ•Ґ", topfork: "в«љ", tosa: "в¤©", tprime: "вЂґ", trade: "в„ў", TRADE: "в„ў", triangle: "в–µ", triangledown: "в–ї", triangleleft: "в—ѓ", trianglelefteq: "вЉґ", triangleq: "в‰њ", triangleright: "в–№", trianglerighteq: "вЉµ", tridot: "в—¬", trie: "в‰њ", triminus: "вЁє", TripleDot: "вѓ›", triplus: "вЁ№", trisb: "в§Ќ", tritime: "вЁ»", trpezium: "вЏў", Tscr: "рќ’Ї", tscr: "рќ“‰", TScy: "Р¦", tscy: "С†", TSHcy: "Р‹", tshcy: "С›", Tstrok: "Е¦", tstrok: "Е§", twixt: "в‰¬", twoheadleftarrow: "в†ћ", twoheadrightarrow: "в† ", Uacute: "Гљ", uacute: "Гє", uarr: "в†‘", Uarr: "в†џ", uArr: "в‡‘", Uarrocir: "вҐ‰", Ubrcy: "РЋ", ubrcy: "Сћ", Ubreve: "Е¬", ubreve: "Е­", Ucirc: "Г›", ucirc: "Г»", Ucy: "РЈ", ucy: "Сѓ", udarr: "в‡…", Udblac: "Е°", udblac: "Е±", udhar: "вҐ®", ufisht: "вҐѕ", Ufr: "рќ”", ufr: "рќ”І", Ugrave: "Г™", ugrave: "Г№", uHar: "вҐЈ", uharl: "в†ї", uharr: "в†ѕ", uhblk: "в–Ђ", ulcorn: "вЊњ", ulcorner: "вЊњ", ulcrop: "вЊЏ", ultri: "в—ё", Umacr: "ЕЄ", umacr: "Е«", uml: "ВЁ", UnderBar: "_", UnderBrace: "вЏџ", UnderBracket: "вЋµ", UnderParenthesis: "вЏќ", Union: "в‹ѓ", UnionPlus: "вЉЋ", Uogon: "ЕІ", uogon: "Еі", Uopf: "рќ•Њ", uopf: "рќ•¦", UpArrowBar: "в¤’", uparrow: "в†‘", UpArrow: "в†‘", Uparrow: "в‡‘", UpArrowDownArrow: "в‡…", updownarrow: "в†•", UpDownArrow: "в†•", Updownarrow: "в‡•", UpEquilibrium: "вҐ®", upharpoonleft: "в†ї", upharpoonright: "в†ѕ", uplus: "вЉЋ", UpperLeftArrow: "в†–", UpperRightArrow: "в†—", upsi: "П…", Upsi: "П’", upsih: "П’", Upsilon: "ОҐ", upsilon: "П…", UpTeeArrow: "в†Ґ", UpTee: "вЉҐ", upuparrows: "в‡€", urcorn: "вЊќ", urcorner: "вЊќ", urcrop: "вЊЋ", Uring: "Е®", uring: "ЕЇ", urtri: "в—№", Uscr: "рќ’°", uscr: "рќ“Љ", utdot: "в‹°", Utilde: "ЕЁ", utilde: "Е©", utri: "в–µ", utrif: "в–ґ", uuarr: "в‡€", Uuml: "Гњ", uuml: "Гј", uwangle: "в¦§", vangrt: "в¦њ", varepsilon: "Пµ", varkappa: "П°", varnothing: "в€…", varphi: "П•", varpi: "П–", varpropto: "в€ќ", varr: "в†•", vArr: "в‡•", varrho: "П±", varsigma: "П‚", varsubsetneq: "вЉЉпёЂ", varsubsetneqq: "в«‹пёЂ", varsupsetneq: "вЉ‹пёЂ", varsupsetneqq: "в«ЊпёЂ", vartheta: "П‘", vartriangleleft: "вЉІ", vartriangleright: "вЉі", vBar: "в«Ё", Vbar: "в««", vBarv: "в«©", Vcy: "Р’", vcy: "РІ", vdash: "вЉў", vDash: "вЉЁ", Vdash: "вЉ©", VDash: "вЉ«", Vdashl: "в«¦", veebar: "вЉ»", vee: "в€Ё", Vee: "в‹Ѓ", veeeq: "в‰љ", vellip: "в‹®", verbar: "|", Verbar: "вЂ–", vert: "|", Vert: "вЂ–", VerticalBar: "в€Ј", VerticalLine: "|", VerticalSeparator: "вќ", VerticalTilde: "в‰Ђ", VeryThinSpace: "вЂЉ", Vfr: "рќ”™", vfr: "рќ”і", vltri: "вЉІ", vnsub: "вЉ‚вѓ’", vnsup: "вЉѓвѓ’", Vopf: "рќ•Ќ", vopf: "рќ•§", vprop: "в€ќ", vrtri: "вЉі", Vscr: "рќ’±", vscr: "рќ“‹", vsubnE: "в«‹пёЂ", vsubne: "вЉЉпёЂ", vsupnE: "в«ЊпёЂ", vsupne: "вЉ‹пёЂ", Vvdash: "вЉЄ", vzigzag: "в¦љ", Wcirc: "Еґ", wcirc: "Еµ", wedbar: "в©џ", wedge: "в€§", Wedge: "в‹Ђ", wedgeq: "в‰™", weierp: "в„", Wfr: "рќ”љ", wfr: "рќ”ґ", Wopf: "рќ•Ћ", wopf: "рќ•Ё", wp: "в„", wr: "в‰Ђ", wreath: "в‰Ђ", Wscr: "рќ’І", wscr: "рќ“Њ", xcap: "в‹‚", xcirc: "в—Ї", xcup: "в‹ѓ", xdtri: "в–Ѕ", Xfr: "рќ”›", xfr: "рќ”µ", xharr: "вџ·", xhArr: "вџє", Xi: "Оћ", xi: "Оѕ", xlarr: "вџµ", xlArr: "вџё", xmap: "вџј", xnis: "в‹»", xodot: "вЁЂ", Xopf: "рќ•Џ", xopf: "рќ•©", xoplus: "вЁЃ", xotime: "вЁ‚", xrarr: "вџ¶", xrArr: "вџ№", Xscr: "рќ’і", xscr: "рќ“Ќ", xsqcup: "вЁ†", xuplus: "вЁ„", xutri: "в–і", xvee: "в‹Ѓ", xwedge: "в‹Ђ", Yacute: "Гќ", yacute: "ГЅ", YAcy: "РЇ", yacy: "СЏ", Ycirc: "Е¶", ycirc: "Е·", Ycy: "Р«", ycy: "С‹", yen: "ВҐ", Yfr: "рќ”њ", yfr: "рќ”¶", YIcy: "Р‡", yicy: "С—", Yopf: "рќ•ђ", yopf: "рќ•Є", Yscr: "рќ’ґ", yscr: "рќ“Ћ", YUcy: "Р®", yucy: "СЋ", yuml: "Гї", Yuml: "Её", Zacute: "Е№", zacute: "Еє", Zcaron: "ЕЅ", zcaron: "Еѕ", Zcy: "Р—", zcy: "Р·", Zdot: "Е»", zdot: "Еј", zeetrf: "в„Ё", ZeroWidthSpace: "вЂ‹", Zeta: "О–", zeta: "О¶", zfr: "рќ”·", Zfr: "в„Ё", ZHcy: "Р–", zhcy: "Р¶", zigrarr: "в‡ќ", zopf: "рќ•«", Zopf: "в„¤", Zscr: "рќ’µ", zscr: "рќ“Џ", zwj: "\u200d", zwnj: "\u200c"
+    Aacute: "Á", aacute: "á", Abreve: "Ă", abreve: "ă", ac: "∾", acd: "∿", acE: "∾̳", Acirc: "Â", acirc: "â", acute: "´", Acy: "А", acy: "а", AElig: "Æ", aelig: "æ", af: "\u2061", Afr: "𝔄", afr: "𝔞", Agrave: "À", agrave: "à", alefsym: "ℵ", aleph: "ℵ", Alpha: "Α", alpha: "α", Amacr: "Ā", amacr: "ā", amalg: "⨿", amp: "&", AMP: "&", andand: "⩕", And: "⩓", and: "∧", andd: "⩜", andslope: "⩘", andv: "⩚", ang: "∠", ange: "⦤", angle: "∠", angmsdaa: "⦨", angmsdab: "⦩", angmsdac: "⦪", angmsdad: "⦫", angmsdae: "⦬", angmsdaf: "⦭", angmsdag: "⦮", angmsdah: "⦯", angmsd: "∡", angrt: "∟", angrtvb: "⊾", angrtvbd: "⦝", angsph: "∢", angst: "Å", angzarr: "⍼", Aogon: "Ą", aogon: "ą", Aopf: "𝔸", aopf: "𝕒", apacir: "⩯", ap: "≈", apE: "⩰", ape: "≊", apid: "≋", apos: "'", ApplyFunction: "\u2061", approx: "≈", approxeq: "≊", Aring: "Å", aring: "å", Ascr: "𝒜", ascr: "𝒶", Assign: "≔", ast: "*", asymp: "≈", asympeq: "≍", Atilde: "Ã", atilde: "ã", Auml: "Ä", auml: "ä", awconint: "∳", awint: "⨑", backcong: "≌", backepsilon: "϶", backprime: "‵", backsim: "∽", backsimeq: "⋍", Backslash: "∖", Barv: "⫧", barvee: "⊽", barwed: "⌅", Barwed: "⌆", barwedge: "⌅", bbrk: "⎵", bbrktbrk: "⎶", bcong: "≌", Bcy: "Б", bcy: "б", bdquo: "„", becaus: "∵", because: "∵", Because: "∵", bemptyv: "⦰", bepsi: "϶", bernou: "ℬ", Bernoullis: "ℬ", Beta: "Β", beta: "β", beth: "ℶ", between: "≬", Bfr: "𝔅", bfr: "𝔟", bigcap: "⋂", bigcirc: "◯", bigcup: "⋃", bigodot: "⨀", bigoplus: "⨁", bigotimes: "⨂", bigsqcup: "⨆", bigstar: "★", bigtriangledown: "▽", bigtriangleup: "△", biguplus: "⨄", bigvee: "⋁", bigwedge: "⋀", bkarow: "⤍", blacklozenge: "⧫", blacksquare: "▪", blacktriangle: "▴", blacktriangledown: "▾", blacktriangleleft: "◂", blacktriangleright: "▸", blank: "␣", blk12: "▒", blk14: "░", blk34: "▓", block: "█", bne: "=⃥", bnequiv: "≡⃥", bNot: "⫭", bnot: "⌐", Bopf: "𝔹", bopf: "𝕓", bot: "⊥", bottom: "⊥", bowtie: "⋈", boxbox: "⧉", boxdl: "┐", boxdL: "╕", boxDl: "╖", boxDL: "╗", boxdr: "┌", boxdR: "╒", boxDr: "╓", boxDR: "╔", boxh: "─", boxH: "═", boxhd: "┬", boxHd: "╤", boxhD: "╥", boxHD: "╦", boxhu: "┴", boxHu: "╧", boxhU: "╨", boxHU: "╩", boxminus: "⊟", boxplus: "⊞", boxtimes: "⊠", boxul: "┘", boxuL: "╛", boxUl: "╜", boxUL: "╝", boxur: "└", boxuR: "╘", boxUr: "╙", boxUR: "╚", boxv: "│", boxV: "║", boxvh: "┼", boxvH: "╪", boxVh: "╫", boxVH: "╬", boxvl: "┤", boxvL: "╡", boxVl: "╢", boxVL: "╣", boxvr: "├", boxvR: "╞", boxVr: "╟", boxVR: "╠", bprime: "‵", breve: "˘", Breve: "˘", brvbar: "¦", bscr: "𝒷", Bscr: "ℬ", bsemi: "⁏", bsim: "∽", bsime: "⋍", bsolb: "⧅", bsol: "\\", bsolhsub: "⟈", bull: "•", bullet: "•", bump: "≎", bumpE: "⪮", bumpe: "≏", Bumpeq: "≎", bumpeq: "≏", Cacute: "Ć", cacute: "ć", capand: "⩄", capbrcup: "⩉", capcap: "⩋", cap: "∩", Cap: "⋒", capcup: "⩇", capdot: "⩀", CapitalDifferentialD: "ⅅ", caps: "∩︀", caret: "⁁", caron: "ˇ", Cayleys: "ℭ", ccaps: "⩍", Ccaron: "Č", ccaron: "č", Ccedil: "Ç", ccedil: "ç", Ccirc: "Ĉ", ccirc: "ĉ", Cconint: "∰", ccups: "⩌", ccupssm: "⩐", Cdot: "Ċ", cdot: "ċ", cedil: "¸", Cedilla: "¸", cemptyv: "⦲", cent: "¢", centerdot: "·", CenterDot: "·", cfr: "𝔠", Cfr: "ℭ", CHcy: "Ч", chcy: "ч", check: "✓", checkmark: "✓", Chi: "Χ", chi: "χ", circ: "ˆ", circeq: "≗", circlearrowleft: "↺", circlearrowright: "↻", circledast: "⊛", circledcirc: "⊚", circleddash: "⊝", CircleDot: "⊙", circledR: "®", circledS: "Ⓢ", CircleMinus: "⊖", CirclePlus: "⊕", CircleTimes: "⊗", cir: "○", cirE: "⧃", cire: "≗", cirfnint: "⨐", cirmid: "⫯", cirscir: "⧂", ClockwiseContourIntegral: "∲", CloseCurlyDoubleQuote: "”", CloseCurlyQuote: "’", clubs: "♣", clubsuit: "♣", colon: ":", Colon: "∷", Colone: "⩴", colone: "≔", coloneq: "≔", comma: ",", commat: "@", comp: "∁", compfn: "∘", complement: "∁", complexes: "ℂ", cong: "≅", congdot: "⩭", Congruent: "≡", conint: "∮", Conint: "∯", ContourIntegral: "∮", copf: "𝕔", Copf: "ℂ", coprod: "∐", Coproduct: "∐", copy: "©", COPY: "©", copysr: "℗", CounterClockwiseContourIntegral: "∳", crarr: "↵", cross: "✗", Cross: "⨯", Cscr: "𝒞", cscr: "𝒸", csub: "⫏", csube: "⫑", csup: "⫐", csupe: "⫒", ctdot: "⋯", cudarrl: "⤸", cudarrr: "⤵", cuepr: "⋞", cuesc: "⋟", cularr: "↶", cularrp: "⤽", cupbrcap: "⩈", cupcap: "⩆", CupCap: "≍", cup: "∪", Cup: "⋓", cupcup: "⩊", cupdot: "⊍", cupor: "⩅", cups: "∪︀", curarr: "↷", curarrm: "⤼", curlyeqprec: "⋞", curlyeqsucc: "⋟", curlyvee: "⋎", curlywedge: "⋏", curren: "¤", curvearrowleft: "↶", curvearrowright: "↷", cuvee: "⋎", cuwed: "⋏", cwconint: "∲", cwint: "∱", cylcty: "⌭", dagger: "†", Dagger: "‡", daleth: "ℸ", darr: "↓", Darr: "↡", dArr: "⇓", dash: "‐", Dashv: "⫤", dashv: "⊣", dbkarow: "⤏", dblac: "˝", Dcaron: "Ď", dcaron: "ď", Dcy: "Д", dcy: "д", ddagger: "‡", ddarr: "⇊", DD: "ⅅ", dd: "ⅆ", DDotrahd: "⤑", ddotseq: "⩷", deg: "°", Del: "∇", Delta: "Δ", delta: "δ", demptyv: "⦱", dfisht: "⥿", Dfr: "𝔇", dfr: "𝔡", dHar: "⥥", dharl: "⇃", dharr: "⇂", DiacriticalAcute: "´", DiacriticalDot: "˙", DiacriticalDoubleAcute: "˝", DiacriticalGrave: "`", DiacriticalTilde: "˜", diam: "⋄", diamond: "⋄", Diamond: "⋄", diamondsuit: "♦", diams: "♦", die: "¨", DifferentialD: "ⅆ", digamma: "ϝ", disin: "⋲", div: "÷", divide: "÷", divideontimes: "⋇", divonx: "⋇", DJcy: "Ђ", djcy: "ђ", dlcorn: "⌞", dlcrop: "⌍", dollar: "$", Dopf: "𝔻", dopf: "𝕕", Dot: "¨", dot: "˙", DotDot: "⃜", doteq: "≐", doteqdot: "≑", DotEqual: "≐", dotminus: "∸", dotplus: "∔", dotsquare: "⊡", doublebarwedge: "⌆", DoubleContourIntegral: "∯", DoubleDot: "¨", DoubleDownArrow: "⇓", DoubleLeftArrow: "⇐", DoubleLeftRightArrow: "⇔", DoubleLeftTee: "⫤", DoubleLongLeftArrow: "⟸", DoubleLongLeftRightArrow: "⟺", DoubleLongRightArrow: "⟹", DoubleRightArrow: "⇒", DoubleRightTee: "⊨", DoubleUpArrow: "⇑", DoubleUpDownArrow: "⇕", DoubleVerticalBar: "∥", DownArrowBar: "⤓", downarrow: "↓", DownArrow: "↓", Downarrow: "⇓", DownArrowUpArrow: "⇵", DownBreve: "̑", downdownarrows: "⇊", downharpoonleft: "⇃", downharpoonright: "⇂", DownLeftRightVector: "⥐", DownLeftTeeVector: "⥞", DownLeftVectorBar: "⥖", DownLeftVector: "↽", DownRightTeeVector: "⥟", DownRightVectorBar: "⥗", DownRightVector: "⇁", DownTeeArrow: "↧", DownTee: "⊤", drbkarow: "⤐", drcorn: "⌟", drcrop: "⌌", Dscr: "𝒟", dscr: "𝒹", DScy: "Ѕ", dscy: "ѕ", dsol: "⧶", Dstrok: "Đ", dstrok: "đ", dtdot: "⋱", dtri: "▿", dtrif: "▾", duarr: "⇵", duhar: "⥯", dwangle: "⦦", DZcy: "Џ", dzcy: "џ", dzigrarr: "⟿", Eacute: "É", eacute: "é", easter: "⩮", Ecaron: "Ě", ecaron: "ě", Ecirc: "Ê", ecirc: "ê", ecir: "≖", ecolon: "≕", Ecy: "Э", ecy: "э", eDDot: "⩷", Edot: "Ė", edot: "ė", eDot: "≑", ee: "ⅇ", efDot: "≒", Efr: "𝔈", efr: "𝔢", eg: "⪚", Egrave: "È", egrave: "è", egs: "⪖", egsdot: "⪘", el: "⪙", Element: "∈", elinters: "⏧", ell: "ℓ", els: "⪕", elsdot: "⪗", Emacr: "Ē", emacr: "ē", empty: "∅", emptyset: "∅", EmptySmallSquare: "◻", emptyv: "∅", EmptyVerySmallSquare: "▫", emsp13: " ", emsp14: " ", emsp: " ", ENG: "Ŋ", eng: "ŋ", ensp: " ", Eogon: "Ę", eogon: "ę", Eopf: "𝔼", eopf: "𝕖", epar: "⋕", eparsl: "⧣", eplus: "⩱", epsi: "ε", Epsilon: "Ε", epsilon: "ε", epsiv: "ϵ", eqcirc: "≖", eqcolon: "≕", eqsim: "≂", eqslantgtr: "⪖", eqslantless: "⪕", Equal: "⩵", equals: "=", EqualTilde: "≂", equest: "≟", Equilibrium: "⇌", equiv: "≡", equivDD: "⩸", eqvparsl: "⧥", erarr: "⥱", erDot: "≓", escr: "ℯ", Escr: "ℰ", esdot: "≐", Esim: "⩳", esim: "≂", Eta: "Η", eta: "η", ETH: "Ð", eth: "ð", Euml: "Ë", euml: "ë", euro: "€", excl: "!", exist: "∃", Exists: "∃", expectation: "ℰ", exponentiale: "ⅇ", ExponentialE: "ⅇ", fallingdotseq: "≒", Fcy: "Ф", fcy: "ф", female: "♀", ffilig: "ﬃ", fflig: "ﬀ", ffllig: "ﬄ", Ffr: "𝔉", ffr: "𝔣", filig: "ﬁ", FilledSmallSquare: "◼", FilledVerySmallSquare: "▪", fjlig: "fj", flat: "♭", fllig: "ﬂ", fltns: "▱", fnof: "ƒ", Fopf: "𝔽", fopf: "𝕗", forall: "∀", ForAll: "∀", fork: "⋔", forkv: "⫙", Fouriertrf: "ℱ", fpartint: "⨍", frac12: "½", frac13: "⅓", frac14: "¼", frac15: "⅕", frac16: "⅙", frac18: "⅛", frac23: "⅔", frac25: "⅖", frac34: "¾", frac35: "⅗", frac38: "⅜", frac45: "⅘", frac56: "⅚", frac58: "⅝", frac78: "⅞", frasl: "⁄", frown: "⌢", fscr: "𝒻", Fscr: "ℱ", gacute: "ǵ", Gamma: "Γ", gamma: "γ", Gammad: "Ϝ", gammad: "ϝ", gap: "⪆", Gbreve: "Ğ", gbreve: "ğ", Gcedil: "Ģ", Gcirc: "Ĝ", gcirc: "ĝ", Gcy: "Г", gcy: "г", Gdot: "Ġ", gdot: "ġ", ge: "≥", gE: "≧", gEl: "⪌", gel: "⋛", geq: "≥", geqq: "≧", geqslant: "⩾", gescc: "⪩", ges: "⩾", gesdot: "⪀", gesdoto: "⪂", gesdotol: "⪄", gesl: "⋛︀", gesles: "⪔", Gfr: "𝔊", gfr: "𝔤", gg: "≫", Gg: "⋙", ggg: "⋙", gimel: "ℷ", GJcy: "Ѓ", gjcy: "ѓ", gla: "⪥", gl: "≷", glE: "⪒", glj: "⪤", gnap: "⪊", gnapprox: "⪊", gne: "⪈", gnE: "≩", gneq: "⪈", gneqq: "≩", gnsim: "⋧", Gopf: "𝔾", gopf: "𝕘", grave: "`", GreaterEqual: "≥", GreaterEqualLess: "⋛", GreaterFullEqual: "≧", GreaterGreater: "⪢", GreaterLess: "≷", GreaterSlantEqual: "⩾", GreaterTilde: "≳", Gscr: "𝒢", gscr: "ℊ", gsim: "≳", gsime: "⪎", gsiml: "⪐", gtcc: "⪧", gtcir: "⩺", gt: ">", GT: ">", Gt: "≫", gtdot: "⋗", gtlPar: "⦕", gtquest: "⩼", gtrapprox: "⪆", gtrarr: "⥸", gtrdot: "⋗", gtreqless: "⋛", gtreqqless: "⪌", gtrless: "≷", gtrsim: "≳", gvertneqq: "≩︀", gvnE: "≩︀", Hacek: "ˇ", hairsp: " ", half: "½", hamilt: "ℋ", HARDcy: "Ъ", hardcy: "ъ", harrcir: "⥈", harr: "↔", hArr: "⇔", harrw: "↭", Hat: "^", hbar: "ℏ", Hcirc: "Ĥ", hcirc: "ĥ", hearts: "♥", heartsuit: "♥", hellip: "…", hercon: "⊹", hfr: "𝔥", Hfr: "ℌ", HilbertSpace: "ℋ", hksearow: "⤥", hkswarow: "⤦", hoarr: "⇿", homtht: "∻", hookleftarrow: "↩", hookrightarrow: "↪", hopf: "𝕙", Hopf: "ℍ", horbar: "―", HorizontalLine: "─", hscr: "𝒽", Hscr: "ℋ", hslash: "ℏ", Hstrok: "Ħ", hstrok: "ħ", HumpDownHump: "≎", HumpEqual: "≏", hybull: "⁃", hyphen: "‐", Iacute: "Í", iacute: "í", ic: "\u2063", Icirc: "Î", icirc: "î", Icy: "И", icy: "и", Idot: "İ", IEcy: "Е", iecy: "е", iexcl: "¡", iff: "⇔", ifr: "𝔦", Ifr: "ℑ", Igrave: "Ì", igrave: "ì", ii: "ⅈ", iiiint: "⨌", iiint: "∭", iinfin: "⧜", iiota: "℩", IJlig: "Ĳ", ijlig: "ĳ", Imacr: "Ī", imacr: "ī", image: "ℑ", ImaginaryI: "ⅈ", imagline: "ℐ", imagpart: "ℑ", imath: "ı", Im: "ℑ", imof: "⊷", imped: "Ƶ", Implies: "⇒", incare: "℅", in: "∈", infin: "∞", infintie: "⧝", inodot: "ı", intcal: "⊺", int: "∫", Int: "∬", integers: "ℤ", Integral: "∫", intercal: "⊺", Intersection: "⋂", intlarhk: "⨗", intprod: "⨼", InvisibleComma: "\u2063", InvisibleTimes: "\u2062", IOcy: "Ё", iocy: "ё", Iogon: "Į", iogon: "į", Iopf: "𝕀", iopf: "𝕚", Iota: "Ι", iota: "ι", iprod: "⨼", iquest: "¿", iscr: "𝒾", Iscr: "ℐ", isin: "∈", isindot: "⋵", isinE: "⋹", isins: "⋴", isinsv: "⋳", isinv: "∈", it: "\u2062", Itilde: "Ĩ", itilde: "ĩ", Iukcy: "І", iukcy: "і", Iuml: "Ï", iuml: "ï", Jcirc: "Ĵ", jcirc: "ĵ", Jcy: "Й", jcy: "й", Jfr: "𝔍", jfr: "𝔧", jmath: "ȷ", Jopf: "𝕁", jopf: "𝕛", Jscr: "𝒥", jscr: "𝒿", Jsercy: "Ј", jsercy: "ј", Jukcy: "Є", jukcy: "є", Kappa: "Κ", kappa: "κ", kappav: "ϰ", Kcedil: "Ķ", kcedil: "ķ", Kcy: "К", kcy: "к", Kfr: "𝔎", kfr: "𝔨", kgreen: "ĸ", KHcy: "Х", khcy: "х", KJcy: "Ќ", kjcy: "ќ", Kopf: "𝕂", kopf: "𝕜", Kscr: "𝒦", kscr: "𝓀", lAarr: "⇚", Lacute: "Ĺ", lacute: "ĺ", laemptyv: "⦴", lagran: "ℒ", Lambda: "Λ", lambda: "λ", lang: "⟨", Lang: "⟪", langd: "⦑", langle: "⟨", lap: "⪅", Laplacetrf: "ℒ", laquo: "«", larrb: "⇤", larrbfs: "⤟", larr: "←", Larr: "↞", lArr: "⇐", larrfs: "⤝", larrhk: "↩", larrlp: "↫", larrpl: "⤹", larrsim: "⥳", larrtl: "↢", latail: "⤙", lAtail: "⤛", lat: "⪫", late: "⪭", lates: "⪭︀", lbarr: "⤌", lBarr: "⤎", lbbrk: "❲", lbrace: "{", lbrack: "[", lbrke: "⦋", lbrksld: "⦏", lbrkslu: "⦍", Lcaron: "Ľ", lcaron: "ľ", Lcedil: "Ļ", lcedil: "ļ", lceil: "⌈", lcub: "{", Lcy: "Л", lcy: "л", ldca: "⤶", ldquo: "“", ldquor: "„", ldrdhar: "⥧", ldrushar: "⥋", ldsh: "↲", le: "≤", lE: "≦", LeftAngleBracket: "⟨", LeftArrowBar: "⇤", leftarrow: "←", LeftArrow: "←", Leftarrow: "⇐", LeftArrowRightArrow: "⇆", leftarrowtail: "↢", LeftCeiling: "⌈", LeftDoubleBracket: "⟦", LeftDownTeeVector: "⥡", LeftDownVectorBar: "⥙", LeftDownVector: "⇃", LeftFloor: "⌊", leftharpoondown: "↽", leftharpoonup: "↼", leftleftarrows: "⇇", leftrightarrow: "↔", LeftRightArrow: "↔", Leftrightarrow: "⇔", leftrightarrows: "⇆", leftrightharpoons: "⇋", leftrightsquigarrow: "↭", LeftRightVector: "⥎", LeftTeeArrow: "↤", LeftTee: "⊣", LeftTeeVector: "⥚", leftthreetimes: "⋋", LeftTriangleBar: "⧏", LeftTriangle: "⊲", LeftTriangleEqual: "⊴", LeftUpDownVector: "⥑", LeftUpTeeVector: "⥠", LeftUpVectorBar: "⥘", LeftUpVector: "↿", LeftVectorBar: "⥒", LeftVector: "↼", lEg: "⪋", leg: "⋚", leq: "≤", leqq: "≦", leqslant: "⩽", lescc: "⪨", les: "⩽", lesdot: "⩿", lesdoto: "⪁", lesdotor: "⪃", lesg: "⋚︀", lesges: "⪓", lessapprox: "⪅", lessdot: "⋖", lesseqgtr: "⋚", lesseqqgtr: "⪋", LessEqualGreater: "⋚", LessFullEqual: "≦", LessGreater: "≶", lessgtr: "≶", LessLess: "⪡", lesssim: "≲", LessSlantEqual: "⩽", LessTilde: "≲", lfisht: "⥼", lfloor: "⌊", Lfr: "𝔏", lfr: "𝔩", lg: "≶", lgE: "⪑", lHar: "⥢", lhard: "↽", lharu: "↼", lharul: "⥪", lhblk: "▄", LJcy: "Љ", ljcy: "љ", llarr: "⇇", ll: "≪", Ll: "⋘", llcorner: "⌞", Lleftarrow: "⇚", llhard: "⥫", lltri: "◺", Lmidot: "Ŀ", lmidot: "ŀ", lmoustache: "⎰", lmoust: "⎰", lnap: "⪉", lnapprox: "⪉", lne: "⪇", lnE: "≨", lneq: "⪇", lneqq: "≨", lnsim: "⋦", loang: "⟬", loarr: "⇽", lobrk: "⟦", longleftarrow: "⟵", LongLeftArrow: "⟵", Longleftarrow: "⟸", longleftrightarrow: "⟷", LongLeftRightArrow: "⟷", Longleftrightarrow: "⟺", longmapsto: "⟼", longrightarrow: "⟶", LongRightArrow: "⟶", Longrightarrow: "⟹", looparrowleft: "↫", looparrowright: "↬", lopar: "⦅", Lopf: "𝕃", lopf: "𝕝", loplus: "⨭", lotimes: "⨴", lowast: "∗", lowbar: "_", LowerLeftArrow: "↙", LowerRightArrow: "↘", loz: "◊", lozenge: "◊", lozf: "⧫", lpar: "(", lparlt: "⦓", lrarr: "⇆", lrcorner: "⌟", lrhar: "⇋", lrhard: "⥭", lrm: "\u200e", lrtri: "⊿", lsaquo: "‹", lscr: "𝓁", Lscr: "ℒ", lsh: "↰", Lsh: "↰", lsim: "≲", lsime: "⪍", lsimg: "⪏", lsqb: "[", lsquo: "‘", lsquor: "‚", Lstrok: "Ł", lstrok: "ł", ltcc: "⪦", ltcir: "⩹", lt: "<", LT: "<", Lt: "≪", ltdot: "⋖", lthree: "⋋", ltimes: "⋉", ltlarr: "⥶", ltquest: "⩻", ltri: "◃", ltrie: "⊴", ltrif: "◂", ltrPar: "⦖", lurdshar: "⥊", luruhar: "⥦", lvertneqq: "≨︀", lvnE: "≨︀", macr: "¯", male: "♂", malt: "✠", maltese: "✠", Map: "⤅", map: "↦", mapsto: "↦", mapstodown: "↧", mapstoleft: "↤", mapstoup: "↥", marker: "▮", mcomma: "⨩", Mcy: "М", mcy: "м", mdash: "—", mDDot: "∺", measuredangle: "∡", MediumSpace: " ", Mellintrf: "ℳ", Mfr: "𝔐", mfr: "𝔪", mho: "℧", micro: "µ", midast: "*", midcir: "⫰", mid: "∣", middot: "·", minusb: "⊟", minus: "−", minusd: "∸", minusdu: "⨪", MinusPlus: "∓", mlcp: "⫛", mldr: "…", mnplus: "∓", models: "⊧", Mopf: "𝕄", mopf: "𝕞", mp: "∓", mscr: "𝓂", Mscr: "ℳ", mstpos: "∾", Mu: "Μ", mu: "μ", multimap: "⊸", mumap: "⊸", nabla: "∇", Nacute: "Ń", nacute: "ń", nang: "∠⃒", nap: "≉", napE: "⩰̸", napid: "≋̸", napos: "ŉ", napprox: "≉", natural: "♮", naturals: "ℕ", natur: "♮", nbsp: " ", nbump: "≎̸", nbumpe: "≏̸", ncap: "⩃", Ncaron: "Ň", ncaron: "ň", Ncedil: "Ņ", ncedil: "ņ", ncong: "≇", ncongdot: "⩭̸", ncup: "⩂", Ncy: "Н", ncy: "н", ndash: "–", nearhk: "⤤", nearr: "↗", neArr: "⇗", nearrow: "↗", ne: "≠", nedot: "≐̸", NegativeMediumSpace: "​", NegativeThickSpace: "​", NegativeThinSpace: "​", NegativeVeryThinSpace: "​", nequiv: "≢", nesear: "⤨", nesim: "≂̸", NestedGreaterGreater: "≫", NestedLessLess: "≪", NewLine: "\u000a", nexist: "∄", nexists: "∄", Nfr: "𝔑", nfr: "𝔫", ngE: "≧̸", nge: "≱", ngeq: "≱", ngeqq: "≧̸", ngeqslant: "⩾̸", nges: "⩾̸", nGg: "⋙̸", ngsim: "≵", nGt: "≫⃒", ngt: "≯", ngtr: "≯", nGtv: "≫̸", nharr: "↮", nhArr: "⇎", nhpar: "⫲", ni: "∋", nis: "⋼", nisd: "⋺", niv: "∋", NJcy: "Њ", njcy: "њ", nlarr: "↚", nlArr: "⇍", nldr: "‥", nlE: "≦̸", nle: "≰", nleftarrow: "↚", nLeftarrow: "⇍", nleftrightarrow: "↮", nLeftrightarrow: "⇎", nleq: "≰", nleqq: "≦̸", nleqslant: "⩽̸", nles: "⩽̸", nless: "≮", nLl: "⋘̸", nlsim: "≴", nLt: "≪⃒", nlt: "≮", nltri: "⋪", nltrie: "⋬", nLtv: "≪̸", nmid: "∤", NoBreak: "\u2060", NonBreakingSpace: " ", nopf: "𝕟", Nopf: "ℕ", Not: "⫬", not: "¬", NotCongruent: "≢", NotCupCap: "≭", NotDoubleVerticalBar: "∦", NotElement: "∉", NotEqual: "≠", NotEqualTilde: "≂̸", NotExists: "∄", NotGreater: "≯", NotGreaterEqual: "≱", NotGreaterFullEqual: "≧̸", NotGreaterGreater: "≫̸", NotGreaterLess: "≹", NotGreaterSlantEqual: "⩾̸", NotGreaterTilde: "≵", NotHumpDownHump: "≎̸", NotHumpEqual: "≏̸", notin: "∉", notindot: "⋵̸", notinE: "⋹̸", notinva: "∉", notinvb: "⋷", notinvc: "⋶", NotLeftTriangleBar: "⧏̸", NotLeftTriangle: "⋪", NotLeftTriangleEqual: "⋬", NotLess: "≮", NotLessEqual: "≰", NotLessGreater: "≸", NotLessLess: "≪̸", NotLessSlantEqual: "⩽̸", NotLessTilde: "≴", NotNestedGreaterGreater: "⪢̸", NotNestedLessLess: "⪡̸", notni: "∌", notniva: "∌", notnivb: "⋾", notnivc: "⋽", NotPrecedes: "⊀", NotPrecedesEqual: "⪯̸", NotPrecedesSlantEqual: "⋠", NotReverseElement: "∌", NotRightTriangleBar: "⧐̸", NotRightTriangle: "⋫", NotRightTriangleEqual: "⋭", NotSquareSubset: "⊏̸", NotSquareSubsetEqual: "⋢", NotSquareSuperset: "⊐̸", NotSquareSupersetEqual: "⋣", NotSubset: "⊂⃒", NotSubsetEqual: "⊈", NotSucceeds: "⊁", NotSucceedsEqual: "⪰̸", NotSucceedsSlantEqual: "⋡", NotSucceedsTilde: "≿̸", NotSuperset: "⊃⃒", NotSupersetEqual: "⊉", NotTilde: "≁", NotTildeEqual: "≄", NotTildeFullEqual: "≇", NotTildeTilde: "≉", NotVerticalBar: "∤", nparallel: "∦", npar: "∦", nparsl: "⫽⃥", npart: "∂̸", npolint: "⨔", npr: "⊀", nprcue: "⋠", nprec: "⊀", npreceq: "⪯̸", npre: "⪯̸", nrarrc: "⤳̸", nrarr: "↛", nrArr: "⇏", nrarrw: "↝̸", nrightarrow: "↛", nRightarrow: "⇏", nrtri: "⋫", nrtrie: "⋭", nsc: "⊁", nsccue: "⋡", nsce: "⪰̸", Nscr: "𝒩", nscr: "𝓃", nshortmid: "∤", nshortparallel: "∦", nsim: "≁", nsime: "≄", nsimeq: "≄", nsmid: "∤", nspar: "∦", nsqsube: "⋢", nsqsupe: "⋣", nsub: "⊄", nsubE: "⫅̸", nsube: "⊈", nsubset: "⊂⃒", nsubseteq: "⊈", nsubseteqq: "⫅̸", nsucc: "⊁", nsucceq: "⪰̸", nsup: "⊅", nsupE: "⫆̸", nsupe: "⊉", nsupset: "⊃⃒", nsupseteq: "⊉", nsupseteqq: "⫆̸", ntgl: "≹", Ntilde: "Ñ", ntilde: "ñ", ntlg: "≸", ntriangleleft: "⋪", ntrianglelefteq: "⋬", ntriangleright: "⋫", ntrianglerighteq: "⋭", Nu: "Ν", nu: "ν", num: "#", numero: "№", numsp: " ", nvap: "≍⃒", nvdash: "⊬", nvDash: "⊭", nVdash: "⊮", nVDash: "⊯", nvge: "≥⃒", nvgt: ">⃒", nvHarr: "⤄", nvinfin: "⧞", nvlArr: "⤂", nvle: "≤⃒", nvlt: "<⃒", nvltrie: "⊴⃒", nvrArr: "⤃", nvrtrie: "⊵⃒", nvsim: "∼⃒", nwarhk: "⤣", nwarr: "↖", nwArr: "⇖", nwarrow: "↖", nwnear: "⤧", Oacute: "Ó", oacute: "ó", oast: "⊛", Ocirc: "Ô", ocirc: "ô", ocir: "⊚", Ocy: "О", ocy: "о", odash: "⊝", Odblac: "Ő", odblac: "ő", odiv: "⨸", odot: "⊙", odsold: "⦼", OElig: "Œ", oelig: "œ", ofcir: "⦿", Ofr: "𝔒", ofr: "𝔬", ogon: "˛", Ograve: "Ò", ograve: "ò", ogt: "⧁", ohbar: "⦵", ohm: "Ω", oint: "∮", olarr: "↺", olcir: "⦾", olcross: "⦻", oline: "‾", olt: "⧀", Omacr: "Ō", omacr: "ō", Omega: "Ω", omega: "ω", Omicron: "Ο", omicron: "ο", omid: "⦶", ominus: "⊖", Oopf: "𝕆", oopf: "𝕠", opar: "⦷", OpenCurlyDoubleQuote: "“", OpenCurlyQuote: "‘", operp: "⦹", oplus: "⊕", orarr: "↻", Or: "⩔", or: "∨", ord: "⩝", order: "ℴ", orderof: "ℴ", ordf: "ª", ordm: "º", origof: "⊶", oror: "⩖", orslope: "⩗", orv: "⩛", oS: "Ⓢ", Oscr: "𝒪", oscr: "ℴ", Oslash: "Ø", oslash: "ø", osol: "⊘", Otilde: "Õ", otilde: "õ", otimesas: "⨶", Otimes: "⨷", otimes: "⊗", Ouml: "Ö", ouml: "ö", ovbar: "⌽", OverBar: "‾", OverBrace: "⏞", OverBracket: "⎴", OverParenthesis: "⏜", para: "¶", parallel: "∥", par: "∥", parsim: "⫳", parsl: "⫽", part: "∂", PartialD: "∂", Pcy: "П", pcy: "п", percnt: "%", period: ".", permil: "‰", perp: "⊥", pertenk: "‱", Pfr: "𝔓", pfr: "𝔭", Phi: "Φ", phi: "φ", phiv: "ϕ", phmmat: "ℳ", phone: "☎", Pi: "Π", pi: "π", pitchfork: "⋔", piv: "ϖ", planck: "ℏ", planckh: "ℎ", plankv: "ℏ", plusacir: "⨣", plusb: "⊞", pluscir: "⨢", plus: "+", plusdo: "∔", plusdu: "⨥", pluse: "⩲", PlusMinus: "±", plusmn: "±", plussim: "⨦", plustwo: "⨧", pm: "±", Poincareplane: "ℌ", pointint: "⨕", popf: "𝕡", Popf: "ℙ", pound: "£", prap: "⪷", Pr: "⪻", pr: "≺", prcue: "≼", precapprox: "⪷", prec: "≺", preccurlyeq: "≼", Precedes: "≺", PrecedesEqual: "⪯", PrecedesSlantEqual: "≼", PrecedesTilde: "≾", preceq: "⪯", precnapprox: "⪹", precneqq: "⪵", precnsim: "⋨", pre: "⪯", prE: "⪳", precsim: "≾", prime: "′", Prime: "″", primes: "ℙ", prnap: "⪹", prnE: "⪵", prnsim: "⋨", prod: "∏", Product: "∏", profalar: "⌮", profline: "⌒", profsurf: "⌓", prop: "∝", Proportional: "∝", Proportion: "∷", propto: "∝", prsim: "≾", prurel: "⊰", Pscr: "𝒫", pscr: "𝓅", Psi: "Ψ", psi: "ψ", puncsp: " ", Qfr: "𝔔", qfr: "𝔮", qint: "⨌", qopf: "𝕢", Qopf: "ℚ", qprime: "⁗", Qscr: "𝒬", qscr: "𝓆", quaternions: "ℍ", quatint: "⨖", quest: "?", questeq: "≟", quot: "\"", QUOT: "\"", rAarr: "⇛", race: "∽̱", Racute: "Ŕ", racute: "ŕ", radic: "√", raemptyv: "⦳", rang: "⟩", Rang: "⟫", rangd: "⦒", range: "⦥", rangle: "⟩", raquo: "»", rarrap: "⥵", rarrb: "⇥", rarrbfs: "⤠", rarrc: "⤳", rarr: "→", Rarr: "↠", rArr: "⇒", rarrfs: "⤞", rarrhk: "↪", rarrlp: "↬", rarrpl: "⥅", rarrsim: "⥴", Rarrtl: "⤖", rarrtl: "↣", rarrw: "↝", ratail: "⤚", rAtail: "⤜", ratio: "∶", rationals: "ℚ", rbarr: "⤍", rBarr: "⤏", RBarr: "⤐", rbbrk: "❳", rbrace: "}", rbrack: "]", rbrke: "⦌", rbrksld: "⦎", rbrkslu: "⦐", Rcaron: "Ř", rcaron: "ř", Rcedil: "Ŗ", rcedil: "ŗ", rceil: "⌉", rcub: "}", Rcy: "Р", rcy: "р", rdca: "⤷", rdldhar: "⥩", rdquo: "”", rdquor: "”", rdsh: "↳", real: "ℜ", realine: "ℛ", realpart: "ℜ", reals: "ℝ", Re: "ℜ", rect: "▭", reg: "®", REG: "®", ReverseElement: "∋", ReverseEquilibrium: "⇋", ReverseUpEquilibrium: "⥯", rfisht: "⥽", rfloor: "⌋", rfr: "𝔯", Rfr: "ℜ", rHar: "⥤", rhard: "⇁", rharu: "⇀", rharul: "⥬", Rho: "Ρ", rho: "ρ", rhov: "ϱ", RightAngleBracket: "⟩", RightArrowBar: "⇥", rightarrow: "→", RightArrow: "→", Rightarrow: "⇒", RightArrowLeftArrow: "⇄", rightarrowtail: "↣", RightCeiling: "⌉", RightDoubleBracket: "⟧", RightDownTeeVector: "⥝", RightDownVectorBar: "⥕", RightDownVector: "⇂", RightFloor: "⌋", rightharpoondown: "⇁", rightharpoonup: "⇀", rightleftarrows: "⇄", rightleftharpoons: "⇌", rightrightarrows: "⇉", rightsquigarrow: "↝", RightTeeArrow: "↦", RightTee: "⊢", RightTeeVector: "⥛", rightthreetimes: "⋌", RightTriangleBar: "⧐", RightTriangle: "⊳", RightTriangleEqual: "⊵", RightUpDownVector: "⥏", RightUpTeeVector: "⥜", RightUpVectorBar: "⥔", RightUpVector: "↾", RightVectorBar: "⥓", RightVector: "⇀", ring: "˚", risingdotseq: "≓", rlarr: "⇄", rlhar: "⇌", rlm: "\u200f", rmoustache: "⎱", rmoust: "⎱", rnmid: "⫮", roang: "⟭", roarr: "⇾", robrk: "⟧", ropar: "⦆", ropf: "𝕣", Ropf: "ℝ", roplus: "⨮", rotimes: "⨵", RoundImplies: "⥰", rpar: ")", rpargt: "⦔", rppolint: "⨒", rrarr: "⇉", Rrightarrow: "⇛", rsaquo: "›", rscr: "𝓇", Rscr: "ℛ", rsh: "↱", Rsh: "↱", rsqb: "]", rsquo: "’", rsquor: "’", rthree: "⋌", rtimes: "⋊", rtri: "▹", rtrie: "⊵", rtrif: "▸", rtriltri: "⧎", RuleDelayed: "⧴", ruluhar: "⥨", rx: "℞", Sacute: "Ś", sacute: "ś", sbquo: "‚", scap: "⪸", Scaron: "Š", scaron: "š", Sc: "⪼", sc: "≻", sccue: "≽", sce: "⪰", scE: "⪴", Scedil: "Ş", scedil: "ş", Scirc: "Ŝ", scirc: "ŝ", scnap: "⪺", scnE: "⪶", scnsim: "⋩", scpolint: "⨓", scsim: "≿", Scy: "С", scy: "с", sdotb: "⊡", sdot: "⋅", sdote: "⩦", searhk: "⤥", searr: "↘", seArr: "⇘", searrow: "↘", sect: "§", semi: ";", seswar: "⤩", setminus: "∖", setmn: "∖", sext: "✶", Sfr: "𝔖", sfr: "𝔰", sfrown: "⌢", sharp: "♯", SHCHcy: "Щ", shchcy: "щ", SHcy: "Ш", shcy: "ш", ShortDownArrow: "↓", ShortLeftArrow: "←", shortmid: "∣", shortparallel: "∥", ShortRightArrow: "→", ShortUpArrow: "↑", shy: "\u00ad", Sigma: "Σ", sigma: "σ", sigmaf: "ς", sigmav: "ς", sim: "∼", simdot: "⩪", sime: "≃", simeq: "≃", simg: "⪞", simgE: "⪠", siml: "⪝", simlE: "⪟", simne: "≆", simplus: "⨤", simrarr: "⥲", slarr: "←", SmallCircle: "∘", smallsetminus: "∖", smashp: "⨳", smeparsl: "⧤", smid: "∣", smile: "⌣", smt: "⪪", smte: "⪬", smtes: "⪬︀", SOFTcy: "Ь", softcy: "ь", solbar: "⌿", solb: "⧄", sol: "/", Sopf: "𝕊", sopf: "𝕤", spades: "♠", spadesuit: "♠", spar: "∥", sqcap: "⊓", sqcaps: "⊓︀", sqcup: "⊔", sqcups: "⊔︀", Sqrt: "√", sqsub: "⊏", sqsube: "⊑", sqsubset: "⊏", sqsubseteq: "⊑", sqsup: "⊐", sqsupe: "⊒", sqsupset: "⊐", sqsupseteq: "⊒", square: "□", Square: "□", SquareIntersection: "⊓", SquareSubset: "⊏", SquareSubsetEqual: "⊑", SquareSuperset: "⊐", SquareSupersetEqual: "⊒", SquareUnion: "⊔", squarf: "▪", squ: "□", squf: "▪", srarr: "→", Sscr: "𝒮", sscr: "𝓈", ssetmn: "∖", ssmile: "⌣", sstarf: "⋆", Star: "⋆", star: "☆", starf: "★", straightepsilon: "ϵ", straightphi: "ϕ", strns: "¯", sub: "⊂", Sub: "⋐", subdot: "⪽", subE: "⫅", sube: "⊆", subedot: "⫃", submult: "⫁", subnE: "⫋", subne: "⊊", subplus: "⪿", subrarr: "⥹", subset: "⊂", Subset: "⋐", subseteq: "⊆", subseteqq: "⫅", SubsetEqual: "⊆", subsetneq: "⊊", subsetneqq: "⫋", subsim: "⫇", subsub: "⫕", subsup: "⫓", succapprox: "⪸", succ: "≻", succcurlyeq: "≽", Succeeds: "≻", SucceedsEqual: "⪰", SucceedsSlantEqual: "≽", SucceedsTilde: "≿", succeq: "⪰", succnapprox: "⪺", succneqq: "⪶", succnsim: "⋩", succsim: "≿", SuchThat: "∋", sum: "∑", Sum: "∑", sung: "♪", sup1: "¹", sup2: "²", sup3: "³", sup: "⊃", Sup: "⋑", supdot: "⪾", supdsub: "⫘", supE: "⫆", supe: "⊇", supedot: "⫄", Superset: "⊃", SupersetEqual: "⊇", suphsol: "⟉", suphsub: "⫗", suplarr: "⥻", supmult: "⫂", supnE: "⫌", supne: "⊋", supplus: "⫀", supset: "⊃", Supset: "⋑", supseteq: "⊇", supseteqq: "⫆", supsetneq: "⊋", supsetneqq: "⫌", supsim: "⫈", supsub: "⫔", supsup: "⫖", swarhk: "⤦", swarr: "↙", swArr: "⇙", swarrow: "↙", swnwar: "⤪", szlig: "ß", Tab: "\u0009", target: "⌖", Tau: "Τ", tau: "τ", tbrk: "⎴", Tcaron: "Ť", tcaron: "ť", Tcedil: "Ţ", tcedil: "ţ", Tcy: "Т", tcy: "т", tdot: "⃛", telrec: "⌕", Tfr: "𝔗", tfr: "𝔱", there4: "∴", therefore: "∴", Therefore: "∴", Theta: "Θ", theta: "θ", thetasym: "ϑ", thetav: "ϑ", thickapprox: "≈", thicksim: "∼", ThickSpace: "  ", ThinSpace: " ", thinsp: " ", thkap: "≈", thksim: "∼", THORN: "Þ", thorn: "þ", tilde: "˜", Tilde: "∼", TildeEqual: "≃", TildeFullEqual: "≅", TildeTilde: "≈", timesbar: "⨱", timesb: "⊠", times: "×", timesd: "⨰", tint: "∭", toea: "⤨", topbot: "⌶", topcir: "⫱", top: "⊤", Topf: "𝕋", topf: "𝕥", topfork: "⫚", tosa: "⤩", tprime: "‴", trade: "™", TRADE: "™", triangle: "▵", triangledown: "▿", triangleleft: "◃", trianglelefteq: "⊴", triangleq: "≜", triangleright: "▹", trianglerighteq: "⊵", tridot: "◬", trie: "≜", triminus: "⨺", TripleDot: "⃛", triplus: "⨹", trisb: "⧍", tritime: "⨻", trpezium: "⏢", Tscr: "𝒯", tscr: "𝓉", TScy: "Ц", tscy: "ц", TSHcy: "Ћ", tshcy: "ћ", Tstrok: "Ŧ", tstrok: "ŧ", twixt: "≬", twoheadleftarrow: "↞", twoheadrightarrow: "↠", Uacute: "Ú", uacute: "ú", uarr: "↑", Uarr: "↟", uArr: "⇑", Uarrocir: "⥉", Ubrcy: "Ў", ubrcy: "ў", Ubreve: "Ŭ", ubreve: "ŭ", Ucirc: "Û", ucirc: "û", Ucy: "У", ucy: "у", udarr: "⇅", Udblac: "Ű", udblac: "ű", udhar: "⥮", ufisht: "⥾", Ufr: "𝔘", ufr: "𝔲", Ugrave: "Ù", ugrave: "ù", uHar: "⥣", uharl: "↿", uharr: "↾", uhblk: "▀", ulcorn: "⌜", ulcorner: "⌜", ulcrop: "⌏", ultri: "◸", Umacr: "Ū", umacr: "ū", uml: "¨", UnderBar: "_", UnderBrace: "⏟", UnderBracket: "⎵", UnderParenthesis: "⏝", Union: "⋃", UnionPlus: "⊎", Uogon: "Ų", uogon: "ų", Uopf: "𝕌", uopf: "𝕦", UpArrowBar: "⤒", uparrow: "↑", UpArrow: "↑", Uparrow: "⇑", UpArrowDownArrow: "⇅", updownarrow: "↕", UpDownArrow: "↕", Updownarrow: "⇕", UpEquilibrium: "⥮", upharpoonleft: "↿", upharpoonright: "↾", uplus: "⊎", UpperLeftArrow: "↖", UpperRightArrow: "↗", upsi: "υ", Upsi: "ϒ", upsih: "ϒ", Upsilon: "Υ", upsilon: "υ", UpTeeArrow: "↥", UpTee: "⊥", upuparrows: "⇈", urcorn: "⌝", urcorner: "⌝", urcrop: "⌎", Uring: "Ů", uring: "ů", urtri: "◹", Uscr: "𝒰", uscr: "𝓊", utdot: "⋰", Utilde: "Ũ", utilde: "ũ", utri: "▵", utrif: "▴", uuarr: "⇈", Uuml: "Ü", uuml: "ü", uwangle: "⦧", vangrt: "⦜", varepsilon: "ϵ", varkappa: "ϰ", varnothing: "∅", varphi: "ϕ", varpi: "ϖ", varpropto: "∝", varr: "↕", vArr: "⇕", varrho: "ϱ", varsigma: "ς", varsubsetneq: "⊊︀", varsubsetneqq: "⫋︀", varsupsetneq: "⊋︀", varsupsetneqq: "⫌︀", vartheta: "ϑ", vartriangleleft: "⊲", vartriangleright: "⊳", vBar: "⫨", Vbar: "⫫", vBarv: "⫩", Vcy: "В", vcy: "в", vdash: "⊢", vDash: "⊨", Vdash: "⊩", VDash: "⊫", Vdashl: "⫦", veebar: "⊻", vee: "∨", Vee: "⋁", veeeq: "≚", vellip: "⋮", verbar: "|", Verbar: "‖", vert: "|", Vert: "‖", VerticalBar: "∣", VerticalLine: "|", VerticalSeparator: "❘", VerticalTilde: "≀", VeryThinSpace: " ", Vfr: "𝔙", vfr: "𝔳", vltri: "⊲", vnsub: "⊂⃒", vnsup: "⊃⃒", Vopf: "𝕍", vopf: "𝕧", vprop: "∝", vrtri: "⊳", Vscr: "𝒱", vscr: "𝓋", vsubnE: "⫋︀", vsubne: "⊊︀", vsupnE: "⫌︀", vsupne: "⊋︀", Vvdash: "⊪", vzigzag: "⦚", Wcirc: "Ŵ", wcirc: "ŵ", wedbar: "⩟", wedge: "∧", Wedge: "⋀", wedgeq: "≙", weierp: "℘", Wfr: "𝔚", wfr: "𝔴", Wopf: "𝕎", wopf: "𝕨", wp: "℘", wr: "≀", wreath: "≀", Wscr: "𝒲", wscr: "𝓌", xcap: "⋂", xcirc: "◯", xcup: "⋃", xdtri: "▽", Xfr: "𝔛", xfr: "𝔵", xharr: "⟷", xhArr: "⟺", Xi: "Ξ", xi: "ξ", xlarr: "⟵", xlArr: "⟸", xmap: "⟼", xnis: "⋻", xodot: "⨀", Xopf: "𝕏", xopf: "𝕩", xoplus: "⨁", xotime: "⨂", xrarr: "⟶", xrArr: "⟹", Xscr: "𝒳", xscr: "𝓍", xsqcup: "⨆", xuplus: "⨄", xutri: "△", xvee: "⋁", xwedge: "⋀", Yacute: "Ý", yacute: "ý", YAcy: "Я", yacy: "я", Ycirc: "Ŷ", ycirc: "ŷ", Ycy: "Ы", ycy: "ы", yen: "¥", Yfr: "𝔜", yfr: "𝔶", YIcy: "Ї", yicy: "ї", Yopf: "𝕐", yopf: "𝕪", Yscr: "𝒴", yscr: "𝓎", YUcy: "Ю", yucy: "ю", yuml: "ÿ", Yuml: "Ÿ", Zacute: "Ź", zacute: "ź", Zcaron: "Ž", zcaron: "ž", Zcy: "З", zcy: "з", Zdot: "Ż", zdot: "ż", zeetrf: "ℨ", ZeroWidthSpace: "​", Zeta: "Ζ", zeta: "ζ", zfr: "𝔷", Zfr: "ℨ", ZHcy: "Ж", zhcy: "ж", zigrarr: "⇝", zopf: "𝕫", Zopf: "ℤ", Zscr: "𝒵", zscr: "𝓏", zwj: "\u200d", zwnj: "\u200c"
 };
 
 var HEXCHARCODE = /^#[xX]([A-Fa-f0-9]+)$/;
@@ -15311,7 +15311,7 @@ function slackMarkdownVariantCorrector(text) {
   return text.replace(/((?:^|\n)```)([^\n`]+)(```(?:$|\n))/, (match, p1, p2, p3) => `${p1}\n${p2}\n${p3}`);
 }
 function bulletsToAsterisks(text) {
-  return text.replace(/(^|\n)вЂў( +)/g, '$1*$2');
+  return text.replace(/(^|\n)•( +)/g, '$1*$2');
 }
 
 /**
@@ -15942,7 +15942,7 @@ function synchronizeBlocksWithTemplate(blocks = [], template) {
 // allows block authors to compose specific blocks that are not meant to be used
 // outside of a specified parent block context. Thus, child blocks extend the
 // concept of inner blocks to support a more direct relationship between sets of
-// blocks. The addition of parentвЂ“child would be a subset of the inner block
+// blocks. The addition of parent–child would be a subset of the inner block
 // functionality under the premise that certain blocks only make sense as
 // children of another block.
 

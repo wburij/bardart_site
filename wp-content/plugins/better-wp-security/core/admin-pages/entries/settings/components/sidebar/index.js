@@ -1,4 +1,4 @@
-﻿/**
+/**
  * External dependencies
  */
 import { Link, useParams } from 'react-router-dom';

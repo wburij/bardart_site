@@ -1,4 +1,4 @@
-﻿/*! elementor - v3.20.0 - 10-04-2024 */
+/*! elementor - v3.20.0 - 10-04-2024 */
 (self["webpackChunkelementor"] = self["webpackChunkelementor"] || []).push([["frontend-modules"],{
 
 /***/ "../assets/dev/js/editor/utils/is-instanceof.js":
@@ -4099,7 +4099,7 @@ var store = __webpack_require__(/*! ../internals/shared-store */ "../node_module
 })('versions', []).push({
   version: '3.32.0',
   mode: IS_PURE ? 'pure' : 'global',
-  copyright: 'В© 2014-2023 Denis Pushkarev (zloirock.ru)',
+  copyright: '© 2014-2023 Denis Pushkarev (zloirock.ru)',
   license: 'https://github.com/zloirock/core-js/blob/v3.32.0/LICENSE',
   source: 'https://github.com/zloirock/core-js'
 });

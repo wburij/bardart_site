@@ -1,4 +1,4 @@
-﻿/**
+/**
  * iThemes dependencies
  */
 import { Heading, TextSize, TextVariant, TextWeight } from '@ithemes/ui';

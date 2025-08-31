@@ -1,4 +1,4 @@
-﻿( function( $ ) {
+( function( $ ) {
 	$( '#_two_factor_enabled_providers-Two_Factor_Totp' ).on( 'change.two-factor-totp-new-secret', function( e ) {
 		jQuery('#two-factor-totp-options').toggle( $( this ).is( ':checked' ) );
 	} );

@@ -1,4 +1,4 @@
-﻿/**
+/**
  * WordPress dependencies
  */
 import { Button, Flex } from '@wordpress/components';
@@ -120,7 +120,7 @@ function Onboard( { proxy, proxyHeader } ) {
 			<Text
 				as="p"
 				text={ createInterpolateElement(
-					__( 'Select the configuration that causes the вЂњDetected IPвЂќ shown below to match your current IP address. <a>DonвЂ™t know your IP?</a>', 'better-wp-security' ),
+					__( 'Select the configuration that causes the “Detected IP” shown below to match your current IP address. <a>Don’t know your IP?</a>', 'better-wp-security' ),
 					{
 						// eslint-disable-next-line jsx-a11y/anchor-has-content
 						a: <a

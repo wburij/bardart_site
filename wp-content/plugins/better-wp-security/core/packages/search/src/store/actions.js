@@ -1,4 +1,4 @@
-﻿export function registerProvider( slug, title, priority, callback ) {
+export function registerProvider( slug, title, priority, callback ) {
 	return {
 		type: REGISTER_PROVIDER,
 		slug,

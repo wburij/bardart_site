@@ -1,4 +1,4 @@
-﻿.wriop-files-list #preview {
+.wriop-files-list #preview {
     width: 80px;
 }
 
@@ -69,7 +69,7 @@
 }
 
 /* Col Title */
-.wriop-files-list .column-preview strongВ  {
+.wriop-files-list .column-preview strong  {
     font-weight: normal;
     font-size: 14px;
 }

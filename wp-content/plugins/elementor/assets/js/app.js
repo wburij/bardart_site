@@ -1,4 +1,4 @@
-﻿/*! elementor - v3.20.0 - 10-04-2024 */
+/*! elementor - v3.20.0 - 10-04-2024 */
 /******/ (() => { // webpackBootstrap
 /******/ 	var __webpack_modules__ = ({
 
@@ -3854,7 +3854,7 @@ exports["default"] = ErrorBoundary;
 });
 (0, _defineProperty2.default)(ErrorBoundary, "defaultProps", {
   title: __('App could not be loaded', 'elementor'),
-  text: __('WeвЂ™re sorry, but something went wrong. Click on вЂLearn moreвЂ™ and follow each of the steps to quickly solve it.', 'elementor'),
+  text: __('We’re sorry, but something went wrong. Click on ‘Learn more’ and follow each of the steps to quickly solve it.', 'elementor'),
   learnMoreUrl: 'https://go.elementor.com/app-general-load-issue/'
 });
 
@@ -7664,7 +7664,7 @@ function KitInfoModal(props) {
     className: "e-app-export-kit-info-modal__heading",
     variant: "h2",
     tag: "h3"
-  }, __('What is kit information?', 'elementor')), /*#__PURE__*/_react.default.createElement(_text.default, null, __('These are the details youвЂ™ll use to quickly find and apply this kit in the future, even as your collection grows.', 'elementor'))));
+  }, __('What is kit information?', 'elementor')), /*#__PURE__*/_react.default.createElement(_text.default, null, __('These are the details you’ll use to quickly find and apply this kit in the future, even as your collection grows.', 'elementor'))));
 }
 
 /***/ }),
@@ -8278,7 +8278,7 @@ __webpack_require__(/*! ./connect-pro-notice.scss */ "../app/modules/import-expo
 function ConnectProNotice() {
   var getButton = function getButton() {
     return /*#__PURE__*/_react.default.createElement(_button.default, {
-      text: __('LetвЂ™s do it', 'elementor'),
+      text: __('Let’s do it', 'elementor'),
       variant: "outlined",
       color: "secondary",
       size: "sm",
@@ -8570,7 +8570,7 @@ function ImportComplete() {
   }, /*#__PURE__*/_react.default.createElement(_wizardStep.default, {
     image: elementorAppConfig.assets_url + 'images/go-pro.svg',
     heading: __('Your kit is now live on your site!', 'elementor'),
-    description: __('YouвЂ™ve imported and applied the following to your site:', 'elementor'),
+    description: __('You’ve imported and applied the following to your site:', 'elementor'),
     notice: /*#__PURE__*/_react.default.createElement(_react.default.Fragment, null, /*#__PURE__*/_react.default.createElement(_inlineLink.default, {
       url: "https://go.elementor.com/app-what-are-kits",
       italic: true,
@@ -8637,12 +8637,12 @@ function ImportContentDisplay(_ref) {
     return /*#__PURE__*/_react.default.createElement(_notice.default, {
       color: "info",
       label: __('Note:', 'elementor')
-    }, __('The Website Kit youвЂ™re using contains plugins for functionality, but no content or pages, etc.', 'elementor'));
+    }, __('The Website Kit you’re using contains plugins for functionality, but no content or pages, etc.', 'elementor'));
   }
   if (!kitData.length) {
     return /*#__PURE__*/_react.default.createElement(_notice.default, {
       color: "danger"
-    }, __('You canвЂ™t use this Website Kit because it doesnвЂ™t contain any content, pages, etc. Try again with a different file.', 'elementor'), " ", /*#__PURE__*/_react.default.createElement(_inlineLink.default, {
+    }, __('You can’t use this Website Kit because it doesn’t contain any content, pages, etc. Try again with a different file.', 'elementor'), " ", /*#__PURE__*/_react.default.createElement(_inlineLink.default, {
       onClick: onResetProcess
     }, __('Go Back', 'elementor')));
   }
@@ -9666,7 +9666,7 @@ function ProBanner(_ref) {
     })
   }), showInfoDialog && /*#__PURE__*/_react.default.createElement(_dialog.default, {
     title: __('Is your Elementor Pro ready?', 'elementor'),
-    text: __('If youвЂ™ve purchased, installed & activated Elementor Pro, we can continue importing all the parts of this site.', 'elementor'),
+    text: __('If you’ve purchased, installed & activated Elementor Pro, we can continue importing all the parts of this site.', 'elementor'),
     approveButtonColor: "primary",
     approveButtonText: __('Yes', 'elementor'),
     approveButtonOnClick: onDialogApprove,
@@ -10479,7 +10479,7 @@ function ImportResolver() {
     heading: __('Import a Website Kit to your site', 'elementor'),
     description: [/*#__PURE__*/_react.default.createElement(_react.default.Fragment, {
       key: "description-first-line"
-    }, __('Parts of this kit overlap with your siteвЂ™s templates, design and settings. The items you leave checked on this list will replace your current design.', 'elementor'), " ", getLearnMoreLink())]
+    }, __('Parts of this kit overlap with your site’s templates, design and settings. The items you leave checked on this list will replace your current design.', 'elementor'), " ", getLearnMoreLink())]
   }), isHomePageOverride() && /*#__PURE__*/_react.default.createElement(_notice.default, {
     className: "e-app-import-resolver__notice",
     label: __('Note:', 'elementor'),
@@ -10755,9 +10755,9 @@ var _infoModal = _interopRequireDefault(__webpack_require__(/*! ./info-modal */ 
 function ExportInfoModal(props) {
   return /*#__PURE__*/_react.default.createElement(_infoModal.default, (0, _extends2.default)({}, props, {
     title: __('Export a Website Kit', 'elementor')
-  }), /*#__PURE__*/_react.default.createElement(_infoModal.default.Section, null, /*#__PURE__*/_react.default.createElement(_infoModal.default.Heading, null, __('WhatвЂ™s a Website Kit?', 'elementor')), /*#__PURE__*/_react.default.createElement(_infoModal.default.Text, null, /*#__PURE__*/_react.default.createElement(_react.default.Fragment, null, __('A Website Kit is a .zip file that contains all the parts of a complete site. ItвЂ™s an easy way to get a site up and running quickly.', 'elementor'), /*#__PURE__*/_react.default.createElement("br", null), /*#__PURE__*/_react.default.createElement("br", null), /*#__PURE__*/_react.default.createElement(_inlineLink.default, {
+  }), /*#__PURE__*/_react.default.createElement(_infoModal.default.Section, null, /*#__PURE__*/_react.default.createElement(_infoModal.default.Heading, null, __('What’s a Website Kit?', 'elementor')), /*#__PURE__*/_react.default.createElement(_infoModal.default.Text, null, /*#__PURE__*/_react.default.createElement(_react.default.Fragment, null, __('A Website Kit is a .zip file that contains all the parts of a complete site. It’s an easy way to get a site up and running quickly.', 'elementor'), /*#__PURE__*/_react.default.createElement("br", null), /*#__PURE__*/_react.default.createElement("br", null), /*#__PURE__*/_react.default.createElement(_inlineLink.default, {
     url: "https://go.elementor.com/app-what-are-kits"
-  }, __(' Learn more about Website Kits', 'elementor'))))), /*#__PURE__*/_react.default.createElement(_infoModal.default.Section, null, /*#__PURE__*/_react.default.createElement(_infoModal.default.Heading, null, __('How does exporting work?', 'elementor')), /*#__PURE__*/_react.default.createElement(_infoModal.default.Text, null, /*#__PURE__*/_react.default.createElement(_react.default.Fragment, null, __('To turn your site into a Website Kit, select the templates, content, settings and plugins you want to include. Once itвЂ™s ready, youвЂ™ll get a .zip file that you can import to other sites.', 'elementor'), /*#__PURE__*/_react.default.createElement("br", null), /*#__PURE__*/_react.default.createElement("br", null), /*#__PURE__*/_react.default.createElement(_inlineLink.default, {
+  }, __(' Learn more about Website Kits', 'elementor'))))), /*#__PURE__*/_react.default.createElement(_infoModal.default.Section, null, /*#__PURE__*/_react.default.createElement(_infoModal.default.Heading, null, __('How does exporting work?', 'elementor')), /*#__PURE__*/_react.default.createElement(_infoModal.default.Text, null, /*#__PURE__*/_react.default.createElement(_react.default.Fragment, null, __('To turn your site into a Website Kit, select the templates, content, settings and plugins you want to include. Once it’s ready, you’ll get a .zip file that you can import to other sites.', 'elementor'), /*#__PURE__*/_react.default.createElement("br", null), /*#__PURE__*/_react.default.createElement("br", null), /*#__PURE__*/_react.default.createElement(_inlineLink.default, {
     url: "https://go.elementor.com/app-export-kit"
   }, __('Learn More', 'elementor'))))));
 }
@@ -10795,12 +10795,12 @@ function ImportInfoModal(props) {
   };
   return /*#__PURE__*/_react.default.createElement(_infoModal.default, (0, _extends2.default)({}, props, {
     title: __('Import a Website Kit', 'elementor')
-  }), /*#__PURE__*/_react.default.createElement(_infoModal.default.Section, null, /*#__PURE__*/_react.default.createElement(_infoModal.default.Heading, null, __('WhatвЂ™s a Website Kit?', 'elementor')), /*#__PURE__*/_react.default.createElement(_infoModal.default.Text, null, /*#__PURE__*/_react.default.createElement(_react.default.Fragment, null, __('A Website Kit is a .zip file that contains all the parts of a complete site. ItвЂ™s an easy way to get a site up and running quickly.', 'elementor'), /*#__PURE__*/_react.default.createElement("br", null), /*#__PURE__*/_react.default.createElement("br", null), /*#__PURE__*/_react.default.createElement(_inlineLink.default, {
+  }), /*#__PURE__*/_react.default.createElement(_infoModal.default.Section, null, /*#__PURE__*/_react.default.createElement(_infoModal.default.Heading, null, __('What’s a Website Kit?', 'elementor')), /*#__PURE__*/_react.default.createElement(_infoModal.default.Text, null, /*#__PURE__*/_react.default.createElement(_react.default.Fragment, null, __('A Website Kit is a .zip file that contains all the parts of a complete site. It’s an easy way to get a site up and running quickly.', 'elementor'), /*#__PURE__*/_react.default.createElement("br", null), /*#__PURE__*/_react.default.createElement("br", null), /*#__PURE__*/_react.default.createElement(_inlineLink.default, {
     url: "https://go.elementor.com/app-what-are-kits",
     onClick: function onClick() {
       return eventTracking('Learn more about website kits');
     }
-  }, __(' Learn more about Website Kits', 'elementor'))))), /*#__PURE__*/_react.default.createElement(_infoModal.default.Section, null, /*#__PURE__*/_react.default.createElement(_infoModal.default.Heading, null, __('How does importing work?', 'elementor')), /*#__PURE__*/_react.default.createElement(_infoModal.default.Text, null, /*#__PURE__*/_react.default.createElement(_react.default.Fragment, null, __('Start by uploading the file and selecting the parts and plugins you want to apply. If there are any overlaps between the kit and your current design, youвЂ™ll be able to choose which imported parts you want to apply or ignore. Once the file is ready, the kit will be applied to your site and youвЂ™ll be able to see it live.', 'elementor'), /*#__PURE__*/_react.default.createElement("br", null), /*#__PURE__*/_react.default.createElement("br", null), /*#__PURE__*/_react.default.createElement(_inlineLink.default, {
+  }, __(' Learn more about Website Kits', 'elementor'))))), /*#__PURE__*/_react.default.createElement(_infoModal.default.Section, null, /*#__PURE__*/_react.default.createElement(_infoModal.default.Heading, null, __('How does importing work?', 'elementor')), /*#__PURE__*/_react.default.createElement(_infoModal.default.Text, null, /*#__PURE__*/_react.default.createElement(_react.default.Fragment, null, __('Start by uploading the file and selecting the parts and plugins you want to apply. If there are any overlaps between the kit and your current design, you’ll be able to choose which imported parts you want to apply or ignore. Once the file is ready, the kit will be applied to your site and you’ll be able to see it live.', 'elementor'), /*#__PURE__*/_react.default.createElement("br", null), /*#__PURE__*/_react.default.createElement("br", null), /*#__PURE__*/_react.default.createElement(_inlineLink.default, {
     url: "https://go.elementor.com/app-import-kit",
     onClick: function onClick() {
       return eventTracking('learn more');
@@ -11033,7 +11033,7 @@ var kitContentData = [{
     features: {
       open: [__('Saved Templates', 'elementor')],
       locked: [__('Headers', 'elementor'), __('Footers', 'elementor'), __('Archives', 'elementor'), __('Single Posts', 'elementor'), __('Single Pages', 'elementor'), __('Search Results', 'elementor'), __('404 Error Page', 'elementor'), __('Popups', 'elementor'), __('Global widgets', 'elementor')],
-      tooltip: __('To import or export these components, youвЂ™ll need Elementor Pro.', 'elementor')
+      tooltip: __('To import or export these components, you’ll need Elementor Pro.', 'elementor')
     }
   }
 }, {
@@ -11800,23 +11800,23 @@ function _interopRequireWildcard(obj, nodeInterop) { if (!nodeInterop && obj && 
 var messagesContent = {
   general: {
     title: __('Unable to download the Kit', 'elementor'),
-    text: /*#__PURE__*/_react.default.createElement(_react.default.Fragment, null, __('We couldnвЂ™t download the Kit due to technical difficulties on our part. Try again and if the problem persists contact ', 'elementor'), /*#__PURE__*/_react.default.createElement(_inlineLink.default, {
+    text: /*#__PURE__*/_react.default.createElement(_react.default.Fragment, null, __('We couldn’t download the Kit due to technical difficulties on our part. Try again and if the problem persists contact ', 'elementor'), /*#__PURE__*/_react.default.createElement(_inlineLink.default, {
       url: "https://my.elementor.com/support-center/"
     }, __('Support', 'elementor')))
   },
   'zip-archive-module-missing': {
-    title: __('CouldnвЂ™t handle the Kit', 'elementor'),
+    title: __('Couldn’t handle the Kit', 'elementor'),
     text: __('Seems like your server is missing the PHP zip module. Install it on your server or contact your site host for further instructions.', 'elementor')
   },
   'invalid-zip-file': {
-    title: __('CouldnвЂ™t use the Kit', 'elementor'),
-    text: /*#__PURE__*/_react.default.createElement(_react.default.Fragment, null, __('Seems like there is a problem with the KitвЂ™s files. Try installing again and if the problem persists contact ', 'elementor'), /*#__PURE__*/_react.default.createElement(_inlineLink.default, {
+    title: __('Couldn’t use the Kit', 'elementor'),
+    text: /*#__PURE__*/_react.default.createElement(_react.default.Fragment, null, __('Seems like there is a problem with the Kit’s files. Try installing again and if the problem persists contact ', 'elementor'), /*#__PURE__*/_react.default.createElement(_inlineLink.default, {
       url: "https://my.elementor.com/support-center/"
     }, __('Support', 'elementor')))
   },
   timeout: {
     title: __('Unable to download the Kit', 'elementor'),
-    text: /*#__PURE__*/_react.default.createElement(_react.default.Fragment, null, __('It took too much time to download your Kit and we were unable to complete the process. If all the KitвЂ™s parts donвЂ™t appear in ', 'elementor'), /*#__PURE__*/_react.default.createElement(_inlineLink.default, {
+    text: /*#__PURE__*/_react.default.createElement(_react.default.Fragment, null, __('It took too much time to download your Kit and we were unable to complete the process. If all the Kit’s parts don’t appear in ', 'elementor'), /*#__PURE__*/_react.default.createElement(_inlineLink.default, {
       url: elementorAppConfig.pages_url
     }, __('Pages', 'elementor')), __(', try again and if the problem persists contact ', 'elementor'), /*#__PURE__*/_react.default.createElement(_inlineLink.default, {
       url: "https://my.elementor.com/support-center/"
@@ -11824,17 +11824,17 @@ var messagesContent = {
   },
   'invalid-kit-library-zip-error': {
     title: __('Unable to download the Kit', 'elementor'),
-    text: /*#__PURE__*/_react.default.createElement(_react.default.Fragment, null, __('We couldnвЂ™t download the Kit due to technical difficulty on our part. Try again in a few minutes and if the problem persists contact ', 'elementor'), /*#__PURE__*/_react.default.createElement(_inlineLink.default, {
+    text: /*#__PURE__*/_react.default.createElement(_react.default.Fragment, null, __('We couldn’t download the Kit due to technical difficulty on our part. Try again in a few minutes and if the problem persists contact ', 'elementor'), /*#__PURE__*/_react.default.createElement(_inlineLink.default, {
       url: "https://my.elementor.com/support-center/"
     }, __('Support', 'elementor')))
   },
   'no-write-permissions': {
-    title: __('CouldnвЂ™t access the file', 'elementor'),
-    text: __('Seems like Elementor isnвЂ™t authorized to access relevant files for installing this Kit. Contact your site host to get permission.', 'elementor')
+    title: __('Couldn’t access the file', 'elementor'),
+    text: __('Seems like Elementor isn’t authorized to access relevant files for installing this Kit. Contact your site host to get permission.', 'elementor')
   },
   'plugin-installation-permissions-error': {
-    title: __('CouldnвЂ™t install the Kit', 'elementor'),
-    text: __('The Kit includes plugins you donвЂ™t have permission to install. Contact your site admin to change your permissions.', 'elementor')
+    title: __('Couldn’t install the Kit', 'elementor'),
+    text: __('The Kit includes plugins you don’t have permission to install. Contact your site admin to change your permissions.', 'elementor')
   },
   'third-party-error': {
     title: __('Unable to download the Kit', 'elementor'),
@@ -11842,7 +11842,7 @@ var messagesContent = {
   },
   'domdocument-missing': {
     title: __('Unable to download the Kit', 'elementor'),
-    text: __('This download requires the \'DOMDocument\' PHP extension, which we couldnвЂ™t detect on your server. Enable this extension, or get in touch with your hosting service for support, and then give the download another go.', 'elementor')
+    text: __('This download requires the \'DOMDocument\' PHP extension, which we couldn’t detect on your server. Enable this extension, or get in touch with your hosting service for support, and then give the download another go.', 'elementor')
   }
 };
 function ProcessFailedDialog(_ref) {

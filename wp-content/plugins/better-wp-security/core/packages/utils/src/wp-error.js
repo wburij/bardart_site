@@ -1,4 +1,4 @@
-﻿export default class WPError {
+export default class WPError {
 	#errors = {};
 	#errorData = {};
 

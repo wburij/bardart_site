@@ -1,4 +1,4 @@
-﻿/**
+/**
  * External dependencies
  */
 import { sortBy, omit, flatMap } from 'lodash';

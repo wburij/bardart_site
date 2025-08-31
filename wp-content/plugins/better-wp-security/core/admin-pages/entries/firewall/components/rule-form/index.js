@@ -1,4 +1,4 @@
-﻿/**
+/**
  * External dependencies
  */
 import { map } from 'lodash';
@@ -56,7 +56,7 @@ export default function RuleForm( { value, onChange, className } ) {
 				required
 				__next36pxDefaultSize
 			/>
-			<Heading level={ 3 } text={ __( 'If incoming requests matchвЂ¦', 'better-wp-security' ) } weight={ TextWeight.HEAVY } />
+			<Heading level={ 3 } text={ __( 'If incoming requests match…', 'better-wp-security' ) } weight={ TextWeight.HEAVY } />
 			<Flex direction="column" gap={ 3 } align="stretch" expanded={ false }>
 				{ config.rules.map( ( rule, i ) => (
 					<Rule
@@ -81,7 +81,7 @@ export default function RuleForm( { value, onChange, className } ) {
 					/>
 				) ) }
 			</Flex>
-			<Heading level={ 3 } text={ __( 'Then take actionвЂ¦', 'better-wp-security' ) } weight={ TextWeight.HEAVY } />
+			<Heading level={ 3 } text={ __( 'Then take action…', 'better-wp-security' ) } weight={ TextWeight.HEAVY } />
 			<Flex direction="column" gap={ 3 } align="stretch" expanded={ false }>
 				<BaseControl
 					id={ id + '__action' }

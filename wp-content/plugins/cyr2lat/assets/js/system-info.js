@@ -1,4 +1,4 @@
-﻿/* global Cyr2LatSystemInfoObject */
+/* global Cyr2LatSystemInfoObject */
 
 document.addEventListener( 'DOMContentLoaded', function() {
 	document.querySelector( '#ctl-system-info-wrap .helper' ).addEventListener(

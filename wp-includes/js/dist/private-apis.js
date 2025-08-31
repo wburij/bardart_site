@@ -1,4 +1,4 @@
-﻿/******/ (() => { // webpackBootstrap
+/******/ (() => { // webpackBootstrap
 /******/ 	"use strict";
 /******/ 	// The require scope
 /******/ 	var __webpack_require__ = {};
@@ -44,7 +44,7 @@ __webpack_require__.d(__webpack_exports__, {
 
 ;// ./node_modules/@wordpress/private-apis/build-module/implementation.js
 /**
- * wordpress/private-apis вЂ“ the utilities to enable private cross-package
+ * wordpress/private-apis – the utilities to enable private cross-package
  * exports of private APIs.
  *
  * This "implementation.ts" file is needed for the sake of the unit tests. It

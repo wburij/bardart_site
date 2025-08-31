@@ -1,4 +1,4 @@
-﻿/******/ (() => { // webpackBootstrap
+/******/ (() => { // webpackBootstrap
 /******/ 	var __webpack_modules__ = ({
 
 /***/ 1933:
@@ -992,7 +992,7 @@ var __WEBPACK_AMD_DEFINE_RESULT__;/*global define:false */
         // not the initial event target in the shadow tree. Note that not all events cross the
         // shadow boundary.
         // For shadow trees with `mode: 'open'`, the initial event target is the first element in
-        // the eventвЂ™s composed path. For shadow trees with `mode: 'closed'`, the initial event
+        // the event’s composed path. For shadow trees with `mode: 'closed'`, the initial event
         // target cannot be obtained.
         if ('composedPath' in e && typeof e.composedPath === 'function') {
             // For open shadow trees, update `element` so that the following check works.
@@ -1074,7 +1074,7 @@ var __WEBPACK_AMD_DEFINE_RESULT__;/*global define:false */
  * clipboard.js v2.0.11
  * https://clipboardjs.com/
  *
- * Licensed MIT В© Zeno Rocha
+ * Licensed MIT © Zeno Rocha
  */
 (function webpackUniversalModuleDefinition(root, factory) {
 	if(true)
@@ -2543,17 +2543,17 @@ var SUPPORTED_LOCALE = {
     tr: {
         regexp: /\u0130|\u0049|\u0049\u0307/g,
         map: {
-            Д°: "\u0069",
+            İ: "\u0069",
             I: "\u0131",
-            IМ‡: "\u0069",
+            İ: "\u0069",
         },
     },
     az: {
         regexp: /\u0130/g,
         map: {
-            Д°: "\u0069",
+            İ: "\u0069",
             I: "\u0131",
-            IМ‡: "\u0069",
+            İ: "\u0069",
         },
     },
     lt: {
@@ -2561,10 +2561,10 @@ var SUPPORTED_LOCALE = {
         map: {
             I: "\u0069\u0307",
             J: "\u006A\u0307",
-            Д®: "\u012F\u0307",
-            ГЊ: "\u0069\u0307\u0300",
-            ГЌ: "\u0069\u0307\u0301",
-            ДЁ: "\u0069\u0307\u0303",
+            Į: "\u012F\u0307",
+            Ì: "\u0069\u0307\u0300",
+            Í: "\u0069\u0307\u0301",
+            Ĩ: "\u0069\u0307\u0303",
         },
     },
 };

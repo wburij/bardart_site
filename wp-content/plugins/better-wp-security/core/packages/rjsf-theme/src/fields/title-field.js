@@ -1,4 +1,4 @@
-﻿const REQUIRED_FIELD_SYMBOL = '*';
+const REQUIRED_FIELD_SYMBOL = '*';
 
 export default function TitleField( props ) {
 	const { id, title, required } = props;

@@ -1,4 +1,4 @@
-﻿/**
+/**
  * External dependencies
  */
 import { isEmpty, size, map } from 'lodash';

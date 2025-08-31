@@ -1,4 +1,4 @@
-﻿/**
+/**
  * WordPress dependencies
  */
 import { __ } from '@wordpress/i18n';
@@ -33,7 +33,7 @@ const basicFeatures = [
 		{ b: <Text weight={ 700 } /> }
 	),
 	createInterpolateElement(
-		__( '<b>Virtual Patches</b> from <b>Patchstack</b> that protect insecure themes and plugins even before vulnerabilities are publicly disclosed and an official patch is released. You may not be able to apply security updates immediately, but with Solid Security Pro youвЂ™re still protected until youвЂ™re ready to update.', 'better-wp-security' ),
+		__( '<b>Virtual Patches</b> from <b>Patchstack</b> that protect insecure themes and plugins even before vulnerabilities are publicly disclosed and an official patch is released. You may not be able to apply security updates immediately, but with Solid Security Pro you’re still protected until you’re ready to update.', 'better-wp-security' ),
 		{ b: <Text weight={ 700 } /> }
 	),
 	createInterpolateElement(
@@ -41,11 +41,11 @@ const basicFeatures = [
 		{ b: <Text weight={ 700 } /> }
 	),
 	createInterpolateElement(
-		__( '<b>Passkeys</b> and other <b>Passwordless</b> Login options mitigate the risks associated with users who often share, reuse, and choose weak passwords. Increase your usersвЂ™ security and simplify their login experience.', 'better-wp-security' ),
+		__( '<b>Passkeys</b> and other <b>Passwordless</b> Login options mitigate the risks associated with users who often share, reuse, and choose weak passwords. Increase your users’ security and simplify their login experience.', 'better-wp-security' ),
 		{ b: <Text weight={ 700 } /> }
 	),
 	createInterpolateElement(
-		__( 'Multiple <b>CAPTCHA</b> options, including <b>Cloudflare Turnstile</b>, eliminate bot traffic from your login screens and other forms. You wonвЂ™t be asked to solve a puzzle or identify objects to prove youвЂ™re a human вЂ” unless youвЂ™re a bot.', 'better-wp-security' ),
+		__( 'Multiple <b>CAPTCHA</b> options, including <b>Cloudflare Turnstile</b>, eliminate bot traffic from your login screens and other forms. You won’t be asked to solve a puzzle or identify objects to prove you’re a human — unless you’re a bot.', 'better-wp-security' ),
 		{ b: <Text weight={ 700 } /> }
 	),
 ];
@@ -70,14 +70,14 @@ export default function Features( { installType } ) {
 					size={ TextSize.EXTRA_LARGE }
 					variant={ TextVariant.ACCENT }
 					text={ installType === 'free'
-						? __( 'Reduce your siteвЂ™s security risk to nearly zero with Solid Security Pro.', 'better-wp-security' )
-						: __( 'Greatly enhance your websiteвЂ™s security with Solid Security Pro.', 'better-wp-security' ) }
+						? __( 'Reduce your site’s security risk to nearly zero with Solid Security Pro.', 'better-wp-security' )
+						: __( 'Greatly enhance your website’s security with Solid Security Pro.', 'better-wp-security' ) }
 				/>
 				<Text
 					variant={ TextVariant.MUTED }
 					text={ installType === 'free'
 						? __( 'Extended features for professionals include:', 'better-wp-security' )
-						: __( 'You are a WordPress security superstar! Be sure to take advantage of the features that comes with your paid plan. Paid features includeвЂ¦', 'better-wp-security' ) }
+						: __( 'You are a WordPress security superstar! Be sure to take advantage of the features that comes with your paid plan. Paid features include…', 'better-wp-security' ) }
 				/>
 				<StyledFeaturesList textVariant={ TextVariant.DARK } gap={ 0 }>
 					{ installType === 'free'

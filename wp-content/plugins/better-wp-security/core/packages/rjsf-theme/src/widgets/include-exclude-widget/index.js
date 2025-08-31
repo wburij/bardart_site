@@ -1,4 +1,4 @@
-﻿/**
+/**
  * External dependencies
  */
 import { partition, find, findIndex } from 'lodash';

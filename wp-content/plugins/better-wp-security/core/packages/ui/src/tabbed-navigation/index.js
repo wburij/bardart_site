@@ -1,4 +1,4 @@
-﻿/**
+/**
  * WordPress dependencies
  */
 import { createContext, useContext, useMemo } from '@wordpress/element';

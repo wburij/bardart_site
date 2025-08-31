@@ -1,4 +1,4 @@
-﻿/******/ (() => { // webpackBootstrap
+/******/ (() => { // webpackBootstrap
 /******/ 	var __webpack_modules__ = ({
 
 /***/ 2058:
@@ -601,7 +601,7 @@ PATTERN = /<=|>=|==|!=|&&|\|\||\?:|\(|!|\*|\/|%|\+|-|<|>|\?|\)|:/;
  * import postfix from '@tannin/postfix';
  *
  * postfix( 'n > 1' );
- * // в‡’ [ 'n', '1', '>' ]
+ * // ⇒ [ 'n', '1', '>' ]
  * ```
  *
  * @param {string} expression C expression.
@@ -728,11 +728,11 @@ var OPERATORS = {
  * ```js
  * import evaluate from '@tannin/evaluate';
  *
- * // 3 + 4 * 5 / 6 в‡’ '3 4 5 * 6 / +'
+ * // 3 + 4 * 5 / 6 ⇒ '3 4 5 * 6 / +'
  * const terms = [ '3', '4', '5', '*', '6', '/', '+' ];
  *
  * evaluate( terms, {} );
- * // в‡’ 6.333333333333334
+ * // ⇒ 6.333333333333334
  * ```
  *
  * @param {string[]} postfix   Postfix terms.
@@ -789,7 +789,7 @@ function evaluate( postfix, variables ) {
  * const evaluate = compile( 'n > 1' );
  *
  * evaluate( { n: 2 } );
- * // в‡’ true
+ * // ⇒ true
  * ```
  *
  * @param {string} expression C expression.

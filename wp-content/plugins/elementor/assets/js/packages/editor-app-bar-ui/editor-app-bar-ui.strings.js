@@ -1,3 +1,3 @@
-﻿__( 'More', 'elementor' );
+__( 'More', 'elementor' );
 __( 'Elementor Logo', 'elementor' );
 __( 'Integrations', 'elementor' );

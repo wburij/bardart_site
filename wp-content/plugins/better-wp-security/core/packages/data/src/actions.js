@@ -1,4 +1,4 @@
-﻿/**
+/**
  * Internal dependencies
  */
 import { apiFetch, select } from './controls';

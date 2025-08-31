@@ -1,4 +1,4 @@
-﻿/**
+/**
  * By Elementor Team
  */
 ( function( $ ) {

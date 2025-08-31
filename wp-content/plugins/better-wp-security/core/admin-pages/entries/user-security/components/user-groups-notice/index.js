@@ -1,4 +1,4 @@
-﻿/**
+/**
  * External dependencies
  */
 import styled from '@emotion/styled';
@@ -29,7 +29,7 @@ export default function UserGroupNotice( { } ) {
 		<>
 			{ showUserGroupNotice && (
 				<StyledNotice
-					text={ __( 'Filter the user groups whose security requirements youвЂ™d like to edit with the вЂњEdit User Group SettingsвЂќ feature.', 'better-wp-security' ) }
+					text={ __( 'Filter the user groups whose security requirements you’d like to edit with the “Edit User Group Settings” feature.', 'better-wp-security' ) }
 					onDismiss={ ( ) =>
 						toggle( 'ithemes-security/users', 'howToEditUserGroups' )
 					}

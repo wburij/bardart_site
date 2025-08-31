@@ -1,4 +1,4 @@
-﻿/*! elementor - v3.20.0 - 10-04-2024 */
+/*! elementor - v3.20.0 - 10-04-2024 */
 /******/ (() => { // webpackBootstrap
 /******/ 	var __webpack_modules__ = ({
 
@@ -10053,10 +10053,10 @@ var Component = /*#__PURE__*/function (_ComponentModalBase) {
             /* Translators: %s is the type content */
             headerMessage: __('Apply the settings of this %s too?', 'elementor').replace('%s', elementor.translate(model.attributes.type)),
             /* Translators: %s is the type content */
-            message: __('This will override the design, layout, and other settings of the %s youвЂ™re working on.', 'elementor').replace('%s', elementor.documents.getCurrent().container.label),
+            message: __('This will override the design, layout, and other settings of the %s you’re working on.', 'elementor').replace('%s', elementor.documents.getCurrent().container.label),
             strings: {
               confirm: __('Apply', 'elementor'),
-              cancel: __('DonвЂ™t apply', 'elementor')
+              cancel: __('Don’t apply', 'elementor')
             }
           });
         },
@@ -10918,7 +10918,7 @@ TemplateLibraryTemplatesEmptyView = Marionette.ItemView.extend({
   },
   modesStrings: {
     empty: {
-      title: __('HavenвЂ™t Saved Templates Yet?', 'elementor'),
+      title: __('Haven’t Saved Templates Yet?', 'elementor'),
       message: __('This is where your templates should be. Design it. Save it. Reuse it.', 'elementor')
     },
     noResults: {
@@ -18031,7 +18031,7 @@ var Copy = /*#__PURE__*/function (_$e$modules$editor$Co) {
         containers = _args$containers === void 0 ? [args.container] : _args$containers;
       if (!elementor.selection.isSameType()) {
         elementor.notifications.showToast({
-          message: __('That didnвЂ™t work. Try copying one kind of element at a time.', 'elementor'),
+          message: __('That didn’t work. Try copying one kind of element at a time.', 'elementor'),
           buttons: [{
             name: 'got_it',
             text: __('Got it', 'elementor')
@@ -18442,7 +18442,7 @@ var Duplicate = /*#__PURE__*/function (_$e$modules$editor$do) {
       var at = containers[containers.length - 1].view._index;
       if (!elementor.selection.isSameType()) {
         elementor.notifications.showToast({
-          message: __('That didnвЂ™t work. Try duplicating one kind of element at a time.', 'elementor'),
+          message: __('That didn’t work. Try duplicating one kind of element at a time.', 'elementor'),
           buttons: [{
             name: 'got_it',
             text: __('Got it', 'elementor')
@@ -25739,7 +25739,7 @@ var Save = /*#__PURE__*/function (_$e$modules$CommandIn) {
       } else if (data.statusText) {
         message = elementor.createAjaxErrorMessage(data);
         if (0 === data.readyState) {
-          message += ' ' + __('Saving has been disabled until youвЂ™re reconnected.', 'elementor');
+          message += ' ' + __('Saving has been disabled until you’re reconnected.', 'elementor');
         }
       } else if (data[0] && data[0].code) {
         message = __('Server Error', 'elementor') + ' ' + data[0].code;
@@ -30172,7 +30172,7 @@ BaseElementView = BaseContainer.extend({
       }, {
         name: 'pasteStyle',
         title: __('Paste style', 'elementor'),
-        shortcut: controlSign + '+в‡§+V',
+        shortcut: controlSign + '+⇧+V',
         isEnabled: function isEnabled() {
           return !!elementorCommon.storage.get('clipboard');
         },
@@ -30226,7 +30226,7 @@ BaseElementView = BaseContainer.extend({
           }
           return __('Delete', 'elementor');
         },
-        shortcut: 'вЊ¦',
+        shortcut: '⌦',
         callback: function callback() {
           return $e.run('document/elements/delete', {
             containers: elementor.selection.getElements(_this.getContainer())
@@ -55065,7 +55065,7 @@ function createStore(reducer, preloadedState, enhancer) {
    * example, see the documentation for the `redux-thunk` package. Even the
    * middleware will eventually dispatch plain object actions using this method.
    *
-   * @param {Object} action A plain object representing вЂњwhat changedвЂќ. It is
+   * @param {Object} action A plain object representing “what changed”. It is
    * a good idea to keep actions serializable so you can record and replay user
    * sessions, or use the time travelling `redux-devtools`. An action must have
    * a `type` property which may not be `undefined`. It is a good idea to use

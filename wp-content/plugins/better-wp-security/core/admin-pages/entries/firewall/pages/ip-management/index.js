@@ -1,4 +1,4 @@
-﻿/**
+/**
  * External dependencies
  */
 import { NavLink, Route } from 'react-router-dom';

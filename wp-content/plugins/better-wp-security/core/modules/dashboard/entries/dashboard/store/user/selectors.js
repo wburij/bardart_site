@@ -1,3 +1,3 @@
-﻿export function getPrimaryDashboard( state ) {
+export function getPrimaryDashboard( state ) {
 	return state.user.primaryDashboard;
 }

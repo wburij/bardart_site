@@ -1,4 +1,4 @@
-﻿/**
+/**
  * Internal dependencies
  */
 import { fetch, parseFetchResponse, updateSettings } from '../controls';

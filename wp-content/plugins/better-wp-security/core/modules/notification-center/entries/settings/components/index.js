@@ -1,4 +1,4 @@
-﻿export { default as Notification } from './notification';
+export { default as Notification } from './notification';
 export { default as Onboard } from './onboard';
 export { default as Page } from './page';
 export { default as Save } from './save';

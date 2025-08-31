@@ -1,4 +1,4 @@
-﻿/******/ (() => { // webpackBootstrap
+/******/ (() => { // webpackBootstrap
 /******/ 	"use strict";
 /******/ 	// The require scope
 /******/ 	var __webpack_require__ = {};
@@ -51,7 +51,7 @@ let _decodeTextArea;
  * import { decodeEntities } from '@wordpress/html-entities';
  *
  * const result = decodeEntities( '&aacute;' );
- * console.log( result ); // result will be "ГЎ"
+ * console.log( result ); // result will be "á"
  * ```
  *
  * @return {string} The decoded string.

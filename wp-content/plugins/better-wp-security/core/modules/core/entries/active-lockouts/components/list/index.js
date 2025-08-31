@@ -1,4 +1,4 @@
-﻿/**
+/**
  * SolidWP dependencies
  */
 import { MasterDetail } from '@ithemes/ui';

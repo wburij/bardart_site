@@ -1,4 +1,4 @@
-﻿/**
+/**
  * External dependencies
  */
 import { useDebounceCallback } from '@react-hook/debounce';

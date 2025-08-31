@@ -1,4 +1,4 @@
-﻿/**
+/**
  * WordPress dependencies
  */
 import { __, _n, sprintf } from '@wordpress/i18n';
@@ -52,7 +52,7 @@ export function UserSecurityPillContainer( ) {
 						text={
 							sprintf(
 							/* translators: 1. Number of additional users. */
-								_n( '%s more userвЂ¦', '%s more usersвЂ¦', selectedUsers.length - maxNumberOfUsersToShow, 'better-wp-security' ),
+								_n( '%s more user…', '%s more users…', selectedUsers.length - maxNumberOfUsersToShow, 'better-wp-security' ),
 								selectedUsers.length - maxNumberOfUsersToShow
 							)
 						}

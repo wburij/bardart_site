@@ -1,4 +1,4 @@
-﻿/*! elementor - v3.20.0 - 10-04-2024 */
+/*! elementor - v3.20.0 - 10-04-2024 */
 /******/ (() => { // webpackBootstrap
 /******/ 	var __webpack_modules__ = ({
 
@@ -1296,7 +1296,7 @@ var PromptErrorMessage = function PromptErrorMessage(_ref) {
       },
       rate_limit_network: {
         text: /*#__PURE__*/_react.default.createElement(_ui.AlertTitle, null, (0, _i18n.__)('Whoa! Slow down there.', 'elementor')),
-        description: (0, _i18n.__)('We canвЂ™t process that many requests so fast. Try again in 15 minutes.', 'elementor')
+        description: (0, _i18n.__)('We can’t process that many requests so fast. Try again in 15 minutes.', 'elementor')
       },
       invalid_prompts: {
         text: /*#__PURE__*/_react.default.createElement(_ui.AlertTitle, null, (0, _i18n.__)('We were unable to generate that prompt.', 'elementor')),
@@ -3190,7 +3190,7 @@ var UpgradeBanner = function UpgradeBanner(_ref) {
     variant: "filled",
     color: "promotion",
     onClose: onClose
-  }, props), __('YouвЂ™re using a limited license. Get maximum access to Elementor AI.', 'elementor'));
+  }, props), __('You’re using a limited license. Get maximum access to Elementor AI.', 'elementor'));
 };
 UpgradeBanner.propTypes = {
   onClose: PropTypes.func,
@@ -3406,19 +3406,19 @@ var KEY_SUBSCRIPTION = 'subscription';
 var KEY_NO_SUBSCRIPTION = 'noSubscription';
 var alertConfigs = [{
   threshold: 95,
-  title: (_title = {}, (0, _defineProperty2.default)(_title, KEY_SUBSCRIPTION, __('YouвЂ™ve used over 95% of your Elementor AI plan.', 'elementor')), (0, _defineProperty2.default)(_title, KEY_NO_SUBSCRIPTION, __('YouвЂ™ve used 95% of credits for this AI feature.', 'elementor')), _title),
+  title: (_title = {}, (0, _defineProperty2.default)(_title, KEY_SUBSCRIPTION, __('You’ve used over 95% of your Elementor AI plan.', 'elementor')), (0, _defineProperty2.default)(_title, KEY_NO_SUBSCRIPTION, __('You’ve used 95% of credits for this AI feature.', 'elementor')), _title),
   description: (_description = {}, (0, _defineProperty2.default)(_description, KEY_SUBSCRIPTION, __('Get maximum access.', 'elementor')), (0, _defineProperty2.default)(_description, KEY_NO_SUBSCRIPTION, __('Upgrade now to keep using this feature. You still have credits for other AI features (Text, Code, Images, Containers, etc.)', 'elementor')), _description),
   url: (_url = {}, (0, _defineProperty2.default)(_url, KEY_SUBSCRIPTION, 'https://go.elementor.com/ai-banner-paid-95-limit-reach/'), (0, _defineProperty2.default)(_url, KEY_NO_SUBSCRIPTION, 'https://go.elementor.com/ai-banner-free-95-limit-reach/'), _url),
   color: 'error'
 }, {
   threshold: 80,
-  title: (_title2 = {}, (0, _defineProperty2.default)(_title2, KEY_SUBSCRIPTION, __('YouвЂ™ve used over 80% of your Elementor AI plan.', 'elementor')), (0, _defineProperty2.default)(_title2, KEY_NO_SUBSCRIPTION, __('YouвЂ™ve used 80% of credits for this AI feature.', 'elementor')), _title2),
+  title: (_title2 = {}, (0, _defineProperty2.default)(_title2, KEY_SUBSCRIPTION, __('You’ve used over 80% of your Elementor AI plan.', 'elementor')), (0, _defineProperty2.default)(_title2, KEY_NO_SUBSCRIPTION, __('You’ve used 80% of credits for this AI feature.', 'elementor')), _title2),
   description: (_description2 = {}, (0, _defineProperty2.default)(_description2, KEY_SUBSCRIPTION, __('Get maximum access.', 'elementor')), (0, _defineProperty2.default)(_description2, KEY_NO_SUBSCRIPTION, __('Upgrade now to keep using this feature. You still have credits for other AI features (Text, Code, Images, Containers, etc.)', 'elementor')), _description2),
   url: (_url2 = {}, (0, _defineProperty2.default)(_url2, KEY_SUBSCRIPTION, 'https://go.elementor.com/ai-banner-paid-80-limit-reach/'), (0, _defineProperty2.default)(_url2, KEY_NO_SUBSCRIPTION, 'https://go.elementor.com/ai-banner-free-80-limit-reach/'), _url2),
   color: 'warning'
 }, {
   threshold: 75,
-  title: (_title3 = {}, (0, _defineProperty2.default)(_title3, KEY_SUBSCRIPTION, __('YouвЂ™ve used over 75% of your Elementor AI plan.', 'elementor')), (0, _defineProperty2.default)(_title3, KEY_NO_SUBSCRIPTION, __(' YouвЂ™ve used 75% of credits for this AI feature.', 'elementor')), _title3),
+  title: (_title3 = {}, (0, _defineProperty2.default)(_title3, KEY_SUBSCRIPTION, __('You’ve used over 75% of your Elementor AI plan.', 'elementor')), (0, _defineProperty2.default)(_title3, KEY_NO_SUBSCRIPTION, __(' You’ve used 75% of credits for this AI feature.', 'elementor')), _title3),
   description: (_description3 = {}, (0, _defineProperty2.default)(_description3, KEY_SUBSCRIPTION, __('Get maximum access.', 'elementor')), (0, _defineProperty2.default)(_description3, KEY_NO_SUBSCRIPTION, __('Upgrade now to keep using this feature. You still have credits for other AI features (Text, Code, Images, Containers, etc.)', 'elementor')), _description3),
   url: (_url3 = {}, (0, _defineProperty2.default)(_url3, KEY_SUBSCRIPTION, 'https://go.elementor.com/ai-banner-paid-80-limit-reach/'), (0, _defineProperty2.default)(_url3, KEY_NO_SUBSCRIPTION, 'https://go.elementor.com/ai-banner-free-80-limit-reach/'), _url3),
   color: 'warning'
@@ -7449,7 +7449,7 @@ var UnsavedChangesAlert = function UnsavedChangesAlert(_ref) {
     id: "unsaved-changes-alert-title"
   }, (0, _i18n.__)('Leave Elementor AI?', 'elementor')), /*#__PURE__*/_react.default.createElement(_ui.DialogContent, null, /*#__PURE__*/_react.default.createElement(_ui.DialogContentText, {
     id: "unsaved-changes-alert-description"
-  }, (0, _i18n.__)('Images will be gone forever and we wonвЂ™t be able to recover them.', 'elementor'))), /*#__PURE__*/_react.default.createElement(_ui.DialogActions, null, /*#__PURE__*/_react.default.createElement(_ui.Button, {
+  }, (0, _i18n.__)('Images will be gone forever and we won’t be able to recover them.', 'elementor'))), /*#__PURE__*/_react.default.createElement(_ui.DialogActions, null, /*#__PURE__*/_react.default.createElement(_ui.Button, {
     onClick: onCancel,
     color: "secondary"
   }, (0, _i18n.__)('Cancel', 'elementor')), /*#__PURE__*/_react.default.createElement(_ui.Button, {
@@ -9861,7 +9861,7 @@ var OutPainting = function OutPainting() {
   };
   return /*#__PURE__*/_react.default.createElement(_view.default, null, /*#__PURE__*/_react.default.createElement(_view.default.Panel, null, /*#__PURE__*/_react.default.createElement(_view.default.BackButton, null), /*#__PURE__*/_react.default.createElement(_view.default.PanelHeading, {
     primary: (0, _i18n.__)('Expand Image', 'elementor'),
-    secondary: (0, _i18n.__)('Position image in itвЂ™s new size to generate content around the edges.', 'elementor')
+    secondary: (0, _i18n.__)('Position image in it’s new size to generate content around the edges.', 'elementor')
   }), error && /*#__PURE__*/_react.default.createElement(_view.default.ErrorMessage, {
     error: error,
     onRetry: handleSubmit
@@ -10374,7 +10374,7 @@ var Resize = function Resize() {
   };
   return /*#__PURE__*/_react.default.createElement(_view.default, null, /*#__PURE__*/_react.default.createElement(_view.default.Panel, null, /*#__PURE__*/_react.default.createElement(_view.default.BackButton, null), /*#__PURE__*/_react.default.createElement(_view.default.PanelHeading, {
     primary: (0, _i18n.__)('Resize', 'elementor'),
-    secondary: (0, _i18n.__)('Make an image larger and improve itвЂ™s resolution.', 'elementor')
+    secondary: (0, _i18n.__)('Make an image larger and improve it’s resolution.', 'elementor')
   }), error && /*#__PURE__*/_react.default.createElement(_view.default.ErrorMessage, {
     error: error,
     onRetry: handleSubmit
@@ -18506,7 +18506,7 @@ function decodeNamedCharacterReference(value) {
 
   // Some named character references do not require the closing semicolon
   // (`&not`, for instance), which leads to situations where parsing the assumed
-  // named reference of `&notit;` will result in the string `В¬it;`.
+  // named reference of `&notit;` will result in the string `¬it;`.
   // When we encounter a trailing semicolon after parsing, and the character
   // reference to decode was not a semicolon (`&semi;`), we can assume that the
   // matching was not complete.
@@ -18936,21 +18936,21 @@ function generateOptions(options, defaults) {
 
 //
 // Ranges and exceptions:
-// Latin-1 Supplement, 0080вЂ“00FF
-//  - U+00D7  Г— Multiplication sign
-//  - U+00F7  Г· Division sign
-// Latin Extended-A, 0100вЂ“017F
-// Latin Extended-B, 0180вЂ“024F
-// IPA Extensions, 0250вЂ“02AF
-// Spacing Modifier Letters, 02B0вЂ“02FF
-//  - U+02C7  Л‡ &#711;  Caron
-//  - U+02D8  Л &#728;  Breve
-//  - U+02D9  Л™ &#729;  Dot Above
-//  - U+02DA  Лљ &#730;  Ring Above
-//  - U+02DB  Л› &#731;  Ogonek
-//  - U+02DC  Лњ &#732;  Small Tilde
-//  - U+02DD  Лќ &#733;  Double Acute Accent
-// Latin Extended Additional, 1E00вЂ“1EFF
+// Latin-1 Supplement, 0080–00FF
+//  - U+00D7  × Multiplication sign
+//  - U+00F7  ÷ Division sign
+// Latin Extended-A, 0100–017F
+// Latin Extended-B, 0180–024F
+// IPA Extensions, 0250–02AF
+// Spacing Modifier Letters, 02B0–02FF
+//  - U+02C7  ˇ &#711;  Caron
+//  - U+02D8  ˘ &#728;  Breve
+//  - U+02D9  ˙ &#729;  Dot Above
+//  - U+02DA  ˚ &#730;  Ring Above
+//  - U+02DB  ˛ &#731;  Ogonek
+//  - U+02DC  ˜ &#732;  Small Tilde
+//  - U+02DD  ˝ &#733;  Double Acute Accent
+// Latin Extended Additional, 1E00–1EFF
 
 var extendedWordChars = /^[A-Za-z\xC0-\u02C6\u02C8-\u02D7\u02DE-\u02FF\u1E00-\u1EFF]+$/;
 var reWhitespace = /\S/;
@@ -20477,7 +20477,7 @@ __webpack_require__.r(__webpack_exports__);
  *
  * @typedef {[Token, OnEnterError | undefined]} TokenTuple
  *   Open token on the stack, with an optional error handler for when
- *   that token isnвЂ™t closed properly.
+ *   that token isn’t closed properly.
  */
 
 /**
@@ -20530,7 +20530,7 @@ __webpack_require__.r(__webpack_exports__);
  */
 
 // To do: micromark: create a registry of tokens?
-// To do: next major: donвЂ™t return given `Node` from `enter`.
+// To do: next major: don’t return given `Node` from `enter`.
 // To do: next major: remove setter/getter.
 
 
@@ -20912,7 +20912,7 @@ function compiler(options) {
             type: 'listItem',
             _spread: false,
             start: Object.assign({}, event[1].start),
-            // @ts-expect-error: weвЂ™ll add `end` in a second.
+            // @ts-expect-error: we’ll add `end` in a second.
             end: undefined
           }
           // @ts-expect-error: `listItem` is most definitely defined, TS...
@@ -21061,7 +21061,7 @@ function compiler(options) {
           token.type +
           '` (' +
           (0,unist_util_stringify_position__WEBPACK_IMPORTED_MODULE_5__.stringifyPosition)({start: token.start, end: token.end}) +
-          '): itвЂ™s not open'
+          '): it’s not open'
       )
     } else if (open[0].type !== token.type) {
       if (onExitError) {
@@ -21289,7 +21289,7 @@ function compiler(options) {
     if (!tail || tail.type !== 'text') {
       // Add a new text node.
       tail = text()
-      // @ts-expect-error: weвЂ™ll add `end` later.
+      // @ts-expect-error: we’ll add `end` later.
       tail.position = {start: point(token.start)}
       // @ts-expect-error: Assume `parent` accepts `text`.
       node.children.push(tail)
@@ -21321,7 +21321,7 @@ function compiler(options) {
     const context = this.stack[this.stack.length - 1]
     ;(0,uvu_assert__WEBPACK_IMPORTED_MODULE_0__.ok)(context, 'expected `node`')
 
-    // If weвЂ™re at a hard break, include the line ending in there.
+    // If we’re at a hard break, include the line ending in there.
     if (getData('atHardBreak')) {
       (0,uvu_assert__WEBPACK_IMPORTED_MODULE_0__.ok)('children' in context, 'expected `parent`')
       const tail = context.children[context.children.length - 1]
@@ -21919,7 +21919,7 @@ function footer(state) {
           className: ['data-footnote-backref'],
           ariaLabel: state.footnoteBackLabel
         },
-        children: [{type: 'text', value: 'в†©'}]
+        children: [{type: 'text', value: '↩'}]
       }
 
       if (referenceIndex > 1) {
@@ -22110,7 +22110,7 @@ __webpack_require__.r(__webpack_exports__);
  */
 function code(state, node) {
   const value = node.value ? node.value + '\n' : ''
-  // To do: next major, use `node.lang` w/o regex, the splittingвЂ™s been going
+  // To do: next major, use `node.lang` w/o regex, the splitting’s been going
   // on for years in remark now.
   const lang = node.lang ? node.lang.match(/^[^ \t]+(?=[ \t]|$)/) : null
   /** @type {Properties} */
@@ -22333,7 +22333,7 @@ __webpack_require__.r(__webpack_exports__);
 // To do: when both:
 // * <https://github.com/micromark/micromark-extension-footnote>
 // * <https://github.com/syntax-tree/mdast-util-footnote>
-// вЂ¦are archived, remove this (also from mdast).
+// …are archived, remove this (also from mdast).
 // These inline notes are not used in GFM.
 
 /**
@@ -23496,7 +23496,7 @@ __webpack_require__.r(__webpack_exports__);
  *
  * Raw HTML is available in mdast as `html` nodes and can be embedded in hast
  * as semistandard `raw` nodes.
- * Most utilities ignore `raw` nodes but two notable ones donвЂ™t:
+ * Most utilities ignore `raw` nodes but two notable ones don’t:
  *
  * *   `hast-util-to-html` also has an option `allowDangerousHtml` which will
  *     output the raw HTML.
@@ -23546,10 +23546,10 @@ __webpack_require__.r(__webpack_exports__);
  *
  * ###### Unknown nodes
  *
- * Unknown nodes are nodes with a type that isnвЂ™t in `handlers` or `passThrough`.
+ * Unknown nodes are nodes with a type that isn’t in `handlers` or `passThrough`.
  * The default behavior for unknown nodes is:
  *
- * *   when the node has a `value` (and doesnвЂ™t have `data.hName`,
+ * *   when the node has a `value` (and doesn’t have `data.hName`,
  *     `data.hProperties`, or `data.hChildren`, see later), create a hast `text`
  *     node
  * *   otherwise, create a `<div>` element (which could be changed with
@@ -23571,7 +23571,7 @@ function toHast(tree, options) {
   const foot = (0,_footer_js__WEBPACK_IMPORTED_MODULE_1__.footer)(state)
 
   if (foot) {
-    // @ts-expect-error If thereвЂ™s a footer, there were definitions, meaning block
+    // @ts-expect-error If there’s a footer, there were definitions, meaning block
     // content.
     // So assume `node` is a parent node.
     node.children.push({type: 'text', value: '\n'}, foot)
@@ -23791,7 +23791,7 @@ __webpack_require__.r(__webpack_exports__);
  * @property {Handler} unknownHandler
  *   Handler for any none not in `passThrough` or otherwise handled.
  * @property {(from: MdastNodes, node: HastNodes) => void} patch
- *   Copy a nodeвЂ™s positional info.
+ *   Copy a node’s positional info.
  * @property {<Type extends HastNodes>(from: MdastNodes, to: Type) => Type | HastElement} applyData
  *   Honor the `data` of `from`, and generate an element instead of `node`.
  * @property {(node: MdastNodes, parent: MdastParents | null | undefined) => HastElementContent | Array<HastElementContent> | null | undefined} one
@@ -23919,7 +23919,7 @@ function createState(tree, options) {
     }
   })
 
-  // @ts-expect-error Hush, itвЂ™s fine!
+  // @ts-expect-error Hush, it’s fine!
   return state
 
   /**
@@ -24006,7 +24006,7 @@ function createState(tree, options) {
    *   Resulting hast node.
    */
   function oneBound(node, parent) {
-    // @ts-expect-error: thatвЂ™s a state :)
+    // @ts-expect-error: that’s a state :)
     return one(state, node, parent)
   }
 
@@ -24019,13 +24019,13 @@ function createState(tree, options) {
    *   Resulting hast nodes.
    */
   function allBound(parent) {
-    // @ts-expect-error: thatвЂ™s a state :)
+    // @ts-expect-error: that’s a state :)
     return all(state, parent)
   }
 }
 
 /**
- * Copy a nodeвЂ™s positional info.
+ * Copy a node’s positional info.
  *
  * @param {MdastNodes} from
  *   mdast node to copy from.
@@ -24287,7 +24287,7 @@ const emptyOptions = {}
 /**
  * Get the text content of a node or list of nodes.
  *
- * Prefers the nodeвЂ™s plain-text fields, otherwise serializes its children,
+ * Prefers the node’s plain-text fields, otherwise serializes its children,
  * and if the given value is an array, serialize the nodes in it.
  *
  * @param {unknown} value
@@ -24453,7 +24453,7 @@ function resolveAllAttention(events, context) {
 
   // Walk through all events.
   //
-  // Note: performance of this is fine on an mb of normal markdown, but itвЂ™s
+  // Note: performance of this is fine on an mb of normal markdown, but it’s
   // a bottleneck for malicious stuff.
   while (++index < events.length) {
     // Find a token that can close.
@@ -24478,7 +24478,7 @@ function resolveAllAttention(events, context) {
           // If the opening can close or the closing can open,
           // and the close size *is not* a multiple of three,
           // but the sum of the opening and closing size *is* multiple of three,
-          // then donвЂ™t match.
+          // then don’t match.
           if (
             (events[open][1]._close || events[index][1]._open) &&
             (events[index][1].end.offset - events[index][1].start.offset) % 3 &&
@@ -24683,7 +24683,7 @@ function tokenizeAttention(effects, ok) {
 /**
  * Move a point a bit.
  *
- * Note: `move` only works inside lines! ItвЂ™s not possible to move past other
+ * Note: `move` only works inside lines! It’s not possible to move past other
  * chunks (replacement characters, tabs, or line endings).
  *
  * @param {Point} point
@@ -25018,12 +25018,12 @@ function tokenizeBlankLine(effects, ok, nok) {
   /**
    * Start of blank line.
    *
-   * > рџ‘‰ **Note**: `вђ ` represents a space character.
+   * > 👉 **Note**: `␠` represents a space character.
    *
    * ```markdown
-   * > | вђ вђ вђЉ
+   * > | ␠␠␊
    *     ^
-   * > | вђЉ
+   * > | ␊
    *     ^
    * ```
    *
@@ -25038,12 +25038,12 @@ function tokenizeBlankLine(effects, ok, nok) {
   /**
    * At eof/eol, after optional whitespace.
    *
-   * > рџ‘‰ **Note**: `вђ ` represents a space character.
+   * > 👉 **Note**: `␠` represents a space character.
    *
    * ```markdown
-   * > | вђ вђ вђЉ
+   * > | ␠␠␊
    *       ^
-   * > | вђЉ
+   * > | ␊
    *     ^
    * ```
    *
@@ -26208,7 +26208,7 @@ function tokenizeFurtherStart(effects, ok, nok) {
    */
   function furtherStart(code) {
     // To do: improve `lazy` / `pierce` handling.
-    // If this is a lazy line, it canвЂ™t be code.
+    // If this is a lazy line, it can’t be code.
     if (self.parser.lazy[self.now().line]) {
       return nok(code)
     }
@@ -26222,7 +26222,7 @@ function tokenizeFurtherStart(effects, ok, nok) {
 
     // To do: the code here in `micromark-js` is a bit different from
     // `markdown-rs` because there it can attempt spaces.
-    // We canвЂ™t yet.
+    // We can’t yet.
     //
     // To do: use an improved `space_or_tab` function like `markdown-rs`,
     // so that we can drop the next state.
@@ -26297,7 +26297,7 @@ const codeText = {
   previous
 }
 
-// To do: next major: donвЂ™t resolve, like `markdown-rs`.
+// To do: next major: don’t resolve, like `markdown-rs`.
 /** @type {Resolver} */
 function resolveCodeText(events) {
   let tailExitIndex = events.length - 4
@@ -26444,9 +26444,9 @@ function tokenizeCodeText(effects, ok, nok) {
       return nok(code)
     }
 
-    // To do: next major: donвЂ™t do spaces in resolve, but when compiling,
+    // To do: next major: don’t do spaces in resolve, but when compiling,
     // like `markdown-rs`.
-    // Tabs donвЂ™t work, and virtual spaces donвЂ™t make sense.
+    // Tabs don’t work, and virtual spaces don’t make sense.
     if (code === micromark_util_symbol_codes_js__WEBPACK_IMPORTED_MODULE_2__.codes.space) {
       effects.enter('space')
       effects.consume(code)
@@ -26577,7 +26577,7 @@ const content = {tokenize: tokenizeContent, resolve: resolveContent}
 const continuationConstruct = {tokenize: tokenizeContinuation, partial: true}
 
 /**
- * Content is transparent: itвЂ™s parsed right now. That way, definitions are also
+ * Content is transparent: it’s parsed right now. That way, definitions are also
  * parsed right now: before text in paragraphs (specifically, media) are parsed.
  *
  * @type {Resolver}
@@ -26828,7 +26828,7 @@ function tokenizeDefinition(effects, ok, nok) {
       self,
       effects,
       labelAfter,
-      // Note: we donвЂ™t need to reset the way `markdown-rs` does.
+      // Note: we don’t need to reset the way `markdown-rs` does.
       nok,
       micromark_util_symbol_types_js__WEBPACK_IMPORTED_MODULE_1__.types.definitionLabel,
       micromark_util_symbol_types_js__WEBPACK_IMPORTED_MODULE_1__.types.definitionLabelMarker,
@@ -26892,7 +26892,7 @@ function tokenizeDefinition(effects, ok, nok) {
     return (0,micromark_factory_destination__WEBPACK_IMPORTED_MODULE_7__.factoryDestination)(
       effects,
       destinationAfter,
-      // Note: we donвЂ™t need to reset the way `markdown-rs` does.
+      // Note: we don’t need to reset the way `markdown-rs` does.
       nok,
       micromark_util_symbol_types_js__WEBPACK_IMPORTED_MODULE_1__.types.definitionDestination,
       micromark_util_symbol_types_js__WEBPACK_IMPORTED_MODULE_1__.types.definitionDestinationLiteral,
@@ -26950,13 +26950,13 @@ function tokenizeDefinition(effects, ok, nok) {
     if (code === micromark_util_symbol_codes_js__WEBPACK_IMPORTED_MODULE_2__.codes.eof || (0,micromark_util_character__WEBPACK_IMPORTED_MODULE_5__.markdownLineEnding)(code)) {
       effects.exit(micromark_util_symbol_types_js__WEBPACK_IMPORTED_MODULE_1__.types.definition)
 
-      // Note: we donвЂ™t care about uniqueness.
-      // ItвЂ™s likely that that doesnвЂ™t happen very frequently.
+      // Note: we don’t care about uniqueness.
+      // It’s likely that that doesn’t happen very frequently.
       // It is more likely that it wastes precious time.
       self.parser.defined.push(identifier)
 
       // To do: `markdown-rs` interrupt.
-      // // YouвЂ™d be interrupting.
+      // // You’d be interrupting.
       // tokenizer.interrupt = true
       return ok(code)
     }
@@ -27335,7 +27335,7 @@ function tokenizeHeadingAtx(effects, ok, nok) {
   /**
    * In further sequence (after whitespace).
    *
-   * Could be normal вЂњvisibleвЂќ hashes in the heading or a final sequence.
+   * Could be normal “visible” hashes in the heading or a final sequence.
    *
    * ```markdown
    * > | ## aa ##
@@ -27541,7 +27541,7 @@ function tokenizeHtmlFlow(effects, ok, nok) {
       // To do:
       // tokenizer.concrete = true
       // To do: use `markdown-rs` style interrupt.
-      // While weвЂ™re in an instruction instead of a declaration, weвЂ™re on a `?`
+      // While we’re in an instruction instead of a declaration, we’re on a `?`
       // right now, so we do need to search for `>`, similar to declarations.
       return self.interrupt ? ok : continuationDeclarationInside
     }
@@ -29105,7 +29105,7 @@ function tokenizeHtmlText(effects, ok, nok) {
   /**
    * At eol.
    *
-   * > рџ‘‰ **Note**: we canвЂ™t have blank lines in text, so no need to worry about
+   * > 👉 **Note**: we can’t have blank lines in text, so no need to worry about
    * > empty tokens.
    *
    * ```markdown
@@ -29129,7 +29129,7 @@ function tokenizeHtmlText(effects, ok, nok) {
   /**
    * After eol, at optional whitespace.
    *
-   * > рџ‘‰ **Note**: we canвЂ™t have blank lines in text, so no need to worry about
+   * > 👉 **Note**: we can’t have blank lines in text, so no need to worry about
    * > empty tokens.
    *
    * ```markdown
@@ -29161,7 +29161,7 @@ function tokenizeHtmlText(effects, ok, nok) {
   /**
    * After eol, after optional whitespace.
    *
-   * > рџ‘‰ **Note**: we canвЂ™t have blank lines in text, so no need to worry about
+   * > 👉 **Note**: we can’t have blank lines in text, so no need to worry about
    * > empty tokens.
    *
    * ```markdown
@@ -29282,7 +29282,7 @@ function resolveToLabelEnd(events, context) {
     token = events[index][1]
 
     if (open) {
-      // If we see another link, or inactive link label, weвЂ™ve been here before.
+      // If we see another link, or inactive link label, we’ve been here before.
       if (
         token.type === micromark_util_symbol_types_js__WEBPACK_IMPORTED_MODULE_1__.types.link ||
         (token.type === micromark_util_symbol_types_js__WEBPACK_IMPORTED_MODULE_1__.types.labelLink && token._inactive)
@@ -29290,7 +29290,7 @@ function resolveToLabelEnd(events, context) {
         break
       }
 
-      // Mark other link openings as inactive, as we canвЂ™t have links in
+      // Mark other link openings as inactive, as we can’t have links in
       // links.
       if (events[index][0] === 'enter' && token.type === micromark_util_symbol_types_js__WEBPACK_IMPORTED_MODULE_1__.types.labelLink) {
         token._inactive = true
@@ -29429,14 +29429,14 @@ function tokenizeLabelEnd(effects, ok, nok) {
     }
 
     // If the corresponding label (link) start is marked as inactive,
-    // it means weвЂ™d be wrapping a link, like this:
+    // it means we’d be wrapping a link, like this:
     //
     // ```markdown
     // > | a [b [c](d) e](f) g.
     //                  ^
     // ```
     //
-    // We canвЂ™t have that, so itвЂ™s just balanced brackets.
+    // We can’t have that, so it’s just balanced brackets.
     if (labelStart._inactive) {
       return labelEndNok(code)
     }
@@ -29499,7 +29499,7 @@ function tokenizeLabelEnd(effects, ok, nok) {
   /**
    * After `]`, at `[`, but not at a full reference.
    *
-   * > рџ‘‰ **Note**: we only get here if the label is defined.
+   * > 👉 **Note**: we only get here if the label is defined.
    *
    * ```markdown
    * > | [a][] b
@@ -29540,9 +29540,9 @@ function tokenizeLabelEnd(effects, ok, nok) {
   }
 
   /**
-   * Done, itвЂ™s nothing.
+   * Done, it’s nothing.
    *
-   * There was an okay opening, but we didnвЂ™t match anything.
+   * There was an okay opening, but we didn’t match anything.
    *
    * ```markdown
    * > | [a](b c
@@ -29806,7 +29806,7 @@ function tokenizeReferenceCollapsed(effects, ok, nok) {
   /**
    * In reference (collapsed), at `[`.
    *
-   * > рџ‘‰ **Note**: we only get here if the label is defined.
+   * > 👉 **Note**: we only get here if the label is defined.
    *
    * ```markdown
    * > | [a][] d
@@ -29816,7 +29816,7 @@ function tokenizeReferenceCollapsed(effects, ok, nok) {
    * @type {State}
    */
   function referenceCollapsedStart(code) {
-    // We only attempt a collapsed label if thereвЂ™s a `[`.
+    // We only attempt a collapsed label if there’s a `[`.
     ;(0,uvu_assert__WEBPACK_IMPORTED_MODULE_0__.ok)(code === micromark_util_symbol_codes_js__WEBPACK_IMPORTED_MODULE_4__.codes.leftSquareBracket, 'expected left bracket')
     effects.enter(micromark_util_symbol_types_js__WEBPACK_IMPORTED_MODULE_1__.types.reference)
     effects.enter(micromark_util_symbol_types_js__WEBPACK_IMPORTED_MODULE_1__.types.referenceMarker)
@@ -29828,7 +29828,7 @@ function tokenizeReferenceCollapsed(effects, ok, nok) {
   /**
    * In reference (collapsed), at `]`.
    *
-   * > рџ‘‰ **Note**: we only get here if the label is defined.
+   * > 👉 **Note**: we only get here if the label is defined.
    *
    * ```markdown
    * > | [a][] d
@@ -29967,7 +29967,7 @@ function tokenizeLabelStartImage(effects, ok, nok) {
   function after(code) {
     // To do: use a new field to do this, this is still needed for
     // `micromark-extension-gfm-footnote`, but the `label-start-link`
-    // behavior isnвЂ™t.
+    // behavior isn’t.
     // Hidden footnotes hook.
     /* c8 ignore next 3 */
     return code === micromark_util_symbol_codes_js__WEBPACK_IMPORTED_MODULE_2__.codes.caret &&
@@ -30045,7 +30045,7 @@ function tokenizeLabelStartLink(effects, ok, nok) {
 
   /** @type {State} */
   function after(code) {
-    // To do: this isnвЂ™t needed in `micromark-extension-gfm-footnote`,
+    // To do: this isn’t needed in `micromark-extension-gfm-footnote`,
     // remove.
     // Hidden footnotes hook.
     /* c8 ignore next 3 */
@@ -30251,7 +30251,7 @@ function tokenizeListStart(effects, ok, nok) {
     self.containerState.marker = self.containerState.marker || code
     return effects.check(
       _blank_line_js__WEBPACK_IMPORTED_MODULE_6__.blankLine,
-      // CanвЂ™t be empty when interrupting.
+      // Can’t be empty when interrupting.
       self.interrupt ? nok : onBlank,
       effects.attempt(
         listItemPrefixWhitespaceConstruct,
@@ -30340,7 +30340,7 @@ function tokenizeListContinuation(effects, ok, nok) {
     (0,uvu_assert__WEBPACK_IMPORTED_MODULE_0__.ok)(self.containerState, 'expected state')
     // While we do continue, we signal that the flow should be closed.
     self.containerState._closeFlow = true
-    // As weвЂ™re closing flow, weвЂ™re no longer interrupting.
+    // As we’re closing flow, we’re no longer interrupting.
     self.interrupt = undefined
     // Always populated by defaults.
     ;(0,uvu_assert__WEBPACK_IMPORTED_MODULE_0__.ok)(
@@ -30484,7 +30484,7 @@ function resolveToSetextUnderline(events, context) {
   let definition
 
   // Find the opening of the content.
-  // ItвЂ™ll always exist: we donвЂ™t tokenize if it isnвЂ™t there.
+  // It’ll always exist: we don’t tokenize if it isn’t there.
   while (index--) {
     if (events[index][0] === 'enter') {
       if (events[index][1].type === micromark_util_symbol_types_js__WEBPACK_IMPORTED_MODULE_1__.types.content) {
@@ -30499,7 +30499,7 @@ function resolveToSetextUnderline(events, context) {
     // Exit
     else {
       if (events[index][1].type === micromark_util_symbol_types_js__WEBPACK_IMPORTED_MODULE_1__.types.content) {
-        // Remove the content end (if needed weвЂ™ll add it later)
+        // Remove the content end (if needed we’ll add it later)
         events.splice(index, 1)
       }
 
@@ -30521,7 +30521,7 @@ function resolveToSetextUnderline(events, context) {
   // Change the paragraph to setext heading text.
   events[text][1].type = micromark_util_symbol_types_js__WEBPACK_IMPORTED_MODULE_1__.types.setextHeadingText
 
-  // If we have definitions in the content, weвЂ™ll keep on having content,
+  // If we have definitions in the content, we’ll keep on having content,
   // but we need move it.
   if (definition) {
     events.splice(text, 0, ['enter', heading, context])
@@ -31032,7 +31032,7 @@ function factoryDestination(
 
     // ASCII control (but *not* `\0`) and space and `(`.
     // Note: in `markdown-rs`, `\0` exists in codes, in `micromark-js` it
-    // doesnвЂ™t.
+    // doesn’t.
     if (
       code === micromark_util_symbol_codes_js__WEBPACK_IMPORTED_MODULE_0__.codes.eof ||
       code === micromark_util_symbol_codes_js__WEBPACK_IMPORTED_MODULE_0__.codes.space ||
@@ -31105,7 +31105,7 @@ __webpack_require__.r(__webpack_exports__);
 /**
  * Parse labels.
  *
- * > рџ‘‰ **Note**: labels in markdown are capped at 999 characters in the string.
+ * > 👉 **Note**: labels in markdown are capped at 999 characters in the string.
  *
  * ###### Examples
  *
@@ -31178,9 +31178,9 @@ function factoryLabel(effects, ok, nok, type, markerType, stringType) {
       code === micromark_util_symbol_codes_js__WEBPACK_IMPORTED_MODULE_1__.codes.eof ||
       code === micromark_util_symbol_codes_js__WEBPACK_IMPORTED_MODULE_1__.codes.leftSquareBracket ||
       (code === micromark_util_symbol_codes_js__WEBPACK_IMPORTED_MODULE_1__.codes.rightSquareBracket && !seen) ||
-      // To do: remove in the future once weвЂ™ve switched from
+      // To do: remove in the future once we’ve switched from
       // `micromark-extension-footnote` to `micromark-extension-gfm-footnote`,
-      // which doesnвЂ™t need this.
+      // which doesn’t need this.
       // Hidden footnotes hook.
       /* c8 ignore next 3 */
       (code === micromark_util_symbol_codes_js__WEBPACK_IMPORTED_MODULE_1__.codes.caret &&
@@ -31300,13 +31300,13 @@ __webpack_require__.r(__webpack_exports__);
  *
  * ###### Examples
  *
- * Where `вђ‰` represents a tab (plus how much it expands) and `вђ ` represents a
+ * Where `␉` represents a tab (plus how much it expands) and `␠` represents a
  * single space.
  *
  * ```markdown
- * вђ‰
- * вђ вђ вђ вђ 
- * вђ‰вђ 
+ * ␉
+ * ␠␠␠␠
+ * ␉␠
  * ```
  *
  * @param {Effects} effects
@@ -31490,7 +31490,7 @@ function factoryTitle(effects, ok, nok, type, markerType, stringType) {
       return nok(code)
     }
 
-    // Note: blank lines canвЂ™t exist in content.
+    // Note: blank lines can’t exist in content.
     if ((0,micromark_util_character__WEBPACK_IMPORTED_MODULE_1__.markdownLineEnding)(code)) {
       // To do: use `space_or_tab_eol_with_options`, connect.
       effects.enter(micromark_util_symbol_types_js__WEBPACK_IMPORTED_MODULE_2__.types.lineEnding)
@@ -31971,11 +31971,11 @@ function splice(list, start, remove, items) {
 
   remove = remove > 0 ? remove : 0
 
-  // No need to chunk the items if thereвЂ™s only a couple (10k) items.
+  // No need to chunk the items if there’s only a couple (10k) items.
   if (items.length < micromark_util_symbol_constants_js__WEBPACK_IMPORTED_MODULE_0__.constants.v8MaxSafeChunkSize) {
     parameters = Array.from(items)
     parameters.unshift(start, remove)
-    // @ts-expect-error Hush, itвЂ™s fine.
+    // @ts-expect-error Hush, it’s fine.
     list.splice(...parameters)
   } else {
     // Delete `remove` items starting from `start`
@@ -31988,7 +31988,7 @@ function splice(list, start, remove, items) {
         chunkStart + micromark_util_symbol_constants_js__WEBPACK_IMPORTED_MODULE_0__.constants.v8MaxSafeChunkSize
       )
       parameters.unshift(start, 0)
-      // @ts-expect-error Hush, itвЂ™s fine.
+      // @ts-expect-error Hush, it’s fine.
       list.splice(...parameters)
 
       chunkStart += micromark_util_symbol_constants_js__WEBPACK_IMPORTED_MODULE_0__.constants.v8MaxSafeChunkSize
@@ -32054,7 +32054,7 @@ __webpack_require__.r(__webpack_exports__);
  * Used for attention (emphasis, strong), whose sequences can open or close
  * based on the class of surrounding characters.
  *
- * > рџ‘‰ **Note**: eof (`null`) is seen as whitespace.
+ * > 👉 **Note**: eof (`null`) is seen as whitespace.
  *
  * @param {Code} code
  *   Code.
@@ -32318,7 +32318,7 @@ const characterEscapeOrReference =
  * Decode markdown strings (which occur in places such as fenced code info
  * strings, destinations, labels, and titles).
  *
- * The вЂњstringвЂќ content type allows character escapes and -references.
+ * The “string” content type allows character escapes and -references.
  * This decodes those.
  *
  * @param {string} value
@@ -32393,7 +32393,7 @@ function encode(value) {
    * @returns {string}
    */
   function replace(value) {
-    // @ts-expect-error Hush, itвЂ™s fine.
+    // @ts-expect-error Hush, it’s fine.
     return '&' + characterReferences[value] + ';'
   }
 }
@@ -32414,11 +32414,11 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */   htmlRawNames: () => (/* binding */ htmlRawNames)
 /* harmony export */ });
 /**
- * List of lowercase HTML вЂњblockвЂќ tag names.
+ * List of lowercase HTML “block” tag names.
  *
  * The list, when parsing HTML (flow), results in more relaxed rules (condition
  * 6).
- * Because they are known blocks, the HTML-like syntax doesnвЂ™t have to be
+ * Because they are known blocks, the HTML-like syntax doesn’t have to be
  * strictly parsed.
  * For tag names not in this list, a more strict algorithm (condition 7) is used
  * to detect whether the HTML-like syntax is seen as HTML (flow) or not.
@@ -32426,7 +32426,7 @@ __webpack_require__.r(__webpack_exports__);
  * This is copied from:
  * <https://spec.commonmark.org/0.30/#html-blocks>.
  *
- * > рџ‘‰ **Note**: `search` was added in `CommonMark@0.31`.
+ * > 👉 **Note**: `search` was added in `CommonMark@0.31`.
  */
 const htmlBlockNames = [
   'address',
@@ -32494,7 +32494,7 @@ const htmlBlockNames = [
 ]
 
 /**
- * List of lowercase HTML вЂњrawвЂќ tag names.
+ * List of lowercase HTML “raw” tag names.
  *
  * The list, when parsing HTML (flow), results in HTML that can include lines
  * without exiting, until a closing tag also in this list is found (condition
@@ -32503,7 +32503,7 @@ const htmlBlockNames = [
  * This module is copied from:
  * <https://spec.commonmark.org/0.30/#html-blocks>.
  *
- * > рџ‘‰ **Note**: `textarea` was added in `CommonMark@0.30`.
+ * > 👉 **Note**: `textarea` was added in `CommonMark@0.30`.
  */
 const htmlRawNames = ['pre', 'script', 'style', 'textarea']
 
@@ -32529,9 +32529,9 @@ __webpack_require__.r(__webpack_exports__);
  *
  * Collapses markdown whitespace, trim, and then lower- and uppercase.
  *
- * Some characters are considered вЂњuppercaseвЂќ, such as U+03F4 (`Пґ`), but if their
- * lowercase counterpart (U+03B8 (`Оё`)) is uppercased will result in a different
- * uppercase character (U+0398 (`О`)).
+ * Some characters are considered “uppercase”, such as U+03F4 (`ϴ`), but if their
+ * lowercase counterpart (U+03B8 (`θ`)) is uppercased will result in a different
+ * uppercase character (U+0398 (`Θ`)).
  * So, to get a canonical form, we perform both lower- and uppercase.
  *
  * Using uppercase last makes sure keys will never interact with default
@@ -32550,7 +32550,7 @@ function normalizeIdentifier(value) {
       .replace(/[\t\n\r ]+/g, micromark_util_symbol_values_js__WEBPACK_IMPORTED_MODULE_0__.values.space)
       // Trim.
       .replace(/^ | $/g, '')
-      // Some characters are considered вЂњuppercaseвЂќ, but if their lowercase
+      // Some characters are considered “uppercase”, but if their lowercase
       // counterpart is uppercased will result in a different uppercase
       // character.
       // Hence, to get that form, we perform both lower- and uppercase.
@@ -32669,9 +32669,9 @@ function sanitizeUri(url, protocol) {
   const slash = value.indexOf('/')
 
   if (
-    // If there is no protocol, itвЂ™s relative.
+    // If there is no protocol, it’s relative.
     colon < 0 ||
-    // If the first colon is after a `?`, `#`, or `/`, itвЂ™s not a protocol.
+    // If the first colon is after a `?`, `#`, or `/`, it’s not a protocol.
     (slash > -1 && colon > slash) ||
     (questionMark > -1 && colon > questionMark) ||
     (numberSign > -1 && colon > numberSign) ||
@@ -33001,9 +33001,9 @@ function subcontent(events, eventIndex) {
   // Help GC.
   tokenizer.events = []
 
-  // If thereвЂ™s one more token (which is the cases for lines that end in an
-  // EOF), thatвЂ™s perfect: the last point we found starts it.
-  // If there isnвЂ™t then make sure any remaining content is added to it.
+  // If there’s one more token (which is the cases for lines that end in an
+  // EOF), that’s perfect: the last point we found starts it.
+  // If there isn’t then make sure any remaining content is added to it.
   if (current) {
     // Help GC.
     current._tokenizer = undefined
@@ -33014,7 +33014,7 @@ function subcontent(events, eventIndex) {
   }
 
   // Now splice the events from the subtokenizer into the current events,
-  // moving back to front so that splice indices arenвЂ™t affected.
+  // moving back to front so that splice indices aren’t affected.
   index = breaks.length
 
   while (index--) {
@@ -33059,7 +33059,7 @@ __webpack_require__.r(__webpack_exports__);
  * character.
  * A couple of them are handled in a special way, such as the line endings
  * (CR, LF, and CR+LF, commonly known as end-of-line: EOLs), the tab (horizontal
- * tab) and its expansion based on what column itвЂ™s at (virtual space),
+ * tab) and its expansion based on what column it’s at (virtual space),
  * and the end-of-file (eof) character.
  * As values are preprocessed before handling them, the actual characters LF,
  * CR, HT, and NUL (which is present as the replacement character), are
@@ -33233,7 +33233,7 @@ __webpack_require__.r(__webpack_exports__);
 const constants = /** @type {const} */ ({
   attentionSideBefore: 1, // Symbol to mark an attention sequence as before content: `*a`
   attentionSideAfter: 2, // Symbol to mark an attention sequence as after content: `a*`
-  atxHeadingOpeningFenceSizeMax: 6, // 6 number signs is fine, 7 isnвЂ™t.
+  atxHeadingOpeningFenceSizeMax: 6, // 6 number signs is fine, 7 isn’t.
   autolinkDomainSizeMax: 63, // 63 characters is fine, 64 is too many.
   autolinkSchemeSizeMax: 32, // 32 characters is fine, 33 is too many.
   cdataOpeningString: 'CDATA[', // And preceded by `<![`.
@@ -33753,7 +33753,7 @@ __webpack_require__.r(__webpack_exports__);
  * This module is compiled away!
  *
  * While micromark works based on character codes, this module includes the
- * string versions of вЂ™em.
+ * string versions of ’em.
  * The C0 block, except for LF, CR, HT, and w/ the replacement character added,
  * are available here.
  */
@@ -34050,7 +34050,7 @@ const debug = debug__WEBPACK_IMPORTED_MODULE_0__('micromark')
  * Tokenizers deal with one type of data (e.g., containers, flow, text).
  * The parser is the object dealing with it all.
  * `initialize` works like other constructs, except that only its `tokenize`
- * function is used, in which case it doesnвЂ™t receive an `ok` or `nok`.
+ * function is used, in which case it doesn’t receive an `ok` or `nok`.
  * `from` can be given to set the point before the first character, although
  * when further lines are indented, they must be set with `defineSkip`.
  *
@@ -34134,7 +34134,7 @@ function createTokenizer(parser, initialize, from) {
 
     main()
 
-    // Exit if weвЂ™re not done, resolve might change stuff.
+    // Exit if we’re not done, resolve might change stuff.
     if (chunks[chunks.length - 1] !== micromark_util_symbol_codes_js__WEBPACK_IMPORTED_MODULE_2__.codes.eof) {
       return []
     }
@@ -34196,7 +34196,7 @@ function createTokenizer(parser, initialize, from) {
     while (point._index < chunks.length) {
       const chunk = chunks[point._index]
 
-      // If weвЂ™re in a buffer chunk, loop through it.
+      // If we’re in a buffer chunk, loop through it.
       if (typeof chunk === 'string') {
         chunkIndex = point._index
 
@@ -34434,8 +34434,8 @@ function createTokenizer(parser, initialize, from) {
         /** @type {State} */
         function start(code) {
           // To do: not needed to store if there is no bogus state, probably?
-          // Currently doesnвЂ™t work because `inspect` in document does a check
-          // w/o a bogus, which doesnвЂ™t make sense. But it does seem to help perf
+          // Currently doesn’t work because `inspect` in document does a check
+          // w/o a bogus, which doesn’t make sense. But it does seem to help perf
           // by not storing.
           info = store()
           currentConstruct = construct
@@ -34460,7 +34460,7 @@ function createTokenizer(parser, initialize, from) {
           return construct.tokenize.call(
             // If we do have fields, create an object w/ `context` as its
             // prototype.
-            // This allows a вЂњlive bindingвЂќ, which is needed for `interrupt`.
+            // This allows a “live binding”, which is needed for `interrupt`.
             fields ? Object.assign(Object.create(context), fields) : context,
             effects,
             ok,
@@ -34554,7 +34554,7 @@ function createTokenizer(parser, initialize, from) {
   }
 
   /**
-   * Move the current point a bit forward in the line when itвЂ™s on a column
+   * Move the current point a bit forward in the line when it’s on a column
    * skip.
    *
    * @returns {void}
@@ -34904,7 +34904,7 @@ function initializeDocument(effects) {
     continued++
 
     // Note: this field is called `_closeFlow` but it also closes containers.
-    // Perhaps a good idea to rename it but itвЂ™s already used in the wild by
+    // Perhaps a good idea to rename it but it’s already used in the wild by
     // extensions.
     if (self.containerState._closeFlow) {
       self.containerState._closeFlow = undefined
@@ -34943,7 +34943,7 @@ function initializeDocument(effects) {
         index++
       }
 
-      // Inject the exits earlier (theyвЂ™re still also at the end).
+      // Inject the exits earlier (they’re still also at the end).
       (0,micromark_util_chunked__WEBPACK_IMPORTED_MODULE_2__.splice)(
         self.events,
         indexBeforeFlow + 1,
@@ -34968,7 +34968,7 @@ function initializeDocument(effects) {
     // step 1 before creating the new block as a child of the last matched
     // block.
     if (continued === stack.length) {
-      // No need to `check` whether thereвЂ™s a container, of `exitContainers`
+      // No need to `check` whether there’s a container, of `exitContainers`
       // would be moot.
       // We can instead immediately `attempt` to parse one.
       if (!childFlow) {
@@ -34976,14 +34976,14 @@ function initializeDocument(effects) {
       }
 
       // If we have concrete content, such as block HTML or fenced code,
-      // we canвЂ™t have containers вЂњpierceвЂќ into them, so we can immediately
+      // we can’t have containers “pierce” into them, so we can immediately
       // start.
       if (childFlow.currentConstruct && childFlow.currentConstruct.concrete) {
         return flowStart(code)
       }
 
       // If we do have flow, it could still be a blank line,
-      // but weвЂ™d be interrupting it w/ a new container if thereвЂ™s a current
+      // but we’d be interrupting it w/ a new container if there’s a current
       // construct.
       // To do: next major: remove `_gfmTableDynamicInterruptHack` (no longer
       // needed in micromark-extension-gfm-table@1.0.6).
@@ -35119,16 +35119,16 @@ function initializeDocument(effects) {
     // lines, so it marked itself as done at the end of its first line, and
     // then the content construct parses `d`.
     // Most constructs in markdown match on the first line: if the first line
-    // forms a construct, a non-lazy line canвЂ™t вЂњunmakeвЂќ it.
+    // forms a construct, a non-lazy line can’t “unmake” it.
     //
     // The construct in the third example is potentially a GFM table, and
     // those are *weird*.
     // It *could* be a table, from the first line, if the following line
     // matches a condition.
-    // In this case, that second line is lazy, which вЂњunmakesвЂќ the first line
+    // In this case, that second line is lazy, which “unmakes” the first line
     // and turns the whole into one content block.
     //
-    // WeвЂ™ve now parsed the non-lazy and the lazy line, and can figure out
+    // We’ve now parsed the non-lazy and the lazy line, and can figure out
     // whether the lazy line started a new flow block.
     // If it did, we exit the current containers between the two flow blocks.
     if (self.parser.lazy[token.start.line]) {
@@ -35136,14 +35136,14 @@ function initializeDocument(effects) {
 
       while (index--) {
         if (
-          // The token starts before the line endingвЂ¦
+          // The token starts before the line ending…
           childFlow.events[index][1].start.offset < lineStartOffset &&
-          // вЂ¦and either is not ended yetвЂ¦
+          // …and either is not ended yet…
           (!childFlow.events[index][1].end ||
-            // вЂ¦or ends after it.
+            // …or ends after it.
             childFlow.events[index][1].end.offset > lineStartOffset)
         ) {
-          // Exit: thereвЂ™s still something open, which means itвЂ™s a lazy line
+          // Exit: there’s still something open, which means it’s a lazy line
           // part of something.
           return
         }
@@ -35185,7 +35185,7 @@ function initializeDocument(effects) {
         index++
       }
 
-      // Inject the exits earlier (theyвЂ™re still also at the end).
+      // Inject the exits earlier (they’re still also at the end).
       (0,micromark_util_chunked__WEBPACK_IMPORTED_MODULE_2__.splice)(
         self.events,
         indexBeforeFlow + 1,
@@ -35498,7 +35498,7 @@ function createResolver(extraResolver) {
           index++
         }
       } else if (!events[index] || events[index][1].type !== micromark_util_symbol_types_js__WEBPACK_IMPORTED_MODULE_2__.types.data) {
-        // DonвЂ™t do anything if there is one data token.
+        // Don’t do anything if there is one data token.
         if (index !== enter + 2) {
           events[enter][1].end = events[index - 1][1].end
           events.splice(enter + 2, index - enter - 2)
@@ -35517,7 +35517,7 @@ function createResolver(extraResolver) {
  * A rather ugly set of instructions which again looks at chunks in the input
  * stream.
  * The reason to do this here is that it is *much* faster to parse in reverse.
- * And that we canвЂ™t hook into `null` to split the line suffix before an EOF.
+ * And that we can’t hook into `null` to split the line suffix before an EOF.
  * To do: figure out if we can make this into a clean utility, or even in core.
  * As it will be useful for GFMs literal autolink extension (and maybe even
  * tables?)
@@ -38394,7 +38394,7 @@ __webpack_require__.r(__webpack_exports__);
 
 
 
-// Note: the `<MdastRoot, HastRoot>` overload doesnвЂ™t seem to work :'(
+// Note: the `<MdastRoot, HastRoot>` overload doesn’t seem to work :'(
 
 /**
  * Plugin that turns markdown into HTML to support rehype.
@@ -38404,14 +38404,14 @@ __webpack_require__.r(__webpack_exports__);
  *     As the given processor runs with a hast tree, and rehype plugins support
  *     hast, that means rehype plugins can be used with the given processor.
  *     The hast tree is discarded in the end.
- *     ItвЂ™s highly unlikely that you want to do this.
+ *     It’s highly unlikely that you want to do this.
  * *   The common case is to not pass a destination processor, in which case the
  *     current processor continues running with a new HTML (hast) tree
  *     (mutate-mode).
  *     As the current processor continues with a hast tree, and rehype plugins
  *     support hast, that means rehype plugins can be used after
  *     `remark-rehype`.
- *     ItвЂ™s likely that this is what you want to do.
+ *     It’s likely that this is what you want to do.
  *
  * @param destination
  *   Optional unified processor.
@@ -38651,7 +38651,7 @@ function trough() {
     next(null, ...values)
 
     /**
-     * Run the next `fn`, or weвЂ™re done.
+     * Run the next `fn`, or we’re done.
      *
      * @param {Error|null|undefined} error
      * @param {Array<any>} output
@@ -39113,7 +39113,7 @@ function base() {
      * @returns {void}
      */
     function executor(resolve, reject) {
-      // @ts-expect-error: `doc` canвЂ™t be a callback anymore, we checked.
+      // @ts-expect-error: `doc` can’t be a callback anymore, we checked.
       transformers.run(node, vfile(doc), done)
 
       /**
@@ -39265,7 +39265,7 @@ function newable(value, name) {
     // type-coverage:ignore-next-line
     value.prototype &&
     // A function with keys in its prototype is probably a constructor.
-    // ClassesвЂ™ prototype methods are not enumerable, so we check if some value
+    // Classes’ prototype methods are not enumerable, so we check if some value
     // exists in the prototype.
     // type-coverage:ignore-next-line
     (keys(value.prototype) || name in value.prototype)
@@ -39475,9 +39475,9 @@ __webpack_require__.r(__webpack_exports__);
  * @param {Node} node
  *   A node.
  * @param {number | null | undefined} [index]
- *   The nodeвЂ™s position in its parent.
+ *   The node’s position in its parent.
  * @param {Parent | null | undefined} [parent]
- *   The nodeвЂ™s parent.
+ *   The node’s parent.
  * @returns {boolean | void}
  *   Whether this node passes the test.
  */
@@ -39499,9 +39499,9 @@ __webpack_require__.r(__webpack_exports__);
  * @param {Node} node
  *   A node.
  * @param {number | null | undefined} [index]
- *   The nodeвЂ™s position in its parent.
+ *   The node’s position in its parent.
  * @param {Parent | null | undefined} [parent]
- *   The nodeвЂ™s parent.
+ *   The node’s parent.
  * @returns {node is Kind}
  *   Whether this node passes the test.
  */
@@ -39512,9 +39512,9 @@ __webpack_require__.r(__webpack_exports__);
  * @param {unknown} [node]
  *   Anything (typically a node).
  * @param {number | null | undefined} [index]
- *   The nodeвЂ™s position in its parent.
+ *   The node’s position in its parent.
  * @param {Parent | null | undefined} [parent]
- *   The nodeвЂ™s parent.
+ *   The node’s parent.
  * @returns {boolean}
  *   Whether this is a node and passes a test.
  */
@@ -39529,9 +39529,9 @@ __webpack_require__.r(__webpack_exports__);
  * @param {unknown} [node]
  *   Anything (typically a node).
  * @param {number | null | undefined} [index]
- *   The nodeвЂ™s position in its parent.
+ *   The node’s position in its parent.
  * @param {Parent | null | undefined} [parent]
- *   The nodeвЂ™s parent.
+ *   The node’s parent.
  * @returns {node is Kind}
  *   Whether this is a node and passes a test.
  */
@@ -39544,9 +39544,9 @@ __webpack_require__.r(__webpack_exports__);
  * @param test
  *   A check for a specific node.
  * @param index
- *   The nodeвЂ™s position in its parent.
+ *   The node’s position in its parent.
  * @param parent
- *   The nodeвЂ™s parent.
+ *   The node’s parent.
  * @returns
  *   Whether `node` is a node and passes a test.
  */
@@ -39608,7 +39608,7 @@ const is =
 /**
  * Generate an assertion from a test.
  *
- * Useful if youвЂ™re going to test many nodes, for example when creating a
+ * Useful if you’re going to test many nodes, for example when creating a
  * utility where something else passes a compatible test.
  *
  * The created function is a bit faster because it expects valid input only:
@@ -39849,7 +39849,7 @@ function point(type) {
   function point(node) {
     const point = (node && node.position && node.position[type]) || {}
 
-    // To do: next major: donвЂ™t return points when invalid.
+    // To do: next major: don’t return points when invalid.
     return {
       // @ts-expect-error: in practice, null is allowed.
       line: point.line || null,
@@ -40089,7 +40089,7 @@ const CONTINUE = true
 const EXIT = false
 
 /**
- * Do not traverse this nodeвЂ™s children.
+ * Do not traverse this node’s children.
  */
 const SKIP = 'skip'
 
@@ -40660,18 +40660,18 @@ __webpack_require__.r(__webpack_exports__);
 
 const colors = {
 	'--': kleur__WEBPACK_IMPORTED_MODULE_0__["default"].red,
-	'В·В·': kleur__WEBPACK_IMPORTED_MODULE_0__["default"].grey,
+	'··': kleur__WEBPACK_IMPORTED_MODULE_0__["default"].grey,
 	'++': kleur__WEBPACK_IMPORTED_MODULE_0__["default"].green,
 };
 
 const TITLE = kleur__WEBPACK_IMPORTED_MODULE_0__["default"].dim().italic;
-const TAB=kleur__WEBPACK_IMPORTED_MODULE_0__["default"].dim('в†’'), SPACE=kleur__WEBPACK_IMPORTED_MODULE_0__["default"].dim('В·'), NL=kleur__WEBPACK_IMPORTED_MODULE_0__["default"].dim('в†µ');
+const TAB=kleur__WEBPACK_IMPORTED_MODULE_0__["default"].dim('→'), SPACE=kleur__WEBPACK_IMPORTED_MODULE_0__["default"].dim('·'), NL=kleur__WEBPACK_IMPORTED_MODULE_0__["default"].dim('↵');
 const LOG = (sym, str) => colors[sym](sym + PRETTY(str)) + '\n';
 const LINE = (num, x) => kleur__WEBPACK_IMPORTED_MODULE_0__["default"].dim('L' + String(num).padStart(x, '0') + ' ');
 const PRETTY = str => str.replace(/[ ]/g, SPACE).replace(/\t/g, TAB).replace(/(\r?\n)/g, NL);
 
 function line(obj, prev, pad) {
-	let char = obj.removed ? '--' : obj.added ? '++' : 'В·В·';
+	let char = obj.removed ? '--' : obj.added ? '++' : '··';
 	let arr = obj.value.replace(/\r?\n$/, '').split('\n');
 	let i=0, tmp, out='';
 
@@ -40694,10 +40694,10 @@ function line(obj, prev, pad) {
 function arrays(input, expect) {
 	let arr = diff__WEBPACK_IMPORTED_MODULE_1__.diffArrays(input, expect);
 	let i=0, j=0, k=0, tmp, val, char, isObj, str;
-	let out = LOG('В·В·', '[');
+	let out = LOG('··', '[');
 
 	for (; i < arr.length; i++) {
-		char = (tmp = arr[i]).removed ? '--' : tmp.added ? '++' : 'В·В·';
+		char = (tmp = arr[i]).removed ? '--' : tmp.added ? '++' : '··';
 
 		if (tmp.added) {
 			out += colors[char]().underline(TITLE('Expected:')) + '\n';
@@ -40716,7 +40716,7 @@ function arrays(input, expect) {
 		}
 	}
 
-	return out + LOG('В·В·', ']');
+	return out + LOG('··', ']');
 }
 
 function lines(input, expect, linenum = 0) {
@@ -41036,7 +41036,7 @@ class VFileMessage extends Error {
    * @param {string | Error | VFileMessage} reason
    *   Reason for message, uses the stack and message of the error if given.
    *
-   *   > рџ‘‰ **Note**: you should use markdown.
+   *   > 👉 **Note**: you should use markdown.
    * @param {Node | NodeLike | Position | Point | null | undefined} [place]
    *   Place in file where the message occurred.
    * @param {string | null | undefined} [origin]
@@ -41130,7 +41130,7 @@ class VFileMessage extends Error {
     /**
      * Reason for message.
      *
-     * > рџ‘‰ **Note**: you should use markdown.
+     * > 👉 **Note**: you should use markdown.
      *
      * @type {string}
      */
@@ -41140,9 +41140,9 @@ class VFileMessage extends Error {
     /**
      * State of problem.
      *
-     * * `true` вЂ” marks associated file as no longer processable (error)
-     * * `false` вЂ” necessitates a (potential) change (warning)
-     * * `null | undefined` вЂ” for things that might not need changing (info)
+     * * `true` — marks associated file as no longer processable (error)
+     * * `false` — necessitates a (potential) change (warning)
+     * * `null | undefined` — for things that might not need changing (info)
      *
      * @type {boolean | null | undefined}
      */
@@ -41190,12 +41190,12 @@ class VFileMessage extends Error {
      */
     this.file
 
-    // The following fields are вЂњwell knownвЂќ.
+    // The following fields are “well known”.
     // Not standard.
     // Feel free to add other non-standard fields to your messages.
 
     /**
-     * Specify the source value thatвЂ™s being reported, which is deemed
+     * Specify the source value that’s being reported, which is deemed
      * incorrect.
      *
      * @type {string | null}
@@ -41212,7 +41212,7 @@ class VFileMessage extends Error {
     /**
      * Link to docs for the message.
      *
-     * > рџ‘‰ **Note**: this must be an absolute URL that can be passed as `x`
+     * > 👉 **Note**: this must be an absolute URL that can be passed as `x`
      * > to `new URL(x)`.
      *
      * @type {string | null}
@@ -41367,10 +41367,10 @@ class VFile {
    *
    * `options` is treated as:
    *
-   * *   `string` or `Buffer` вЂ” `{value: options}`
-   * *   `URL` вЂ” `{path: options}`
-   * *   `VFile` вЂ” shallow copies its data over to the new file
-   * *   `object` вЂ” all fields are shallow copied over to the new file
+   * *   `string` or `Buffer` — `{value: options}`
+   * *   `URL` — `{path: options}`
+   * *   `VFile` — shallow copies its data over to the new file
+   * *   `object` — all fields are shallow copied over to the new file
    *
    * Path related fields are set in the following order (least specific to
    * most specific): `history`, `path`, `basename`, `stem`, `extname`,
@@ -41401,7 +41401,7 @@ class VFile {
     /**
      * Place to store custom information (default: `{}`).
      *
-     * ItвЂ™s OK to store custom data directly on the file but moving it to
+     * It’s OK to store custom data directly on the file but moving it to
      * `data` is recommended.
      *
      * @type {Data}
@@ -41439,7 +41439,7 @@ class VFile {
      */
     this.value
 
-    // The below are non-standard, they are вЂњwell-knownвЂќ.
+    // The below are non-standard, they are “well-known”.
     // As in, used in several tools.
 
     /**
@@ -41485,7 +41485,7 @@ class VFile {
         options[prop] !== undefined &&
         options[prop] !== null
       ) {
-        // @ts-expect-error: TS doesnвЂ™t understand basic reality.
+        // @ts-expect-error: TS doesn’t understand basic reality.
         this[prop] = prop === 'history' ? [...options[prop]] : options[prop]
       }
     }
@@ -41543,7 +41543,7 @@ class VFile {
   /**
    * Set the parent path (example: `'~'`).
    *
-   * Cannot be set if thereвЂ™s no `path` yet.
+   * Cannot be set if there’s no `path` yet.
    */
   set dirname(dirname) {
     assertPath(this.basename, 'dirname')
@@ -41582,7 +41582,7 @@ class VFile {
    *
    * Cannot contain path separators (`'/'` on unix, macOS, and browsers, `'\'`
    * on windows).
-   * Cannot be set if thereвЂ™s no `path` yet.
+   * Cannot be set if there’s no `path` yet.
    */
   set extname(extname) {
     assertPart(extname, 'extname')
@@ -41627,7 +41627,7 @@ class VFile {
    * Serialize the file.
    *
    * @param {BufferEncoding | null | undefined} [encoding='utf8']
-   *   Character encoding to understand `value` as when itвЂ™s a `Buffer`
+   *   Character encoding to understand `value` as when it’s a `Buffer`
    *   (default: `'utf8'`).
    * @returns {string}
    *   Serialized file.
@@ -41697,7 +41697,7 @@ class VFile {
    * Its `fatal` is set to `true` and `file` is set to the current file path.
    * Its added to `file.messages`.
    *
-   * > рџ‘‰ **Note**: a fatal error means that a file is no longer processable.
+   * > 👉 **Note**: a fatal error means that a file is no longer processable.
    *
    * @param {string | Error | VFileMessage} reason
    *   Reason for message, uses the stack and message of the error if given.
@@ -41822,7 +41822,7 @@ __webpack_require__.r(__webpack_exports__);
 // CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
 // A derivative work based on:
 //
-// Parts of that are extracted from NodeвЂ™s internal `path` module:
+// Parts of that are extracted from Node’s internal `path` module:
 // <https://github.com/nodejs/node/blob/master/lib/path.js>.
 // Which is licensed:
 //
@@ -42235,7 +42235,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ });
 // Somewhat based on:
 // <https://github.com/defunctzombie/node-process/blob/master/browser.js>.
-// But I donвЂ™t think one tiny line of code can be copyrighted. рџ…
+// But I don’t think one tiny line of code can be copyrighted. 😅
 const proc = {cwd}
 
 function cwd() {
@@ -42375,7 +42375,7 @@ __webpack_require__.r(__webpack_exports__);
  * @param {unknown} fileUrlOrPath
  *   File path or URL.
  * @returns {fileUrlOrPath is URL}
- *   Whether itвЂ™s a URL.
+ *   Whether it’s a URL.
  */
 // From: <https://github.com/nodejs/node/blob/fcf8ba4/lib/internal/url.js#L1501>
 function isUrl(fileUrlOrPath) {

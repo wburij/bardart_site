@@ -1,4 +1,4 @@
-﻿/**
+/**
  * Handles pointers throughout Popup Maker.
  */
 ( function( $ ) {

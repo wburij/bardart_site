@@ -1,4 +1,4 @@
-﻿/*!
+/*!
  * Font Awesome Free 5.15.3 by @fontawesome - https://fontawesome.com
  * License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License)
  */
@@ -7,8 +7,8 @@
   font-style: normal;
   font-weight: 400;
   font-display: block;
-  src: url("/bardart_site/wp-content/plugins/elementor/assets/lib/font-awesome/webfonts/fa-regular-400.eot");
-  src: url("/bardart_site/wp-content/plugins/elementor/assets/lib/font-awesome/webfonts/fa-regular-400.eot#iefix") format("embedded-opentype"), url("/bardart_site/wp-content/plugins/elementor/assets/lib/font-awesome/webfonts/fa-regular-400.woff2") format("woff2"), url("/bardart_site/wp-content/plugins/elementor/assets/lib/font-awesome/webfonts/fa-regular-400.woff") format("woff"), url("/bardart_site/wp-content/plugins/elementor/assets/lib/font-awesome/webfonts/fa-regular-400.ttf") format("truetype"), url("/bardart_site/wp-content/plugins/elementor/assets/lib/font-awesome/webfonts/fa-regular-400.svg#fontawesome") format("svg"); }
+  src: url("/bardart_site//wp-content/plugins/elementor/assets/lib/font-awesome/webfonts/fa-regular-400.eot");
+  src: url("/bardart_site//wp-content/plugins/elementor/assets/lib/font-awesome/webfonts/fa-regular-400.eot#iefix") format("embedded-opentype"), url("/bardart_site//wp-content/plugins/elementor/assets/lib/font-awesome/webfonts/fa-regular-400.woff2") format("woff2"), url("/bardart_site//wp-content/plugins/elementor/assets/lib/font-awesome/webfonts/fa-regular-400.woff") format("woff"), url("/bardart_site//wp-content/plugins/elementor/assets/lib/font-awesome/webfonts/fa-regular-400.ttf") format("truetype"), url("/bardart_site//wp-content/plugins/elementor/assets/lib/font-awesome/webfonts/fa-regular-400.svg#fontawesome") format("svg"); }
 
 .far {
   font-family: 'Font Awesome 5 Free';

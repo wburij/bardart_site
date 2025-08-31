@@ -1,4 +1,4 @@
-﻿/* exported ITSECLoginInterstitial */
+/* exported ITSECLoginInterstitial */
 ( function( $ ) {
 
 	var VARS = [

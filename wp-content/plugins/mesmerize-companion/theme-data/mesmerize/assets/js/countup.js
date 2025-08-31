@@ -1,4 +1,4 @@
-﻿(function (root, factory) {
+(function (root, factory) {
     if (typeof define === 'function' && define.amd) {
         define(factory);
     } else if (typeof exports === 'object') {
@@ -56,7 +56,7 @@
 
         // make sure requestAnimationFrame and cancelAnimationFrame are defined
         // polyfill for browsers without native support
-        // by Opera engineer Erik MГ¶ller
+        // by Opera engineer Erik Möller
         var lastTime = 0;
         var vendors = ['webkit', 'moz', 'ms', 'o'];
         for (var x = 0; x < vendors.length && !window.requestAnimationFrame; ++x) {

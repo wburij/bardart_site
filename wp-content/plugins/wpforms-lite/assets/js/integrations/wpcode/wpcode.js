@@ -1,4 +1,4 @@
-﻿/* global wpformsWpcodeVars, List, wpforms_admin */
+/* global wpformsWpcodeVars, List, wpforms_admin */
 
 /**
  * @param wpformsWpcodeVars.installing_text

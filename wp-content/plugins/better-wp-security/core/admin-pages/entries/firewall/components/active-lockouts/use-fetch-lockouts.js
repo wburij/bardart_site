@@ -1,4 +1,4 @@
-﻿import { useCallback, useMemo } from '@wordpress/element';
+import { useCallback, useMemo } from '@wordpress/element';
 import apiFetch from '@wordpress/api-fetch';
 import { addQueryArgs } from '@wordpress/url';
 import { useAsync } from '@ithemes/security-hocs';

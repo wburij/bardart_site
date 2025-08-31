@@ -1,4 +1,4 @@
-﻿/**
+/**
  * External dependencies
  */
 import { get, keyBy, times, zipObject } from 'lodash';
@@ -310,7 +310,7 @@ export function transformApiLayoutToGridForCard(
  */
 export function findSlot( numColumns, layout, size ) {
 	/*		  0  1  2  3
-			  в†“  в†“  в†“  в†“
+			  ↓  ↓  ↓  ↓
 		[
 	0 ->	[ 1, 1, 1, 0 ]
 	1 ->	[ 1, 1, 1, 0 ]

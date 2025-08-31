@@ -1,4 +1,4 @@
-﻿/**
+/**
  * Internal dependencies
  */
 import { GroupLabel, PanelRoles, PanelUsers } from '../';

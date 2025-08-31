@@ -1,4 +1,4 @@
-﻿(function ($) {
+(function ($) {
 
     // source: https://github.com/andymantell/node-wpautop
     function _autop_newline_preservation_helper(matches) {

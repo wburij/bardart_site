@@ -1,4 +1,4 @@
-﻿/**
+/**
  * External dependencies
  */
 import { useHistory, useLocation, useParams, useRouteMatch, Link } from 'react-router-dom';

@@ -1,4 +1,4 @@
-﻿/**
+/**
  * Internal dependencies
  */
 import { ErrorList, MessageList } from '../';

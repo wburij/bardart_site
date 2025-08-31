@@ -1,4 +1,4 @@
-﻿/*! elementor - v3.0.15 - 2020-12-20 */
+/*! elementor - v3.0.15 - 2020-12-20 */
 // MarionetteJS (Backbone.Marionette)
 // ----------------------------------
 // v2.4.5.e1

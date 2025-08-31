@@ -1,4 +1,4 @@
-﻿/**
+/**
  * External dependencies
  */
 import { isString, isEqual, map, isEmpty } from 'lodash';

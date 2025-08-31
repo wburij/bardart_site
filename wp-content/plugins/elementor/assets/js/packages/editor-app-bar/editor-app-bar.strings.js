@@ -1,4 +1,4 @@
-﻿__( 'Exit to WordPress', 'elementor' );
+__( 'Exit to WordPress', 'elementor' );
 __( 'Help', 'elementor' );
 __( 'User Preferences', 'elementor' );
 __( 'Theme Builder', 'elementor' );

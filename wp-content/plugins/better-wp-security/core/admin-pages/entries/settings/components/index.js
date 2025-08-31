@@ -1,4 +1,4 @@
-﻿export { default as Sidebar } from './sidebar';
+export { default as Sidebar } from './sidebar';
 export { default as Main } from './main';
 export { default as Navigation, NavigationFill } from './navigation';
 export { default as SelectableCard } from './selectable-card';

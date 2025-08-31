@@ -1,4 +1,4 @@
-﻿/**
+/**
  * External dependencies
  */
 import { includes, findIndex, noop } from 'lodash';

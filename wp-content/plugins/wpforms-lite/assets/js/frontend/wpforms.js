@@ -1,4 +1,4 @@
-﻿/* global wpforms_settings, grecaptcha, hcaptcha, turnstile, wpformsRecaptchaCallback, wpformsRecaptchaV3Execute, wpforms_validate, wpforms_datepicker, wpforms_timepicker, Mailcheck, Choices, WPFormsPasswordField, WPFormsEntryPreview, punycode, tinyMCE, WPFormsUtils */
+/* global wpforms_settings, grecaptcha, hcaptcha, turnstile, wpformsRecaptchaCallback, wpformsRecaptchaV3Execute, wpforms_validate, wpforms_datepicker, wpforms_timepicker, Mailcheck, Choices, WPFormsPasswordField, WPFormsEntryPreview, punycode, tinyMCE, WPFormsUtils */
 
 'use strict';
 

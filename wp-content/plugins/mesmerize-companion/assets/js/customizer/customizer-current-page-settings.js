@@ -1,4 +1,4 @@
-﻿(function (root, CP_Customizer, $) {
+(function (root, CP_Customizer, $) {
 
     var containerTemplate = $('' +
         '<li id="cp-current-page-settings-popup" class="customizer-right-section">' +

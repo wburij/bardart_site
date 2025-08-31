@@ -1,4 +1,4 @@
-﻿/**
+/**
  * External dependencies
  */
 import { omit, without, last } from 'lodash';

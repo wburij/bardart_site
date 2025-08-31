@@ -1,4 +1,4 @@
-﻿/**
+/**
  * Internal dependencies
  */
 import Header from '../header';

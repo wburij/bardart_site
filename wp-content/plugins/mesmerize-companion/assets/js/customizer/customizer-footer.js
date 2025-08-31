@@ -1,4 +1,4 @@
-﻿(function ($) {
+(function ($) {
     window.CP_Customizer.addModule(function (CP_Customizer) {
         var control = wp.customize.panel('footer_panel');
 

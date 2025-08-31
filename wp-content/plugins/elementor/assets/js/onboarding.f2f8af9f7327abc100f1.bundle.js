@@ -1,4 +1,4 @@
-﻿/*! elementor - v3.20.0 - 10-04-2024 */
+/*! elementor - v3.20.0 - 10-04-2024 */
 "use strict";
 (self["webpackChunkelementor"] = self["webpackChunkelementor"] || []).push([["onboarding"],{
 
@@ -1229,7 +1229,7 @@ function Account() {
     };
   } else {
     pageTexts = {
-      firstLine: __('To get the most out of Elementor, weвЂ™ll connect your account.', 'elementor') + ' ' + __('Then you can:', 'elementor'),
+      firstLine: __('To get the most out of Elementor, we’ll connect your account.', 'elementor') + ' ' + __('Then you can:', 'elementor'),
       listItems: [__('Choose from countless professional templates', 'elementor'), __('Manage your site with our handy dashboard', 'elementor'), __('Take part in the community forum, share & grow together', 'elementor')]
     };
   }
@@ -1240,7 +1240,7 @@ function Account() {
     role: 'button'
   };
   if (state.isLibraryConnected) {
-    actionButton.text = __('LetвЂ™s do it', 'elementor');
+    actionButton.text = __('Let’s do it', 'elementor');
     actionButton.onClick = function () {
       elementorCommon.events.dispatchEvent({
         event: 'next',
@@ -1459,7 +1459,7 @@ function HelloTheme() {
     noticeStateSuccess = {
       type: 'success',
       icon: 'eicon-check-circle-o',
-      message: __('Your siteвЂ™s got Hello theme. High-five!', 'elementor')
+      message: __('Your site’s got Hello theme. High-five!', 'elementor')
     },
     _useState5 = (0, _react.useState)(state.isHelloThemeActivated ? noticeStateSuccess : null),
     _useState6 = (0, _slicedToArray2.default)(_useState5, 2),

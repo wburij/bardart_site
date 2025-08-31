@@ -1,4 +1,4 @@
-﻿/**
+/**
  * General
  * @author Webcraftic <wordpress.webraftic@gmail.com>
  * @copyright (c) 10.09.2017, Webcraftic
@@ -84,8 +84,8 @@
 					console.log(response);
 
 					if( response.data && response.data.error_message ) {
-						// todo: С‚Р°Рє РєР°Рє С„СЂРµР№РјРІРѕСЂРє РЅРµ РёСЃРїРѕР»СЊР·СѓРµС‚СЃСЏ РІ Р°РґРґРѕРЅРµ, РЅСѓР¶РЅРѕ РґРѕСЂР°Р±РѕС‚Р°С‚СЊ СЌС‚РѕС‚ РєСѓСЃРѕРє РєРѕРґР°. РћРЅ РЅРµ
-						// РјРѕР¶РµС‚ Р±С‹С‚СЊ СЃРєРѕРјРїРёР»РёСЂРѕРІР°РЅ.
+						// todo: так как фреймворк не используется в аддоне, нужно доработать этот кусок кода. Он не
+						// может быть скомпилирован.
 						var noticeId = $.wbcr_factory_clearfy_000.app.showNotice(response.data.error_message, 'danger');
 
 						setTimeout(function() {
@@ -131,7 +131,7 @@
 					tr.find('td').eq(0).removeClass('wrio-table-spinner');
 					tr.find('td').eq(1).find('span').text(result.total);
 
-					reload_ui(); // РѕР±РЅРѕРІР»СЏРµРј РёРЅС‚РµСЂС„РµР№СЃ
+					reload_ui(); // обновляем интерфейс
 				});
 			});
 		},
@@ -148,8 +148,8 @@
 					console.log(response);
 
 					if( response.data && response.data.error_message ) {
-						// todo: С‚Р°Рє РєР°Рє С„СЂРµР№РјРІРѕСЂРє РЅРµ РёСЃРїРѕР»СЊР·СѓРµС‚СЃСЏ РІ Р°РґРґРѕРЅРµ, РЅСѓР¶РЅРѕ РґРѕСЂР°Р±РѕС‚Р°С‚СЊ СЌС‚РѕС‚ РєСѓСЃРѕРє РєРѕРґР°. РћРЅ РЅРµ
-						// РјРѕР¶РµС‚ Р±С‹С‚СЊ СЃРєРѕРјРїРёР»РёСЂРѕРІР°РЅ.
+						// todo: так как фреймворк не используется в аддоне, нужно доработать этот кусок кода. Он не
+						// может быть скомпилирован.
 						var noticeId = $.wbcr_factory_clearfy_000.app.showNotice(response.data.error_message, 'danger');
 
 						setTimeout(function() {
@@ -270,7 +270,7 @@
 		};
 		$(this).closest('tr').remove();
 		$.post(ajaxurl, data, function(response) {
-			reload_ui(); // РѕР±РЅРѕРІР»СЏРµРј РёРЅС‚РµСЂС„РµР№СЃ
+			reload_ui(); // обновляем интерфейс
 		});
 	});
 
@@ -332,7 +332,7 @@
 				$('#wio-restore-backup-progress').find('.progress-bar').css('width', '100%');
 				$('#wio-restore-backup-success-msg').show();
 				$('#wio-restore-backup-progress-msg').hide();
-				reload_ui(); // РѕР±РЅРѕРІР»СЏРµРј РёРЅС‚РµСЂС„РµР№СЃ
+				reload_ui(); // обновляем интерфейс
 			}
 		});
 	}
@@ -346,7 +346,7 @@
 				$('#wio-optimize-progress').find('.progress-bar').css('width', '100%');
 				$('#wio-optimize-success-msg').show();
 				$('#wio-optimize-progress-msg').hide();
-				reload_ui(); // РѕР±РЅРѕРІР»СЏРµРј РёРЅС‚РµСЂС„РµР№СЃ
+				reload_ui(); // обновляем интерфейс
 			}
 		});
 	}
@@ -376,7 +376,7 @@
 				$('#wio-sync-progress').find('.progress-bar').css('width', '100%');
 				$('#wio-sync-success-msg').show();
 				$('#wio-sync-progress-msg').hide();
-				reload_ui(); // РѕР±РЅРѕРІР»СЏРµРј РёРЅС‚РµСЂС„РµР№СЃ
+				reload_ui(); // обновляем интерфейс
 			} else {
 				send_check_index_data(data);
 				$('#wio-sync-progress').find('.progress-bar').css('width', response.percent + '%');
@@ -393,7 +393,7 @@
 				$("#wbcr-rio-add-folder").show();
 				$('#wbcr-rio-indexing-text').hide();
 				$('#wbcr-rio-indexing-finish-text').show();
-				reload_ui(); // РѕР±РЅРѕРІР»СЏРµРј РёРЅС‚РµСЂС„РµР№СЃ
+				reload_ui(); // обновляем интерфейс
 			} else {
 				first_indexing(data);
 			}

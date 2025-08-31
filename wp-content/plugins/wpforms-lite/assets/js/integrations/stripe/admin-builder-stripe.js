@@ -1,4 +1,4 @@
-﻿/* global wpforms_builder, wpforms_builder_stripe */
+/* global wpforms_builder, wpforms_builder_stripe */
 
 /**
  * Stripe builder function.

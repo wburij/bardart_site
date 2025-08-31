@@ -1,4 +1,4 @@
-﻿(function ($) {
+(function ($) {
   'use strict'; // Standards.
 
   var plugin = {

@@ -1,4 +1,4 @@
-﻿( function( $, wp, config ) {
+( function( $, wp, config ) {
 	$( function() {
 		$( '.itsec-notice .notice-dismiss' ).off( 'click.wp-dismiss-notice' );
 

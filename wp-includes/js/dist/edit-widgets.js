@@ -1,4 +1,4 @@
-﻿/******/ (() => { // webpackBootstrap
+/******/ (() => { // webpackBootstrap
 /******/ 	"use strict";
 /******/ 	// The require scope
 /******/ 	var __webpack_require__ = {};
@@ -3240,7 +3240,7 @@ function WidgetAreas({
   if (!selectedWidgetArea) {
     description = (0,external_wp_i18n_namespaceObject.__)(
     // eslint-disable-next-line no-restricted-syntax -- 'sidebar' is a common web design term for layouts
-    'Widget Areas are global parts in your siteвЂ™s layout that can accept blocks. These vary by theme, but are typically parts like your Sidebar or Footer.');
+    'Widget Areas are global parts in your site’s layout that can accept blocks. These vary by theme, but are typically parts like your Sidebar or Footer.');
   } else if (selectedWidgetAreaId === 'wp_inactive_widgets') {
     description = (0,external_wp_i18n_namespaceObject.__)('Blocks in this Widget Area will not be displayed in your site.');
   } else {
@@ -3706,7 +3706,7 @@ function SaveButton() {
     "aria-disabled": isDisabled,
     onClick: isDisabled ? undefined : saveEditedWidgetAreas,
     size: "compact",
-    children: isSaving ? (0,external_wp_i18n_namespaceObject.__)('SavingвЂ¦') : (0,external_wp_i18n_namespaceObject.__)('Update')
+    children: isSaving ? (0,external_wp_i18n_namespaceObject.__)('Saving…') : (0,external_wp_i18n_namespaceObject.__)('Update')
   });
 }
 /* harmony default export */ const save_button = (SaveButton);
@@ -4710,12 +4710,12 @@ function WelcomeGuide() {
             className: "edit-widgets-welcome-guide__text",
             children: (0,external_wp_i18n_namespaceObject.sprintf)(
             // Translators: %s: Number of block areas in the current theme.
-            (0,external_wp_i18n_namespaceObject._n)('Your theme provides %s вЂњblockвЂќ area for you to add and edit content.В Try adding a search bar, social icons, or other types of blocks here and see how theyвЂ™ll look on your site.', 'Your theme provides %s different вЂњblockвЂќ areas for you to add and edit content.В Try adding a search bar, social icons, or other types of blocks here and see how theyвЂ™ll look on your site.', numWidgetAreas), numWidgetAreas)
+            (0,external_wp_i18n_namespaceObject._n)('Your theme provides %s “block” area for you to add and edit content. Try adding a search bar, social icons, or other types of blocks here and see how they’ll look on your site.', 'Your theme provides %s different “block” areas for you to add and edit content. Try adding a search bar, social icons, or other types of blocks here and see how they’ll look on your site.', numWidgetAreas), numWidgetAreas)
           })
         }) : /*#__PURE__*/(0,external_ReactJSXRuntime_namespaceObject.jsxs)(external_ReactJSXRuntime_namespaceObject.Fragment, {
           children: [/*#__PURE__*/(0,external_ReactJSXRuntime_namespaceObject.jsx)("p", {
             className: "edit-widgets-welcome-guide__text",
-            children: (0,external_wp_i18n_namespaceObject.__)('You can now add any block to your siteвЂ™s widget areas. DonвЂ™t worry, all of your favorite widgets still work flawlessly.')
+            children: (0,external_wp_i18n_namespaceObject.__)('You can now add any block to your site’s widget areas. Don’t worry, all of your favorite widgets still work flawlessly.')
           }), /*#__PURE__*/(0,external_ReactJSXRuntime_namespaceObject.jsxs)("p", {
             className: "edit-widgets-welcome-guide__text",
             children: [/*#__PURE__*/(0,external_ReactJSXRuntime_namespaceObject.jsx)("strong", {
@@ -4752,7 +4752,7 @@ function WelcomeGuide() {
           children: (0,external_wp_i18n_namespaceObject.__)('Explore all blocks')
         }), /*#__PURE__*/(0,external_ReactJSXRuntime_namespaceObject.jsx)("p", {
           className: "edit-widgets-welcome-guide__text",
-          children: (0,external_wp_element_namespaceObject.createInterpolateElement)((0,external_wp_i18n_namespaceObject.__)('All of the blocks available to you live in the block library. YouвЂ™ll find it wherever you see the <InserterIconImage /> icon.'), {
+          children: (0,external_wp_element_namespaceObject.createInterpolateElement)((0,external_wp_i18n_namespaceObject.__)('All of the blocks available to you live in the block library. You’ll find it wherever you see the <InserterIconImage /> icon.'), {
             InserterIconImage: /*#__PURE__*/(0,external_ReactJSXRuntime_namespaceObject.jsx)("img", {
               className: "edit-widgets-welcome-guide__inserter-icon",
               alt: (0,external_wp_i18n_namespaceObject.__)('inserter'),

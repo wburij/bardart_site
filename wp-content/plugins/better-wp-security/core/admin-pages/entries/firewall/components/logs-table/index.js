@@ -1,4 +1,4 @@
-﻿/**
+/**
  * WordPress dependencies
  */
 import { __, _n, sprintf } from '@wordpress/i18n';
@@ -320,7 +320,7 @@ function EmptyState( { isSmall } ) {
 				) : (
 					<StyledEmptyState>
 						<HiResIcon icon={ <Gear /> } />
-						<Text text={ __( 'We havenвЂ™t logged any activity yet.', 'better-wp-security' ) } />
+						<Text text={ __( 'We haven’t logged any activity yet.', 'better-wp-security' ) } />
 					</StyledEmptyState>
 				) }
 			</td>

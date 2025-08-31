@@ -1,4 +1,4 @@
-﻿/* eslint-disable max-len, camelcase */
+/* eslint-disable max-len, camelcase */
 /*!
  * jQuery UI Datepicker 1.13.3
  * https://jqueryui.com

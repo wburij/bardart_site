@@ -1,4 +1,4 @@
-﻿@charset "UTF-8";
+@charset "UTF-8";
 :root{
   --wp-admin-theme-color:#007cba;
   --wp-admin-theme-color--rgb:0, 124, 186;
@@ -672,19 +672,19 @@ body.is-fullscreen-mode .interface-interface-skeleton{
   margin-right:4px;
 }
 .document-outline__item.is-h2 .document-outline__emdash:before{
-  content:"вЂ”";
+  content:"—";
 }
 .document-outline__item.is-h3 .document-outline__emdash:before{
-  content:"вЂ”вЂ”";
+  content:"——";
 }
 .document-outline__item.is-h4 .document-outline__emdash:before{
-  content:"вЂ”вЂ”вЂ”";
+  content:"———";
 }
 .document-outline__item.is-h5 .document-outline__emdash:before{
-  content:"вЂ”вЂ”вЂ”вЂ”";
+  content:"————";
 }
 .document-outline__item.is-h6 .document-outline__emdash:before{
-  content:"вЂ”вЂ”вЂ”вЂ”вЂ”";
+  content:"—————";
 }
 
 .document-outline__button{

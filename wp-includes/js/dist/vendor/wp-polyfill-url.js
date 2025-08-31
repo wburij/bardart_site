@@ -1,4 +1,4 @@
-﻿(function(){function r(e,n,t){function o(i,f){if(!n[i]){if(!e[i]){var c="function"==typeof require&&require;if(!f&&c)return c(i,!0);if(u)return u(i,!0);var a=new Error("Cannot find module '"+i+"'");throw a.code="MODULE_NOT_FOUND",a}var p=n[i]={exports:{}};e[i][0].call(p.exports,function(r){var n=e[i][1][r];return o(n||r)},p,p.exports,r,e,n,t)}return n[i].exports}for(var u="function"==typeof require&&require,i=0;i<t.length;i++)o(t[i]);return o}return r})()({1:[function(require,module,exports){
+(function(){function r(e,n,t){function o(i,f){if(!n[i]){if(!e[i]){var c="function"==typeof require&&require;if(!f&&c)return c(i,!0);if(u)return u(i,!0);var a=new Error("Cannot find module '"+i+"'");throw a.code="MODULE_NOT_FOUND",a}var p=n[i]={exports:{}};e[i][0].call(p.exports,function(r){var n=e[i][1][r];return o(n||r)},p,p.exports,r,e,n,t)}return n[i].exports}for(var u="function"==typeof require&&require,i=0;i<t.length;i++)o(t[i]);return o}return r})()({1:[function(require,module,exports){
 module.exports = function (it) {
   if (typeof it != 'function') {
     throw TypeError(String(it) + ' is not a function');
@@ -763,9 +763,9 @@ module.exports = !fails(function () {
     || new URL('https://a@b').username !== 'a'
     || new URLSearchParams(new URLSearchParams('a=b')).get('a') !== 'b'
     // not punycoded in Edge
-    || new URL('http://С‚РµСЃС‚').host !== 'xn--e1aybc'
+    || new URL('http://тест').host !== 'xn--e1aybc'
     // not escaped in Chrome 62-
-    || new URL('http://a#Р±').hash !== '#%D0%B1'
+    || new URL('http://a#б').hash !== '#%D0%B1'
     // fails in Chrome 66-
     || result !== 'a1c3'
     // throws in Safari
@@ -1203,7 +1203,7 @@ var store = require('../internals/shared-store');
 })('versions', []).push({
   version: '3.6.4',
   mode: IS_PURE ? 'pure' : 'global',
-  copyright: 'В© 2020 Denis Pushkarev (zloirock.ru)'
+  copyright: '© 2020 Denis Pushkarev (zloirock.ru)'
 });
 
 },{"../internals/is-pure":38,"../internals/shared-store":64}],66:[function(require,module,exports){

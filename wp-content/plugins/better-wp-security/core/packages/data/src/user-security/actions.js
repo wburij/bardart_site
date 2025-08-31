@@ -1,4 +1,4 @@
-﻿/**
+/**
  * WordPress dependencies
  */
 import { addQueryArgs, getQueryArg } from '@wordpress/url';

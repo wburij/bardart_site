@@ -1,4 +1,4 @@
-﻿/*! elementor - v3.20.0 - 10-04-2024 */
+/*! elementor - v3.20.0 - 10-04-2024 */
 .elementor-control-unit-1 {
   width: 27px;
 }
@@ -1877,13 +1877,13 @@ body:not(.elementor-device-mobile) .elementor-control.elementor-control-responsi
 }
 
 .elementor-group-control-blur .elementor-slider {
-  background: url("/bardart_site/wp-content/plugins/elementor/assets/images/blur.png");
+  background: url("/bardart_site//wp-content/plugins/elementor/assets/images/blur.png");
   background-size: cover;
   background-position: center;
 }
 
 .elementor-group-control-contrast .elementor-slider {
-  background: url("/bardart_site/wp-content/plugins/elementor/assets/images/contrast.png");
+  background: url("/bardart_site//wp-content/plugins/elementor/assets/images/contrast.png");
   background-size: 100% 100%;
 }
 

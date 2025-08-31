@@ -1,4 +1,4 @@
-﻿/*WP DEVICES CHANGER WIDTH*/
+/*WP DEVICES CHANGER WIDTH*/
 
 .wp-full-overlay-footer .devices {
     display: flex;
@@ -476,7 +476,7 @@ span.reiki_btn.active {
     font-size: 17px;
     color: #ffffff;
     font-family: sans-serif;
-    background-image: url(/bardart_site/wp-content/plugins/mesmerize-companion/assets/images/trash-o.png);
+    background-image: url(/bardart_site//wp-content/plugins/mesmerize-companion/assets/images/trash-o.png);
     background-size: 60%;
     background-position: center;
     image-rendering: pixelated;
@@ -503,7 +503,7 @@ span.item-menu-visible {
     font-size: 17px;
     color: #ffffff;
     font-family: sans-serif;
-    background-image: url(/bardart_site/wp-content/plugins/mesmerize-companion/assets/images/toggle-menu.png);
+    background-image: url(/bardart_site//wp-content/plugins/mesmerize-companion/assets/images/toggle-menu.png);
     box-shadow: 0 2px 1px rgba(46, 68, 83, 0.15);
 }
 
@@ -512,7 +512,7 @@ span.item-menu-visible:hover {
 }
 
 span.item-menu-visible.active {
-    background-image: url(/bardart_site/wp-content/plugins/mesmerize-companion/assets/images/toggle-menu-active.png);
+    background-image: url(/bardart_site//wp-content/plugins/mesmerize-companion/assets/images/toggle-menu-active.png);
     background-color: #05597a;
 }
 
@@ -533,7 +533,7 @@ span.item-settings {
     color: #ffffff;
     font-family: sans-serif;
     background-size: cover;
-    background-image: url(/bardart_site/wp-content/plugins/mesmerize-companion/assets/images/cog-white.png);
+    background-image: url(/bardart_site//wp-content/plugins/mesmerize-companion/assets/images/cog-white.png);
     box-shadow: 0 2px 1px rgba(46, 68, 83, 0.15);
 }
 
@@ -1046,15 +1046,15 @@ li.content-type[data-type="p"] {
 }
 
 .open-right {
-    background-image: url('/bardart_site/wp-content/plugins/mesmerize-companion/assets/images/swap.png');
+    background-image: url('/bardart_site//wp-content/plugins/mesmerize-companion/assets/images/swap.png');
 }
 
 span.setting.section-icon {
-    background-image: url('/bardart_site/wp-content/plugins/mesmerize-companion/assets/images/cog.png');
+    background-image: url('/bardart_site//wp-content/plugins/mesmerize-companion/assets/images/cog.png');
 }
 
 span.add-section-plus {
-    background-image: url('/bardart_site/wp-content/plugins/mesmerize-companion/assets/images/plus-black.png');
+    background-image: url('/bardart_site//wp-content/plugins/mesmerize-companion/assets/images/plus-black.png');
 }
 
 h3:hover .section-icon {
@@ -1118,7 +1118,7 @@ li#customize-control-reiki_dummy_title_control_header>label>span {
     float: left;
     width: 20px;
     height: 45px;
-    background: url(/bardart_site/wp-content/plugins/mesmerize-companion/assets/images/reorder-handler.png?x=3);
+    background: url(/bardart_site//wp-content/plugins/mesmerize-companion/assets/images/reorder-handler.png?x=3);
     background-position: center;
     background-repeat: no-repeat;
     margin-top: -4px;
@@ -1290,7 +1290,7 @@ ul#available_footers {
     top: -8px !important;
     color: #ffffff;
     background-color: #38d638;
-    background-image: url('/bardart_site/wp-content/plugins/mesmerize-companion/assets/images/check.png');
+    background-image: url('/bardart_site//wp-content/plugins/mesmerize-companion/assets/images/check.png');
     content: " ";
     background-position: center;
     background-repeat: no-repeat;

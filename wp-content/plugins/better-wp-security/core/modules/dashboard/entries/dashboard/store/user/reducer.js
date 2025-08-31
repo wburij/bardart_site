@@ -1,4 +1,4 @@
-﻿import { RECEIVE_PRIMARY_DASHBOARD } from './actions';
+import { RECEIVE_PRIMARY_DASHBOARD } from './actions';
 
 const DEFAULT_STATE = {
 	primaryDashboard: undefined,

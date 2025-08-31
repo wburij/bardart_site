@@ -1,4 +1,4 @@
-﻿/******/ (() => { // webpackBootstrap
+/******/ (() => { // webpackBootstrap
 /******/ 	"use strict";
 /******/ 	var __webpack_modules__ = ({
 
@@ -1336,17 +1336,17 @@ var SUPPORTED_LOCALE = {
     tr: {
         regexp: /\u0130|\u0049|\u0049\u0307/g,
         map: {
-            Д°: "\u0069",
+            İ: "\u0069",
             I: "\u0131",
-            IМ‡: "\u0069",
+            İ: "\u0069",
         },
     },
     az: {
         regexp: /\u0130/g,
         map: {
-            Д°: "\u0069",
+            İ: "\u0069",
             I: "\u0131",
-            IМ‡: "\u0069",
+            İ: "\u0069",
         },
     },
     lt: {
@@ -1354,10 +1354,10 @@ var SUPPORTED_LOCALE = {
         map: {
             I: "\u0069\u0307",
             J: "\u006A\u0307",
-            Д®: "\u012F\u0307",
-            ГЊ: "\u0069\u0307\u0300",
-            ГЌ: "\u0069\u0307\u0301",
-            ДЁ: "\u0069\u0307\u0303",
+            Į: "\u012F\u0307",
+            Ì: "\u0069\u0307\u0300",
+            Í: "\u0069\u0307\u0301",
+            Ĩ: "\u0069\u0307\u0303",
         },
     },
 };
@@ -2922,7 +2922,7 @@ var equivalent_key_map_default = /*#__PURE__*/__webpack_require__.n(equivalent_k
 ;// ./node_modules/@wordpress/core-data/build-module/utils/set-nested-value.js
 /**
  * Sets the value at path of object.
- * If a portion of path doesnвЂ™t exist, itвЂ™s created.
+ * If a portion of path doesn’t exist, it’s created.
  * Arrays are created for missing index properties while objects are created
  * for all other missing properties.
  *

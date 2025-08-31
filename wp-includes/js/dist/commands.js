@@ -1,4 +1,4 @@
-﻿/******/ (() => { // webpackBootstrap
+/******/ (() => { // webpackBootstrap
 /******/ 	"use strict";
 /******/ 	var __webpack_modules__ = ({});
 /************************************************************************/
@@ -602,14 +602,14 @@ const $8927f6f2acc4f386$var$NODES = [
  * is not nessesary when dispatching known event types, or if dispatching a custom type inside a non-discrete event.
  * For example:
  *
- * dispatching a known click рџ‘Ћ
- * target.dispatchEvent(new Event(вЂclickвЂ™))
+ * dispatching a known click 👎
+ * target.dispatchEvent(new Event(‘click’))
  *
- * dispatching a custom type within a non-discrete event рџ‘Ћ
- * onScroll={(event) => event.target.dispatchEvent(new CustomEvent(вЂcustomTypeвЂ™))}
+ * dispatching a custom type within a non-discrete event 👎
+ * onScroll={(event) => event.target.dispatchEvent(new CustomEvent(‘customType’))}
  *
- * dispatching a custom type within a `discrete` event рџ‘Ќ
- * onPointerDown={(event) => dispatchDiscreteCustomEvent(event.target, new CustomEvent(вЂcustomTypeвЂ™))}
+ * dispatching a custom type within a `discrete` event 👍
+ * onPointerDown={(event) => dispatchDiscreteCustomEvent(event.target, new CustomEvent(‘customType’))}
  *
  * Note: though React classifies `focus`, `focusin` and `focusout` events as `discrete`, it's  not recommended to use
  * this utility with them. This is because it's possible for those handlers to be called implicitly during render
@@ -1927,7 +1927,7 @@ var currentValues = new WeakMap();
  * @example
  * const Component = React.forwardRef((props, ref) => {
  *   const ownRef = useRef();
- *   const domRef = useMergeRefs([ref, ownRef]); // рџ‘€ merge together
+ *   const domRef = useMergeRefs([ref, ownRef]); // 👈 merge together
  *   return <div ref={domRef}>...</div>
  * }
  */

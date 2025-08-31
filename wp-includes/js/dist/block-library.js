@@ -1,4 +1,4 @@
-﻿/******/ (() => { // webpackBootstrap
+/******/ (() => { // webpackBootstrap
 /******/ 	var __webpack_modules__ = ({
 
 /***/ 2321:
@@ -10,8 +10,8 @@
  *
  * This function is in a separate file and uses the older JS syntax so
  * that it can be imported in both:
- * вЂ“ block-library/src/index.js
- * вЂ“ block-library/src/babel-plugin.js
+ * – block-library/src/index.js
+ * – block-library/src/babel-plugin.js
  *
  * @param {Object} metadata Parsed block.json metadata.
  * @return {boolean} Is the block experimental?
@@ -107,465 +107,465 @@ module.exports = function equal(a, b) {
 /***/ ((module) => {
 
 var characterMap = {
-	"ГЂ": "A",
-	"ГЃ": "A",
-	"Г‚": "A",
-	"Гѓ": "A",
-	"Г„": "A",
-	"Г…": "A",
-	"бє¤": "A",
-	"бє®": "A",
-	"бєІ": "A",
-	"бєґ": "A",
-	"бє¶": "A",
-	"Г†": "AE",
-	"бє¦": "A",
-	"бє°": "A",
-	"И‚": "A",
-	"бєў": "A",
-	"бє ": "A",
-	"бєЁ": "A",
-	"бєЄ": "A",
-	"бє¬": "A",
-	"Г‡": "C",
-	"бё€": "C",
-	"Г€": "E",
-	"Г‰": "E",
-	"ГЉ": "E",
-	"Г‹": "E",
-	"бєѕ": "E",
-	"бё–": "E",
-	"б»Ђ": "E",
-	"бё”": "E",
-	"бёњ": "E",
-	"И†": "E",
-	"бєє": "E",
-	"бєј": "E",
-	"бєё": "E",
-	"б»‚": "E",
-	"б»„": "E",
-	"б»†": "E",
-	"ГЊ": "I",
-	"ГЌ": "I",
-	"ГЋ": "I",
-	"ГЏ": "I",
-	"бё®": "I",
-	"ИЉ": "I",
-	"б»€": "I",
-	"б»Љ": "I",
-	"Гђ": "D",
-	"Г‘": "N",
-	"Г’": "O",
-	"Г“": "O",
-	"Г”": "O",
-	"Г•": "O",
-	"Г–": "O",
-	"Г": "O",
-	"б»ђ": "O",
-	"б№Њ": "O",
-	"б№’": "O",
-	"ИЋ": "O",
-	"б»Ћ": "O",
-	"б»Њ": "O",
-	"б»”": "O",
-	"б»–": "O",
-	"б»": "O",
-	"б»њ": "O",
-	"б»ћ": "O",
-	"б» ": "O",
-	"б»љ": "O",
-	"б»ў": "O",
-	"Г™": "U",
-	"Гљ": "U",
-	"Г›": "U",
-	"Гњ": "U",
-	"б»¦": "U",
-	"б»¤": "U",
-	"б»¬": "U",
-	"б»®": "U",
-	"б»°": "U",
-	"Гќ": "Y",
-	"Г ": "a",
-	"ГЎ": "a",
-	"Гў": "a",
-	"ГЈ": "a",
-	"Г¤": "a",
-	"ГҐ": "a",
-	"бєҐ": "a",
-	"бєЇ": "a",
-	"бєі": "a",
-	"бєµ": "a",
-	"бє·": "a",
-	"Г¦": "ae",
-	"бє§": "a",
-	"бє±": "a",
-	"Иѓ": "a",
-	"бєЈ": "a",
-	"бєЎ": "a",
-	"бє©": "a",
-	"бє«": "a",
-	"бє­": "a",
-	"Г§": "c",
-	"бё‰": "c",
-	"ГЁ": "e",
-	"Г©": "e",
-	"ГЄ": "e",
-	"Г«": "e",
-	"бєї": "e",
-	"бё—": "e",
-	"б»Ѓ": "e",
-	"бё•": "e",
-	"бёќ": "e",
-	"И‡": "e",
-	"бє»": "e",
-	"бєЅ": "e",
-	"бє№": "e",
-	"б»ѓ": "e",
-	"б»…": "e",
-	"б»‡": "e",
-	"Г¬": "i",
-	"Г­": "i",
-	"Г®": "i",
-	"ГЇ": "i",
-	"бёЇ": "i",
-	"И‹": "i",
-	"б»‰": "i",
-	"б»‹": "i",
-	"Г°": "d",
-	"Г±": "n",
-	"ГІ": "o",
-	"Гі": "o",
-	"Гґ": "o",
-	"Гµ": "o",
-	"Г¶": "o",
-	"Гё": "o",
-	"б»‘": "o",
-	"б№Ќ": "o",
-	"б№“": "o",
-	"ИЏ": "o",
-	"б»Џ": "o",
-	"б»Ќ": "o",
-	"б»•": "o",
-	"б»—": "o",
-	"б»™": "o",
-	"б»ќ": "o",
-	"б»џ": "o",
-	"б»Ў": "o",
-	"б»›": "o",
-	"б»Ј": "o",
-	"Г№": "u",
-	"Гє": "u",
-	"Г»": "u",
-	"Гј": "u",
-	"б»§": "u",
-	"б»Ґ": "u",
-	"б»­": "u",
-	"б»Ї": "u",
-	"б»±": "u",
-	"ГЅ": "y",
-	"Гї": "y",
-	"ДЂ": "A",
-	"ДЃ": "a",
-	"Д‚": "A",
-	"Дѓ": "a",
-	"Д„": "A",
-	"Д…": "a",
-	"Д†": "C",
-	"Д‡": "c",
-	"Д€": "C",
-	"Д‰": "c",
-	"ДЉ": "C",
-	"Д‹": "c",
-	"ДЊ": "C",
-	"ДЌ": "c",
-	"CМ†": "C",
-	"cМ†": "c",
-	"ДЋ": "D",
-	"ДЏ": "d",
-	"Дђ": "D",
-	"Д‘": "d",
-	"Д’": "E",
-	"Д“": "e",
-	"Д”": "E",
-	"Д•": "e",
-	"Д–": "E",
-	"Д—": "e",
-	"Д": "E",
-	"Д™": "e",
-	"Дљ": "E",
-	"Д›": "e",
-	"Дњ": "G",
-	"Зґ": "G",
-	"Дќ": "g",
-	"Зµ": "g",
-	"Дћ": "G",
-	"Дџ": "g",
-	"Д ": "G",
-	"ДЎ": "g",
-	"Дў": "G",
-	"ДЈ": "g",
-	"Д¤": "H",
-	"ДҐ": "h",
-	"Д¦": "H",
-	"Д§": "h",
-	"бёЄ": "H",
-	"бё«": "h",
-	"ДЁ": "I",
-	"Д©": "i",
-	"ДЄ": "I",
-	"Д«": "i",
-	"Д¬": "I",
-	"Д­": "i",
-	"Д®": "I",
-	"ДЇ": "i",
-	"Д°": "I",
-	"Д±": "i",
-	"ДІ": "IJ",
-	"Ді": "ij",
-	"Дґ": "J",
-	"Дµ": "j",
-	"Д¶": "K",
-	"Д·": "k",
-	"бё°": "K",
-	"бё±": "k",
-	"KМ†": "K",
-	"kМ†": "k",
-	"Д№": "L",
-	"Дє": "l",
-	"Д»": "L",
-	"Дј": "l",
-	"ДЅ": "L",
-	"Дѕ": "l",
-	"Дї": "L",
-	"ЕЂ": "l",
-	"ЕЃ": "l",
-	"Е‚": "l",
-	"бёѕ": "M",
-	"бёї": "m",
-	"MМ†": "M",
-	"mМ†": "m",
-	"Еѓ": "N",
-	"Е„": "n",
-	"Е…": "N",
-	"Е†": "n",
-	"Е‡": "N",
-	"Е€": "n",
-	"Е‰": "n",
-	"NМ†": "N",
-	"nМ†": "n",
-	"ЕЊ": "O",
-	"ЕЌ": "o",
-	"ЕЋ": "O",
-	"ЕЏ": "o",
-	"Еђ": "O",
-	"Е‘": "o",
-	"Е’": "OE",
-	"Е“": "oe",
-	"PМ†": "P",
-	"pМ†": "p",
-	"Е”": "R",
-	"Е•": "r",
-	"Е–": "R",
-	"Е—": "r",
-	"Е": "R",
-	"Е™": "r",
-	"RМ†": "R",
-	"rМ†": "r",
-	"И’": "R",
-	"И“": "r",
-	"Ељ": "S",
-	"Е›": "s",
-	"Ењ": "S",
-	"Еќ": "s",
-	"Ећ": "S",
-	"И": "S",
-	"И™": "s",
-	"Еџ": "s",
-	"Е ": "S",
-	"ЕЎ": "s",
-	"Еў": "T",
-	"ЕЈ": "t",
-	"И›": "t",
-	"Иљ": "T",
-	"Е¤": "T",
-	"ЕҐ": "t",
-	"Е¦": "T",
-	"Е§": "t",
-	"TМ†": "T",
-	"tМ†": "t",
-	"ЕЁ": "U",
-	"Е©": "u",
-	"ЕЄ": "U",
-	"Е«": "u",
-	"Е¬": "U",
-	"Е­": "u",
-	"Е®": "U",
-	"ЕЇ": "u",
-	"Е°": "U",
-	"Е±": "u",
-	"ЕІ": "U",
-	"Еі": "u",
-	"И–": "U",
-	"И—": "u",
-	"VМ†": "V",
-	"vМ†": "v",
-	"Еґ": "W",
-	"Еµ": "w",
-	"бє‚": "W",
-	"бєѓ": "w",
-	"XМ†": "X",
-	"xМ†": "x",
-	"Е¶": "Y",
-	"Е·": "y",
-	"Её": "Y",
-	"YМ†": "Y",
-	"yМ†": "y",
-	"Е№": "Z",
-	"Еє": "z",
-	"Е»": "Z",
-	"Еј": "z",
-	"ЕЅ": "Z",
-	"Еѕ": "z",
-	"Еї": "s",
-	"Ж’": "f",
-	"Ж ": "O",
-	"ЖЎ": "o",
-	"ЖЇ": "U",
-	"Ж°": "u",
-	"ЗЌ": "A",
-	"ЗЋ": "a",
-	"ЗЏ": "I",
-	"Зђ": "i",
-	"З‘": "O",
-	"З’": "o",
-	"З“": "U",
-	"З”": "u",
-	"З•": "U",
-	"З–": "u",
-	"З—": "U",
-	"З": "u",
-	"З™": "U",
-	"Зљ": "u",
-	"З›": "U",
-	"Зњ": "u",
-	"б»Ё": "U",
-	"б»©": "u",
-	"б№ё": "U",
-	"б№№": "u",
-	"Зє": "A",
-	"З»": "a",
-	"Зј": "AE",
-	"ЗЅ": "ae",
-	"Зѕ": "O",
-	"Зї": "o",
-	"Гћ": "TH",
-	"Гѕ": "th",
-	"б№”": "P",
-	"б№•": "p",
-	"б№¤": "S",
-	"б№Ґ": "s",
-	"XМЃ": "X",
-	"xМЃ": "x",
-	"Рѓ": "Р“",
-	"С“": "Рі",
-	"РЊ": "Рљ",
-	"Сњ": "Рє",
-	"AМ‹": "A",
-	"aМ‹": "a",
-	"EМ‹": "E",
-	"eМ‹": "e",
-	"IМ‹": "I",
-	"iМ‹": "i",
-	"Зё": "N",
-	"З№": "n",
-	"б»’": "O",
-	"б»“": "o",
-	"б№ђ": "O",
-	"б№‘": "o",
-	"б»Є": "U",
-	"б»«": "u",
-	"бєЂ": "W",
-	"бєЃ": "w",
-	"б»І": "Y",
-	"б»і": "y",
-	"ИЂ": "A",
-	"ИЃ": "a",
-	"И„": "E",
-	"И…": "e",
-	"И€": "I",
-	"И‰": "i",
-	"ИЊ": "O",
-	"ИЌ": "o",
-	"Иђ": "R",
-	"И‘": "r",
-	"И”": "U",
-	"И•": "u",
-	"BМЊ": "B",
-	"bМЊ": "b",
-	"ДЊМЈ": "C",
-	"ДЌМЈ": "c",
-	"ГЉМЊ": "E",
-	"ГЄМЊ": "e",
-	"FМЊ": "F",
-	"fМЊ": "f",
-	"З¦": "G",
-	"З§": "g",
-	"Ић": "H",
-	"Иџ": "h",
-	"JМЊ": "J",
-	"З°": "j",
-	"ЗЁ": "K",
-	"З©": "k",
-	"MМЊ": "M",
-	"mМЊ": "m",
-	"PМЊ": "P",
-	"pМЊ": "p",
-	"QМЊ": "Q",
-	"qМЊ": "q",
-	"ЕМ©": "R",
-	"Е™М©": "r",
-	"б№¦": "S",
-	"б№§": "s",
-	"VМЊ": "V",
-	"vМЊ": "v",
-	"WМЊ": "W",
-	"wМЊ": "w",
-	"XМЊ": "X",
-	"xМЊ": "x",
-	"YМЊ": "Y",
-	"yМЊ": "y",
-	"AМ§": "A",
-	"aМ§": "a",
-	"BМ§": "B",
-	"bМ§": "b",
-	"бёђ": "D",
-	"бё‘": "d",
-	"ИЁ": "E",
-	"И©": "e",
-	"ЖђМ§": "E",
-	"Й›М§": "e",
-	"бёЁ": "H",
-	"бё©": "h",
-	"IМ§": "I",
-	"iМ§": "i",
-	"Ж—М§": "I",
-	"ЙЁМ§": "i",
-	"MМ§": "M",
-	"mМ§": "m",
-	"OМ§": "O",
-	"oМ§": "o",
-	"QМ§": "Q",
-	"qМ§": "q",
-	"UМ§": "U",
-	"uМ§": "u",
-	"XМ§": "X",
-	"xМ§": "x",
-	"ZМ§": "Z",
-	"zМ§": "z",
-	"Р№":"Рё",
-	"Р™":"Р",
-	"С‘":"Рµ",
-	"РЃ":"Р•",
+	"À": "A",
+	"Á": "A",
+	"Â": "A",
+	"Ã": "A",
+	"Ä": "A",
+	"Å": "A",
+	"Ấ": "A",
+	"Ắ": "A",
+	"Ẳ": "A",
+	"Ẵ": "A",
+	"Ặ": "A",
+	"Æ": "AE",
+	"Ầ": "A",
+	"Ằ": "A",
+	"Ȃ": "A",
+	"Ả": "A",
+	"Ạ": "A",
+	"Ẩ": "A",
+	"Ẫ": "A",
+	"Ậ": "A",
+	"Ç": "C",
+	"Ḉ": "C",
+	"È": "E",
+	"É": "E",
+	"Ê": "E",
+	"Ë": "E",
+	"Ế": "E",
+	"Ḗ": "E",
+	"Ề": "E",
+	"Ḕ": "E",
+	"Ḝ": "E",
+	"Ȇ": "E",
+	"Ẻ": "E",
+	"Ẽ": "E",
+	"Ẹ": "E",
+	"Ể": "E",
+	"Ễ": "E",
+	"Ệ": "E",
+	"Ì": "I",
+	"Í": "I",
+	"Î": "I",
+	"Ï": "I",
+	"Ḯ": "I",
+	"Ȋ": "I",
+	"Ỉ": "I",
+	"Ị": "I",
+	"Ð": "D",
+	"Ñ": "N",
+	"Ò": "O",
+	"Ó": "O",
+	"Ô": "O",
+	"Õ": "O",
+	"Ö": "O",
+	"Ø": "O",
+	"Ố": "O",
+	"Ṍ": "O",
+	"Ṓ": "O",
+	"Ȏ": "O",
+	"Ỏ": "O",
+	"Ọ": "O",
+	"Ổ": "O",
+	"Ỗ": "O",
+	"Ộ": "O",
+	"Ờ": "O",
+	"Ở": "O",
+	"Ỡ": "O",
+	"Ớ": "O",
+	"Ợ": "O",
+	"Ù": "U",
+	"Ú": "U",
+	"Û": "U",
+	"Ü": "U",
+	"Ủ": "U",
+	"Ụ": "U",
+	"Ử": "U",
+	"Ữ": "U",
+	"Ự": "U",
+	"Ý": "Y",
+	"à": "a",
+	"á": "a",
+	"â": "a",
+	"ã": "a",
+	"ä": "a",
+	"å": "a",
+	"ấ": "a",
+	"ắ": "a",
+	"ẳ": "a",
+	"ẵ": "a",
+	"ặ": "a",
+	"æ": "ae",
+	"ầ": "a",
+	"ằ": "a",
+	"ȃ": "a",
+	"ả": "a",
+	"ạ": "a",
+	"ẩ": "a",
+	"ẫ": "a",
+	"ậ": "a",
+	"ç": "c",
+	"ḉ": "c",
+	"è": "e",
+	"é": "e",
+	"ê": "e",
+	"ë": "e",
+	"ế": "e",
+	"ḗ": "e",
+	"ề": "e",
+	"ḕ": "e",
+	"ḝ": "e",
+	"ȇ": "e",
+	"ẻ": "e",
+	"ẽ": "e",
+	"ẹ": "e",
+	"ể": "e",
+	"ễ": "e",
+	"ệ": "e",
+	"ì": "i",
+	"í": "i",
+	"î": "i",
+	"ï": "i",
+	"ḯ": "i",
+	"ȋ": "i",
+	"ỉ": "i",
+	"ị": "i",
+	"ð": "d",
+	"ñ": "n",
+	"ò": "o",
+	"ó": "o",
+	"ô": "o",
+	"õ": "o",
+	"ö": "o",
+	"ø": "o",
+	"ố": "o",
+	"ṍ": "o",
+	"ṓ": "o",
+	"ȏ": "o",
+	"ỏ": "o",
+	"ọ": "o",
+	"ổ": "o",
+	"ỗ": "o",
+	"ộ": "o",
+	"ờ": "o",
+	"ở": "o",
+	"ỡ": "o",
+	"ớ": "o",
+	"ợ": "o",
+	"ù": "u",
+	"ú": "u",
+	"û": "u",
+	"ü": "u",
+	"ủ": "u",
+	"ụ": "u",
+	"ử": "u",
+	"ữ": "u",
+	"ự": "u",
+	"ý": "y",
+	"ÿ": "y",
+	"Ā": "A",
+	"ā": "a",
+	"Ă": "A",
+	"ă": "a",
+	"Ą": "A",
+	"ą": "a",
+	"Ć": "C",
+	"ć": "c",
+	"Ĉ": "C",
+	"ĉ": "c",
+	"Ċ": "C",
+	"ċ": "c",
+	"Č": "C",
+	"č": "c",
+	"C̆": "C",
+	"c̆": "c",
+	"Ď": "D",
+	"ď": "d",
+	"Đ": "D",
+	"đ": "d",
+	"Ē": "E",
+	"ē": "e",
+	"Ĕ": "E",
+	"ĕ": "e",
+	"Ė": "E",
+	"ė": "e",
+	"Ę": "E",
+	"ę": "e",
+	"Ě": "E",
+	"ě": "e",
+	"Ĝ": "G",
+	"Ǵ": "G",
+	"ĝ": "g",
+	"ǵ": "g",
+	"Ğ": "G",
+	"ğ": "g",
+	"Ġ": "G",
+	"ġ": "g",
+	"Ģ": "G",
+	"ģ": "g",
+	"Ĥ": "H",
+	"ĥ": "h",
+	"Ħ": "H",
+	"ħ": "h",
+	"Ḫ": "H",
+	"ḫ": "h",
+	"Ĩ": "I",
+	"ĩ": "i",
+	"Ī": "I",
+	"ī": "i",
+	"Ĭ": "I",
+	"ĭ": "i",
+	"Į": "I",
+	"į": "i",
+	"İ": "I",
+	"ı": "i",
+	"Ĳ": "IJ",
+	"ĳ": "ij",
+	"Ĵ": "J",
+	"ĵ": "j",
+	"Ķ": "K",
+	"ķ": "k",
+	"Ḱ": "K",
+	"ḱ": "k",
+	"K̆": "K",
+	"k̆": "k",
+	"Ĺ": "L",
+	"ĺ": "l",
+	"Ļ": "L",
+	"ļ": "l",
+	"Ľ": "L",
+	"ľ": "l",
+	"Ŀ": "L",
+	"ŀ": "l",
+	"Ł": "l",
+	"ł": "l",
+	"Ḿ": "M",
+	"ḿ": "m",
+	"M̆": "M",
+	"m̆": "m",
+	"Ń": "N",
+	"ń": "n",
+	"Ņ": "N",
+	"ņ": "n",
+	"Ň": "N",
+	"ň": "n",
+	"ŉ": "n",
+	"N̆": "N",
+	"n̆": "n",
+	"Ō": "O",
+	"ō": "o",
+	"Ŏ": "O",
+	"ŏ": "o",
+	"Ő": "O",
+	"ő": "o",
+	"Œ": "OE",
+	"œ": "oe",
+	"P̆": "P",
+	"p̆": "p",
+	"Ŕ": "R",
+	"ŕ": "r",
+	"Ŗ": "R",
+	"ŗ": "r",
+	"Ř": "R",
+	"ř": "r",
+	"R̆": "R",
+	"r̆": "r",
+	"Ȓ": "R",
+	"ȓ": "r",
+	"Ś": "S",
+	"ś": "s",
+	"Ŝ": "S",
+	"ŝ": "s",
+	"Ş": "S",
+	"Ș": "S",
+	"ș": "s",
+	"ş": "s",
+	"Š": "S",
+	"š": "s",
+	"Ţ": "T",
+	"ţ": "t",
+	"ț": "t",
+	"Ț": "T",
+	"Ť": "T",
+	"ť": "t",
+	"Ŧ": "T",
+	"ŧ": "t",
+	"T̆": "T",
+	"t̆": "t",
+	"Ũ": "U",
+	"ũ": "u",
+	"Ū": "U",
+	"ū": "u",
+	"Ŭ": "U",
+	"ŭ": "u",
+	"Ů": "U",
+	"ů": "u",
+	"Ű": "U",
+	"ű": "u",
+	"Ų": "U",
+	"ų": "u",
+	"Ȗ": "U",
+	"ȗ": "u",
+	"V̆": "V",
+	"v̆": "v",
+	"Ŵ": "W",
+	"ŵ": "w",
+	"Ẃ": "W",
+	"ẃ": "w",
+	"X̆": "X",
+	"x̆": "x",
+	"Ŷ": "Y",
+	"ŷ": "y",
+	"Ÿ": "Y",
+	"Y̆": "Y",
+	"y̆": "y",
+	"Ź": "Z",
+	"ź": "z",
+	"Ż": "Z",
+	"ż": "z",
+	"Ž": "Z",
+	"ž": "z",
+	"ſ": "s",
+	"ƒ": "f",
+	"Ơ": "O",
+	"ơ": "o",
+	"Ư": "U",
+	"ư": "u",
+	"Ǎ": "A",
+	"ǎ": "a",
+	"Ǐ": "I",
+	"ǐ": "i",
+	"Ǒ": "O",
+	"ǒ": "o",
+	"Ǔ": "U",
+	"ǔ": "u",
+	"Ǖ": "U",
+	"ǖ": "u",
+	"Ǘ": "U",
+	"ǘ": "u",
+	"Ǚ": "U",
+	"ǚ": "u",
+	"Ǜ": "U",
+	"ǜ": "u",
+	"Ứ": "U",
+	"ứ": "u",
+	"Ṹ": "U",
+	"ṹ": "u",
+	"Ǻ": "A",
+	"ǻ": "a",
+	"Ǽ": "AE",
+	"ǽ": "ae",
+	"Ǿ": "O",
+	"ǿ": "o",
+	"Þ": "TH",
+	"þ": "th",
+	"Ṕ": "P",
+	"ṕ": "p",
+	"Ṥ": "S",
+	"ṥ": "s",
+	"X́": "X",
+	"x́": "x",
+	"Ѓ": "Г",
+	"ѓ": "г",
+	"Ќ": "К",
+	"ќ": "к",
+	"A̋": "A",
+	"a̋": "a",
+	"E̋": "E",
+	"e̋": "e",
+	"I̋": "I",
+	"i̋": "i",
+	"Ǹ": "N",
+	"ǹ": "n",
+	"Ồ": "O",
+	"ồ": "o",
+	"Ṑ": "O",
+	"ṑ": "o",
+	"Ừ": "U",
+	"ừ": "u",
+	"Ẁ": "W",
+	"ẁ": "w",
+	"Ỳ": "Y",
+	"ỳ": "y",
+	"Ȁ": "A",
+	"ȁ": "a",
+	"Ȅ": "E",
+	"ȅ": "e",
+	"Ȉ": "I",
+	"ȉ": "i",
+	"Ȍ": "O",
+	"ȍ": "o",
+	"Ȑ": "R",
+	"ȑ": "r",
+	"Ȕ": "U",
+	"ȕ": "u",
+	"B̌": "B",
+	"b̌": "b",
+	"Č̣": "C",
+	"č̣": "c",
+	"Ê̌": "E",
+	"ê̌": "e",
+	"F̌": "F",
+	"f̌": "f",
+	"Ǧ": "G",
+	"ǧ": "g",
+	"Ȟ": "H",
+	"ȟ": "h",
+	"J̌": "J",
+	"ǰ": "j",
+	"Ǩ": "K",
+	"ǩ": "k",
+	"M̌": "M",
+	"m̌": "m",
+	"P̌": "P",
+	"p̌": "p",
+	"Q̌": "Q",
+	"q̌": "q",
+	"Ř̩": "R",
+	"ř̩": "r",
+	"Ṧ": "S",
+	"ṧ": "s",
+	"V̌": "V",
+	"v̌": "v",
+	"W̌": "W",
+	"w̌": "w",
+	"X̌": "X",
+	"x̌": "x",
+	"Y̌": "Y",
+	"y̌": "y",
+	"A̧": "A",
+	"a̧": "a",
+	"B̧": "B",
+	"b̧": "b",
+	"Ḑ": "D",
+	"ḑ": "d",
+	"Ȩ": "E",
+	"ȩ": "e",
+	"Ɛ̧": "E",
+	"ɛ̧": "e",
+	"Ḩ": "H",
+	"ḩ": "h",
+	"I̧": "I",
+	"i̧": "i",
+	"Ɨ̧": "I",
+	"ɨ̧": "i",
+	"M̧": "M",
+	"m̧": "m",
+	"O̧": "O",
+	"o̧": "o",
+	"Q̧": "Q",
+	"q̧": "q",
+	"U̧": "U",
+	"u̧": "u",
+	"X̧": "X",
+	"x̧": "x",
+	"Z̧": "Z",
+	"z̧": "z",
+	"й":"и",
+	"Й":"И",
+	"ё":"е",
+	"Ё":"Е",
 };
 
 var chars = Object.keys(characterMap).join('|');
@@ -5367,7 +5367,7 @@ function ButtonEdit(props) {
       children: /*#__PURE__*/(0,external_ReactJSXRuntime_namespaceObject.jsx)(external_wp_blockEditor_namespaceObject.RichText, {
         ref: mergedRef,
         "aria-label": (0,external_wp_i18n_namespaceObject.__)('Button text'),
-        placeholder: placeholder || (0,external_wp_i18n_namespaceObject.__)('Add textвЂ¦'),
+        placeholder: placeholder || (0,external_wp_i18n_namespaceObject.__)('Add text…'),
         value: text,
         onChange: value => setAttributes({
           text: removeAnchorTag(value)
@@ -7402,7 +7402,7 @@ function CodeEdit({
       }),
       onRemove: onRemove,
       onMerge: mergeBlocks,
-      placeholder: (0,external_wp_i18n_namespaceObject.__)('Write codeвЂ¦'),
+      placeholder: (0,external_wp_i18n_namespaceObject.__)('Write code…'),
       "aria-label": (0,external_wp_i18n_namespaceObject.__)('Code'),
       preserveWhiteSpace: true,
       __unstablePastePlainText: true,
@@ -7653,7 +7653,7 @@ const code_settings = {
     attributes: {
       /* eslint-disable @wordpress/i18n-no-collapsible-whitespace */
       // translators: Preserve \n markers for line breaks
-      content: (0,external_wp_i18n_namespaceObject.__)('// A вЂњblockвЂќ is the abstract term used\n// to describe units of markup that\n// when composed together, form the\n// content or layout of a page.\nregisterBlockType( name, settings );')
+      content: (0,external_wp_i18n_namespaceObject.__)('// A “block” is the abstract term used\n// to describe units of markup that\n// when composed together, form the\n// content or layout of a page.\nregisterBlockType( name, settings );')
       /* eslint-enable @wordpress/i18n-no-collapsible-whitespace */
     }
   },
@@ -8296,7 +8296,7 @@ function getTotalColumnsWidth(blocks, totalBlockCount = blocks.length) {
 }
 
 /**
- * Returns an object of `clientId` в†’ `width` of effective column widths.
+ * Returns an object of `clientId` → `width` of effective column widths.
  *
  * @param {WPBlock[]} blocks          Block objects.
  * @param {?number}   totalBlockCount Total number of blocks in Columns.
@@ -8314,7 +8314,7 @@ function getColumnWidths(blocks, totalBlockCount = blocks.length) {
 }
 
 /**
- * Returns an object of `clientId` в†’ `width` of column widths as redistributed
+ * Returns an object of `clientId` → `width` of column widths as redistributed
  * proportional to their current widths, constrained or expanded to fit within
  * the given available width.
  *
@@ -9526,7 +9526,7 @@ function CommentsLegacy({
       ...blockProps,
       children: [/*#__PURE__*/(0,external_ReactJSXRuntime_namespaceObject.jsx)(external_wp_blockEditor_namespaceObject.Warning, {
         actions: actions,
-        children: (0,external_wp_i18n_namespaceObject.__)('Comments block: YouвЂ™re currently using the legacy version of the block. ' + 'The following is just a placeholder - the final styling will likely look different. ' + 'For a better representation and more customization options, ' + 'switch the block to its editable mode.')
+        children: (0,external_wp_i18n_namespaceObject.__)('Comments block: You’re currently using the legacy version of the block. ' + 'The following is just a placeholder - the final styling will likely look different. ' + 'For a better representation and more customization options, ' + 'switch the block to its editable mode.')
       }), /*#__PURE__*/(0,external_ReactJSXRuntime_namespaceObject.jsx)(PostCommentsPlaceholder, {
         postId: postId,
         postType: postType
@@ -11471,8 +11471,8 @@ const queryPaginationPrevious = /*#__PURE__*/(0,external_ReactJSXRuntime_namespa
 
 const arrowMap = {
   none: '',
-  arrow: 'в†ђ',
-  chevron: 'В«'
+  arrow: '←',
+  chevron: '«'
 };
 function CommentsPaginationPreviousEdit({
   attributes: {
@@ -11829,8 +11829,8 @@ const queryPaginationNext = /*#__PURE__*/(0,external_ReactJSXRuntime_namespaceOb
 
 const edit_arrowMap = {
   none: '',
-  arrow: 'в†’',
-  chevron: 'В»'
+  arrow: '→',
+  chevron: '»'
 };
 function CommentsPaginationNextEdit({
   attributes: {
@@ -12188,7 +12188,7 @@ function comments_title_edit_Edit({
       })]
     })
   });
-  const postTitle = isSiteEditor ? (0,external_wp_i18n_namespaceObject.__)('вЂњPost TitleвЂќ') : `"${rawTitle}"`;
+  const postTitle = isSiteEditor ? (0,external_wp_i18n_namespaceObject.__)('“Post Title”') : `"${rawTitle}"`;
   let placeholder;
   if (showCommentsCount && commentsCount !== undefined) {
     if (showPostTitle) {
@@ -13969,7 +13969,7 @@ const v3 = {
       content: attributes.title,
       align: attributes.contentAlign,
       fontSize: 'large',
-      placeholder: (0,external_wp_i18n_namespaceObject.__)('Write titleвЂ¦')
+      placeholder: (0,external_wp_i18n_namespaceObject.__)('Write title…')
     })]];
   }
 };
@@ -14041,7 +14041,7 @@ const v2 = {
       content: attributes.title,
       align: attributes.contentAlign,
       fontSize: 'large',
-      placeholder: (0,external_wp_i18n_namespaceObject.__)('Write titleвЂ¦')
+      placeholder: (0,external_wp_i18n_namespaceObject.__)('Write title…')
     })]];
   }
 };
@@ -14104,7 +14104,7 @@ const cover_deprecated_v1 = {
       content: attributes.title,
       align: attributes.contentAlign,
       fontSize: 'large',
-      placeholder: (0,external_wp_i18n_namespaceObject.__)('Write titleвЂ¦')
+      placeholder: (0,external_wp_i18n_namespaceObject.__)('Write title…')
     })]];
   }
 };
@@ -14700,7 +14700,7 @@ var colord_r={grad:.9,turn:360,rad:360/(2*Math.PI)},t=function(r){return"string"
 /* harmony default export */ function names(e,f){var a={white:"#ffffff",bisque:"#ffe4c4",blue:"#0000ff",cadetblue:"#5f9ea0",chartreuse:"#7fff00",chocolate:"#d2691e",coral:"#ff7f50",antiquewhite:"#faebd7",aqua:"#00ffff",azure:"#f0ffff",whitesmoke:"#f5f5f5",papayawhip:"#ffefd5",plum:"#dda0dd",blanchedalmond:"#ffebcd",black:"#000000",gold:"#ffd700",goldenrod:"#daa520",gainsboro:"#dcdcdc",cornsilk:"#fff8dc",cornflowerblue:"#6495ed",burlywood:"#deb887",aquamarine:"#7fffd4",beige:"#f5f5dc",crimson:"#dc143c",cyan:"#00ffff",darkblue:"#00008b",darkcyan:"#008b8b",darkgoldenrod:"#b8860b",darkkhaki:"#bdb76b",darkgray:"#a9a9a9",darkgreen:"#006400",darkgrey:"#a9a9a9",peachpuff:"#ffdab9",darkmagenta:"#8b008b",darkred:"#8b0000",darkorchid:"#9932cc",darkorange:"#ff8c00",darkslateblue:"#483d8b",gray:"#808080",darkslategray:"#2f4f4f",darkslategrey:"#2f4f4f",deeppink:"#ff1493",deepskyblue:"#00bfff",wheat:"#f5deb3",firebrick:"#b22222",floralwhite:"#fffaf0",ghostwhite:"#f8f8ff",darkviolet:"#9400d3",magenta:"#ff00ff",green:"#008000",dodgerblue:"#1e90ff",grey:"#808080",honeydew:"#f0fff0",hotpink:"#ff69b4",blueviolet:"#8a2be2",forestgreen:"#228b22",lawngreen:"#7cfc00",indianred:"#cd5c5c",indigo:"#4b0082",fuchsia:"#ff00ff",brown:"#a52a2a",maroon:"#800000",mediumblue:"#0000cd",lightcoral:"#f08080",darkturquoise:"#00ced1",lightcyan:"#e0ffff",ivory:"#fffff0",lightyellow:"#ffffe0",lightsalmon:"#ffa07a",lightseagreen:"#20b2aa",linen:"#faf0e6",mediumaquamarine:"#66cdaa",lemonchiffon:"#fffacd",lime:"#00ff00",khaki:"#f0e68c",mediumseagreen:"#3cb371",limegreen:"#32cd32",mediumspringgreen:"#00fa9a",lightskyblue:"#87cefa",lightblue:"#add8e6",midnightblue:"#191970",lightpink:"#ffb6c1",mistyrose:"#ffe4e1",moccasin:"#ffe4b5",mintcream:"#f5fffa",lightslategray:"#778899",lightslategrey:"#778899",navajowhite:"#ffdead",navy:"#000080",mediumvioletred:"#c71585",powderblue:"#b0e0e6",palegoldenrod:"#eee8aa",oldlace:"#fdf5e6",paleturquoise:"#afeeee",mediumturquoise:"#48d1cc",mediumorchid:"#ba55d3",rebeccapurple:"#663399",lightsteelblue:"#b0c4de",mediumslateblue:"#7b68ee",thistle:"#d8bfd8",tan:"#d2b48c",orchid:"#da70d6",mediumpurple:"#9370db",purple:"#800080",pink:"#ffc0cb",skyblue:"#87ceeb",springgreen:"#00ff7f",palegreen:"#98fb98",red:"#ff0000",yellow:"#ffff00",slateblue:"#6a5acd",lavenderblush:"#fff0f5",peru:"#cd853f",palevioletred:"#db7093",violet:"#ee82ee",teal:"#008080",slategray:"#708090",slategrey:"#708090",aliceblue:"#f0f8ff",darkseagreen:"#8fbc8f",darkolivegreen:"#556b2f",greenyellow:"#adff2f",seagreen:"#2e8b57",seashell:"#fff5ee",tomato:"#ff6347",silver:"#c0c0c0",sienna:"#a0522d",lavender:"#e6e6fa",lightgreen:"#90ee90",orange:"#ffa500",orangered:"#ff4500",steelblue:"#4682b4",royalblue:"#4169e1",turquoise:"#40e0d0",yellowgreen:"#9acd32",salmon:"#fa8072",saddlebrown:"#8b4513",sandybrown:"#f4a460",rosybrown:"#bc8f8f",darksalmon:"#e9967a",lightgoldenrodyellow:"#fafad2",snow:"#fffafa",lightgrey:"#d3d3d3",lightgray:"#d3d3d3",dimgray:"#696969",dimgrey:"#696969",olivedrab:"#6b8e23",olive:"#808000"},r={};for(var d in a)r[a[d]]=d;var l={};e.prototype.toName=function(f){if(!(this.rgba.a||this.rgba.r||this.rgba.g||this.rgba.b))return"transparent";var d,i,n=r[this.toHex()];if(n)return n;if(null==f?void 0:f.closest){var o=this.toRgb(),t=1/0,b="black";if(!l.length)for(var c in a)l[c]=new e(a[c]).toRgb();for(var g in a){var u=(d=o,i=l[g],Math.pow(d.r-i.r,2)+Math.pow(d.g-i.g,2)+Math.pow(d.b-i.b,2));u<t&&(t=u,b=g)}return b}};f.string.push([function(f){var r=f.toLowerCase(),d="transparent"===r?"#0000":a[r];return d?new e(d).toRgb():null},"name"])}
 
 ;// ./node_modules/fast-average-color/dist/index.esm.js
-/*! Fast Average Color | В© 2022 Denis Seleznev | MIT License | https://github.com/fast-average-color/fast-average-color */
+/*! Fast Average Color | © 2022 Denis Seleznev | MIT License | https://github.com/fast-average-color/fast-average-color */
 function toHex(num) {
     var str = num.toString(16);
     return str.length === 1 ? '0' + str : str;
@@ -15368,7 +15368,7 @@ function compositeIsDark(dimRatio, overlayColor, backgroundColor) {
 function getInnerBlocksTemplate(attributes) {
   return [['core/paragraph', {
     align: 'center',
-    placeholder: (0,external_wp_i18n_namespaceObject.__)('Write titleвЂ¦'),
+    placeholder: (0,external_wp_i18n_namespaceObject.__)('Write title…'),
     ...attributes
   }]];
 }
@@ -16531,7 +16531,7 @@ function DetailsEdit({
         children: /*#__PURE__*/(0,external_ReactJSXRuntime_namespaceObject.jsx)(external_wp_blockEditor_namespaceObject.RichText, {
           identifier: "summary",
           "aria-label": (0,external_wp_i18n_namespaceObject.__)('Write summary. Press Enter to expand or collapse the details.'),
-          placeholder: placeholder || (0,external_wp_i18n_namespaceObject.__)('Write summaryвЂ¦'),
+          placeholder: placeholder || (0,external_wp_i18n_namespaceObject.__)('Write summary…'),
           withoutInteractiveFormatting: true,
           value: summary,
           onChange: newSummary => setAttributes({
@@ -17055,7 +17055,7 @@ const EmbedPlaceholder = ({
         className: "wp-block-embed__placeholder-input",
         label: label,
         hideLabelFromVision: true,
-        placeholder: (0,external_wp_i18n_namespaceObject.__)('Enter URL to embed hereвЂ¦'),
+        placeholder: (0,external_wp_i18n_namespaceObject.__)('Enter URL to embed here…'),
         onChange: onChange
       }), /*#__PURE__*/(0,external_ReactJSXRuntime_namespaceObject.jsx)(external_wp_components_namespaceObject.Button, {
         __next40pxDefaultSize: true,
@@ -19057,7 +19057,7 @@ function FileEdit({
           identifier: "fileName",
           tagName: "a",
           value: fileName,
-          placeholder: (0,external_wp_i18n_namespaceObject.__)('Write file nameвЂ¦'),
+          placeholder: (0,external_wp_i18n_namespaceObject.__)('Write file name…'),
           withoutInteractiveFormatting: true,
           onChange: text => setAttributes({
             fileName: removeAnchorTag(text)
@@ -19073,7 +19073,7 @@ function FileEdit({
             className: dist_clsx('wp-block-file__button', (0,external_wp_blockEditor_namespaceObject.__experimentalGetElementClassName)('button')),
             value: downloadButtonText,
             withoutInteractiveFormatting: true,
-            placeholder: (0,external_wp_i18n_namespaceObject.__)('Add textвЂ¦'),
+            placeholder: (0,external_wp_i18n_namespaceObject.__)('Add text…'),
             onChange: text => setAttributes({
               downloadButtonText: removeAnchorTag(text)
             })
@@ -20187,7 +20187,7 @@ function InputFieldBlock({
         // stops screen readers from reading the placeholder field's placeholder
         // which is confusing.
         ,
-        placeholder: placeholder ? undefined : (0,external_wp_i18n_namespaceObject.__)('Optional placeholderвЂ¦'),
+        placeholder: placeholder ? undefined : (0,external_wp_i18n_namespaceObject.__)('Optional placeholder…'),
         value: placeholder,
         onChange: event => setAttributes({
           placeholder: event.target.value
@@ -22623,7 +22623,7 @@ function GalleryEdit(props) {
             children: (0,external_wp_i18n_namespaceObject.__)('Resolution')
           }), /*#__PURE__*/(0,external_ReactJSXRuntime_namespaceObject.jsxs)(external_wp_primitives_namespaceObject.View, {
             className: "gallery-image-sizes__loading",
-            children: [/*#__PURE__*/(0,external_ReactJSXRuntime_namespaceObject.jsx)(external_wp_components_namespaceObject.Spinner, {}), (0,external_wp_i18n_namespaceObject.__)('Loading optionsвЂ¦')]
+            children: [/*#__PURE__*/(0,external_ReactJSXRuntime_namespaceObject.jsx)(external_wp_components_namespaceObject.Spinner, {}), (0,external_wp_i18n_namespaceObject.__)('Loading options…')]
           })]
         })]
       })
@@ -25247,7 +25247,7 @@ function HTMLEdit({
       onChange: content => setAttributes({
         content
       }),
-      placeholder: (0,external_wp_i18n_namespaceObject.__)('Write HTMLвЂ¦'),
+      placeholder: (0,external_wp_i18n_namespaceObject.__)('Write HTML…'),
       "aria-label": (0,external_wp_i18n_namespaceObject.__)('HTML')
     })]
   });
@@ -25339,7 +25339,7 @@ const html_settings = {
   icon: library_html,
   example: {
     attributes: {
-      content: '<marquee>' + (0,external_wp_i18n_namespaceObject.__)('Welcome to the wonderful world of blocksвЂ¦') + '</marquee>'
+      content: '<marquee>' + (0,external_wp_i18n_namespaceObject.__)('Welcome to the wonderful world of blocks…') + '</marquee>'
     }
   },
   edit: HTMLEdit,
@@ -28304,7 +28304,7 @@ const image_settings = {
       sizeSlug: 'large',
       url: 'https://s.w.org/images/core/5.3/MtBlanc1.jpg',
       // translators: Caption accompanying an image of the Mont Blanc, which serves as an example for the Image block.
-      caption: (0,external_wp_i18n_namespaceObject.__)('Mont Blanc appearsвЂ”still, snowy, and serene.')
+      caption: (0,external_wp_i18n_namespaceObject.__)('Mont Blanc appears—still, snowy, and serene.')
     }
   },
   __experimentalLabel(attributes, {
@@ -29298,7 +29298,7 @@ function LatestPostsEdit({
         const needsReadMore = excerptLength < excerpt.trim().split(' ').length && post.excerpt.raw === '';
         const postExcerpt = needsReadMore ? /*#__PURE__*/(0,external_ReactJSXRuntime_namespaceObject.jsxs)(external_ReactJSXRuntime_namespaceObject.Fragment, {
           children: [excerpt.trim().split(' ', excerptLength).join(' '), (0,external_wp_element_namespaceObject.createInterpolateElement)((0,external_wp_i18n_namespaceObject.sprintf)(/* translators: 1: Hidden accessibility text: Post title */
-          (0,external_wp_i18n_namespaceObject.__)('вЂ¦ <a>Read more<span>: %1$s</span></a>'), titleTrimmed || (0,external_wp_i18n_namespaceObject.__)('(no title)')), {
+          (0,external_wp_i18n_namespaceObject.__)('… <a>Read more<span>: %1$s</span></a>'), titleTrimmed || (0,external_wp_i18n_namespaceObject.__)('(no title)')), {
             a:
             /*#__PURE__*/
             // eslint-disable-next-line jsx-a11y/anchor-has-content
@@ -31497,7 +31497,7 @@ const WIDTH_CONSTRAINT_PERCENTAGE = 15;
 const media_text_constants_LINK_DESTINATION_MEDIA = 'media';
 const media_text_constants_LINK_DESTINATION_ATTACHMENT = 'attachment';
 const constants_TEMPLATE = [['core/paragraph', {
-  placeholder: (0,external_wp_i18n_namespaceObject._x)('ContentвЂ¦', 'content placeholder')
+  placeholder: (0,external_wp_i18n_namespaceObject._x)('Content…', 'content placeholder')
 }]];
 
 ;// ./node_modules/@wordpress/block-library/build-module/media-text/deprecated.js
@@ -33637,7 +33637,7 @@ const media_text_settings = {
     }, {
       name: 'core/paragraph',
       attributes: {
-        content: (0,external_wp_i18n_namespaceObject.__)('вЂ” Kobayashi Issa (дёЂиЊ¶)')
+        content: (0,external_wp_i18n_namespaceObject.__)('— Kobayashi Issa (一茶)')
       }
     }]
   },
@@ -33711,11 +33711,11 @@ function MissingEdit({
     }
   } else if (hasContent && hasHTMLBlock) {
     messageHTML = (0,external_wp_i18n_namespaceObject.sprintf)(/* translators: %s: block name */
-    (0,external_wp_i18n_namespaceObject.__)('Your site doesnвЂ™t include support for the "%s" block. You can leave it as-is, convert it to custom HTML, or remove it.'), originalName);
+    (0,external_wp_i18n_namespaceObject.__)('Your site doesn’t include support for the "%s" block. You can leave it as-is, convert it to custom HTML, or remove it.'), originalName);
     actions.push(convertToHtmlButton);
   } else {
     messageHTML = (0,external_wp_i18n_namespaceObject.sprintf)(/* translators: %s: block name */
-    (0,external_wp_i18n_namespaceObject.__)('Your site doesnвЂ™t include support for the "%s" block. You can leave it as-is or remove it.'), originalName);
+    (0,external_wp_i18n_namespaceObject.__)('Your site doesn’t include support for the "%s" block. You can leave it as-is or remove it.'), originalName);
   }
   return /*#__PURE__*/(0,external_ReactJSXRuntime_namespaceObject.jsxs)("div", {
     ...(0,external_wp_blockEditor_namespaceObject.useBlockProps)({
@@ -33904,7 +33904,7 @@ function MoreEdit({
     }), /*#__PURE__*/(0,external_ReactJSXRuntime_namespaceObject.jsx)("div", {
       ...(0,external_wp_blockEditor_namespaceObject.useBlockProps)(),
       children: /*#__PURE__*/(0,external_ReactJSXRuntime_namespaceObject.jsx)("input", {
-        "aria-label": (0,external_wp_i18n_namespaceObject.__)('вЂњRead moreвЂќ link text'),
+        "aria-label": (0,external_wp_i18n_namespaceObject.__)('“Read more” link text'),
         type: "text",
         value: customText,
         placeholder: DEFAULT_TEXT,
@@ -34398,7 +34398,7 @@ function NavigationMenuSelector({
   const navMenuHasBeenDeleted = currentMenuId && isNavigationMenuMissing;
   let selectorLabel = '';
   if (isResolvingNavigationMenus) {
-    selectorLabel = (0,external_wp_i18n_namespaceObject.__)('LoadingвЂ¦');
+    selectorLabel = (0,external_wp_i18n_namespaceObject.__)('Loading…');
   } else if (noMenuSelected || noBlockMenus || menuUnavailable || navMenuHasBeenDeleted) {
     // Note: classic Menus may be available.
     selectorLabel = (0,external_wp_i18n_namespaceObject.__)('Choose or create a Navigation Menu');
@@ -34501,7 +34501,7 @@ function NavigationPlaceholder({
       return;
     }
     if (isResolvingMenus) {
-      (0,external_wp_a11y_namespaceObject.speak)((0,external_wp_i18n_namespaceObject.__)('Loading navigation block setup optionsвЂ¦'));
+      (0,external_wp_a11y_namespaceObject.speak)((0,external_wp_i18n_namespaceObject.__)('Loading navigation block setup options…'));
     }
     if (hasResolvedMenus) {
       (0,external_wp_a11y_namespaceObject.speak)((0,external_wp_i18n_namespaceObject.__)('Navigation block setup options ready.'));
@@ -38351,7 +38351,7 @@ function NavigationLinkEdit({
   const [popoverAnchor, setPopoverAnchor] = (0,external_wp_element_namespaceObject.useState)(null);
   const listItemRef = (0,external_wp_element_namespaceObject.useRef)(null);
   const isDraggingWithin = useIsDraggingWithin(listItemRef);
-  const itemLabelPlaceholder = (0,external_wp_i18n_namespaceObject.__)('Add labelвЂ¦');
+  const itemLabelPlaceholder = (0,external_wp_i18n_namespaceObject.__)('Add label…');
   const ref = (0,external_wp_element_namespaceObject.useRef)();
   const linkUIref = (0,external_wp_element_namespaceObject.useRef)();
   const prevUrl = (0,external_wp_compose_namespaceObject.usePrevious)(url);
@@ -39192,7 +39192,7 @@ function NavigationSubmenuEdit({
   const [popoverAnchor, setPopoverAnchor] = (0,external_wp_element_namespaceObject.useState)(null);
   const listItemRef = (0,external_wp_element_namespaceObject.useRef)(null);
   const isDraggingWithin = edit_useIsDraggingWithin(listItemRef);
-  const itemLabelPlaceholder = (0,external_wp_i18n_namespaceObject.__)('Add textвЂ¦');
+  const itemLabelPlaceholder = (0,external_wp_i18n_namespaceObject.__)('Add text…');
   const ref = (0,external_wp_element_namespaceObject.useRef)();
   const dropdownMenuProps = useToolsPanelDropdownMenuProps();
   const {
@@ -40498,7 +40498,7 @@ function PageListEdit({
       const hasChildren = pagesByParentId.has(page.id);
       const item = {
         value: page.id,
-        label: 'вЂ” '.repeat(level) + page.title.rendered,
+        label: '— '.repeat(level) + page.title.rendered,
         rawName: page.title.rendered
       };
       tree.push(item);
@@ -42065,7 +42065,7 @@ function PostAuthorEdit({
           identifier: "byline",
           className: "wp-block-post-author__byline",
           "aria-label": (0,external_wp_i18n_namespaceObject.__)('Post author byline text'),
-          placeholder: (0,external_wp_i18n_namespaceObject.__)('Write bylineвЂ¦'),
+          placeholder: (0,external_wp_i18n_namespaceObject.__)('Write byline…'),
           value: byline,
           onChange: value => setAttributes({
             byline: value
@@ -43933,7 +43933,7 @@ const postExcerpt = /*#__PURE__*/(0,external_ReactJSXRuntime_namespaceObject.jsx
  */
 
 
-const ELLIPSIS = 'вЂ¦';
+const ELLIPSIS = '…';
 function PostExcerptEditor({
   attributes: {
     textAlign,
@@ -44034,7 +44034,7 @@ function PostExcerptEditor({
     identifier: "moreText",
     className: "wp-block-post-excerpt__more-link",
     tagName: "a",
-    "aria-label": (0,external_wp_i18n_namespaceObject.__)('вЂњRead moreвЂќ link text'),
+    "aria-label": (0,external_wp_i18n_namespaceObject.__)('“Read more” link text'),
     placeholder: (0,external_wp_i18n_namespaceObject.__)('Add "read more" link text'),
     value: moreText,
     onChange: newMoreText => setAttributes({
@@ -45134,8 +45134,8 @@ function PostNavigationLinkEdit({
   let placeholder = isNext ? (0,external_wp_i18n_namespaceObject.__)('Next') : (0,external_wp_i18n_namespaceObject.__)('Previous');
   const arrowMap = {
     none: '',
-    arrow: isNext ? 'в†’' : 'в†ђ',
-    chevron: isNext ? 'В»' : 'В«'
+    arrow: isNext ? '→' : '←',
+    chevron: isNext ? '»' : '«'
   };
   const displayArrow = arrowMap[arrow];
   if (showTitle) {
@@ -46757,7 +46757,7 @@ function PreformattedEdit({
     },
     onRemove: onRemove,
     "aria-label": (0,external_wp_i18n_namespaceObject.__)('Preformatted text'),
-    placeholder: (0,external_wp_i18n_namespaceObject.__)('Write preformatted textвЂ¦'),
+    placeholder: (0,external_wp_i18n_namespaceObject.__)('Write preformatted text…'),
     onMerge: mergeBlocks,
     ...blockProps,
     __unstablePastePlainText: true,
@@ -48089,11 +48089,11 @@ function useOrderByOptions(postType) {
       value: 'date/asc'
     }, {
       /* translators: Label for ordering posts by title in ascending order. */
-      label: (0,external_wp_i18n_namespaceObject.__)('A в†’ Z'),
+      label: (0,external_wp_i18n_namespaceObject.__)('A → Z'),
       value: 'title/asc'
     }, {
       /* translators: Label for ordering posts by title in descending order. */
-      label: (0,external_wp_i18n_namespaceObject.__)('Z в†’ A'),
+      label: (0,external_wp_i18n_namespaceObject.__)('Z → A'),
       value: 'title/desc'
     }];
     if (supportsCustomOrder) {
@@ -48375,7 +48375,7 @@ function EnhancedPaginationControl({
     hasUnsupportedBlocks
   } = useUnsupportedBlocks(clientId);
   const fullPageClientSideNavigation = window.__experimentalFullPageClientSideNavigation;
-  let help = (0,external_wp_i18n_namespaceObject.__)('Reload the full pageвЂ”instead of just the posts listвЂ”when visitors navigate between pages.');
+  let help = (0,external_wp_i18n_namespaceObject.__)('Reload the full page—instead of just the posts list—when visitors navigate between pages.');
   if (fullPageClientSideNavigation) {
     help = (0,external_wp_i18n_namespaceObject.__)('Experimental full-page client-side navigation setting enabled.');
   } else if (hasUnsupportedBlocks) {
@@ -48412,11 +48412,11 @@ const defaultOrderByOptions = [{
   value: 'date/asc'
 }, {
   /* translators: Label for ordering posts by title in ascending order. */
-  label: (0,external_wp_i18n_namespaceObject.__)('A в†’ Z'),
+  label: (0,external_wp_i18n_namespaceObject.__)('A → Z'),
   value: 'title/asc'
 }, {
   /* translators: Label for ordering posts by title in descending order. */
-  label: (0,external_wp_i18n_namespaceObject.__)('Z в†’ A'),
+  label: (0,external_wp_i18n_namespaceObject.__)('Z → A'),
   value: 'title/desc'
 }];
 function OrderControl({
@@ -51162,8 +51162,8 @@ const query_pagination_init = () => initBlock({
 
 const query_pagination_next_edit_arrowMap = {
   none: '',
-  arrow: 'в†’',
-  chevron: 'В»'
+  arrow: '→',
+  chevron: '»'
 };
 function QueryPaginationNextEdit({
   attributes: {
@@ -51435,8 +51435,8 @@ const query_pagination_numbers_init = () => initBlock({
 
 const query_pagination_previous_edit_arrowMap = {
   none: '',
-  arrow: 'в†ђ',
-  chevron: 'В«'
+  arrow: '←',
+  chevron: '«'
 };
 function QueryPaginationPreviousEdit({
   attributes: {
@@ -51757,7 +51757,7 @@ function QueryTitleEdit({
         })
       }), /*#__PURE__*/(0,external_ReactJSXRuntime_namespaceObject.jsx)(TagName, {
         ...blockProps,
-        children: showSearchTerm ? (0,external_wp_i18n_namespaceObject.__)('Search results for: вЂњsearch termвЂќ') : (0,external_wp_i18n_namespaceObject.__)('Search results')
+        children: showSearchTerm ? (0,external_wp_i18n_namespaceObject.__)('Search results for: “search term”') : (0,external_wp_i18n_namespaceObject.__)('Search results')
       })]
     });
   }
@@ -52100,7 +52100,7 @@ function QueryTotalEdit({
     }
     if (displayType === 'range-display') {
       return /*#__PURE__*/(0,external_ReactJSXRuntime_namespaceObject.jsx)(external_ReactJSXRuntime_namespaceObject.Fragment, {
-        children: (0,external_wp_i18n_namespaceObject.__)('Displaying 1 вЂ“ 10 of 12')
+        children: (0,external_wp_i18n_namespaceObject.__)('Displaying 1 – 10 of 12')
       });
     }
     return null;
@@ -53007,7 +53007,7 @@ const quote_settings = {
   icon: library_quote,
   example: {
     attributes: {
-      citation: 'Julio CortГЎzar'
+      citation: 'Julio Cortázar'
     },
     innerBlocks: [{
       name: 'core/paragraph',
@@ -53498,7 +53498,7 @@ function ReadMore({
     }), /*#__PURE__*/(0,external_ReactJSXRuntime_namespaceObject.jsx)(external_wp_blockEditor_namespaceObject.RichText, {
       identifier: "content",
       tagName: "a",
-      "aria-label": (0,external_wp_i18n_namespaceObject.__)('вЂњRead moreвЂќ link text'),
+      "aria-label": (0,external_wp_i18n_namespaceObject.__)('“Read more” link text'),
       placeholder: (0,external_wp_i18n_namespaceObject.__)('Read more'),
       value: content,
       onChange: newValue => setAttributes({
@@ -53679,7 +53679,7 @@ function RSSEdit({
             label: label,
             type: "url",
             hideLabelFromVision: true,
-            placeholder: (0,external_wp_i18n_namespaceObject.__)('Enter URL hereвЂ¦'),
+            placeholder: (0,external_wp_i18n_namespaceObject.__)('Enter URL here…'),
             value: feedURL,
             onChange: value => setAttributes({
               feedURL: value
@@ -54267,7 +54267,7 @@ function SearchEdit({
       // stops screen readers from reading the placeholder field's placeholder
       // which is confusing.
       ,
-      placeholder: placeholder ? undefined : (0,external_wp_i18n_namespaceObject.__)('Optional placeholderвЂ¦'),
+      placeholder: placeholder ? undefined : (0,external_wp_i18n_namespaceObject.__)('Optional placeholder…'),
       value: placeholder,
       onChange: event => setAttributes({
         placeholder: event.target.value
@@ -54308,7 +54308,7 @@ function SearchEdit({
         className: buttonClasses,
         style: buttonStyles,
         "aria-label": (0,external_wp_i18n_namespaceObject.__)('Button text'),
-        placeholder: (0,external_wp_i18n_namespaceObject.__)('Add button textвЂ¦'),
+        placeholder: (0,external_wp_i18n_namespaceObject.__)('Add button text…'),
         withoutInteractiveFormatting: true,
         value: buttonText,
         onChange: html => setAttributes({
@@ -54473,7 +54473,7 @@ function SearchEdit({
       identifier: "label",
       className: labelClassnames,
       "aria-label": (0,external_wp_i18n_namespaceObject.__)('Label text'),
-      placeholder: (0,external_wp_i18n_namespaceObject.__)('Add labelвЂ¦'),
+      placeholder: (0,external_wp_i18n_namespaceObject.__)('Add label…'),
       withoutInteractiveFormatting: true,
       value: label,
       onChange: html => setAttributes({
@@ -55061,7 +55061,7 @@ function ShortcodeEdit({
         id: inputId,
         value: attributes.text,
         "aria-label": (0,external_wp_i18n_namespaceObject.__)('Shortcode text'),
-        placeholder: (0,external_wp_i18n_namespaceObject.__)('Write shortcode hereвЂ¦'),
+        placeholder: (0,external_wp_i18n_namespaceObject.__)('Write shortcode here…'),
         onChange: text => setAttributes({
           text
         })
@@ -55957,7 +55957,7 @@ function SiteTaglineEdit({
     allowedFormats: [],
     onChange: setTagline,
     "aria-label": (0,external_wp_i18n_namespaceObject.__)('Site tagline text'),
-    placeholder: (0,external_wp_i18n_namespaceObject.__)('Write site taglineвЂ¦'),
+    placeholder: (0,external_wp_i18n_namespaceObject.__)('Write site tagline…'),
     tagName: TagName,
     value: tagline,
     disableLineBreaks: true,
@@ -56240,7 +56240,7 @@ function SiteTitleEdit({
       tagName: isLink ? 'a' : 'span',
       href: isLink ? '#site-title-pseudo-link' : undefined,
       "aria-label": (0,external_wp_i18n_namespaceObject.__)('Site title text'),
-      placeholder: (0,external_wp_i18n_namespaceObject.__)('Write site titleвЂ¦'),
+      placeholder: (0,external_wp_i18n_namespaceObject.__)('Write site title…'),
       value: title,
       onChange: setTitle,
       allowedFormats: [],
@@ -61434,7 +61434,7 @@ const table_settings = {
           content: '5.0',
           tag: 'td'
         }, {
-          content: 'Bebo ValdГ©s',
+          content: 'Bebo Valdés',
           tag: 'td'
         }, {
           content: (0,external_wp_i18n_namespaceObject.__)('December 6, 2018'),
@@ -62774,17 +62774,17 @@ var SUPPORTED_LOCALE = {
     tr: {
         regexp: /\u0130|\u0049|\u0049\u0307/g,
         map: {
-            Д°: "\u0069",
+            İ: "\u0069",
             I: "\u0131",
-            IМ‡: "\u0069",
+            İ: "\u0069",
         },
     },
     az: {
         regexp: /\u0130/g,
         map: {
-            Д°: "\u0069",
+            İ: "\u0069",
             I: "\u0131",
-            IМ‡: "\u0069",
+            İ: "\u0069",
         },
     },
     lt: {
@@ -62792,10 +62792,10 @@ var SUPPORTED_LOCALE = {
         map: {
             I: "\u0069\u0307",
             J: "\u006A\u0307",
-            Д®: "\u012F\u0307",
-            ГЊ: "\u0069\u0307\u0300",
-            ГЌ: "\u0069\u0307\u0301",
-            ДЁ: "\u0069\u0307\u0303",
+            Į: "\u012F\u0307",
+            Ì: "\u0069\u0307\u0300",
+            Í: "\u0069\u0307\u0301",
+            Ĩ: "\u0069\u0307\u0303",
         },
     },
 };
@@ -64653,7 +64653,7 @@ function VerseEdit({
         });
       },
       "aria-label": (0,external_wp_i18n_namespaceObject.__)('Verse text'),
-      placeholder: (0,external_wp_i18n_namespaceObject.__)('Write verseвЂ¦'),
+      placeholder: (0,external_wp_i18n_namespaceObject.__)('Write verse…'),
       onRemove: onRemove,
       onMerge: mergeBlocks,
       textAlign: textAlign,
@@ -66753,7 +66753,7 @@ lock(privateApis, {
 const getAllBlocks = () => {
   const blocks = [
   // Common blocks are grouped at the top to prioritize their display
-  // in various contexts вЂ” like the inserter and auto-complete components.
+  // in various contexts — like the inserter and auto-complete components.
   build_module_paragraph_namespaceObject, build_module_image_namespaceObject, build_module_heading_namespaceObject, build_module_gallery_namespaceObject, build_module_list_namespaceObject, build_module_list_item_namespaceObject, build_module_quote_namespaceObject,
   // Register all remaining core blocks.
   archives_namespaceObject, build_module_audio_namespaceObject, build_module_button_namespaceObject, build_module_buttons_namespaceObject, build_module_calendar_namespaceObject, categories_namespaceObject, build_module_code_namespaceObject, build_module_column_namespaceObject, build_module_columns_namespaceObject, build_module_comment_author_avatar_namespaceObject, build_module_cover_namespaceObject, build_module_details_namespaceObject, embed_namespaceObject, build_module_file_namespaceObject, build_module_group_namespaceObject, build_module_html_namespaceObject, latest_comments_namespaceObject, latest_posts_namespaceObject, media_text_namespaceObject, missing_namespaceObject, build_module_more_namespaceObject, nextpage_namespaceObject, page_list_namespaceObject, page_list_item_namespaceObject, pattern_namespaceObject, build_module_preformatted_namespaceObject, build_module_pullquote_namespaceObject, block_namespaceObject, build_module_rss_namespaceObject, build_module_search_namespaceObject, build_module_separator_namespaceObject, build_module_shortcode_namespaceObject, social_link_namespaceObject, social_links_namespaceObject, spacer_namespaceObject, build_module_table_namespaceObject, tag_cloud_namespaceObject, text_columns_namespaceObject, build_module_verse_namespaceObject, build_module_video_namespaceObject, footnotes_namespaceObject,

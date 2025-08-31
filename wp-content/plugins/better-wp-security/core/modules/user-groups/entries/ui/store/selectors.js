@@ -1,4 +1,4 @@
-﻿/**
+/**
  * External dependencies
  */
 import { get, isEmpty, partition, pull, cloneDeep, merge } from 'lodash';

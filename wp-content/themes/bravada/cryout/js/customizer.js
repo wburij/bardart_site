@@ -1,4 +1,4 @@
-﻿/**
+/**
  * Customizer JS
  *
  * @package Cryout Framework

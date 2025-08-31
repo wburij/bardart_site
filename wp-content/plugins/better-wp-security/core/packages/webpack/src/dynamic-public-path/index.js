@@ -1,4 +1,4 @@
-﻿const path = require( 'path' );
+const path = require( 'path' );
 const { NormalModule } = require( 'webpack' );
 
 function DynamicPublicPathPlugin( propertyName ) {

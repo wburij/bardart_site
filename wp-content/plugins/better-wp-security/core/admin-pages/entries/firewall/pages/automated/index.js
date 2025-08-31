@@ -1,4 +1,4 @@
-﻿/**
+/**
  * External dependencies
  */
 import moment from 'moment';
@@ -161,7 +161,7 @@ function CustomerPatchstackStatusBanner( { hasPatchstack, isSmall, numberOfVulne
 	let subText = '';
 
 	if ( hasPatchstack ) {
-		subText = __( 'YouвЂ™re getting the best protection available with our Patchstack integration.', 'better-wp-security' );
+		subText = __( 'You’re getting the best protection available with our Patchstack integration.', 'better-wp-security' );
 	} else if ( numberOfVulnerabilities > 0 ) {
 		subText = sprintf(
 			/* translators: 1. Number of vulnerabilities. */
@@ -359,7 +359,7 @@ function AutomatedVulnerabilityTable( { items, isSmall, installType, hasPatchsta
 					<ProPlusPatchstack />
 					<Text
 						text={ createInterpolateElement(
-							__( 'We didnвЂ™t spot vulnerabilities that could have been patched automatically in the last 90 days, <b>but they can still appear any day</b>. Solid Security Pro with Patchstack gives peace of mind and proactive security upgrade to be automatically protected today!', 'better-wp-security' ),
+							__( 'We didn’t spot vulnerabilities that could have been patched automatically in the last 90 days, <b>but they can still appear any day</b>. Solid Security Pro with Patchstack gives peace of mind and proactive security upgrade to be automatically protected today!', 'better-wp-security' ),
 							{ b: <strong /> }
 						) }
 						align="center"
@@ -378,7 +378,7 @@ function AutomatedVulnerabilityTable( { items, isSmall, installType, hasPatchsta
 				<StyledNoVulnerabilitiesContainer>
 					<HiResIcon icon={ <VulnerabilitySuccess /> } />
 					<Text
-						text={ __( 'We didnвЂ™t spot vulnerabilities that could have been patched automatically in the last 90 days, great job keeping your site secure!', 'better-wp-security' ) }
+						text={ __( 'We didn’t spot vulnerabilities that could have been patched automatically in the last 90 days, great job keeping your site secure!', 'better-wp-security' ) }
 						align="center"
 					/>
 				</StyledNoVulnerabilitiesContainer>
@@ -398,8 +398,8 @@ function InstantProtectionCard( { hasPatchstack, numberOfVulnerabilities } ) {
 		cardText = createInterpolateElement(
 			sprintf(
 				/* translators: 1. Number of vulnerabilities. */
-				_n( 'You were automatically protected from <b>%d vulnerability</b> using <b>virtual patching,</b> Solid Security ProвЂ™s instant protection feature!',
-					'You were automatically protected from <b>%d vulnerabilities</b> using <b>virtual patching,</b> Solid Security ProвЂ™s instant protection feature!',
+				_n( 'You were automatically protected from <b>%d vulnerability</b> using <b>virtual patching,</b> Solid Security Pro’s instant protection feature!',
+					'You were automatically protected from <b>%d vulnerabilities</b> using <b>virtual patching,</b> Solid Security Pro’s instant protection feature!',
 					numberOfVulnerabilities,
 					'better-wp-security'
 				),
@@ -409,8 +409,8 @@ function InstantProtectionCard( { hasPatchstack, numberOfVulnerabilities } ) {
 		cardText = createInterpolateElement(
 			sprintf(
 				/* translators: 1. Number of vulnerabilities. */
-				_n( 'Automated protection was available for <b>%d vulnerabilities</b> using <b>virtual patches</b> that instantly deploy when using Solid Security Pro with Patchstack integration. Get вЂ™round the clock protection. Go Pro today.',
-					'Automated protection was available for <b>%d vulnerabilities</b> using <b>virtual patches</b> that instantly deploy when using Solid Security Pro with Patchstack integration. Get вЂ™round the clock protection. Go Pro today.',
+				_n( 'Automated protection was available for <b>%d vulnerabilities</b> using <b>virtual patches</b> that instantly deploy when using Solid Security Pro with Patchstack integration. Get ’round the clock protection. Go Pro today.',
+					'Automated protection was available for <b>%d vulnerabilities</b> using <b>virtual patches</b> that instantly deploy when using Solid Security Pro with Patchstack integration. Get ’round the clock protection. Go Pro today.',
 					numberOfVulnerabilities,
 					'better-wp-security',
 				),

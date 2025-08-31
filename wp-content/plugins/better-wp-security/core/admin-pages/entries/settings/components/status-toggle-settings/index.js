@@ -1,4 +1,4 @@
-﻿/**
+/**
  * WordPress dependencies
  */
 import { useState } from '@wordpress/element';
@@ -43,7 +43,7 @@ export default function StatusToggleSettings( { module, setSettingsOpen, persist
 			disabled={ toggling }
 			aria-label={ sprintf(
 				/* translators: 1. The module name. */
-				__( 'Enable the вЂњ%sвЂќ module.', 'better-wp-security' ),
+				__( 'Enable the “%s” module.', 'better-wp-security' ),
 				module.title
 			) }
 			aria-describedby={ `itsec-module-description--${ module.id }` }

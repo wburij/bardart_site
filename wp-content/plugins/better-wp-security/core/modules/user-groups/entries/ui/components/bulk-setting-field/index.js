@@ -1,4 +1,4 @@
-﻿/**
+/**
  * WordPress dependencies
  */
 import { useSelect, useDispatch } from '@wordpress/data';

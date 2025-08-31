@@ -1,4 +1,4 @@
-﻿/**
+/**
  *
  * @author Webcraftic <wordpress.webraftic@gmail.com>
  * @copyright (c) 02.09.2020, Webcraftic

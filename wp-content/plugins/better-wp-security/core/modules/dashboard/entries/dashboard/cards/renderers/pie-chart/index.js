@@ -1,4 +1,4 @@
-﻿/**
+/**
  * External dependencies
  */
 import styled from '@emotion/styled';
@@ -95,7 +95,7 @@ export default function PieChart( { card, config } ) {
 					as="p"
 					variant={ TextVariant.DARK }
 					size={ TextSize.GIGANTIC }
-					text={ hasData ? shortenNumber( card.data.circle_sum ) : 'вЂ”' }
+					text={ hasData ? shortenNumber( card.data.circle_sum ) : '—' }
 				/>
 				<Text
 					as="p"
@@ -168,7 +168,7 @@ export default function PieChart( { card, config } ) {
 										? ( ( datum.value / total ) * 100 ).toFixed(
 											0
 										) + '%'
-										: 'вЂ”' }
+										: '—' }
 								</StyledDataValues>
 							</td>
 						</tr>

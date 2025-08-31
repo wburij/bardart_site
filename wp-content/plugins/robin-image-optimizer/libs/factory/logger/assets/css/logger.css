@@ -1,4 +1,4 @@
-﻿.wbcr_factory_logger_container
+.wbcr_factory_logger_container
 {
     padding-right: 40px;
 }
@@ -35,7 +35,7 @@
 {
     content: ' ';
     position: absolute;
-    background: rgba(255, 255, 255, 0.5) url('/bardart_site/wp-content/plugins/robin-image-optimizer/libs/factory/logger/assets/img/loader.gif') no-repeat center center;
+    background: rgba(255, 255, 255, 0.5) url('/bardart_site//wp-content/plugins/robin-image-optimizer/libs/factory/logger/assets/img/loader.gif') no-repeat center center;
     background-size: 64px;
     width: 82%;
     height: 600px;
