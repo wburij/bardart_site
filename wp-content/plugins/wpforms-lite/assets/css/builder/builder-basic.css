@@ -461,7 +461,7 @@ li {
 }
 
 .wpforms-loading-spinner {
-  background-image: url("/wp-content/plugins/wpforms-lite/assets/images/spinner.svg");
+  background-image: url("/bardart_site//wp-content/plugins/wpforms-lite/assets/images/spinner.svg");
   background-repeat: no-repeat;
   background-size: 15px 15px;
   display: block;
@@ -477,7 +477,7 @@ li {
 }
 
 .wpforms-loading-spinner.wpforms-loading-white {
-  background-image: url("/wp-content/plugins/wpforms-lite/assets/images/spinner-white.svg");
+  background-image: url("/bardart_site//wp-content/plugins/wpforms-lite/assets/images/spinner-white.svg");
 }
 
 .wpforms-loading-spinner.wpforms-loading-md {

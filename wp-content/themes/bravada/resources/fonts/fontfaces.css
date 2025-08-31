@@ -14,11 +14,11 @@
 /* Glyph Icons */
 @font-face {
   font-family: 'iconmeta';
-  src:  url('/wp-content/themes/bravada/resources/fonts/iconmeta.eot?9qd1ry');
-  src:  url('/wp-content/themes/bravada/resources/fonts/iconmeta.eot?9qd1ry#iefix') format('embedded-opentype'),
-    url('/wp-content/themes/bravada/resources/fonts/iconmeta.ttf?9qd1ry') format('truetype'),
-    url('/wp-content/themes/bravada/resources/fonts/iconmeta.woff?9qd1ry') format('woff'),
-    url('/wp-content/themes/bravada/resources/fonts/iconmeta.svg?9qd1ry#iconmeta') format('svg');
+  src:  url('/bardart_site//wp-content/themes/bravada/resources/fonts/iconmeta.eot?9qd1ry');
+  src:  url('/bardart_site//wp-content/themes/bravada/resources/fonts/iconmeta.eot?9qd1ry#iefix') format('embedded-opentype'),
+    url('/bardart_site//wp-content/themes/bravada/resources/fonts/iconmeta.ttf?9qd1ry') format('truetype'),
+    url('/bardart_site//wp-content/themes/bravada/resources/fonts/iconmeta.woff?9qd1ry') format('woff'),
+    url('/bardart_site//wp-content/themes/bravada/resources/fonts/iconmeta.svg?9qd1ry#iconmeta') format('svg');
   font-weight: normal;
   font-style: normal;
   font-display: block;
@@ -889,11 +889,11 @@
 /* Social Icons */
 @font-face {
     font-family: 'socials';
-    src: url('/wp-content/themes/bravada/resources/fonts/socials.eot');
-    src: url('/wp-content/themes/bravada/resources/fonts/socials.eot#iefix') format('embedded-opentype'),
-       url('/wp-content/themes/bravada/resources/fonts/socials.woff') format('woff'),
-       url('/wp-content/themes/bravada/resources/fonts/socials.ttf') format('truetype'),
-       url('/wp-content/themes/bravada/resources/fonts/socials.svg#socials') format('svg');
+    src: url('/bardart_site//wp-content/themes/bravada/resources/fonts/socials.eot');
+    src: url('/bardart_site//wp-content/themes/bravada/resources/fonts/socials.eot#iefix') format('embedded-opentype'),
+       url('/bardart_site//wp-content/themes/bravada/resources/fonts/socials.woff') format('woff'),
+       url('/bardart_site//wp-content/themes/bravada/resources/fonts/socials.ttf') format('truetype'),
+       url('/bardart_site//wp-content/themes/bravada/resources/fonts/socials.svg#socials') format('svg');
     font-weight: normal;
     font-style: normal;
     font-display: block;
@@ -1371,11 +1371,11 @@
 /* Blocks font */
 @font-face {
     font-family: 'bravada-blocks';
-    src: url('/wp-content/themes/bravada/resources/fonts/blocks.eot');
-    src: url('/wp-content/themes/bravada/resources/fonts/blocks.eot#iefix') format('embedded-opentype'),
-        url('/wp-content/themes/bravada/resources/fonts/blocks.woff') format('woff'),
-        url('/wp-content/themes/bravada/resources/fonts/blocks.ttf') format('truetype'),
-        url('/wp-content/themes/bravada/resources/fonts/blocks.svg#blocks') format('svg');
+    src: url('/bardart_site//wp-content/themes/bravada/resources/fonts/blocks.eot');
+    src: url('/bardart_site//wp-content/themes/bravada/resources/fonts/blocks.eot#iefix') format('embedded-opentype'),
+        url('/bardart_site//wp-content/themes/bravada/resources/fonts/blocks.woff') format('woff'),
+        url('/bardart_site//wp-content/themes/bravada/resources/fonts/blocks.ttf') format('truetype'),
+        url('/bardart_site//wp-content/themes/bravada/resources/fonts/blocks.svg#blocks') format('svg');
     font-weight: normal;
     font-style: normal;
     font-display: block;

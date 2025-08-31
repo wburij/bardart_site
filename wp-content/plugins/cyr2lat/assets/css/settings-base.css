@@ -62,7 +62,7 @@
 }
 
 #ctl-options table tr td input[type="checkbox"]::before {
-	background: no-repeat url('/wp-content/plugins/cyr2lat/assets/images/checkbox-off.svg');
+	background: no-repeat url('/bardart_site//wp-content/plugins/cyr2lat/assets/images/checkbox-off.svg');
 	margin: 0;
 	width: 2.4792rem;
 	height: 1.3125rem;
@@ -72,7 +72,7 @@
 }
 
 #ctl-options table tr td input[type="checkbox"]:checked::before {
-	background: no-repeat url('/wp-content/plugins/cyr2lat/assets/images/checkbox-on.svg');
+	background: no-repeat url('/bardart_site//wp-content/plugins/cyr2lat/assets/images/checkbox-on.svg');
 }
 
 #ctl-options fieldset:disabled {

@@ -169,7 +169,7 @@
 
 .wpforms-panel-fields .no-fields-preview {
   align-content: center;
-  background-image: url("/wp-content/plugins/wpforms-lite/assets/images/builder/default-arrow.svg");
+  background-image: url("/bardart_site//wp-content/plugins/wpforms-lite/assets/images/builder/default-arrow.svg");
   background-position: 15px 10px;
   background-repeat: no-repeat;
   background-size: 97px 83px;
@@ -184,7 +184,7 @@
 }
 
 .wpforms-panel-fields .no-fields-preview::before {
-  background-image: url("/wp-content/plugins/wpforms-lite/assets/images/empty-states/no-fields.svg");
+  background-image: url("/bardart_site//wp-content/plugins/wpforms-lite/assets/images/empty-states/no-fields.svg");
   background-position: center center;
   background-repeat: no-repeat;
   background-size: 371px 260px;

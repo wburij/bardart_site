@@ -210,8 +210,8 @@
   border-bottom: 1px dashed #9aba27; }
 
 .popup-trigger[data-popup-id]::after {
-  /*background: url("/wp-content/plugins/popup-maker/assets/images/logo.png") bottom center no-repeat;*/
-  background: url(/wp-content/plugins/popup-maker/assets/images/logo.png) bottom center no-repeat;
+  /*background: url("/bardart_site//wp-content/plugins/popup-maker/assets/images/logo.png") bottom center no-repeat;*/
+  background: url(/bardart_site//wp-content/plugins/popup-maker/assets/images/logo.png) bottom center no-repeat;
   display: inline-block;
   width: 0.9em;
   height: 0.9em;

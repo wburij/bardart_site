@@ -46,7 +46,7 @@
 }
 
 .contact-1 {
-	background-image: url("/wp-content/plugins/mesmerize-companion/theme-data/mesmerize/sections/images/mockup-863469.jpg");
+	background-image: url("/bardart_site//wp-content/plugins/mesmerize-companion/theme-data/mesmerize/sections/images/mockup-863469.jpg");
 	background-position: center top;
 	background-size: cover;
 	position: relative;
@@ -70,7 +70,7 @@
 }
 
 .content-2 .bg-image,.content-3 .bg-image {
-	background: url("/wp-content/plugins/mesmerize-companion/theme-data/mesmerize/sections/images/apple-1838564.jpg") center center / cover scroll transparent;
+	background: url("/bardart_site//wp-content/plugins/mesmerize-companion/theme-data/mesmerize/sections/images/apple-1838564.jpg") center center / cover scroll transparent;
 	min-height: 514px;
 }
 

@@ -279,7 +279,7 @@
 
 .wpforms-panel-sidebar-content .wpforms-panel-sidebar-toggle-icon {
   align-items: center;
-  background-image: url(/wp-content/plugins/wpforms-lite/assets/images/builder/toggle-tab-bg.svg);
+  background-image: url(/bardart_site//wp-content/plugins/wpforms-lite/assets/images/builder/toggle-tab-bg.svg);
   background-size: 100% 58px;
   background-repeat: no-repeat;
   border-radius: 5px 5px 0 0;
@@ -675,12 +675,12 @@
 }
 
 .wpforms-panel-content-section .illustration.illustration-marketing {
-  background: url("/wp-content/plugins/wpforms-lite/assets/images/builder/illustration-marketing.svg") no-repeat center center;
+  background: url("/bardart_site//wp-content/plugins/wpforms-lite/assets/images/builder/illustration-marketing.svg") no-repeat center center;
   background-size: 313px 260px;
 }
 
 .wpforms-panel-content-section .illustration.illustration-payments {
-  background: url("/wp-content/plugins/wpforms-lite/assets/images/builder/illustration-payments.svg") no-repeat center center;
+  background: url("/bardart_site//wp-content/plugins/wpforms-lite/assets/images/builder/illustration-payments.svg") no-repeat center center;
   background-size: 269px 255px;
 }
 
@@ -775,7 +775,7 @@
 }
 
 .wpforms-panel-content-section-default {
-  background: url("/wp-content/plugins/wpforms-lite/assets/images/builder/default-arrow.svg") no-repeat 0 0;
+  background: url("/bardart_site//wp-content/plugins/wpforms-lite/assets/images/builder/default-arrow.svg") no-repeat 0 0;
   background-size: 96px 81px;
 }
 
