@@ -1,4 +1,4 @@
-/*
+﻿/*
  * Frontend JS
  *
  * @package Bravada

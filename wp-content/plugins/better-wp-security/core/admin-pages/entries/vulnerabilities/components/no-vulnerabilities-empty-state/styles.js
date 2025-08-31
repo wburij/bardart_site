@@ -1,4 +1,4 @@
-import styled from '@emotion/styled';
+﻿import styled from '@emotion/styled';
 import { Text } from '@ithemes/ui';
 
 export const StyledSuccessPanel = styled.div`

@@ -1,4 +1,4 @@
-/**
+﻿/**
  * External dependencies
  */
 import { mapValues, toInteger } from 'lodash';

@@ -1,4 +1,4 @@
-const cache = {};
+﻿const cache = {};
 
 /**
  * Given a path, returns a normalized path where equal query parameter values

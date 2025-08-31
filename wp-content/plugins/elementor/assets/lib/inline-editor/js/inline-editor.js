@@ -1,4 +1,4 @@
-/**
+﻿/**
  * Licensed under MIT, https://github.com/sofish/pen
  *
  * Customized and fixed by Elementor team
@@ -132,7 +132,7 @@
 	};
 
 	function commandOverall(cmd, val) {
-		var message = ' to exec 「' + cmd + '」 command' + (val ? (' with value: ' + val) : '');
+		var message = ' to exec гЂЊ' + cmd + 'гЂЌ command' + (val ? (' with value: ' + val) : '');
 
 		try {
 			doc.execCommand(cmd, false, val);

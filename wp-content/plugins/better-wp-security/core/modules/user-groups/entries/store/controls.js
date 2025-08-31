@@ -1,4 +1,4 @@
-/**
+﻿/**
  * WordPress dependencies
  */
 import { default as triggerApiFetch } from '@wordpress/api-fetch';

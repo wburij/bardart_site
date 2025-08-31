@@ -1,4 +1,4 @@
-/******/ (() => { // webpackBootstrap
+﻿/******/ (() => { // webpackBootstrap
 /******/ 	"use strict";
 /******/ 	// The require scope
 /******/ 	var __webpack_require__ = {};
@@ -2839,7 +2839,7 @@ function getFormatElement(range, editableContentElement, tagName, className) {
 
   // Even if the active format is defined, the actually DOM range's start
   // container may be outside of the format's DOM element:
-  // `a‸<strong>b</strong>` (DOM) while visually it's `a<strong>‸b</strong>`.
+  // `aвЂё<strong>b</strong>` (DOM) while visually it's `a<strong>вЂёb</strong>`.
   // So at a given selection index, start with the deepest format DOM element.
   if (element.nodeType === element.TEXT_NODE && range.startOffset === element.length && element.nextSibling) {
     element = element.nextSibling;

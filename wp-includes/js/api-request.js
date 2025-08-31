@@ -1,4 +1,4 @@
-/**
+﻿/**
  * Thin jQuery.ajax wrapper for WP REST API requests.
  *
  * Currently only applies to requests that do not use the `wp-api.js` Backbone

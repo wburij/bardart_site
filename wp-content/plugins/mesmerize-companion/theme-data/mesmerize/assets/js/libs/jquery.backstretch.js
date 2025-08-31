@@ -1,4 +1,4 @@
-/*
+﻿/*
  * Backstretch
  * http://srobbin.com/jquery-plugins/backstretch/
  *

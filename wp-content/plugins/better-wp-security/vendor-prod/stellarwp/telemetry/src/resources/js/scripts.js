@@ -1,4 +1,4 @@
-(function ( $ ) {
+﻿(function ( $ ) {
 
 	let $body = $('body');
 

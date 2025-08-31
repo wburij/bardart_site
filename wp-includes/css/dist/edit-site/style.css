@@ -1,4 +1,4 @@
-@charset "UTF-8";
+﻿@charset "UTF-8";
 :root{
   --wp-admin-theme-color:#007cba;
   --wp-admin-theme-color--rgb:0, 124, 186;
@@ -2943,7 +2943,7 @@ html.canvas-mode-edit-transition::view-transition-group(toggle){
   outline-offset:2px;
 }
 .edit-site-site-hub__title .components-button:after{
-  content:"↗";
+  content:"в†—";
   font-weight:400;
   opacity:0;
   position:absolute;

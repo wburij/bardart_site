@@ -1,4 +1,4 @@
-(function (root, CP_Customizer) {
+﻿(function (root, CP_Customizer) {
 
     var itemTemplate = _.template(
         '<div class="cp-multi-image-item attachment-media-view attachment-media-view-image ">' +

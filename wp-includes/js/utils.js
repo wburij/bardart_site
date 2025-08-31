@@ -1,4 +1,4 @@
-/**
+﻿/**
  * Cookie functions.
  *
  * @output wp-includes/js/utils.js

@@ -1,1 +1,1 @@
-export const STORE_NAME = 'ithemes-security/modules';
+﻿export const STORE_NAME = 'ithemes-security/modules';

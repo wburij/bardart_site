@@ -1,4 +1,4 @@
-/**
+﻿/**
  * @output wp-includes/js/wp-api.js
  */
 
@@ -108,14 +108,14 @@
 			numericKeys = [ 1, 4, 5, 6, 7, 10, 11 ];
 
 		/*
-		 * ES5 §15.9.4.2 states that the string should attempt to be parsed as a Date Time String Format string
-		 * before falling back to any implementation-specific date parsing, so that’s what we do, even if native
+		 * ES5 В§15.9.4.2 states that the string should attempt to be parsed as a Date Time String Format string
+		 * before falling back to any implementation-specific date parsing, so thatвЂ™s what we do, even if native
 		 * implementations could be faster.
 		 */
-		//              1 YYYY                2 MM       3 DD           4 HH    5 mm       6 ss        7 msec        8 Z 9 ±    10 tzHH    11 tzmm
+		//              1 YYYY                2 MM       3 DD           4 HH    5 mm       6 ss        7 msec        8 Z 9 В±    10 tzHH    11 tzmm
 		if ( ( struct = /^(\d{4}|[+\-]\d{6})(?:-(\d{2})(?:-(\d{2}))?)?(?:T(\d{2}):(\d{2})(?::(\d{2})(?:\.(\d{3}))?)?(?:(Z)|([+\-])(\d{2})(?::(\d{2}))?)?)?$/.exec( date ) ) ) {
 
-			// Avoid NaN timestamps caused by “undefined” values being passed to Date.UTC.
+			// Avoid NaN timestamps caused by вЂњundefinedвЂќ values being passed to Date.UTC.
 			for ( i = 0; ( k = numericKeys[i] ); ++i ) {
 				struct[k] = +struct[k] || 0;
 			}
@@ -467,7 +467,7 @@
 				// Create the new getObjects collection.
 				getObjects = new wp.api.collections[ collectionName ]( properties, classProperties );
 
-				// If we didn’t have embedded getObjects, fetch the getObjects data.
+				// If we didnвЂ™t have embedded getObjects, fetch the getObjects data.
 				if ( _.isUndefined( getObjects.models[0] ) ) {
 					getObjects.fetch( {
 						success: function( getObjects ) {

@@ -1,4 +1,4 @@
-/**
+﻿/**
  * @license
  * Lodash <https://lodash.com/>
  * Copyright OpenJS Foundation and other contributors <https://openjsf.org/>
@@ -14243,7 +14243,7 @@
      * @returns {string} Returns the deburred string.
      * @example
      *
-     * _.deburr('déjà vu');
+     * _.deburr('dГ©jГ  vu');
      * // => 'deja vu'
      */
     function deburr(string) {

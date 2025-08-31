@@ -1,4 +1,4 @@
-/*!
+﻿/*!
  * jQuery UI Tooltip 1.13.3
  * https://jqueryui.com
  *

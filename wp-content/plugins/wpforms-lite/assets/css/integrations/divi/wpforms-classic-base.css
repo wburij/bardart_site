@@ -1,4 +1,4 @@
-.wpforms-container .wpforms-form .wpforms-error-alert, .et-db #et-boc .et-l .et_pb_module .wpforms-container .wpforms-form .wpforms-error-alert {
+﻿.wpforms-container .wpforms-form .wpforms-error-alert, .et-db #et-boc .et-l .et_pb_module .wpforms-container .wpforms-form .wpforms-error-alert {
   border: 1px solid #cccccc;
   text-shadow: 0 1px 0 rgba(255, 255, 255, 0.5);
   padding: 10px 15px;
@@ -970,7 +970,7 @@ body.rtl .wpforms-container.wpforms-edit-entry-container .wpforms-first + .wpfor
 
 .wpforms-container .wpforms-datepicker-wrap .wpforms-datepicker-clear {
   position: absolute;
-  background-image: url(/bardart_site//wp-content/plugins/wpforms-lite/assets/pro/images/times-solid-white.svg);
+  background-image: url(/bardart_site/wp-content/plugins/wpforms-lite/assets/pro/images/times-solid-white.svg);
   background-position: 50% 50%;
   background-repeat: no-repeat;
   background-color: #cccccc;
@@ -3018,7 +3018,7 @@ ul.wpforms-icon-choices.wpforms-icon-choices-classic li .wpforms-icon-choices-ic
 
 .et-db #et-boc .et-l .et_pb_module .wpforms-container .wpforms-datepicker-wrap .wpforms-datepicker-clear {
   position: absolute;
-  background-image: url(/bardart_site//wp-content/plugins/wpforms-lite/assets/pro/images/times-solid-white.svg);
+  background-image: url(/bardart_site/wp-content/plugins/wpforms-lite/assets/pro/images/times-solid-white.svg);
   background-position: 50% 50%;
   background-repeat: no-repeat;
   background-color: #cccccc;

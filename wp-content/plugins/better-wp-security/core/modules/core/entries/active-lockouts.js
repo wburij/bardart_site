@@ -1,4 +1,4 @@
-export ActiveLockoutActions from './active-lockouts/components/actions';
+﻿export ActiveLockoutActions from './active-lockouts/components/actions';
 export List from './active-lockouts/components/list';
 export Search from './active-lockouts/components/search';
 export useBanLockout from './active-lockouts/use-ban-lockout';

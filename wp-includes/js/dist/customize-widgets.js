@@ -1,4 +1,4 @@
-/******/ (() => { // webpackBootstrap
+﻿/******/ (() => { // webpackBootstrap
 /******/ 	"use strict";
 /******/ 	var __webpack_modules__ = ({
 
@@ -1500,7 +1500,7 @@ function WelcomeGuide({
       children: (0,external_wp_i18n_namespaceObject.__)('Welcome to block Widgets')
     }), /*#__PURE__*/(0,external_ReactJSXRuntime_namespaceObject.jsx)("p", {
       className: "customize-widgets-welcome-guide__text",
-      children: isEntirelyBlockWidgets ? (0,external_wp_i18n_namespaceObject.__)('Your theme provides different “block” areas for you to add and edit content. Try adding a search bar, social icons, or other types of blocks here and see how they’ll look on your site.') : (0,external_wp_i18n_namespaceObject.__)('You can now add any block to your site’s widget areas. Don’t worry, all of your favorite widgets still work flawlessly.')
+      children: isEntirelyBlockWidgets ? (0,external_wp_i18n_namespaceObject.__)('Your theme provides different вЂњblockвЂќ areas for you to add and edit content.В Try adding a search bar, social icons, or other types of blocks here and see how theyвЂ™ll look on your site.') : (0,external_wp_i18n_namespaceObject.__)('You can now add any block to your siteвЂ™s widget areas. DonвЂ™t worry, all of your favorite widgets still work flawlessly.')
     }), /*#__PURE__*/(0,external_ReactJSXRuntime_namespaceObject.jsx)(external_wp_components_namespaceObject.Button, {
       size: "compact",
       variant: "primary",
@@ -2054,7 +2054,7 @@ function getSidebarSection() {
       this.inspector = new InspectorSection(getInspectorSectionId(this.id), {
         title: (0,external_wp_i18n_namespaceObject.__)('Block Settings'),
         parentSection: this,
-        customizeAction: [(0,external_wp_i18n_namespaceObject.__)('Customizing'), (0,external_wp_i18n_namespaceObject.__)('Widgets'), this.params.title].join(' ▸ ')
+        customizeAction: [(0,external_wp_i18n_namespaceObject.__)('Customizing'), (0,external_wp_i18n_namespaceObject.__)('Widgets'), this.params.title].join(' в–ё ')
       });
       customize.section.add(this.inspector);
       this.contentContainer[0].classList.add('customize-widgets__sidebar-section');

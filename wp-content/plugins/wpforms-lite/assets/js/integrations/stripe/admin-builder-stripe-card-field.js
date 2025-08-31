@@ -1,4 +1,4 @@
-/* global wpforms_builder, wpforms_builder_stripe_card_field */
+﻿/* global wpforms_builder, wpforms_builder_stripe_card_field */
 
 /**
  * WPForms Stripe Card Field function.

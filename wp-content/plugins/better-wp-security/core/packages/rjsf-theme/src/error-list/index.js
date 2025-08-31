@@ -1,4 +1,4 @@
-/**
+﻿/**
  * Internal dependencies
  */
 import { ErrorList as Wrapped } from '@ithemes/security-components';

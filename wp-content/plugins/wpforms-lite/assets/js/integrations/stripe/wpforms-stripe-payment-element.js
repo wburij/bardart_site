@@ -1,4 +1,4 @@
-/* global Stripe, wpforms, wpforms_stripe, WPForms */
+﻿/* global Stripe, wpforms, wpforms_stripe, WPForms */
 
 /**
  * WPForms Stripe Payment Element function.

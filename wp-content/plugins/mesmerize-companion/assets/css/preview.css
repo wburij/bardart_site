@@ -1,4 +1,4 @@
-html,
+﻿html,
 body {
     /*transform: translateZ(0);*/
     /*transform-origin: top left;*/
@@ -68,7 +68,7 @@ div#cp-overlays {
     box-shadow: 0 2px 1px rgba(46, 68, 83, 0.15);
     color: #ffffff;
     font-family: sans-serif;
-    background-image: url('/bardart_site//wp-content/plugins/mesmerize-companion/assets/images/plus.png');
+    background-image: url('/bardart_site/wp-content/plugins/mesmerize-companion/assets/images/plus.png');
     background-repeat: no-repeat;
     cursor: pointer;
     user-select: none;
@@ -92,7 +92,7 @@ div#cp-overlays {
     border-radius: 100%;
     border: 2px solid #fff;
     -webkit-box-shadow: 0 2px 1px rgba(46, 68, 83, 0.15);
-    background-image: url(/bardart_site//wp-content/plugins/mesmerize-companion/assets/images/trash-o.png);
+    background-image: url(/bardart_site/wp-content/plugins/mesmerize-companion/assets/images/trash-o.png);
     background-position: center center;
     background-repeat: no-repeat;
     image-rendering: pixelated;
@@ -109,7 +109,7 @@ div#cp-overlays {
     border-radius: 100%;
     border: 2px solid #fff;
     -webkit-box-shadow: 0 2px 1px rgba(46, 68, 83, 0.15);
-    background-image: url(/bardart_site//wp-content/plugins/mesmerize-companion/assets/images/up-down.png);
+    background-image: url(/bardart_site/wp-content/plugins/mesmerize-companion/assets/images/up-down.png);
     background-position: center center;
     background-repeat: no-repeat;
     image-rendering: pixelated;
@@ -261,7 +261,7 @@ div#cp-overlays {
     background-color: #0085ba;
     box-sizing: border-box;
     text-transform: capitalize;
-    background-image: url('/bardart_site//wp-content/plugins/mesmerize-companion/assets/images/toolbar-cog.png');
+    background-image: url('/bardart_site/wp-content/plugins/mesmerize-companion/assets/images/toolbar-cog.png');
     background-size: cover;
     margin: 20px 20px 0px 0px;
     border-radius: 100%;
@@ -384,7 +384,7 @@ div#cp-overlays {
 }
 
 .options-group.cog.overlay-tooltip-group.fixed-overlay.active a {
-    background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAsAAAALCAYAAACprHcmAAAABHNCÃƒÆ’Ã†â€™Ãƒâ€šÃ‚Â¢ÃƒÆ’Ã‚Â¢ÃƒÂ¢Ã¢â€šÂ¬Ã…Â¡Ãƒâ€šÃ‚Â¬ÃƒÆ’Ã¢â‚¬Å¡Ãƒâ€šÃ‚Â¦t58ZZ7zMHGX2M0XZuzPCa4iq1z+RLNOCfDda5wavN2g8syXLmy2TplAAAAABJRU5ErkJggg==');
+    background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAsAAAALCAYAAACprHcmAAAABHNCГѓЖ’Г†вЂ™ГѓвЂ Гўв‚¬в„ўГѓЖ’Гўв‚¬ЕЎГѓвЂљГ‚ВўГѓЖ’Г†вЂ™ГѓвЂљГ‚ВўГѓЖ’Г‚ВўГѓВўГўв‚¬ЕЎГ‚В¬ГѓвЂ¦Г‚ВЎГѓЖ’Гўв‚¬ЕЎГѓвЂљГ‚В¬ГѓЖ’Г†вЂ™ГѓВўГўвЂљВ¬Г…ВЎГѓЖ’Гўв‚¬ЕЎГѓвЂљГ‚В¦t58ZZ7zMHGX2M0XZuzPCa4iq1z+RLNOCfDda5wavN2g8syXLmy2TplAAAAABJRU5ErkJggg==');
 }
 
 .tab_icon {
@@ -547,7 +547,7 @@ div#cp-overlays {
 }
 
 span.cog-item.sortable-item {
-    background-image: url(/bardart_site//wp-content/plugins/mesmerize-companion/assets/images/reorder-handler.png?x=3);
+    background-image: url(/bardart_site/wp-content/plugins/mesmerize-companion/assets/images/reorder-handler.png?x=3);
     background-repeat: no-repeat;
     background-position: 6px center;
     padding-left: 20px;
@@ -604,11 +604,11 @@ span.cog-item.sortable-item {
 }
 
 .brush {
-    background-image: url('/bardart_site//wp-content/plugins/mesmerize-companion/assets/css/icons/brush.png');
+    background-image: url('/bardart_site/wp-content/plugins/mesmerize-companion/assets/css/icons/brush.png');
 }
 
 .overlay-tooltip-group.active .brush {
-    background-image: url('/bardart_site//wp-content/plugins/mesmerize-companion/assets/css/icons/brush-hover.png');
+    background-image: url('/bardart_site/wp-content/plugins/mesmerize-companion/assets/css/icons/brush-hover.png');
 }
 
 .overlay-tooltip-group.color .picker {
@@ -812,7 +812,7 @@ button.reiki-button.reiki-bg-button {
     top: -8px;
     right: -6px;
     border-radius: 100%;
-    background-image: url('/bardart_site//wp-content/plugins/mesmerize-companion/assets/images/check.png');
+    background-image: url('/bardart_site/wp-content/plugins/mesmerize-companion/assets/images/check.png');
     background-size: 80%;
     background-position: center;
     background-repeat: no-repeat;
@@ -1020,7 +1020,7 @@ i.fa[data-parent-id].expanded {
     height: 40px;
     outline: 2px dotted #d9d9d9;
     background-color: hsla(0, 0%, 85%, 0.33);
-    background-image: url(/bardart_site//wp-content/plugins/mesmerize-companion/assets/images/slash.png);
+    background-image: url(/bardart_site/wp-content/plugins/mesmerize-companion/assets/images/slash.png);
 }
 
 [data-preview-empty]:before {

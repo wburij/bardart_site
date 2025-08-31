@@ -1,4 +1,4 @@
-/**
+﻿/**
  * WordPress dependencies
  */
 import { Flex } from '@wordpress/components';
@@ -34,8 +34,8 @@ export default function Header( { installType } ) {
 				/>
 				<Text
 					text={ installType === 'free'
-						? __( 'Use your security dashboard for insights into your users’ activity and potential threats to your site. From there you’ll be guided to actions you can take.', 'better-wp-security' )
-						: __( 'If you want to dig into your site’s security, check out your security dashboard, and make changes via settings.', 'better-wp-security' ) }
+						? __( 'Use your security dashboard for insights into your usersвЂ™ activity and potential threats to your site. From there youвЂ™ll be guided to actions you can take.', 'better-wp-security' )
+						: __( 'If you want to dig into your siteвЂ™s security, check out your security dashboard, and make changes via settings.', 'better-wp-security' ) }
 					size={ TextSize.EXTRA_LARGE }
 					variant={ TextVariant.DARK }
 				/>

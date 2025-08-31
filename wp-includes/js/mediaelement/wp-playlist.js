@@ -1,4 +1,4 @@
-/* global _wpmejsSettings, MediaElementPlayer */
+﻿/* global _wpmejsSettings, MediaElementPlayer */
 
 (function ($, _, Backbone) {
 	'use strict';

@@ -1,4 +1,4 @@
-.wpforms-list-table-ext-page .wp-list-table {
+﻿.wpforms-list-table-ext-page .wp-list-table {
   border: none;
   border-radius: 4px;
   margin: 0;
@@ -262,7 +262,7 @@
   width: 12px;
   height: 16px;
   opacity: 0.7;
-  background-image: url("/bardart_site//wp-content/plugins/wpforms-lite/assets/images/file-code.svg");
+  background-image: url("/bardart_site/wp-content/plugins/wpforms-lite/assets/images/file-code.svg");
 }
 
 #wpforms-list-table-ext-edit-columns-select-container {

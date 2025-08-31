@@ -1,4 +1,4 @@
-/**
+﻿/**
  * Internal Dependencies
  */
 import { dispatch } from '../controls';

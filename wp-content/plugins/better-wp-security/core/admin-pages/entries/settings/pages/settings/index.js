@@ -1,4 +1,4 @@
-/**
+﻿/**
  * External dependencies
  */
 import { Redirect, Route, Switch, useRouteMatch } from 'react-router-dom';

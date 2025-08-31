@@ -1,4 +1,4 @@
-var el = wp.element.createElement;
+﻿var el = wp.element.createElement;
     var __ = wp.i18n.__;
     var registerPlugin = wp.plugins.registerPlugin;
     var PluginPostStatusInfo = wp.editPost.PluginPostStatusInfo;

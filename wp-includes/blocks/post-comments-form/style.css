@@ -1,4 +1,4 @@
-:where(.wp-block-post-comments-form) input:not([type=submit]),:where(.wp-block-post-comments-form) textarea{
+﻿:where(.wp-block-post-comments-form) input:not([type=submit]),:where(.wp-block-post-comments-form) textarea{
   border:1px solid #949494;
   font-family:inherit;
   font-size:1em;

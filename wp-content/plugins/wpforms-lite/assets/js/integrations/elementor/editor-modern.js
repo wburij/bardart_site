@@ -1,4 +1,4 @@
-/* global elementor, elementorCommon, wpformsElementorVars, elementorFrontend, Choices */
+﻿/* global elementor, elementorCommon, wpformsElementorVars, elementorFrontend, Choices */
 
 'use strict';
 

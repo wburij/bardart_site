@@ -1,4 +1,4 @@
-:root :where(figure.wp-block-gallery){
+﻿:root :where(figure.wp-block-gallery){
   display:block;
 }
 :root :where(figure.wp-block-gallery)>.blocks-gallery-caption{

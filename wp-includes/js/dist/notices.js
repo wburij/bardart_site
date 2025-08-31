@@ -1,4 +1,4 @@
-/******/ (() => { // webpackBootstrap
+﻿/******/ (() => { // webpackBootstrap
 /******/ 	"use strict";
 /******/ 	// The require scope
 /******/ 	var __webpack_require__ = {};
@@ -280,7 +280,7 @@ function createNotice(status = DEFAULT_STATUS, content, options = {}) {
  *             onClick={ () =>
  *                 createSuccessNotice( __( 'Success!' ), {
  *                     type: 'snackbar',
- *                     icon: '🔥',
+ *                     icon: 'рџ”Ґ',
  *                 } )
  *             }
  *         >

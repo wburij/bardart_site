@@ -1,4 +1,4 @@
-/*
+﻿/*
  * jQuery Simple Slider: Unobtrusive Numerical Slider
  * Version 1.0.0
  *

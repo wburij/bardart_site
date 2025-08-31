@@ -1,4 +1,4 @@
-/*! elementor - v3.20.0 - 10-04-2024 */
+﻿/*! elementor - v3.20.0 - 10-04-2024 */
 /******/ (() => { // webpackBootstrap
 /******/ 	var __webpack_modules__ = ({
 
@@ -1154,9 +1154,9 @@ function getNormalAttributeName(attribute) {
 /**
  * Returns the normal form of the style property name for HTML.
  *
- * - Converts property names to kebab-case, e.g. 'backgroundColor' → 'background-color'
- * - Leaves custom attributes alone, e.g. '--myBackgroundColor' → '--myBackgroundColor'
- * - Converts vendor-prefixed property names to -kebab-case, e.g. 'MozTransform' → '-moz-transform'
+ * - Converts property names to kebab-case, e.g. 'backgroundColor' в†’ 'background-color'
+ * - Leaves custom attributes alone, e.g. '--myBackgroundColor' в†’ '--myBackgroundColor'
+ * - Converts vendor-prefixed property names to -kebab-case, e.g. 'MozTransform' в†’ '-moz-transform'
  *
  * @param {string} property Property name.
  *
@@ -2406,7 +2406,7 @@ var App = function App() {
       display: 'block',
       marginTop: '20px'
     }
-  }, (0, _i18n.__)('If you’re adding widgets back in, enjoy them!', 'elementor'))), /*#__PURE__*/_react.default.createElement(_components.ButtonGroup, {
+  }, (0, _i18n.__)('If youвЂ™re adding widgets back in, enjoy them!', 'elementor'))), /*#__PURE__*/_react.default.createElement(_components.ButtonGroup, {
     style: {
       display: 'flex',
       justifyContent: 'flex-end',
@@ -2645,17 +2645,17 @@ var SUPPORTED_LOCALE = {
     tr: {
         regexp: /\u0130|\u0049|\u0049\u0307/g,
         map: {
-            İ: "\u0069",
+            Д°: "\u0069",
             I: "\u0131",
-            İ: "\u0069",
+            IМ‡: "\u0069",
         },
     },
     az: {
         regexp: /\u0130/g,
         map: {
-            İ: "\u0069",
+            Д°: "\u0069",
             I: "\u0131",
-            İ: "\u0069",
+            IМ‡: "\u0069",
         },
     },
     lt: {
@@ -2663,10 +2663,10 @@ var SUPPORTED_LOCALE = {
         map: {
             I: "\u0069\u0307",
             J: "\u006A\u0307",
-            Į: "\u012F\u0307",
-            Ì: "\u0069\u0307\u0300",
-            Í: "\u0069\u0307\u0301",
-            Ĩ: "\u0069\u0307\u0303",
+            Д®: "\u012F\u0307",
+            ГЊ: "\u0069\u0307\u0300",
+            ГЌ: "\u0069\u0307\u0301",
+            ДЁ: "\u0069\u0307\u0303",
         },
     },
 };

@@ -1,4 +1,4 @@
-/**
+﻿/**
  * Admin-side JS
  *
  * @package Bravada

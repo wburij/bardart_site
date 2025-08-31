@@ -1,4 +1,4 @@
-div.wpforms-container .wpforms-form .choices {
+﻿div.wpforms-container .wpforms-form .choices {
   position: relative;
   margin-bottom: 24px;
 }
@@ -68,7 +68,7 @@ div.wpforms-container .wpforms-form .choices[data-type*="select-one"] input.choi
 }
 
 div.wpforms-container .wpforms-form .choices[data-type*="select-one"] .choices__button {
-  background-image: url("/bardart_site//wp-content/plugins/wpforms-lite/assets/css/integrations/images/cross-inverse.svg");
+  background-image: url("/bardart_site/wp-content/plugins/wpforms-lite/assets/css/integrations/images/cross-inverse.svg");
   padding: 0;
   background-size: 8px;
   position: absolute;
@@ -165,7 +165,7 @@ div.wpforms-container .wpforms-form .choices[data-type*="select-multiple"] .choi
   margin-left: 5px;
   padding: 0;
   background-color: transparent;
-  background-image: url("/bardart_site//wp-content/plugins/wpforms-lite/assets/css/integrations/images/cross.svg");
+  background-image: url("/bardart_site/wp-content/plugins/wpforms-lite/assets/css/integrations/images/cross.svg");
   background-size: 12px;
   background-position: center center;
   background-repeat: no-repeat;
@@ -552,7 +552,7 @@ body.rtl div.wpforms-container .wpforms-form .choices[data-type*="select-multipl
 }
 
 .et-db #et-boc .et-l .et_pb_module div.wpforms-container .wpforms-form .choices[data-type*="select-one"] .choices__button {
-  background-image: url("/bardart_site//wp-content/plugins/wpforms-lite/assets/css/integrations/images/cross-inverse.svg");
+  background-image: url("/bardart_site/wp-content/plugins/wpforms-lite/assets/css/integrations/images/cross-inverse.svg");
   padding: 0;
   background-size: 8px;
   position: absolute;
@@ -649,7 +649,7 @@ body.rtl div.wpforms-container .wpforms-form .choices[data-type*="select-multipl
   margin-left: 5px;
   padding: 0;
   background-color: transparent;
-  background-image: url("/bardart_site//wp-content/plugins/wpforms-lite/assets/css/integrations/images/cross.svg");
+  background-image: url("/bardart_site/wp-content/plugins/wpforms-lite/assets/css/integrations/images/cross.svg");
   background-size: 12px;
   background-position: center center;
   background-repeat: no-repeat;
@@ -975,11 +975,11 @@ body.rtl div.wpforms-container .wpforms-form .choices[data-type*="select-multipl
 
 .et-db #et-boc .et-l .et_pb_module div.wpforms-container .wpforms-form .choices[data-type*="select-multiple"] .choices__button,
 .et-db #et-boc .et-l .et_pb_module div.wpforms-container .wpforms-form .choices[data-type*="text"] .choices__button {
-  background-image: url("/bardart_site//wp-content/plugins/wpforms-lite/assets/images/cross.svg");
+  background-image: url("/bardart_site/wp-content/plugins/wpforms-lite/assets/images/cross.svg");
 }
 
 .et-db #et-boc .et-l .et_pb_module div.wpforms-container .wpforms-form .choices[data-type*="select-one"] .choices__button {
-  background-image: url("/bardart_site//wp-content/plugins/wpforms-lite/assets/images/cross-inverse.svg");
+  background-image: url("/bardart_site/wp-content/plugins/wpforms-lite/assets/images/cross-inverse.svg");
   cursor: not-allowed;
 }
 

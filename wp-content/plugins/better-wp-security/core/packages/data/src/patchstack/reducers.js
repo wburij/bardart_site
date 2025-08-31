@@ -1,4 +1,4 @@
-/**
+﻿/**
  * External dependencies
  */
 import { fromPairs, get, map, omit } from 'lodash';

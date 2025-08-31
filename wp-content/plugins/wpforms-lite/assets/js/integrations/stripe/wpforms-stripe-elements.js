@@ -1,4 +1,4 @@
-/* global Stripe, wpforms, wpforms_settings, wpforms_stripe, WPForms */
+﻿/* global Stripe, wpforms, wpforms_settings, wpforms_stripe, WPForms */
 
 'use strict';
 
@@ -161,7 +161,7 @@ var WPFormsStripeElements = window.WPFormsStripeElements || ( function( document
 
 			let fontFamily = $hiddenInput.css( 'font-family' );
 
-			const regExp = /[“”<>!@$%^&*=~`|{}[\]]/;
+			const regExp = /[вЂњвЂќ<>!@$%^&*=~`|{}[\]]/;
 
 			if ( regExp.test( fontFamily ) || fontFamily.indexOf( 'MS Shell Dlg' ) !== -1 ) {
 				fontFamily = $( 'p' ).css( 'font-family' );

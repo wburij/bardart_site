@@ -1,4 +1,4 @@
-/**
+﻿/**
  * Heartbeat API
  *
  * Heartbeat is a simple server polling API that sends XHR requests to

@@ -1,4 +1,4 @@
-.wp-block-navigation .wp-block-page-list{
+﻿.wp-block-navigation .wp-block-page-list{
   align-items:var(--navigation-layout-align, initial);
   background-color:inherit;
   display:flex;

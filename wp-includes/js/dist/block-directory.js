@@ -1,4 +1,4 @@
-/******/ (() => { // webpackBootstrap
+﻿/******/ (() => { // webpackBootstrap
 /******/ 	"use strict";
 /******/ 	// The require scope
 /******/ 	var __webpack_require__ = {};
@@ -1109,17 +1109,17 @@ var SUPPORTED_LOCALE = {
     tr: {
         regexp: /\u0130|\u0049|\u0049\u0307/g,
         map: {
-            İ: "\u0069",
+            Д°: "\u0069",
             I: "\u0131",
-            İ: "\u0069",
+            IМ‡: "\u0069",
         },
     },
     az: {
         regexp: /\u0130/g,
         map: {
-            İ: "\u0069",
+            Д°: "\u0069",
             I: "\u0131",
-            İ: "\u0069",
+            IМ‡: "\u0069",
         },
     },
     lt: {
@@ -1127,10 +1127,10 @@ var SUPPORTED_LOCALE = {
         map: {
             I: "\u0069\u0307",
             J: "\u006A\u0307",
-            Į: "\u012F\u0307",
-            Ì: "\u0069\u0307\u0300",
-            Í: "\u0069\u0307\u0301",
-            Ĩ: "\u0069\u0307\u0303",
+            Д®: "\u012F\u0307",
+            ГЊ: "\u0069\u0307\u0300",
+            ГЌ: "\u0069\u0307\u0301",
+            ДЁ: "\u0069\u0307\u0303",
         },
     },
 };
@@ -1622,7 +1622,7 @@ function DownloadableBlockListItem({
   if (isInstalled) {
     statusText = (0,external_wp_i18n_namespaceObject.__)('Installed!');
   } else if (isInstalling) {
-    statusText = (0,external_wp_i18n_namespaceObject.__)('Installing…');
+    statusText = (0,external_wp_i18n_namespaceObject.__)('InstallingвЂ¦');
   }
   const itemLabel = getDownloadableBlockLabel(item, {
     hasNotice,
@@ -2155,7 +2155,7 @@ const ModifiedWarning = ({
     return canInsertBlockType('core/html', getBlockRootClientId(clientId));
   }, [clientId]);
   let messageHTML = (0,external_wp_i18n_namespaceObject.sprintf)(/* translators: %s: block name */
-  (0,external_wp_i18n_namespaceObject.__)('Your site doesn’t include support for the %s block. You can try installing the block or remove it entirely.'), originalBlock.title || originalName);
+  (0,external_wp_i18n_namespaceObject.__)('Your site doesnвЂ™t include support for the %s block. You can try installing the block or remove it entirely.'), originalBlock.title || originalName);
   const actions = [/*#__PURE__*/(0,external_ReactJSXRuntime_namespaceObject.jsx)(InstallButton, {
     block: originalBlock,
     attributes: props.attributes,
@@ -2163,7 +2163,7 @@ const ModifiedWarning = ({
   }, "install")];
   if (hasContent && hasHTMLBlock) {
     messageHTML = (0,external_wp_i18n_namespaceObject.sprintf)(/* translators: %s: block name */
-    (0,external_wp_i18n_namespaceObject.__)('Your site doesn’t include support for the %s block. You can try installing the block, convert it to a Custom HTML block, or remove it entirely.'), originalBlock.title || originalName);
+    (0,external_wp_i18n_namespaceObject.__)('Your site doesnвЂ™t include support for the %s block. You can try installing the block, convert it to a Custom HTML block, or remove it entirely.'), originalBlock.title || originalName);
     actions.push(/*#__PURE__*/(0,external_ReactJSXRuntime_namespaceObject.jsx)(external_wp_components_namespaceObject.Button, {
       __next40pxDefaultSize: true,
       onClick: convertToHTML,

@@ -1,4 +1,4 @@
-import { castWPError } from './';
+﻿import { castWPError } from './';
 
 export default class Result {
 	type;

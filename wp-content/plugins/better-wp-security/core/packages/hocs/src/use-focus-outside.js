@@ -1,4 +1,4 @@
-/**
+﻿/**
  * External dependencies
  */
 import { includes } from 'lodash';

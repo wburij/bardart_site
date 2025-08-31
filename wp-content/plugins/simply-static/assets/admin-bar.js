@@ -1,4 +1,4 @@
-jQuery(document).ready(function ($) {
+﻿jQuery(document).ready(function ($) {
     let failed_tests_html = '<span style="color:#FFFFFF;background:#d63f41;padding: 1px 5px;border-radius:50%;margin-left:5px;">' + ss_admin_status_object.failed_tests + '</span>';
     let failed_tests = ss_admin_status_object.failed_tests > 0 ? failed_tests_html : '';
 

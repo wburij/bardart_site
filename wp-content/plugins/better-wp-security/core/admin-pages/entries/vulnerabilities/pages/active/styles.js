@@ -1,4 +1,4 @@
-import styled from '@emotion/styled';
+﻿import styled from '@emotion/styled';
 import { Filters } from '@ithemes/ui';
 
 export const StyledFilters = styled( Filters )`

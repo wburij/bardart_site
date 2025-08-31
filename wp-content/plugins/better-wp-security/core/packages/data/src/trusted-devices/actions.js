@@ -1,4 +1,4 @@
-/**
+﻿/**
  * External dependencies
  */
 import { chunk, constant, isEqual, times } from 'lodash';

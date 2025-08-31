@@ -1,4 +1,4 @@
-@charset "UTF-8";
+﻿@charset "UTF-8";
 :root{
   --wp-admin-theme-color:#3858e9;
   --wp-admin-theme-color--rgb:56, 88, 233;
@@ -863,7 +863,7 @@ input.components-combobox-control__input[type=text]:focus{
   text-transform:uppercase;
 }
 .components-color-palette__custom-color-value:empty:after{
-  content:"​";
+  content:"вЂ‹";
   visibility:hidden;
 }
 

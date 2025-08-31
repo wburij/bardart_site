@@ -1,4 +1,4 @@
-function ITSECFileChangeScanner( $el, options ) {
+﻿function ITSECFileChangeScanner( $el, options ) {
 
 	this.$el = $el;
 	this.options = jQuery.extend( {}, {

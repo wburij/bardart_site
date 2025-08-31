@@ -1,4 +1,4 @@
-import { controls } from '@wordpress/data';
+﻿import { controls } from '@wordpress/data';
 
 /**
  * Internal dependencies

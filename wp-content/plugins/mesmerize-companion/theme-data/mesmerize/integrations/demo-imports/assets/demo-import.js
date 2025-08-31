@@ -1,4 +1,4 @@
-(function ($, __ocdiPreparePluginData) {
+﻿(function ($, __ocdiPreparePluginData) {
 
 
     $('.ocdi-installer .js-ocdi-nav-link').click(function (event) {

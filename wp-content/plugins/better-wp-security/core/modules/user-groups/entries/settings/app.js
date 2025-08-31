@@ -1,4 +1,4 @@
-/**
+﻿/**
  * WordPress dependencies
  */
 import '@wordpress/notices';

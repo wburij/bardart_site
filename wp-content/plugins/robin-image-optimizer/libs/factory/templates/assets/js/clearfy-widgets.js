@@ -1,4 +1,4 @@
-jQuery(function($) {
+﻿jQuery(function($) {
 	$('#wbcr-factory-subscribe-widget__subscribe-form').submit(function(e) {
 		e.preventDefault();
 		var agree = $(this).find('[name=agree_terms]:checked'),

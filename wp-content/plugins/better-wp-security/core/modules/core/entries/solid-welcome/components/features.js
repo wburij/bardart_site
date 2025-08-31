@@ -1,4 +1,4 @@
-/**
+﻿/**
  * WordPress dependencies
  */
 import { __ } from '@wordpress/i18n';
@@ -115,7 +115,7 @@ export function CardThree( { installType } ) {
 
 	return (
 		<StyledCard>
-			<WelcomeFlowBanner text={ __( 'Features continued…', 'better-wp-security' ) } />
+			<WelcomeFlowBanner text={ __( 'Features continuedвЂ¦', 'better-wp-security' ) } />
 			<NewFeatures features={ [
 				{
 					heading: __( 'New Site Scan Panel ', 'better-wp-security' ),
@@ -148,7 +148,7 @@ export function CardThree( { installType } ) {
 					align="center"
 					variant={ TextVariant.MUTED }
 					text={ createInterpolateElement(
-						__( 'Want to reduce your WordPress site’s risk to nearly zero? <a>Upgrade to Solid Security Pro with Patchstack</a>.', 'better-wp-security' ),
+						__( 'Want to reduce your WordPress siteвЂ™s risk to nearly zero? <a>Upgrade to Solid Security Pro with Patchstack</a>.', 'better-wp-security' ),
 						{
 							// eslint-disable-next-line jsx-a11y/anchor-has-content
 							a: <a href="https://go.solidwp.com/upgrade-virtual-patching" />,

@@ -1,4 +1,4 @@
-/**
+﻿/**
  * External dependencies
  */
 import { withTheme } from '@rjsf/core';

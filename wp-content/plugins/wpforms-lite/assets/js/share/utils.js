@@ -1,4 +1,4 @@
-'use strict';
+﻿'use strict';
 
 // eslint-disable-next-line no-unused-vars
 const WPFormsUtils = window.WPFormsUtils || ( function( document, window, $ ) {

@@ -1,4 +1,4 @@
-jQuery(window).on('load',function() {
+﻿jQuery(window).on('load',function() {
     jQuery('.dpmrs').delay(10000).slideDown('slow');
 });
 jQuery(document).ready(function () {

@@ -1,4 +1,4 @@
-{
+﻿{
   "icons": [
 	"ad",
 	"address-book",

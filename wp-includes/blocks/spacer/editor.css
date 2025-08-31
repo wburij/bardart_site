@@ -1,4 +1,4 @@
-.block-editor-block-list__block[data-type="core/spacer"]:before{
+﻿.block-editor-block-list__block[data-type="core/spacer"]:before{
   content:"";
   display:block;
   height:100%;

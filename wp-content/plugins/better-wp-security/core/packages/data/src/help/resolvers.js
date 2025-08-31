@@ -1,4 +1,4 @@
-/**
+﻿/**
  * Internal dependencies
  */
 import { fetchHelp } from './actions';

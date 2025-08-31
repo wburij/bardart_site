@@ -1,4 +1,4 @@
-(function (global, factory) {
+﻿(function (global, factory) {
   typeof exports === 'object' && typeof module !== 'undefined' ? module.exports = factory() :
   typeof define === 'function' && define.amd ? define('underscore', factory) :
   (global = typeof globalThis !== 'undefined' ? globalThis : global || self, (function () {
@@ -58,9 +58,9 @@
 
   // Some functions take a variable number of arguments, or a few expected
   // arguments at the beginning and then a variable number of values to operate
-  // on. This helper accumulates all remaining arguments past the function’s
+  // on. This helper accumulates all remaining arguments past the functionвЂ™s
   // argument length (or an explicit `startIndex`), into an array that becomes
-  // the last argument. Similar to ES6’s "rest parameter".
+  // the last argument. Similar to ES6вЂ™s "rest parameter".
   function restArguments(func, startIndex) {
     startIndex = startIndex == null ? func.length - 1 : +startIndex;
     return function() {
@@ -705,7 +705,7 @@
     };
   }
 
-  // Creates a function that, when passed an object, will traverse that object’s
+  // Creates a function that, when passed an object, will traverse that objectвЂ™s
   // properties down the given `path`, specified as an array of keys or indices.
   function property(path) {
     path = toPath(path);
@@ -723,7 +723,7 @@
       case 1: return function(value) {
         return func.call(context, value);
       };
-      // The 2-argument case is omitted because we’re not using it.
+      // The 2-argument case is omitted because weвЂ™re not using it.
       case 3: return function(value, index, collection) {
         return func.call(context, value, index, collection);
       };
@@ -737,7 +737,7 @@
   }
 
   // An internal function to generate callbacks that can be applied to each
-  // element in a collection, returning the desired result — either `_.identity`,
+  // element in a collection, returning the desired result вЂ” either `_.identity`,
   // an arbitrary callback, a property matcher, or a property accessor.
   function baseIteratee(value, context, argCount) {
     if (value == null) return identity;
@@ -1532,7 +1532,7 @@
   }
 
   // Sample **n** random values from a collection using the modern version of the
-  // [Fisher-Yates shuffle](https://en.wikipedia.org/wiki/Fisher–Yates_shuffle).
+  // [Fisher-Yates shuffle](https://en.wikipedia.org/wiki/FisherвЂ“Yates_shuffle).
   // If **n** is not specified, returns a single random element.
   // The internal `guard` argument allows it to work with `_.map`.
   function sample(obj, n, guard) {

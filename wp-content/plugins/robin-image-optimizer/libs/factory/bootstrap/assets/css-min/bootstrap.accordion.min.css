@@ -1,4 +1,4 @@
-/*!
+﻿/*!
  * Bootstrap generator - v1.0.1, 2021-11-19 
  * Webcraftic factory build 
  * 

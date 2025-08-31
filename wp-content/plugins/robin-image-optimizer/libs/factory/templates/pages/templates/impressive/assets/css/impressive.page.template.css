@@ -1,4 +1,4 @@
-/**
+﻿/**
  * General styles
  * @author Alex Kovalev <alex.kovalevv@gmail.com> 
  * @copyright Alex Kovalev 23.08.2017 
@@ -433,7 +433,7 @@
   display: block;
   width: 80px;
   height: 17px;
-  background: url('/bardart_site//wp-content/plugins/robin-image-optimizer/libs/factory/templates/pages/templates/impressive/assets/img/5-stars22.png') no-repeat;
+  background: url('/bardart_site/wp-content/plugins/robin-image-optimizer/libs/factory/templates/pages/templates/impressive/assets/img/5-stars22.png') no-repeat;
   vertical-align: middle;
   margin-bottom: 5px;
 }

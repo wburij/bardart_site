@@ -1,4 +1,4 @@
-/**
+﻿/**
  * WordPress dependencies
  */
 import { dateI18n } from '@wordpress/date';
@@ -59,7 +59,7 @@ export function EmptyState( { date } ) {
 				text={ date
 					? __( 'Your site has been successfully checked against the Patchstack vulnerability database.', 'better-wp-security' )
 					: createInterpolateElement(
-						__( 'Your site hasn’t been scanned yet. Run your first scan from the <a>Site Scans</a> page.', 'better-wp-security' ),
+						__( 'Your site hasnвЂ™t been scanned yet. Run your first scan from the <a>Site Scans</a> page.', 'better-wp-security' ),
 						{
 							// eslint-disable-next-line jsx-a11y/anchor-has-content
 							a: <a href={ siteScanUrl } />,

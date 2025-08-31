@@ -1,4 +1,4 @@
-/**
+﻿/**
  * Lodash
  */
 import { isEmpty } from 'lodash';

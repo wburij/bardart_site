@@ -1,4 +1,4 @@
-import { useCallback } from '@wordpress/element';
+﻿import { useCallback } from '@wordpress/element';
 import { ModuleFormInputs, useSettingsForm } from '@ithemes/security.pages.settings';
 import { PageHeader, Surface } from '@ithemes/ui';
 import { StyledGlobalSettingsContainer } from './styles';

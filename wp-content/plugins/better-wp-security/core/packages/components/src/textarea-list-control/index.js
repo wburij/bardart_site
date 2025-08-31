@@ -1,4 +1,4 @@
-/**
+﻿/**
  * External dependencies
  */
 import { isArray, isString } from 'lodash';

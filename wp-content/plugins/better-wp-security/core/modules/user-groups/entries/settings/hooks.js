@@ -1,4 +1,4 @@
-/**
+﻿/**
  * External dependencies
  */
 import { pick } from 'lodash';

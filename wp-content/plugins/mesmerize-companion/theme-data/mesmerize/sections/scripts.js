@@ -1,4 +1,4 @@
-(function ($) {
+﻿(function ($) {
     var contentSwap = {
         "contentswap-effect": {
             "effectType": "",

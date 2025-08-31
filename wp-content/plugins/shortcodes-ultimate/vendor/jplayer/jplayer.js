@@ -1,4 +1,4 @@
-/*
+﻿/*
  * jPlayer Plugin for jQuery JavaScript Library
  * http://www.jplayer.org
  *

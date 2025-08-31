@@ -1,4 +1,4 @@
-/**
+﻿/**
  * WordPress dependencies
  */
 import { useBlockProps, BlockIcon } from '@wordpress/block-editor';

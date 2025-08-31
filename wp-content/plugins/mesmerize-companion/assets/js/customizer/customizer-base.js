@@ -1,4 +1,4 @@
-(function ($) {
+﻿(function ($) {
   if (!Element.prototype.scrollIntoViewIfNeeded) {
     Element.prototype.scrollIntoViewIfNeeded = function (centerIfNeeded) {
       centerIfNeeded = arguments.length === 0 ? true : !!centerIfNeeded;

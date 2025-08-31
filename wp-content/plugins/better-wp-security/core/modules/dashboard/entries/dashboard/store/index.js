@@ -1,4 +1,4 @@
-/**
+﻿/**
  * WordPress dependencies
  */
 import { registerStore, combineReducers } from '@wordpress/data';

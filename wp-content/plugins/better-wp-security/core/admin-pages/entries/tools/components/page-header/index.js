@@ -1,4 +1,4 @@
-/**
+﻿/**
  * External dependencies
  */
 import { Link, useLocation } from 'react-router-dom';
@@ -39,7 +39,7 @@ export default function PageHeader() {
 			<Text
 				size={ TextSize.SMALL }
 				variant={ TextVariant.MUTED }
-				text={ __( 'Advanced tools to help you manage your site’s security.', 'better-wp-security' ) }
+				text={ __( 'Advanced tools to help you manage your siteвЂ™s security.', 'better-wp-security' ) }
 			/>
 		</header>
 	);

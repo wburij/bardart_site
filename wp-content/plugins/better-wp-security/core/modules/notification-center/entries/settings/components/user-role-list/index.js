@@ -1,4 +1,4 @@
-/**
+﻿/**
  * WordPress components
  */
 import { CheckboxControl } from '@wordpress/components';
@@ -25,7 +25,7 @@ export default function UserRoleList( {
 						<CheckboxControl
 							label={ sprintf(
 								/* translators: 1. WordPress User Role */
-								__( 'All “%s” Users', 'better-wp-security' ),
+								__( 'All вЂњ%sвЂќ Users', 'better-wp-security' ),
 								label
 							) }
 							checked={ value.includes( item ) }

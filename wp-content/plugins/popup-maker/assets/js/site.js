@@ -1,4 +1,4 @@
-/**
+﻿/**
  * Adds needed backward compatibility for older versions of jQuery
  */
 ( function( $ ) {
@@ -831,7 +831,7 @@ var PUM;
 	window.ajaxurl = window.pum_vars.ajaxurl;
 
     window.PUM.init = function () {
-        console.log('init popups ✔');
+        console.log('init popups вњ”');
         $(document).trigger('pumBeforeInit');
         $('.pum').popmake();
         $(document).trigger('pumInitialized');

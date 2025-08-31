@@ -1,4 +1,4 @@
-.wp-block-video :where(figcaption){
+﻿.wp-block-video :where(figcaption){
   color:#555;
   font-size:13px;
   text-align:center;

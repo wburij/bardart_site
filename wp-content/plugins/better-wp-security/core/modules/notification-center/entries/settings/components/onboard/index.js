@@ -1,4 +1,4 @@
-/**
+﻿/**
  * WordPress dependencies
  */
 import { __ } from '@wordpress/i18n';
@@ -32,7 +32,7 @@ export default function Onboard( { usersAndRoles, apiError } ) {
 					align="center"
 					size={ TextSize.EXTRA_LARGE }
 					variant={ TextVariant.MUTED }
-					text={ __( 'You’re almost done, just one last topic to cover!', 'better-wp-security' ) }
+					text={ __( 'YouвЂ™re almost done, just one last topic to cover!', 'better-wp-security' ) }
 				/>
 			) }
 			<OnboardHeader

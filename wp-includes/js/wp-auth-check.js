@@ -1,4 +1,4 @@
-/**
+﻿/**
  * Interim login dialog.
  *
  * @output wp-includes/js/wp-auth-check.js

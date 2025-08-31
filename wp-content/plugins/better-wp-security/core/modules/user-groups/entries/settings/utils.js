@@ -1,4 +1,4 @@
-/**
+﻿/**
  * External dependencies
  */
 import { filter, intersection, isPlainObject, map, reduce } from 'lodash';

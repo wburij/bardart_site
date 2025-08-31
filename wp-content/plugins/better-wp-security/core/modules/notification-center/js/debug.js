@@ -1,4 +1,4 @@
-(function ( $, itsecUtil ) {
+﻿(function ( $, itsecUtil ) {
 	"use strict";
 
 	$( function () {

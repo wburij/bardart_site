@@ -1,4 +1,4 @@
-/*! For license information please see componentsNew.js.LICENSE.txt */
+﻿/*! For license information please see componentsNew.js.LICENSE.txt */
 (()=>{var e={97623:(e,t,r)=>{"use strict";Object.defineProperty(t,"__esModule",{value:!0}),t.default=void 0;var o=c(r(85890)),n=c(r(99196)),a=c(r(98487)),l=r(65736),s=r(23695),i=r(37188),u=c(r(16984)),d=c(r(54260));function c(e){return e&&e.__esModule?e:{default:e}}const f=a.default.div`
 	display: flex;
 	align-items: flex-start;
@@ -49,7 +49,7 @@
 		border-color: ${i.colors.$color_yoast_focus};
 		box-shadow: 0px 0px 0px 3px ${i.colors.$color_yoast_focus_outer};
 	}
-`;class g extends n.default.Component{getTypeDisplayOptions(e){switch(e){case"error":return{color:i.colors.$color_alert_error_text,background:i.colors.$color_alert_error_background,icon:"alert-error"};case"info":return{color:i.colors.$color_alert_info_text,background:i.colors.$color_alert_info_background,icon:"alert-info"};case"success":return{color:i.colors.$color_alert_success_text,background:i.colors.$color_alert_success_background,icon:"alert-success"};case"warning":return{color:i.colors.$color_alert_warning_text,background:i.colors.$color_alert_warning_background,icon:"alert-warning"}}}render(){if(!0===this.props.isAlertDismissed)return null;const e=this.getTypeDisplayOptions(this.props.type),t=this.props.dismissAriaLabel||(0,l.__)("Dismiss this alert","wordpress-seo");return n.default.createElement(f,{alertColor:e.color,alertBackground:e.background,className:this.props.className},n.default.createElement(h,{icon:e.icon,color:e.color}),n.default.createElement(p,null,this.props.children),"function"==typeof this.props.onDismissed?n.default.createElement(b,{alertDismissColor:e.color,onClick:this.props.onDismissed,"aria-label":t},"×"):null)}}g.propTypes={children:o.default.any.isRequired,type:o.default.oneOf(["error","info","success","warning"]).isRequired,onDismissed:o.default.func,isAlertDismissed:o.default.bool,dismissAriaLabel:o.default.string,className:o.default.string},g.defaultProps={onDismissed:null,isAlertDismissed:!1,dismissAriaLabel:"",className:""},t.default=g},8299:(e,t,r)=>{"use strict";Object.defineProperty(t,"__esModule",{value:!0}),t.default=void 0;var o=s(r(99196)),n=s(r(85890)),a=s(r(98487)),l=r(23695);function s(e){return e&&e.__esModule?e:{default:e}}const i=a.default.div`
+`;class g extends n.default.Component{getTypeDisplayOptions(e){switch(e){case"error":return{color:i.colors.$color_alert_error_text,background:i.colors.$color_alert_error_background,icon:"alert-error"};case"info":return{color:i.colors.$color_alert_info_text,background:i.colors.$color_alert_info_background,icon:"alert-info"};case"success":return{color:i.colors.$color_alert_success_text,background:i.colors.$color_alert_success_background,icon:"alert-success"};case"warning":return{color:i.colors.$color_alert_warning_text,background:i.colors.$color_alert_warning_background,icon:"alert-warning"}}}render(){if(!0===this.props.isAlertDismissed)return null;const e=this.getTypeDisplayOptions(this.props.type),t=this.props.dismissAriaLabel||(0,l.__)("Dismiss this alert","wordpress-seo");return n.default.createElement(f,{alertColor:e.color,alertBackground:e.background,className:this.props.className},n.default.createElement(h,{icon:e.icon,color:e.color}),n.default.createElement(p,null,this.props.children),"function"==typeof this.props.onDismissed?n.default.createElement(b,{alertDismissColor:e.color,onClick:this.props.onDismissed,"aria-label":t},"Г—"):null)}}g.propTypes={children:o.default.any.isRequired,type:o.default.oneOf(["error","info","success","warning"]).isRequired,onDismissed:o.default.func,isAlertDismissed:o.default.bool,dismissAriaLabel:o.default.string,className:o.default.string},g.defaultProps={onDismissed:null,isAlertDismissed:!1,dismissAriaLabel:"",className:""},t.default=g},8299:(e,t,r)=>{"use strict";Object.defineProperty(t,"__esModule",{value:!0}),t.default=void 0;var o=s(r(99196)),n=s(r(85890)),a=s(r(98487)),l=r(23695);function s(e){return e&&e.__esModule?e:{default:e}}const i=a.default.div`
 	box-sizing: border-box;
 
 	p {
@@ -255,7 +255,7 @@
 		${(0,s.getDirectionalStyle)("margin-left","margin-right")}: 16px;
 
 		&:before {
-			content: "✓";
+			content: "вњ“";
 			color: ${l.colors.$color_green};
 			position: absolute;
 			font-weight: bold;

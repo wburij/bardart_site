@@ -1,4 +1,4 @@
-/*!
+﻿/*!
  * jQuery UI Effects Puff 1.13.3
  * https://jqueryui.com
  *

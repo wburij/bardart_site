@@ -1,4 +1,4 @@
-(()=>{"use strict";var e={n:t=>{var n=t&&t.__esModule?()=>t.default:()=>t;return e.d(n,{a:n}),n},d:(t,n)=>{for(var o in n)e.o(n,o)&&!e.o(t,o)&&Object.defineProperty(t,o,{enumerable:!0,get:n[o]})},o:(e,t)=>Object.prototype.hasOwnProperty.call(e,t)};const t=window.React,n=window.wp.element,o=window.yoast.styledComponents;var i=e.n(o);const a=window.wp.i18n,r=o.createGlobalStyle`
+﻿(()=>{"use strict";var e={n:t=>{var n=t&&t.__esModule?()=>t.default:()=>t;return e.d(n,{a:n}),n},d:(t,n)=>{for(var o in n)e.o(n,o)&&!e.o(t,o)&&Object.defineProperty(t,o,{enumerable:!0,get:n[o]})},o:(e,t)=>Object.prototype.hasOwnProperty.call(e,t)};const t=window.React,n=window.wp.element,o=window.yoast.styledComponents;var i=e.n(o);const a=window.wp.i18n,r=o.createGlobalStyle`
 	@media only screen and (min-width: 1024px) {
 		.BeaconFabButtonFrame.BeaconFabButtonFrame {
 			${e=>"1"===e.isRtl?"left":"right"}: 340px !important;

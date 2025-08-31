@@ -1,4 +1,4 @@
-/**
+﻿/**
  * WordPress dependencies
  */
 import { useSelect, useDispatch } from '@wordpress/data';
@@ -39,7 +39,7 @@ export default function TabEditGroup( { groupId, children } ) {
 		title: __( 'Confirm your action', 'better-wp-security' ),
 		body: sprintf(
 			/* translators: 1. User Group name. */
-			__( 'Are you sure you want to delete the “%s” user group?', 'better-wp-security' ),
+			__( 'Are you sure you want to delete the вЂњ%sвЂќ user group?', 'better-wp-security' ),
 			label ?? __( 'Untitled', 'better-wp-security' )
 		),
 		continueText: __( 'Delete User Group', 'better-wp-security' ),

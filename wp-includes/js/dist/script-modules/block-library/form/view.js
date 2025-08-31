@@ -1,4 +1,4 @@
-var __webpack_exports__ = {};
+﻿var __webpack_exports__ = {};
 /* wp:polyfill */
 let formSettings;
 try {

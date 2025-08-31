@@ -1,4 +1,4 @@
-(function ($, CP_Customizer) {
+﻿(function ($, CP_Customizer) {
   CP_Customizer.addModule(function () {
     var used = false;
     CP_Customizer.bind(CP_Customizer.events.PREVIEW_LOADED, function () {

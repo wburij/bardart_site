@@ -1,4 +1,4 @@
-/**
+﻿/**
  * Solid dependencies
  */
 import { MessageList } from '@ithemes/ui';

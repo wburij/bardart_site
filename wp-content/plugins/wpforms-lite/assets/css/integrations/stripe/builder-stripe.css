@@ -1,4 +1,4 @@
-#wpforms-panel-fields .wpforms-stripe-payment-element,
+﻿#wpforms-panel-fields .wpforms-stripe-payment-element,
 #wpforms-panel-revisions .wpforms-stripe-payment-element {
   width: 60%;
 }
@@ -108,7 +108,7 @@
   width: 136px;
   max-width: calc( 100% - 24px);
   height: 24px;
-  background-image: url("/bardart_site//wp-content/plugins/wpforms-lite/assets/images/integrations/stripe/cc-preview.png");
+  background-image: url("/bardart_site/wp-content/plugins/wpforms-lite/assets/images/integrations/stripe/cc-preview.png");
   background-repeat: no-repeat;
   background-size: 136px 24px;
   background-position: 100% 50%;

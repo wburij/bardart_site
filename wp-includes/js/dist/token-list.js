@@ -1,4 +1,4 @@
-/******/ (() => { // webpackBootstrap
+﻿/******/ (() => { // webpackBootstrap
 /******/ 	"use strict";
 /******/ 	// The require scope
 /******/ 	var __webpack_require__ = {};
@@ -162,8 +162,8 @@ class TokenList {
   }
 
   /**
-   * If `force` is not given, "toggles" `token`, removing it if it’s present
-   * and adding it if it’s not present. If `force` is true, adds token (same
+   * If `force` is not given, "toggles" `token`, removing it if itвЂ™s present
+   * and adding it if itвЂ™s not present. If `force` is true, adds token (same
    * as add()). If force is false, removes token (same as remove()). Returns
    * true if `token` is now present, and false otherwise.
    *
@@ -208,7 +208,7 @@ class TokenList {
 
   /* eslint-disable @typescript-eslint/no-unused-vars */
   /**
-   * Returns true if `token` is in the associated attribute’s supported
+   * Returns true if `token` is in the associated attributeвЂ™s supported
    * tokens. Returns false otherwise.
    *
    * Always returns `true` in this implementation.

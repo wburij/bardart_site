@@ -1,4 +1,4 @@
-import { useSelect } from '@wordpress/data';
+﻿import { useSelect } from '@wordpress/data';
 import { coreStore, modulesStore } from '@ithemes/security.packages.data';
 import { __ } from '@wordpress/i18n';
 import { StyledCheck, StyledClose } from './styles';
@@ -21,7 +21,7 @@ export function ActiveUpdatesBadge() {
 
 	const tooltip = isFree
 		? __( 'Upgrade', 'better-wp-security' )
-		: __( 'Enable “Auto Update If Fixes Vulnerability” in Version Management', 'better-wp-security' );
+		: __( 'Enable вЂњAuto Update If Fixes VulnerabilityвЂќ in Version Management', 'better-wp-security' );
 
 	const icon = updateVulnerabilities
 		? <StyledCheck icon={ checkIcon } />

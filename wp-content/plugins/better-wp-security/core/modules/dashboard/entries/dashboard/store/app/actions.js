@@ -1,4 +1,4 @@
-export function viewDashboard( dashboardId ) {
+﻿export function viewDashboard( dashboardId ) {
 	return {
 		type: NAVIGATE,
 		page: 'view-dashboard',

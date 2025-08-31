@@ -1,4 +1,4 @@
-wp.domReady( function() {
+﻿wp.domReady( function() {
 	let permission = document.getElementById( 'itsec-app-password-rest_api_permissions' );
 	let permissionLabel = document.querySelector( 'label[for="itsec-app-password-rest_api_permissions"]' );
 	let enabledFor = document.getElementById( 'itsec-app-password-enabled_for' );

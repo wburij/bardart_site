@@ -1,4 +1,4 @@
-/**
+﻿/**
  * External dependencies
  */
 import { find, isEmpty } from 'lodash';

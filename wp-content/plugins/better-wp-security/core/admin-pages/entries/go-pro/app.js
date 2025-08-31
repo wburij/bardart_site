@@ -1,4 +1,4 @@
-/**
+﻿/**
  * External dependencies
  */
 import { ThemeProvider } from '@emotion/react';
@@ -34,7 +34,7 @@ export default function App() {
 				<StyledMain>
 					<StyledUpsellText
 						text={ createInterpolateElement(
-							__( 'The only WordPress security plugin you need — <i>period</i>', 'better-wp-security' ), {
+							__( 'The only WordPress security plugin you need вЂ” <i>period</i>', 'better-wp-security' ), {
 								i: <span />,
 							} ) }
 					/>

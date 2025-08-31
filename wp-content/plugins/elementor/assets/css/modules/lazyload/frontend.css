@@ -1,4 +1,4 @@
-/* 
+﻿/* 
 TODO: Temp fix - Need to unify the background & lazy-load selectors.
 This fix accounts for the DOM experiment & motion fx changes, that are already fixed in the background
 selector itself (which is the reason we need to unify it).

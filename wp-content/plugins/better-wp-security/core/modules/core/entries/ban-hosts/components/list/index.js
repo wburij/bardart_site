@@ -1,4 +1,4 @@
-/**
+﻿/**
  * External dependencies
  */
 import { flatten, get } from 'lodash';

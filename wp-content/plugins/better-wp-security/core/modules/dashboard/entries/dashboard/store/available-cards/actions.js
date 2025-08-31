@@ -1,4 +1,4 @@
-export function receiveAvailableCards( cards ) {
+﻿export function receiveAvailableCards( cards ) {
 	return {
 		type: RECEIVE_AVAILABLE_CARDS,
 		cards,

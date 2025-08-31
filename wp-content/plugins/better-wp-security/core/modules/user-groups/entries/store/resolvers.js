@@ -1,4 +1,4 @@
-/**
+﻿/**
  * External dependencies
  */
 import { isEmpty, get } from 'lodash';

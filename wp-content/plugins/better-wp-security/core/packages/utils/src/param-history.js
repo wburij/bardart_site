@@ -1,4 +1,4 @@
-/**
+﻿/**
  * Based on WooCommerce GPLv2
  *
  * https://github.com/woocommerce/woocommerce-admin/blob/main/packages/navigation/src/history.js

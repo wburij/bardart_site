@@ -1,4 +1,4 @@
-/**
+﻿/**
  * WordPress Dependencies
  */
 import { TextControl } from '@wordpress/components';

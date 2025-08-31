@@ -1,4 +1,4 @@
-/* Styles needed for integrations with third-party plugins. */
+﻿/* Styles needed for integrations with third-party plugins. */
 .wpforms-admin-empty-state-container {
   color: #50575e;
   font-style: normal;
@@ -7,7 +7,7 @@
 }
 
 .wpforms-admin-empty-state-container .waving-hand-emoji {
-  background-image: url(/bardart_site//wp-content/plugins/wpforms-lite/assets/images/empty-states/waving-hand-emoji.png);
+  background-image: url(/bardart_site/wp-content/plugins/wpforms-lite/assets/images/empty-states/waving-hand-emoji.png);
   background-position: 0 0;
   background-repeat: no-repeat;
   background-size: 24px 24px;
@@ -260,8 +260,8 @@
 
 @font-face {
   font-family: 'Icon WPForms';
-  src: url("/bardart_site//wp-content/plugins/wpforms-lite/assets/images/integrations/elementor/font/icon-wpforms.eot");
-  src: url("/bardart_site//wp-content/plugins/wpforms-lite/assets/images/integrations/elementor/font/icon-wpforms.eot#iefix") format("embedded-opentype"), url("/bardart_site//wp-content/plugins/wpforms-lite/assets/images/integrations/elementor/font/icon-wpforms.woff2") format("woff2"), url("/bardart_site//wp-content/plugins/wpforms-lite/assets/images/integrations/elementor/font/icon-wpforms.woff") format("woff"), url("/bardart_site//wp-content/plugins/wpforms-lite/assets/images/integrations/elementor/font/icon-wpforms.ttf") format("truetype"), url("/bardart_site//wp-content/plugins/wpforms-lite/assets/images/integrations/elementor/font/icon-wpforms.svg") format("svg");
+  src: url("/bardart_site/wp-content/plugins/wpforms-lite/assets/images/integrations/elementor/font/icon-wpforms.eot");
+  src: url("/bardart_site/wp-content/plugins/wpforms-lite/assets/images/integrations/elementor/font/icon-wpforms.eot#iefix") format("embedded-opentype"), url("/bardart_site/wp-content/plugins/wpforms-lite/assets/images/integrations/elementor/font/icon-wpforms.woff2") format("woff2"), url("/bardart_site/wp-content/plugins/wpforms-lite/assets/images/integrations/elementor/font/icon-wpforms.woff") format("woff"), url("/bardart_site/wp-content/plugins/wpforms-lite/assets/images/integrations/elementor/font/icon-wpforms.ttf") format("truetype"), url("/bardart_site/wp-content/plugins/wpforms-lite/assets/images/integrations/elementor/font/icon-wpforms.svg") format("svg");
 }
 
 #elementor-editor-wrapper .icon-wpforms, .elementor-edit-area .icon-wpforms {
@@ -593,7 +593,7 @@
 
 .et-db #et-boc .et-l .et-fb-modules-list ul > li.wpforms_selector::before {
   content: '';
-  background-image: url("/bardart_site//wp-content/plugins/wpforms-lite/assets/images/integrations/divi/wpforms-icon.svg");
+  background-image: url("/bardart_site/wp-content/plugins/wpforms-lite/assets/images/integrations/divi/wpforms-icon.svg");
   height: 16px;
   font-variant: normal;
   background-position: center center;

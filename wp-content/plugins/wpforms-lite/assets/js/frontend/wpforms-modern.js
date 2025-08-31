@@ -1,4 +1,4 @@
-/* global wpforms_settings */
+﻿/* global wpforms_settings */
 
 'use strict';
 

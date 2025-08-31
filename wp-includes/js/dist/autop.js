@@ -1,4 +1,4 @@
-/******/ (() => { // webpackBootstrap
+﻿/******/ (() => { // webpackBootstrap
 /******/ 	"use strict";
 /******/ 	// The require scope
 /******/ 	var __webpack_require__ = {};
@@ -123,7 +123,7 @@ function htmlSplit(input) {
  * Replace characters or phrases within HTML elements only.
  *
  * @param haystack     The text which has to be formatted.
- * @param replacePairs In the form {from: 'to', …}.
+ * @param replacePairs In the form {from: 'to', вЂ¦}.
  *
  * @return The formatted text.
  */

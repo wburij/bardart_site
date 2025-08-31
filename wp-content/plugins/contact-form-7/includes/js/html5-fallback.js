@@ -1,4 +1,4 @@
-( function( $ ) {
+﻿( function( $ ) {
 	$( function() {
 		var supportHtml5 = ( function() {
 			var features = {};

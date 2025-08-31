@@ -1,4 +1,4 @@
-/**
+﻿/**
  * External dependencies
  */
 import { find, sortBy, random, trimEnd } from 'lodash';

@@ -1,4 +1,4 @@
-(function (root, CP_Customizer, $) {
+﻿(function (root, CP_Customizer, $) {
 
     CP_Customizer.__customPopupControls = {};
 

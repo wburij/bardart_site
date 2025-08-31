@@ -1,4 +1,4 @@
-/**
+﻿/**
  * WordPress dependenices
  */
 import { useInstanceId } from '@wordpress/compose';

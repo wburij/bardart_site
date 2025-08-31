@@ -1,4 +1,4 @@
-export function getCurrentPage( state ) {
+﻿export function getCurrentPage( state ) {
 	return state.app.view.page;
 }
 

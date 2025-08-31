@@ -1,4 +1,4 @@
-export { default as LogoProColor } from './logo/pro-color.svg';
+﻿export { default as LogoProColor } from './logo/pro-color.svg';
 export { default as LogoFreeColor } from './logo/free-color.svg';
 export { default as LogoProWhite } from './logo/pro-white.svg';
 export { default as LogoFreeWhite } from './logo/free-white.svg';

@@ -1,4 +1,4 @@
-/**
+﻿/**
  * @output wp-includes/js/autosave.js
  */
 

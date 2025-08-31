@@ -1,4 +1,4 @@
-(function($){
+﻿(function($){
     
     if ( !$.factory ) $.factory = {}
     if ( $.factory.widget ) return;

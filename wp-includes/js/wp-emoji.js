@@ -1,4 +1,4 @@
-/**
+﻿/**
  * wp-emoji.js is used to replace emoji with images in browsers when the browser
  * doesn't support emoji natively.
  *

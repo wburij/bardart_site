@@ -1,4 +1,4 @@
-.wp-block-post-comments-form *{
+﻿.wp-block-post-comments-form *{
   pointer-events:none;
 }
 .wp-block-post-comments-form .block-editor-warning *{

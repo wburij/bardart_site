@@ -1,4 +1,4 @@
-/**
+﻿/**
  * Handles the addition of the comment form.
  *
  * @since 2.7.0

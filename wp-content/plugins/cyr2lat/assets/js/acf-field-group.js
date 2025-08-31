@@ -1,4 +1,4 @@
-/* global acf, CyrToLatAcfFieldGroup */
+﻿/* global acf, CyrToLatAcfFieldGroup */
 
 /**
  * ACF support.

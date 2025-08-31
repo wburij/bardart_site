@@ -1,4 +1,4 @@
-/**
+﻿/**
  * WordPress Dependencies
  */
 import { __ } from '@wordpress/i18n';
@@ -59,7 +59,7 @@ export default function Improvements() {
 				size={ TextSize.LARGE }
 				variant={ TextVariant.DARK }
 				weight={ TextWeight.HEAVY }
-				text={ __( 'Here are some notable improvements…', 'better-wp-security' ) }
+				text={ __( 'Here are some notable improvementsвЂ¦', 'better-wp-security' ) }
 			/>
 			<StyledImprovementsList>
 				{ enabledImprovements.map( ( { text }, i ) => (

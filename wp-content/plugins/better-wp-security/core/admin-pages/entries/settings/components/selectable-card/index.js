@@ -1,4 +1,4 @@
-/**
+﻿/**
  * WordPress dependencies
  */
 import { arrowRight as goIcon } from '@wordpress/icons';

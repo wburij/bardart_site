@@ -1,4 +1,4 @@
-.wp-block-embed :where(figcaption){
+﻿.wp-block-embed :where(figcaption){
   color:#555;
   font-size:13px;
   text-align:center;

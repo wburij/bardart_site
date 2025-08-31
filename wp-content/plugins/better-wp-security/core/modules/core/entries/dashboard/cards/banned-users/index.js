@@ -1,4 +1,4 @@
-/**
+﻿/**
  * Internal dependencies
  */
 import { CardHeader, CardHeaderTitle } from '@ithemes/security.dashboard.dashboard';

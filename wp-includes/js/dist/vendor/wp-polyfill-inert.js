@@ -1,4 +1,4 @@
-(function (global, factory) {
+﻿(function (global, factory) {
   typeof exports === 'object' && typeof module !== 'undefined' ? factory() :
   typeof define === 'function' && define.amd ? define('inert', factory) :
   (factory());

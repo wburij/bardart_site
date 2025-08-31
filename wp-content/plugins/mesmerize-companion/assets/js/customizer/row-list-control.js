@@ -1,4 +1,4 @@
-(function ($) {
+﻿(function ($) {
     var $preview;
 
     function showPreview($item) {

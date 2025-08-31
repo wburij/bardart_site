@@ -1,4 +1,4 @@
-/**
+﻿/**
  * WordPress dependencies
  */
 import { Component, findDOMNode } from '@wordpress/element';
